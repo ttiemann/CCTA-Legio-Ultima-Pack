@@ -13,7 +13,7 @@
                 - C&C:TA Compass Movable
 		        - BaseInfo v3.2.8
 		        - Tiberium Alliances Zoom (Sky)
-		        - WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army
+		        - WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army v13.11.11
 		        - CnC: Tiberium Alliances COORDS 500:500
 		        - New Ressource Trade Window
 		        - CCTA NavBar Reorderer 1.0
@@ -21,7 +21,7 @@
 		        - TitleMod
 		        - TABS v2 final
 */
-// @version     1.8.13
+// @version     1.8.14
 // @icon		data:image/png;base64,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
 // @updateURL   https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -6133,20 +6133,17 @@ try {
 // @name            WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army
 // @description     Upgrade your Base,Defense Army to a specific Level.
 // @author          Eistee
-// @version         13.07.20
-// @namespace       http*://*.alliances.commandandconquer.com/*
-// @include         http*://*.alliances.commandandconquer.com/*
-// @require         http://usocheckup.redirectme.net/167564.js
-// @icon            http://s3.amazonaws.com/uso_ss/icon/167564/large.png
-// @updateURL       https://userscripts.org/scripts/source/167564.meta.js
-// @downloadURL     https://userscripts.org/scripts/source/167564.user.js
-// @grant           GM_getValue
-// @grant           GM_log
-// @grant           GM_openInTab
-// @grant           GM_registerMenuCommand
-// @grant           GM_setValue
-// @grant           GM_xmlhttpRequest
+// @version         13.11.11
+// @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
+// @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
+// @icon            http://eistee82.github.io/ta_simv2/icon.png
 // ==/UserScript==
+/**
+ *  License: CC-BY-NC-SA 3.0
+ *
+ *  thx to TheStriker for his API knowledge.
+ *
+ */
 (function () {
     var injectFunction = function () {
         function createClasses() {
@@ -6157,14 +6154,17 @@ try {
                     try {
                         var qxApp = qx.core.Init.getApplication();
 
+                        var stats = document.createElement('img');
+                        stats.src = "http://goo.gl/BuvwKs"; // http://goo.gl/#analytics/goo.gl/BuvwKs/all_time
+
                         var btnUpgrade = new qx.ui.form.Button(qxApp.tr("tnf:toggle upgrade mode"), "FactionUI/icons/icon_building_detail_upgrade.png").set({
                             toolTipText: qxApp.tr("tnf:toggle upgrade mode"),
                             alignY: "middle",
                             show: "icon",
-                            width: 60,
-                            allowGrowX: false,
-                            allowGrowY: false,
-                            appearance: "button"
+                            width : 60,
+                            allowGrowX : false,
+                            allowGrowY : false,
+                            appearance : "button"
                         });
                         btnUpgrade.addListener("click", this.toggleWindow, this);
 
@@ -6175,7 +6175,7 @@ try {
                         console.log(e.toString());
                     }
                 },
-                destruct: function () { },
+                destruct: function () {},
                 members: {
                     toggleWindow: function () {
                         if (Upgrade.Window.getInstance().isVisible()) Upgrade.Window.getInstance().close();
@@ -6188,7 +6188,6 @@ try {
                 extend: qx.ui.window.Window,
                 construct: function () {
                     try {
-                        var qxApp = qx.core.Init.getApplication();
                         this.base(arguments);
                         this.set({
                             layout: new qx.ui.layout.VBox().set({ spacing: 0 }),
@@ -6201,54 +6200,11 @@ try {
                             resizable: false
                         });
                         this.moveTo(124, 31);
-                        this.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        this.getChildControl("icon").set({ width : 18, height : 18, scale : true, alignY : "middle" });
 
-                        var cntCurrent = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({ padding: 5, decorator: "pane-light-opaque" });
-                        cntCurrent.add(this.titCurrent = new qx.ui.basic.Label("").set({ alignX: "center", font: "font_size_14_bold" }));
-                        cntCurrent.add(this.selCurrent = new qx.ui.basic.Label("").set({ alignX: "center" }));
-                        var cntCurrentHBox = new qx.ui.container.Composite(new qx.ui.layout.HBox(5))
-                        cntCurrentHBox.add(new qx.ui.basic.Label(qxApp.tr("tnf:level:")).set({ alignY: "middle" }));
-                        cntCurrentHBox.add(this.txtCurrent = new qx.ui.form.Spinner(1).set({ maximum: 150, minimum: 1 }));
-                        cntCurrentHBox.add(this.btnCurrent = new qx.ui.form.Button(qxApp.tr("tnf:toggle upgrade mode"), "FactionUI/icons/icon_building_detail_upgrade.png"));
-                        this.txtCurrent.addListener("changeValue", this.onInputCurrent, this);
-                        this.btnCurrent.addListener("execute", this.onUpgradeCurrent, this);
-                        cntCurrent.add(cntCurrentHBox);
-                        var cntCurrentRes = new qx.ui.container.Composite(new qx.ui.layout.HBox(5))
-                        cntCurrentRes.add(new qx.ui.basic.Label(qxApp.tr("tnf:requires:")));
-                        cntCurrentRes.add(this.tibCurrent = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_tiberium.png"));
-                        cntCurrentRes.add(this.cryCurrent = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_chrystal.png"));
-                        cntCurrentRes.add(this.powCurrent = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_power.png"));
-                        this.tibCurrent.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
-                        this.cryCurrent.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
-                        this.powCurrent.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                        this.tibCurrent.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        this.cryCurrent.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        this.powCurrent.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        cntCurrent.add(cntCurrentRes);
-                        this.add(cntCurrent);
-
-                        var cntAll = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({ padding: 5, decorator: "pane-light-opaque" });
-                        cntAll.add(this.titAll = new qx.ui.basic.Label("").set({ alignX: "center", font: "font_size_14_bold" }));
-                        var cntAllHBox = new qx.ui.container.Composite(new qx.ui.layout.HBox(5))
-                        cntAllHBox.add(new qx.ui.basic.Label(qxApp.tr("tnf:level:")).set({ alignY: "middle" }));
-                        cntAllHBox.add(this.txtAll = new qx.ui.form.Spinner(1).set({ maximum: 150, minimum: 1 }));
-                        cntAllHBox.add(this.btnAll = new qx.ui.form.Button(qxApp.tr("tnf:toggle upgrade mode"), "FactionUI/icons/icon_building_detail_upgrade.png"));
-                        this.txtAll.addListener("changeValue", this.onInputAll, this);
-                        this.btnAll.addListener("execute", this.onUpgradeAll, this);
-                        cntAll.add(cntAllHBox);
-                        var cntAllRes = new qx.ui.container.Composite(new qx.ui.layout.HBox(5))
-                        cntAllRes.add(new qx.ui.basic.Label(qxApp.tr("tnf:requires:")));
-                        cntAllRes.add(this.tibAll = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_tiberium.png"));
-                        cntAllRes.add(this.cryAll = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_chrystal.png"));
-                        cntAllRes.add(this.powAll = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_power.png"));
-                        this.tibAll.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
-                        this.cryAll.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
-                        this.powAll.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                        this.tibAll.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        this.cryAll.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        this.powAll.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
-                        cntAll.add(cntAllRes);
-                        this.add(cntAll);
+                        this.add(new Upgrade.Current());
+                        this.add(new Upgrade.All());
+                        this.add(new Upgrade.Repairtime());
 
                         this.addListener("appear", this.onOpen, this);
                         this.addListener("close", this.onClose, this);
@@ -6257,34 +6213,14 @@ try {
                         console.log(e.toString());
                     }
                 },
-                destruct: function () { },
+                destruct: function () {},
                 members: {
-                    Current: null,
-                    titCurrent: null,
-                    selCurrent: null,
-                    txtCurrent: null,
-                    btnCurrent: null,
-                    tibCurrent: null,
-                    cryCurrent: null,
-                    powCurrent: null,
-                    titAll: null,
-                    txtAll: null,
-                    btnAll: null,
-                    tibAll: null,
-                    cryAll: null,
-                    powAll: null,
                     onOpen: function () {
                         phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
-                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "SelectionChange", ClientLib.Vis.SelectionChange, this, this.onSelectionChange);
-                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
-                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
                         this.onViewModeChanged(null, ClientLib.Vis.VisMain.GetInstance().get_Mode());
                     },
                     onClose: function () {
                         phe.cnc.Util.detachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
-                        phe.cnc.Util.detachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "SelectionChange", ClientLib.Vis.SelectionChange, this, this.onSelectionChange);
-                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
-                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
                     },
                     onViewModeChanged: function (oldMode, newMode) {
                         if (oldMode !== newMode) {
@@ -6293,168 +6229,120 @@ try {
                                 case ClientLib.Vis.Mode.City:
                                     this.setCaption(qxApp.tr("tnf:toggle upgrade mode") + ": " + qxApp.tr("tnf:base"));
                                     this.setIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
-                                    this.titCurrent.setValue(qxApp.tr("Selected building"));
-                                    this.titAll.setValue(qxApp.tr("All buildings"));
-                                    this.resetAll();
-                                    this.resetCurrent();
                                     break;
                                 case ClientLib.Vis.Mode.DefenseSetup:
                                     this.setCaption(qxApp.tr("tnf:toggle upgrade mode") + ": " + qxApp.tr("tnf:defense"));
                                     this.setIcon("FactionUI/icons/icon_def_army_points.png");
-                                    this.titCurrent.setValue(qxApp.tr("Selected defense unit"));
-                                    this.titAll.setValue(qxApp.tr("All defense units"));
-                                    this.resetAll();
-                                    this.resetCurrent();
                                     break;
                                 case ClientLib.Vis.Mode.ArmySetup:
                                     this.setCaption(qxApp.tr("tnf:toggle upgrade mode") + ": " + qxApp.tr("tnf:offense"));
                                     this.setIcon("FactionUI/icons/icon_army_points.png");
-                                    this.titCurrent.setValue(qxApp.tr("Selected army unit"));
-                                    this.titAll.setValue(qxApp.tr("All army units"));
-                                    this.resetAll();
-                                    this.resetCurrent();
                                     break;
                                 default:
                                     this.close();
                                     break;
                             }
                         }
+                    }
+                }
+            });
+            qx.Class.define("Upgrade.All", {
+                extend: qx.ui.container.Composite,
+                construct: function () {
+                    try {
+                        qx.ui.container.Composite.call(this);
+                        this.set({
+                            layout : new qx.ui.layout.VBox(5),
+                            padding: 5,
+                            decorator: "pane-light-opaque"
+                        });
+                        this.add(this.title = new qx.ui.basic.Label("").set({ alignX: "center", font: "font_size_14_bold" }));
+
+                        var level = new qx.ui.container.Composite(new qx.ui.layout.HBox(5));
+                        level.add(new qx.ui.basic.Label(this.tr("tnf:level:")).set({ alignY: "middle" }));
+                        level.add(this.txtLevel = new qx.ui.form.Spinner(1).set({ maximum: 150, minimum: 1 }));
+                        this.txtLevel.addListener("changeValue", this.onInput, this);
+                        level.add(this.btnLevel = new qx.ui.form.Button(this.tr("tnf:toggle upgrade mode"), "FactionUI/icons/icon_building_detail_upgrade.png"));
+                        this.btnLevel.addListener("execute", this.onUpgrade, this);
+                        this.add(level);
+
+                        var requires = new qx.ui.container.Composite(new qx.ui.layout.HBox(5));
+                        requires.add(new qx.ui.basic.Label(this.tr("tnf:requires:")));
+                        var resource = new qx.ui.container.Composite(new qx.ui.layout.VBox(5));
+                        resource.add(this.resTiberium = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_tiberium.png"));
+                        this.resTiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
+                        this.resTiberium.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        resource.add(this.resChrystal = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_chrystal.png"));
+                        this.resChrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
+                        this.resChrystal.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        resource.add(this.resPower = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_power.png"));
+                        this.resPower.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                        this.resPower.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        requires.add(resource);
+                        this.add(requires);
+
+                        this.addListener("appear", this.onAppear, this);
+                        this.addListener("disappear", this.onDisappear, this);
+                    } catch (e) {
+                        console.log("Error setting up Upgrade.All Constructor: ");
+                        console.log(e.toString());
+                    }
+                },
+                destruct: function () {},
+                members: {
+                    title: null,
+                    txtLevel: null,
+                    btnLevel: null,
+                    resTiberium: null,
+                    resChrystal: null,
+                    resPower: null,
+                    onAppear: function () {
+                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick, this);
+                        this.onViewModeChanged(null, ClientLib.Vis.VisMain.GetInstance().get_Mode());
                     },
-                    onSelectionChange: function (oldObj, newObj) {
-                        if (newObj != null) {
-                            switch (newObj.get_VisObjectType()) {
-                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
-                                    this.Current = newObj;
-                                    var name = newObj.get_BuildingName();
-                                    var level = newObj.get_BuildingLevel();
-                                    this.selCurrent.setValue(name + " (" + level + ")");
-                                    this.txtCurrent.setMinimum(level + 1);
-                                    this.txtCurrent.setMaximum(level + 51);
-                                    this.txtCurrent.setValue(level + 1);
-                                    this.txtCurrent.setEnabled(true);
-                                    this.btnCurrent.setEnabled(true);
-                                    this.onInputCurrent();
+                    onDisappear: function () {
+                        phe.cnc.Util.detachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick, this);
+                    },
+                    onViewModeChanged: function (oldViewMode, newViewMode) {
+                        if (oldViewMode !== newViewMode) {
+                            switch (newViewMode) {
+                                case ClientLib.Vis.Mode.City:
+                                    this.title.setValue(this.tr("All buildings"));
+                                    this.reset();
                                     break;
-                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
-                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
-                                    this.Current = newObj;
-                                    var name = newObj.get_UnitName();
-                                    var level = newObj.get_UnitLevel();
-                                    this.selCurrent.setValue(name + " (" + level + ")");
-                                    this.txtCurrent.setMinimum(level + 1);
-                                    this.txtCurrent.setMaximum(level + 51);
-                                    this.txtCurrent.setValue(level + 1);
-                                    this.txtCurrent.setEnabled(true);
-                                    this.btnCurrent.setEnabled(true);
-                                    this.onInputCurrent();
+                                case ClientLib.Vis.Mode.DefenseSetup:
+                                    this.title.setValue(this.tr("All defense units"));
+                                    this.reset();
+                                    break;
+                                case ClientLib.Vis.Mode.ArmySetup:
+                                    this.title.setValue(this.tr("All army units"));
+                                    this.reset();
                                     break;
                             }
                         }
                     },
-                    onCurrentCityChange: function (oldObj, newObj) {
-                        if (oldObj !== newObj) {
-                            this.resetAll();
-                            this.resetCurrent();
+                    onCurrentCityChange: function (oldCurrentCity, newCurrentCity) {
+                        if (oldCurrentCity !== newCurrentCity) {
+                            this.reset();
                         }
                     },
-                    GetCurrentUpgradeCostsToLevel: function (Current, newLevel) {
-                        var costs = null;
-                        if (Current !== null && newLevel > 0) {
-                            switch (Current.get_VisObjectType()) {
-                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
-                                    if (newLevel > Current.get_BuildingLevel())
-                                        costs = ClientLib.API.City.GetInstance().GetUpgradeCostsForBuildingToLevel(Current.get_BuildingDetails(), newLevel);
-                                    break;
-                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
-                                    if (newLevel > Current.get_UnitLevel())
-                                        costs = ClientLib.API.Defense.GetInstance().GetUpgradeCostsForUnitToLevel(Current.get_UnitDetails(), newLevel);
-                                    break;
-                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
-                                    if (newLevel > Current.get_UnitLevel())
-                                        costs = ClientLib.API.Army.GetInstance().GetUpgradeCostsForUnitToLevel(Current.get_UnitDetails(), newLevel);
-                                    break;
-                            }
-                        }
-                        return costs;
+                    getResTime: function (need, type) {
+                        var CurrentOwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity();
+                        var Alliance = ClientLib.Data.MainData.GetInstance().get_Alliance();
+                        need -= CurrentOwnCity.GetResourceCount(type);
+                        need = Math.max(0, need);
+                        var Con = CurrentOwnCity.GetResourceGrowPerHour(type);
+                        var Bonus = CurrentOwnCity.get_hasCooldown() ? 0 : CurrentOwnCity.GetResourceBonusGrowPerHour(type);
+                        var POI = CurrentOwnCity.get_IsGhostMode() ? 0 : Alliance.GetPOIBonusFromResourceType(type);
+                        return (need <= 0 ? 0 : need / (Con + Bonus + POI) * 3600);
                     },
-                    resetCurrent: function () {
-                        this.Current = null;
-                        this.selCurrent.setValue("-");
-                        this.txtCurrent.setMinimum(0);
-                        this.txtCurrent.setMaximum(0);
-                        this.txtCurrent.resetValue();
-                        this.txtCurrent.setEnabled(false);
-                        this.btnCurrent.setEnabled(false);
-                        this.onInputCurrent();
-                    },
-                    onInputCurrent: function () {
-                        var costs = this.GetCurrentUpgradeCostsToLevel(this.Current, parseInt(this.txtCurrent.getValue(), 10));
-                        if (costs !== null) {
-                            for (var i = 0, Tib = 0, Cry = 0, Pow = 0; i < costs.length; i++) {
-                                var uCosts = costs[i];
-                                var cType = parseInt(uCosts.Type, 10);
-                                switch (cType) {
-                                    case ClientLib.Base.EResourceType.Tiberium:
-                                        Tib += uCosts.Count;
-                                        break;
-                                    case ClientLib.Base.EResourceType.Crystal:
-                                        Cry += uCosts.Count;
-                                        break;
-                                    case ClientLib.Base.EResourceType.Power:
-                                        Pow += uCosts.Count;
-                                        break;
-                                }
-                            }
-                            this.tibCurrent.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Tib));
-                            this.tibCurrent.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Tib));
-                            if (Tib === 0) this.tibCurrent.exclude();
-                            else this.tibCurrent.show();
-                            this.cryCurrent.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Cry));
-                            this.cryCurrent.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Cry));
-                            if (Cry === 0) this.cryCurrent.exclude();
-                            else this.cryCurrent.show();
-                            this.powCurrent.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Pow));
-                            this.powCurrent.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Pow));
-                            if (Pow === 0) this.powCurrent.exclude();
-                            else this.powCurrent.show();
-                        } else {
-                            this.tibCurrent.setLabel("-");
-                            this.tibCurrent.resetToolTipText();
-                            this.tibCurrent.show();
-                            this.cryCurrent.setLabel("-");
-                            this.cryCurrent.resetToolTipText();
-                            this.cryCurrent.show();
-                            this.powCurrent.setLabel("-");
-                            this.powCurrent.resetToolTipText();
-                            this.powCurrent.show();
-                        }
-                    },
-                    onUpgradeCurrent: function () {
-                        var newLevel = parseInt(this.txtCurrent.getValue(), 10);
-                        if (newLevel > 0 && this.Current !== null) {
-                            switch (this.Current.get_VisObjectType()) {
-                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
-                                    if (newLevel > this.Current.get_BuildingLevel()) {
-                                        ClientLib.API.City.GetInstance().UpgradeBuildingToLevel(this.Current.get_BuildingDetails(), newLevel);
-                                        this.onSelectionChange(null, this.Current);
-                                    }
-                                    break;
-                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
-                                    if (newLevel > this.Current.get_UnitLevel()) {
-                                        ClientLib.API.Defense.GetInstance().UpgradeUnitToLevel(this.Current.get_UnitDetails(), newLevel);
-                                        this.onSelectionChange(null, this.Current);
-                                    }
-                                    break;
-                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
-                                    if (newLevel > this.Current.get_UnitLevel()) {
-                                        ClientLib.API.Army.GetInstance().UpgradeUnitToLevel(this.Current.get_UnitDetails(), newLevel);
-                                        this.onSelectionChange(null, this.Current);
-                                    }
-                                    break;
-                            }
-                        }
-                    },
-                    GetAllUpgradeCostsToLevel: function (newLevel) {
+                    getUpgradeCostsToLevel: function (newLevel) {
                         if (newLevel > 0) {
                             switch (ClientLib.Vis.VisMain.GetInstance().get_Mode()) {
                                 case ClientLib.Vis.Mode.City:
@@ -6467,9 +6355,9 @@ try {
                         }
                         return null;
                     },
-                    calcAllLowLevel: function () {
+                    getLowLevel: function () {
                         for (var newLevel = 1, Tib = 0, Cry = 0, Pow = 0; Tib === 0 && Cry === 0 && Pow === 0 && newLevel < 1000; newLevel++) {
-                            var costs = this.GetAllUpgradeCostsToLevel(newLevel);
+                            var costs = this.getUpgradeCostsToLevel(newLevel);
                             if (costs !== null) {
                                 for (var i = 0; i < costs.length; i++) {
                                     var uCosts = costs[i];
@@ -6488,84 +6376,491 @@ try {
                                 }
                             }
                         }
-                        return (newLevel === 1000 ? 0 : (newLevel - 1));
+                        return (newLevel === 1000?0:(newLevel - 1));
                     },
-                    resetAll: function () {
-                        var allLowLevel = this.calcAllLowLevel();
-                        if (allLowLevel > 0) {
-                            this.txtAll.setMinimum(allLowLevel);
-                            this.txtAll.setMaximum(allLowLevel + 50);
-                            this.txtAll.setValue(allLowLevel);
-                            this.txtAll.setEnabled(true);
-                            this.btnAll.setEnabled(true);
+                    reset: function () {
+                        var LowLevel = this.getLowLevel();
+                        if (LowLevel > 0) {
+                            this.txtLevel.setMinimum(LowLevel);
+                            this.txtLevel.setMaximum(LowLevel + 50);
+                            this.txtLevel.setValue(LowLevel);
+                            this.txtLevel.setEnabled(true);
+                            this.btnLevel.setEnabled(true);
                         } else {
-                            this.txtAll.setMinimum(0);
-                            this.txtAll.setMaximum(0);
-                            this.txtAll.resetValue();
-                            this.txtAll.setEnabled(false);
-                            this.btnAll.setEnabled(false);
+                            this.txtLevel.setMinimum(0);
+                            this.txtLevel.setMaximum(0);
+                            this.txtLevel.resetValue();
+                            this.txtLevel.setEnabled(false);
+                            this.btnLevel.setEnabled(false);
                         }
-                        this.onInputAll();
+                        this.onInput();
                     },
-                    onInputAll: function () {
-                        var newLevel = parseInt(this.txtAll.getValue(), 10);
-                        var costs = this.GetAllUpgradeCostsToLevel(newLevel);
+                    onTick: function () {
+                        this.onInput();
+                    },
+                    onInput: function () {
+                        var newLevel = parseInt(this.txtLevel.getValue(), 10);
+                        var costs = this.getUpgradeCostsToLevel(newLevel);
                         if (newLevel > 0 && costs !== null) {
-                            for (var i = 0, Tib = 0, Cry = 0, Pow = 0; i < costs.length; i++) {
+                            for (var i = 0, Tib = 0, Cry = 0, Pow = 0, TibTime = 0, CryTime = 0, PowTime = 0; i < costs.length; i++) {
                                 var uCosts = costs[i];
                                 switch (parseInt(uCosts.Type, 10)) {
                                     case ClientLib.Base.EResourceType.Tiberium:
                                         Tib += uCosts.Count;
+                                        TibTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Tiberium);
                                         break;
                                     case ClientLib.Base.EResourceType.Crystal:
                                         Cry += uCosts.Count;
+                                        CryTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Crystal);
                                         break;
                                     case ClientLib.Base.EResourceType.Power:
                                         Pow += uCosts.Count;
+                                        PowTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Power);
                                         break;
                                 }
                             }
-                            this.tibAll.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Tib));
-                            this.tibAll.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Tib));
-                            if (Tib === 0) this.tibAll.exclude();
-                            else this.tibAll.show();
-                            this.cryAll.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Cry));
-                            this.cryAll.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Cry));
-                            if (Cry === 0) this.cryAll.exclude();
-                            else this.cryAll.show();
-                            this.powAll.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Pow));
-                            this.powAll.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Pow));
-                            if (Pow === 0) this.powAll.exclude();
-                            else this.powAll.show();
+                            this.resTiberium.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Tib) + (TibTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(TibTime) : ""));
+                            this.resTiberium.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Tib));
+                            if (Tib === 0) this.resTiberium.exclude();
+                            else this.resTiberium.show();
+                            this.resChrystal.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Cry) + (CryTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(CryTime) : ""));
+                            this.resChrystal.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Cry));
+                            if (Cry === 0) this.resChrystal.exclude();
+                            else this.resChrystal.show();
+                            this.resPower.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Pow) + (PowTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(PowTime) : ""));
+                            this.resPower.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Pow));
+                            if (Pow === 0) this.resPower.exclude();
+                            else this.resPower.show();
                         } else {
-                            this.tibAll.setLabel("-");
-                            this.tibAll.resetToolTipText();
-                            this.tibAll.show();
-                            this.cryAll.setLabel("-");
-                            this.cryAll.resetToolTipText();
-                            this.cryAll.show();
-                            this.powAll.setLabel("-");
-                            this.powAll.resetToolTipText();
-                            this.powAll.show();
+                            this.resTiberium.setLabel("-");
+                            this.resTiberium.resetToolTipText();
+                            this.resTiberium.show();
+                            this.resChrystal.setLabel("-");
+                            this.resChrystal.resetToolTipText();
+                            this.resChrystal.show();
+                            this.resPower.setLabel("-");
+                            this.resPower.resetToolTipText();
+                            this.resPower.show();
                         }
                     },
-                    onUpgradeAll: function () {
-                        var newLevel = parseInt(this.txtAll.getValue(), 10);
+                    onUpgrade: function () {
+                        var newLevel = parseInt(this.txtLevel.getValue(), 10);
                         if (newLevel > 0) {
                             switch (ClientLib.Vis.VisMain.GetInstance().get_Mode()) {
                                 case ClientLib.Vis.Mode.City:
                                     ClientLib.API.City.GetInstance().UpgradeAllBuildingsToLevel(newLevel);
-                                    this.resetAll()
+                                    this.reset();
                                     break;
                                 case ClientLib.Vis.Mode.DefenseSetup:
                                     ClientLib.API.Defense.GetInstance().UpgradeAllUnitsToLevel(newLevel);
-                                    this.resetAll()
+                                    this.reset();
                                     break;
                                 case ClientLib.Vis.Mode.ArmySetup:
                                     ClientLib.API.Army.GetInstance().UpgradeAllUnitsToLevel(newLevel);
-                                    this.resetAll()
+                                    this.reset();
                                     break;
                             }
+                        }
+                    }
+                }
+            });
+            qx.Class.define("Upgrade.Current", {
+                extend: qx.ui.container.Composite,
+                construct: function () {
+                    try {
+                        qx.ui.container.Composite.call(this);
+                        this.set({
+                            layout : new qx.ui.layout.VBox(5),
+                            padding: 5,
+                            decorator: "pane-light-opaque"
+                        });
+                        this.add(this.title = new qx.ui.basic.Label("").set({ alignX: "center", font: "font_size_14_bold" }));
+                        this.add(this.txtSelected = new qx.ui.basic.Label("").set({ alignX: "center" }));
+
+                        var level = new qx.ui.container.Composite(new qx.ui.layout.HBox(5));
+                        level.add(new qx.ui.basic.Label(this.tr("tnf:level:")).set({ alignY: "middle" }));
+                        level.add(this.txtLevel = new qx.ui.form.Spinner(1).set({ maximum: 150, minimum: 1 }));
+                        this.txtLevel.addListener("changeValue", this.onInput, this);
+                        level.add(this.btnLevel = new qx.ui.form.Button(this.tr("tnf:toggle upgrade mode"), "FactionUI/icons/icon_building_detail_upgrade.png"));
+                        this.btnLevel.addListener("execute", this.onUpgrade, this);
+                        this.add(level);
+
+                        var requires = new qx.ui.container.Composite(new qx.ui.layout.HBox(5));
+                        requires.add(new qx.ui.basic.Label(this.tr("tnf:requires:")));
+                        var resource = new qx.ui.container.Composite(new qx.ui.layout.VBox(5));
+                        resource.add(this.resTiberium = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_tiberium.png"));
+                        this.resTiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
+                        this.resTiberium.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        resource.add(this.resChrystal = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_chrystal.png"));
+                        this.resChrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
+                        this.resChrystal.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        resource.add(this.resPower = new qx.ui.basic.Atom("-", "webfrontend/ui/common/icn_res_power.png"));
+                        this.resPower.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                        this.resPower.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        requires.add(resource);
+                        this.add(requires);
+
+                        this.addListener("appear", this.onAppear, this);
+                        this.addListener("disappear", this.onDisappear, this);
+                    } catch (e) {
+                        console.log("Error setting up Upgrade.Current Constructor: ");
+                        console.log(e.toString());
+                    }
+                },
+                destruct: function () {},
+                members: {
+                    title: null,
+                    txtSelected: null,
+                    txtLevel: null,
+                    btnLevel: null,
+                    resTiberium: null,
+                    resChrystal: null,
+                    resPower: null,
+                    Selection: null,
+                    onAppear: function () {
+                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "SelectionChange", ClientLib.Vis.SelectionChange, this, this.onSelectionChange);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick, this);
+                        this.onViewModeChanged(null, ClientLib.Vis.VisMain.GetInstance().get_Mode());
+                    },
+                    onDisappear: function () {
+                        phe.cnc.Util.detachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this.onViewModeChanged);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "SelectionChange", ClientLib.Vis.SelectionChange, this, this.onSelectionChange);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick, this);
+                    },
+                    onViewModeChanged: function (oldViewMode, newViewMode) {
+                        if (oldViewMode !== newViewMode) {
+                            switch (newViewMode) {
+                                case ClientLib.Vis.Mode.City:
+                                    this.title.setValue(this.tr("Selected building"));
+                                    this.reset();
+                                    break;
+                                case ClientLib.Vis.Mode.DefenseSetup:
+                                    this.title.setValue(this.tr("Selected defense unit"));
+                                    this.reset();
+                                    break;
+                                case ClientLib.Vis.Mode.ArmySetup:
+                                    this.title.setValue(this.tr("Selected army unit"));
+                                    this.reset();
+                                    break;
+                            }
+                        }
+                    },
+                    onSelectionChange: function (oldSelection, newSelection) {
+                        if (newSelection !== null) {
+                            var name, level;
+                            switch (newSelection.get_VisObjectType()) {
+                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
+                                    this.Selection = newSelection;
+                                    name = newSelection.get_BuildingName();
+                                    level = newSelection.get_BuildingLevel();
+                                    this.txtSelected.setValue(name + " (" + level + ")");
+                                    this.txtLevel.setMinimum(level + 1);
+                                    this.txtLevel.setMaximum(level + 51);
+                                    this.txtLevel.setValue(level + 1);
+                                    this.txtLevel.setEnabled(true);
+                                    this.btnLevel.setEnabled(true);
+                                    this.onInput();
+                                    break;
+                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
+                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
+                                    this.Selection = newSelection;
+                                    name = newSelection.get_UnitName();
+                                    level = newSelection.get_UnitLevel();
+                                    this.txtSelected.setValue(name + " (" + level + ")");
+                                    this.txtLevel.setMinimum(level + 1);
+                                    this.txtLevel.setMaximum(level + 51);
+                                    this.txtLevel.setValue(level + 1);
+                                    this.txtLevel.setEnabled(true);
+                                    this.btnLevel.setEnabled(true);
+                                    this.onInput();
+                                    break;
+                            }
+                        }
+                    },
+                    onCurrentCityChange: function (oldCurrentCity, newCurrentCity) {
+                        if (oldCurrentCity !== newCurrentCity) {
+                            this.reset();
+                        }
+                    },
+                    getResTime: function (need, type) {
+                        var CurrentOwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity();
+                        var Alliance = ClientLib.Data.MainData.GetInstance().get_Alliance();
+                        need -= CurrentOwnCity.GetResourceCount(type);
+                        need = Math.max(0, need);
+                        var Con = CurrentOwnCity.GetResourceGrowPerHour(type);
+                        var Bonus = CurrentOwnCity.get_hasCooldown() ? 0 : CurrentOwnCity.GetResourceBonusGrowPerHour(type);
+                        var POI = CurrentOwnCity.get_IsGhostMode() ? 0 : Alliance.GetPOIBonusFromResourceType(type);
+                        return (need <= 0 ? 0 : need / (Con + Bonus + POI) * 3600);
+                    },
+                    getUpgradeCostsToLevel: function (unit, newLevel) {
+                        var costs = null;
+                        if (unit !== null && newLevel > 0) {
+                            switch (unit.get_VisObjectType()) {
+                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
+                                    if (newLevel > unit.get_BuildingLevel())
+                                        costs = ClientLib.API.City.GetInstance().GetUpgradeCostsForBuildingToLevel(unit.get_BuildingDetails(), newLevel);
+                                    break;
+                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
+                                    if (newLevel > unit.get_UnitLevel())
+                                        costs = ClientLib.API.Defense.GetInstance().GetUpgradeCostsForUnitToLevel(unit.get_UnitDetails(), newLevel);
+                                    break;
+                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
+                                    if (newLevel > unit.get_UnitLevel())
+                                        costs = ClientLib.API.Army.GetInstance().GetUpgradeCostsForUnitToLevel(unit.get_UnitDetails(), newLevel);
+                                    break;
+                            }
+                        }
+                        return costs;
+                    },
+                    reset: function () {
+                        this.Selection = null;
+                        this.txtSelected.setValue("-");
+                        this.txtLevel.setMinimum(0);
+                        this.txtLevel.setMaximum(0);
+                        this.txtLevel.resetValue();
+                        this.txtLevel.setEnabled(false);
+                        this.btnLevel.setEnabled(false);
+                        this.onInput();
+                    },
+                    onTick: function () {
+                        this.onInput();
+                    },
+                    onInput: function () {
+                        var costs = this.getUpgradeCostsToLevel(this.Selection, parseInt(this.txtLevel.getValue(), 10));
+                        if (costs !== null) {
+                            for (var i = 0, Tib = 0, Cry = 0, Pow = 0, TibTime = 0, CryTime = 0, PowTime = 0; i < costs.length; i++) {
+                                var uCosts = costs[i];
+                                switch (parseInt(uCosts.Type, 10)) {
+                                    case ClientLib.Base.EResourceType.Tiberium:
+                                        Tib += uCosts.Count;
+                                        TibTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Tiberium);
+                                        break;
+                                    case ClientLib.Base.EResourceType.Crystal:
+                                        Cry += uCosts.Count;
+                                        CryTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Crystal);
+                                        break;
+                                    case ClientLib.Base.EResourceType.Power:
+                                        Pow += uCosts.Count;
+                                        PowTime += this.getResTime(uCosts.Count, ClientLib.Base.EResourceType.Power);
+                                        break;
+                                }
+                            }
+                            this.resTiberium.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Tib) + (TibTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(TibTime) : ""));
+                            this.resTiberium.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Tib));
+                            if (Tib === 0) this.resTiberium.exclude();
+                            else this.resTiberium.show();
+                            this.resChrystal.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Cry) + (CryTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(CryTime) : ""));
+                            this.resChrystal.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Cry));
+                            if (Cry === 0) this.resChrystal.exclude();
+                            else this.resChrystal.show();
+                            this.resPower.setLabel(phe.cnc.gui.util.Numbers.formatNumbersCompact(Pow) + (PowTime > 0 ? " @ " + phe.cnc.Util.getTimespanString(PowTime) : ""));
+                            this.resPower.setToolTipText(phe.cnc.gui.util.Numbers.formatNumbers(Pow));
+                            if (Pow === 0) this.resPower.exclude();
+                            else this.resPower.show();
+                        } else {
+                            this.resTiberium.setLabel("-");
+                            this.resTiberium.resetToolTipText();
+                            this.resTiberium.show();
+                            this.resChrystal.setLabel("-");
+                            this.resChrystal.resetToolTipText();
+                            this.resChrystal.show();
+                            this.resPower.setLabel("-");
+                            this.resPower.resetToolTipText();
+                            this.resPower.show();
+                        }
+                    },
+                    onUpgrade: function() {
+                        var newLevel = parseInt(this.txtLevel.getValue(), 10);
+                        if (newLevel > 0 && this.Selection !== null) {
+                            switch (this.Selection.get_VisObjectType()) {
+                                case ClientLib.Vis.VisObject.EObjectType.CityBuildingType:
+                                    if (newLevel > this.Selection.get_BuildingLevel()) {
+                                        ClientLib.API.City.GetInstance().UpgradeBuildingToLevel(this.Selection.get_BuildingDetails(), newLevel);
+                                        this.onSelectionChange(null, this.Selection);
+                                    }
+                                    break;
+                                case ClientLib.Vis.VisObject.EObjectType.DefenseUnitType:
+                                    if (newLevel > this.Selection.get_UnitLevel()) {
+                                        ClientLib.API.Defense.GetInstance().UpgradeUnitToLevel(this.Selection.get_UnitDetails(), newLevel);
+                                        this.onSelectionChange(null, this.Selection);
+                                    }
+                                    break;
+                                case ClientLib.Vis.VisObject.EObjectType.ArmyUnitType:
+                                    if (newLevel > this.Selection.get_UnitLevel()) {
+                                        ClientLib.API.Army.GetInstance().UpgradeUnitToLevel(this.Selection.get_UnitDetails(), newLevel);
+                                        this.onSelectionChange(null, this.Selection);
+                                    }
+                                    break;
+                            }
+                        }
+                    }
+                }
+            });
+            qx.Class.define("Upgrade.Repairtime", {
+                extend: qx.ui.container.Composite,
+                construct: function () {
+                    try {
+                        qx.ui.container.Composite.call(this);
+                        this.set({
+                            layout : new qx.ui.layout.VBox(5),
+                            padding: 5,
+                            decorator: "pane-light-opaque"
+                        });
+                        this.add(this.title = new qx.ui.basic.Label(this.tr("tnf:repair points")).set({ alignX: "center", font: "font_size_14_bold" }));
+                        this.add(this.grid = new qx.ui.container.Composite(new qx.ui.layout.Grid()));
+
+                        this.grid.add(this.basRT = new qx.ui.basic.Atom("", "FactionUI/icons/icon_arsnl_base_buildings.png").set({toolTipText: this.tr("tnf:base")}), {row: 0, column: 0});
+                        this.basRT.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 0, column: 2});
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 0, column: 4});
+                        this.grid.add(this.btnBuildings = new qx.ui.form.Button(null, "FactionUI/icons/icon_building_detail_upgrade.png").set({toolTipText: this.tr("tnf:toggle upgrade mode"), width: 25, maxHeight: 17, alignY: "middle", show: "icon", iconPosition: "top", appearance: "button-addpoints"}), {row: 0, column: 6});
+                        this.btnBuildings.getChildControl("icon").set({width: 14, height: 14, scale: true});
+                        this.btnBuildings.addListener("execute", function () { this.upgradeBuilding(ClientLib.Base.ETechName.Construction_Yard); }, this);
+
+                        this.grid.add(this.infRT = new qx.ui.basic.Atom("", "FactionUI/icons/icon_arsnl_off_squad.png").set({toolTipText: this.tr("tnf:infantry repair title")}), {row: 1, column: 0});
+                        this.infRT.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 1, column: 2});
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 1, column: 4});
+                        this.grid.add(this.btnInfantry = new qx.ui.form.Button(null, "FactionUI/icons/icon_building_detail_upgrade.png").set({toolTipText: this.tr("tnf:toggle upgrade mode"), width: 25, maxHeight: 17, alignY: "middle", show: "icon", iconPosition: "top", appearance: "button-addpoints"}), {row: 1, column: 6});
+                        this.btnInfantry.getChildControl("icon").set({width: 14, height: 14, scale: true});
+                        this.btnInfantry.addListener("execute", function () { this.upgradeBuilding(ClientLib.Base.ETechName.Barracks); }, this);
+
+                        this.grid.add(this.vehRT = new qx.ui.basic.Atom("", "FactionUI/icons/icon_arsnl_off_vehicle.png").set({toolTipText: this.tr("tnf:vehicle repair title")}), {row: 2, column: 0});
+                        this.vehRT.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 2, column: 2});
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 2, column: 4});
+                        this.grid.add(this.btnVehicle = new qx.ui.form.Button(null, "FactionUI/icons/icon_building_detail_upgrade.png").set({toolTipText: this.tr("tnf:toggle upgrade mode"), width: 25, maxHeight: 17, alignY: "middle", show: "icon", iconPosition: "top", appearance: "button-addpoints"}), {row: 2, column: 6});
+                        this.btnVehicle.getChildControl("icon").set({width: 14, height: 14, scale: true});
+                        this.btnVehicle.addListener("execute", function () { this.upgradeBuilding(ClientLib.Base.ETechName.Factory); }, this);
+
+                        this.grid.add(this.airRT = new qx.ui.basic.Atom("", "FactionUI/icons/icon_arsnl_off_plane.png").set({toolTipText: this.tr("tnf:aircraft repair title")}), {row: 3, column: 0});
+                        this.airRT.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 3, column: 2});
+                        this.grid.add(new qx.ui.basic.Label("").set({ alignX: "right", alignY: "middle" }), {row: 3, column: 4});
+                        this.grid.add(this.btnAircraft = new qx.ui.form.Button(null, "FactionUI/icons/icon_building_detail_upgrade.png").set({toolTipText: this.tr("tnf:toggle upgrade mode"), width: 25, maxHeight: 17, alignY: "middle", show: "icon", iconPosition: "top", appearance: "button-addpoints"}), {row: 3, column: 6});
+                        this.btnAircraft.getChildControl("icon").set({width: 14, height: 14, scale: true});
+                        this.btnAircraft.addListener("execute", function () { this.upgradeBuilding(ClientLib.Base.ETechName.Airport); }, this);
+
+                        this.grid.getLayout().setRowFlex(0, 0);
+                        this.grid.getLayout().setRowFlex(1, 0);
+                        this.grid.getLayout().setRowFlex(2, 0);
+                        this.grid.getLayout().setRowFlex(3, 0);
+                        this.grid.getLayout().setColumnFlex(1, 200);
+                        this.grid.getLayout().setColumnFlex(3, 200);
+                        this.grid.getLayout().setColumnFlex(5, 200);
+
+                        this.addListener("appear", this.onAppear, this);
+                        this.addListener("disappear", this.onDisappear, this);
+                    } catch (e) {
+                        console.log("Error setting up Upgrade.Repairtime Constructor: ");
+                        console.log(e.toString());
+                    }
+                },
+                destruct: function () {},
+                members: {
+                    title: null,
+                    grid: null,
+                    btnBuildings: null,
+                    btnInfantry: null,
+                    btnVehicle: null,
+                    btnAircraft: null,
+                    onAppear: function () {
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick, this);
+                        this.getInfo();
+                    },
+                    onDisappear: function () {
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.onCurrentCityChange);
+                        phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick, this);
+                    },
+                    onTick: function () {
+                        this.getInfo();
+                    },
+                    onCurrentCityChange: function (oldCurrentCity, newCurrentCity) {
+                        if (oldCurrentCity !== newCurrentCity) {
+                            this.getInfo();
+                        }
+                    },
+                    canUpgradeBuilding: function (ETechName) {
+                        var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity();
+                        var building = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ETechName);
+                        if (building) {
+                            var ResourceRequirements_Obj = ClientLib.Base.Util.GetUnitLevelResourceRequirements_Obj(building.get_CurrentLevel() + 1, building.get_UnitGameData_Obj());
+                            return (building.get_CurrentDamage() === 0 && !city.get_IsLocked() && city.HasEnoughResources(ResourceRequirements_Obj));
+                        } else return false;
+                    },
+                    upgradeBuilding: function (ETechName) {
+                        var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity();
+                        var building = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ETechName);
+                        if (building) {
+                            ClientLib.Net.CommunicationManager.GetInstance().SendCommand("UpgradeBuilding", {
+                                cityid : city.get_Id(),
+                                posX : building.get_CoordX(),
+                                posY : building.get_CoordY()
+                            }, null, null, true);
+                        }
+                    },
+                    getInfo: function () {
+                        try {
+                            var lvl, win, city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity();
+
+                            lvl = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Construction_Yard).get_CurrentLevel();
+                            win = (city.get_CityBuildingsData().GetFullRepairTime(true) - city.get_CityBuildingsData().GetFullRepairTime(false)) * -1;
+                            this.grid.getLayout().getCellWidget(0, 0).setLabel("("+ lvl +")");
+                            this.grid.getLayout().getCellWidget(0, 2).setValue(phe.cnc.Util.getTimespanString(city.get_CityBuildingsData().GetFullRepairTime()));
+                            this.grid.getLayout().getCellWidget(0, 4).setValue("-"+ phe.cnc.Util.getTimespanString(win));
+
+                            if (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false) > 0) {
+                                lvl = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Barracks).get_CurrentLevel();
+                                win = (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, true) - city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false)) * -1;
+                                this.grid.getLayout().getCellWidget(1, 0).setLabel("("+ lvl +")");
+                                this.grid.getLayout().getCellWidget(1, 2).setValue(phe.cnc.Util.getTimespanString(city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false)));
+                                this.grid.getLayout().getCellWidget(1, 4).setValue("-"+ phe.cnc.Util.getTimespanString(win));
+                                this.grid.getLayout().setRowHeight(1, 18);
+                            } else {
+                                this.grid.getLayout().setRowHeight(1, 0);
+                            }
+
+                            if (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false) > 0) {
+                                lvl = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Factory).get_CurrentLevel();
+                                win = (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, true) - city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false)) * -1;
+                                this.grid.getLayout().getCellWidget(2, 0).setLabel("("+ lvl +")");
+                                this.grid.getLayout().getCellWidget(2, 2).setValue(phe.cnc.Util.getTimespanString(city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false)));
+                                this.grid.getLayout().getCellWidget(2, 4).setValue("-"+ phe.cnc.Util.getTimespanString(win));
+                                this.grid.getLayout().setRowHeight(2, 18);
+                            } else {
+                                this.grid.getLayout().setRowHeight(2, 0);
+                            }
+
+                            if (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false) > 0) {
+                                lvl = city.get_CityBuildingsData().GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Airport).get_CurrentLevel();
+                                win = (city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, true) - city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false)) * -1;
+                                this.grid.getLayout().getCellWidget(3, 0).setLabel("("+ lvl +")");
+                                this.grid.getLayout().getCellWidget(3, 2).setValue(phe.cnc.Util.getTimespanString(city.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false)));
+                                this.grid.getLayout().getCellWidget(3, 4).setValue("-"+ phe.cnc.Util.getTimespanString(win));
+                                this.grid.getLayout().setRowHeight(3, 18);
+                            } else {
+                                this.grid.getLayout().setRowHeight(3, 0);
+                            }
+
+                            if (this.canUpgradeBuilding(ClientLib.Base.ETechName.Construction_Yard)) this.btnBuildings.setEnabled(true);
+                            else this.btnBuildings.setEnabled(false);
+                            if (this.canUpgradeBuilding(ClientLib.Base.ETechName.Barracks)) this.btnInfantry.setEnabled(true);
+                            else this.btnInfantry.setEnabled(false);
+                            if (this.canUpgradeBuilding(ClientLib.Base.ETechName.Factory)) this.btnVehicle.setEnabled(true);
+                            else this.btnVehicle.setEnabled(false);
+                            if (this.canUpgradeBuilding(ClientLib.Base.ETechName.Airport)) this.btnAircraft.setEnabled(true);
+                            else this.btnAircraft.setEnabled(false);
+                        } catch (e) {
+                            console.log("Error in Upgrade.Repairtime.getInfo: ");
+                            console.log(e.toString());
                         }
                     }
                 }
@@ -6576,7 +6871,7 @@ try {
 
             // Default language is english (en)
             // Available Languages are: ar,ce,cs,da,de,en,es,fi,fr,hu,id,it,nb,nl,pl,pt,ro,ru,sk,sv,ta,tr,uk
-            // You can send me translations so i can include them in the Script.
+            // You can send me translations so I can include them in the Script.
 
             // German
             localeManager.addTranslation("de", {
@@ -6587,20 +6882,37 @@ try {
                 "Selected army unit": "Markierte Armee-Einheit",
                 "All army units": "Alle Armee-Einheiten"
             });
+
+            // Hungarian
+            localeManager.addTranslation("hu", {
+                "Selected building": "Kiválasztott létesítmény",
+                "All buildings": "Összes létesítmény",
+                "Selected defense unit": "Kiválasztott védelmi egység",
+                "All defense units": "Minden védelmi egység",
+                "Selected army unit": "Kiválasztott katonai egység",
+                "All army units": "Minden katonai egység"
+            });
+
+            // Russian
+            localeManager.addTranslation("ru", {
+                "Selected building": "Вывбранное здание",
+                "All buildings": "Все здания",
+                "Selected defense unit": "Выбранный оборонный юнит",
+                "All defense units": "Все оборонные юниты",
+                "Selected army unit": "Выделенный юнит атаки",
+                "All army units": "Все юниты атаки"
+            });
         }
         function waitForGame() {
             try {
                 if (typeof qx != 'undefined' && typeof qx.core != 'undfined' && typeof qx.core.Init != 'undefined') {
                     var app = qx.core.Init.getApplication();
-                    if (app.initDone == true) {
+                    if (app.initDone === true) {
                         try {
                             console.log("WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army: Loading");
                             translation();
                             createClasses();
                             Upgrade.getInstance();
-                            Upgrade.Base.getInstance();
-                            Upgrade.Defense.getInstance();
-                            Upgrade.Army.getInstance();
                             console.log("WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army: Loaded");
                         } catch (e) {
                             console.log(e);
