@@ -18,9 +18,9 @@
                 - CCTA NavBar Reorderer 1.0 (removed)
 		        - PVE/PVP Player Info Mod v1.3
 		        - TitleMod
-		        - TABS v2 final
+		        - TABS v2 final v15.12.09
 */
-// @version     1.8.20
+// @version     1.8.21
 // @icon		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAE9lJREFUeNrsXXtsVFd6P/P0PDwztrENtnnY4Q0GDARC2jyAQEJTUTVF0W63AlYbNSSt2v4RZbVJ/ugfuw1dKW3TrlbVqiKtYKuugrSbFFUEkTQPAgsEgnklJml4GPzAnvHMeOzxjMczt7/fufeYsbHNjD0eovYe6Whm7tw553zf73udc79zxqJpmjDLt6dYTRaYgJjFBMQExCwmICYgZjEBMQExS5GLJXti+MtfHhCdnZ1iaCgtEolEzo2wDat16thmMpqwWArbJ+9jteTQcK73FZL20lKvsNlsQuEwApBHHvkdcfbsGYCRkp9dLqcV39vx1jZOe2k0MZRMDmYKJSH37tMyhO/Tg4OpnPu02awWu92O9jTbOFYBbVnSQ5DEdDqjFZN2t7tEOJ3OYUDsI9EqFX6/X3i9Ggbkstnt1ircV4ev/GMQwhZiqO2o3Z2dXYMokx4YGCZqambarFbLRH2CCSICKW4D53o6Om7jJT1hu+XlZaKszO8Go2vxcSZ5PcZtSdTbaLc9mUz2EzyAWBTaA4HA+IAMy6Cuti6YkEV4fRS1hpeN7zL4sRpgF+pJqOxpt9s1JUAm6FPDd+hSSje534r3n+LaBfTbfy9ASkqcAmCAudoGfFxJuTPazBgWgrTEUS+gfgjm9PNnxaR9hGCOtOEZbygU+TmIbNJVXPgMCXHo/LJAe9ydPp/vhiE1lYaUXEINT3IMXtSfp1KpJkj8qD4tZELa5yu94fV6usEMi3H/VdQWfO6foF0y8yddXcEApN0NAWSbHjRpJR2gr7+8PPA1XsnJBGgf6u4OfgeMrbNabcWifWJAoK7zvV7v7nXr1onLly8DoLQSDvk+lRoSsVhfvcfjuQ1CaMudlCbYXtucOXNEY2MZQc09xIMzRFvzL1y4sLuxsXHMPhOJJPucB0B6jC9KUNGvZl21ahVN64g+qfpgGnzh2T9funTpY9FoVNy+fXvYWfN7thuNxkrj8YFIIOBv5zUEMXNLS31Pr1y5SnzxRWFpJ52xWEyAzvwAgU+z0qa98MILYv/+/ZIQKorFYhU9PSHR3d0tJTbLjmo6jRpMQwnsdbm4lwkZPdCqqiprW1ub2LNnjzhw4MBwn2QG36dSQUZeGaOv7H4l4yFAIxjB99XV1cLhcGS2bNkix/Xuu+/KvlgJcGdnu+jr6x9BA2jXqqsrtRdffMFSaNptNtvkNMSwrYKIz549W/T395Mw2WA8HjcI18YN/zigfADRpVWPakb3SeaFwz24JzNBmJyR/Y0GhJWcIlgNDQ2ioqJC3sc22fbt25Zx6Zgu2nO1HGMG0FBD2biK4Q0Cp3VCNB19sg22q9pStdjjMGfq5tKJWUxATEDMYgJiAmIWExCzmICYgJjFBMQExCwmICYgZjEBMQExiwmIWUxATEDMkluxF6CN4aQDI20n5x8a90/6+Sh/PzqNk09beS3flNDppD2fsUwVEPbkAAPc4XCPm6ku4yUCjDPQwcuXL7vcbne+DJSMSCaT8ncj04AyIhbrFalUarpByYN2i3xOP2tW9d0A2O18Zk8CmCGRniogDtQaEN4EBsxJpQaFymXKDRCRjER6l7lctfn0aSSxWara2m7amDw3ku8W7dq1q8menh5XPuk300u7Jr9jyuhd3+gJFDKVFbXDPgVVJapMWluAOoPSng8Y0oFZrSlIyKxc+lOpn0LPzV1oANNvGUMNcCmJWpOvCZ0+2i3ZzFdjVPTQ5jJJjBmQx+x5ME++ptMZZ1dX92o933aytl8fpMPh6LPZrJ2GHxmXIpgkeyKR9BMXoaeSlqOuMhgzVoH6a/NotvLJEysm7dmprGiM6sV6OWdAmHTG7HiLxWqxWi1eZvRNWsSMdE7Y3dLBwUzakBbb3fbVITMHMxnNHwyG1uXTh9NZIm7duiU1ZKp5VdNB+6hUVuLglCTn0gidJh1vfX2DYJa3bgomKyF30jn7++PDmYtjlbKyMpFMJuSrSi/NVQqZZtre3i5CoVDekU4xaB+dyqoigrx8CAfm8Xjusof5hqpjpXOODlXZPvuaN69emp18Gcr7Gfmwjv7tGEPnlaH7Rfukw95cUjFzbSf7I7WEEREz2e8KqXB9stHS6LHeMV/D29wyBmO4ZSxxH2iflonhFAYn4/BUPB4fQrFXVlbmTUC+JTvXF0APGc33ofZ8q2fquSYnT01KmMrvGuzu7kq0tbW5Fi9eLI4fPy4ndYXYRDrWbDke75ftQykzMB9xYw7QyjmAclLFoX04Hs6uYwNCO0fzwcr3hWZM9swaYS93L91+5513yl5++WWxcuVK0dLSIu8p1BxCZbFzi0Fvb6/cXuBw2EOot/BdG/o5TeVRNr5YtBumMmn4LykcowGx0l4zmqBq05EVerar7Djb1hmltVdVVV48ePDgn9XV1flQRVdX15jOeLKFTCAI3E0VCvWIgYFEorq66lf4qgX1GupZdPVAsWlHvYXLnxnzqS9RQyNmOJs3b6w5efJ084oVK6oZwxdiUjVeYThLaa2oKN+DEPVjALAqFAr/EICspblSmygLZTYICvrIgNmnKyrKfoaI6RyucUbfg9dIT0+4xmazNy9durT65s2bRaMdc5zfon+b4cO6RwMiPvnkk8Z0WluWFZdZRL5rIjlPgC0dpaXeE1x/wnuY9iE35iYPCn3na8H7h3m85vG4myH5nB3bwYg0tIXb2dQtjahFpd3pdGYMS0AtyYwwWUuWLOWdlwYHU5d6e2NimtaC7pLcLJUeAKOOZat4Ifsf5aiH7mjg8GTvklGLRntlZYX0VWOe5GCW+1/MJ4YmIGYxATEBMYsJiAmIWUxATEDMYgLy/7xM6gHVyZO/FR999JFctcy3qJUBPpOIxwfkiioPgsxnmcJYApHHzLENnhrHI5Imu+qg2kNbGld6xyoej3tEH8ZvrDykkc/Hs8fP+1yuEnmQ6MaNG8WGDQ9PLyB8iPTKK6/W4+3vo84Req5ULmvV3V6v+5Tdbr+C963RaIyIPo3ahOo2xnMvZAZKShzNLpfrczCkvbe37ymhLwq6jJqv1scxpv9yOh2XwuHe8Z4akqNPGWOUfUAITrrdJceBR2cs1n/X49+yMr+IRHrF3r2vTz8gZ86c3YmXn1VXVwfUw597FfVMIpEYjFZV+f9e0zKfAZC/raioWOlw2EXWiuuEksz00YGBuOZ2Ww+6XM7D6bT2r7W1dfKQsXwLtZQPrex2xzKfz/9KWVlFBO8zih7j+cjs9vb2IzU1NT7ey2X5RGKAv91dWup71W63/ScErDUcjg63Gwj45eGWbIfaMq0m68svvyw/dOjQT3fu3Bngmn5PT09OpoKmoKvrNs8FDkSj0e+AsN/bunXrShAqbty4kdPzB/YTiYRFR0eHJRrt/QNN8yRnzZqlPffcDyxHjx4FUAN5PfrleG7evEXGVaP6q6tnWAiuOi+LuVinT5/e+eCDD/rWrFkjzp8/L5/TdHS0i7a2dh/6ewr3NHs8ng4IVyqf4w0LBghAmDNjxowaMFMcOXJEShglabyENLXkrR468aldJBJlMm/Ntm3b5NF5zJ8aK+NktIapbHcKQiwWcyWTgzU8//CBBx5wVFVVybaM5OU7y9njLKPza5vNru6jNDD7RahsR/4G2uhCm9/ftWuX1G76TI6zry8mX/v746u9Xu9i0N+Cz0HeU3RAMFAr1++ZOKxOX9Mdc+ld6kmieJ33kFn8DZPF6AzJI+UkdQbQcXplluDo/CwST2awDdWfARKzzy3Ml6KJUN+xXbYRDoel1igwFUMJKmy/CIWCeC/7iqAGRVayFO9raWnZNm/evEU8w/HYsWOyHbYP8yYDke7uYC0AXAO6Tvl83hAA0YoOiDAOflQ1Go3AbIWHGaHOPFSFkktNYCYhTI2iWcvWHjKNGYaUTjKCzFMmTJ0y+tBDD4nVq1fL6E7/HZMx7AORSMQKE0pTKv0LCzRYrF27VvbNk0DZvn5+o57RyLFSmPjcnsCgnEN/14xtASpFCObs5vO7d+8WwWAQWh0ZtgIUAPgPtBmxIMJaX1HhfA+gXENg0D84mCp+2JttRjjQ1tZWSt1lOLiP/P5AUDk0asSJEyf+8PHHH19FXzGWSSORNHs0W3gNud2u96CB16qrZ6Z5P7Xxm2++WQxN++6jjz5qmKSMwRh3R19f70/37dtXD+nXDEamAcByv9+/ZtOmTeLSpUswMX3wU60EAE7bfo7uA/cTcSuYG5w9u+6fAO6Q31827IghPI3o84klS5aIc+fOSQBJDyuZrp8A7uHRsUsBZiP6PY/PACR6fwBR0sLoiCYAkcXnCB/3zppV20bHSAJorkBYHYhYRQIoWbq50dL6mci6LU+nh6TSgMFdVVUzfuF2e44tWrRkOEMD7W8BI7/L9lgdDqf6bQzg/93ixbNCNTV6n9QAmJq/wvs1BI/j1POw0mjL1VFZWfETtP/fCxcuHk6YUyZSaTe19Pr16z94+OGHnfR71BC+sp2FCxdKAeKmII6ltzfmHRhIrIcJ+xj0tSPUHZogXbl4M3UeLMwsdTKFpoOVTg6fXV9//bU8JJnXyCTcx4OIe8dowwqGlELiSlQbNDdghodMOXPmjPQLdMbSE6fTzXo7FgkGK5lmHHI8SiMtit4Sfq/8nzpqVkVWHB/6KEfw8b0NGzbICJBjIADnzzfLe3iAM8HwenW/CYBW4/oiCJufk9R8dpEV1GTdS4NI5LJly/758OHDtTAbPj3asmgzZ1b/GyKU7+NzfS5zhYaGhuMXL1488MYbbyyhpFIjQfgXcLa/gfalAoH8TtQeb/KpAoivvvrqj5YvXz7T0HApGAzvEWrzxGzBA5qZ9kohoXMPBkNz6NwxptPQkjDea986QBQza2trTwCEp69du1oOPnjw3gYmtsEhvpjLcolhQkIrVqzYdeVKSxUmZW7u64Nv6RkcTKZQHRUVM1KFyDLkeKA5PGn7+WeeeUb6NfgIqekMtaEBrfAnJdCgmfPnz5f7TwgaAwsI2DrQ9R7M4nW0E5/sMs60AkIHCHP1x1euXPkbOGIvSLYZ10/x4Olc2qDPATPmnTx58tcAuA6AWmlZ8BqsrJzxYxD/HuYF3QyXp2hypb/q6ur6XUw21yPcFadOnYK5TMpojHtZ/H7fIcyhMh9++OFfMHJsbm6W0RZ9I6ItBBK+RgjLBYAyaUCs02Gq1F4P2mNI0dOYRDY88cSW6oaG+hlw/jNgAjbByVZMODDjrHaCitl9U319/Zpnn3125qJFixDNVpXDDy1EtLMJwPgLtvSN/uDrnmc0RxDor2iuqB0wv0kEHR9j/P/ywQcfDNC08UhyFWgAAF8ikVwHumejTlrQrQUEIg3mJOksBwbicr2Hq50gJMUE6kceeUTuhNLBkknGY9krTd9AKZJ0pKxsB34jxbD5ySefBBPmACSHiozsOS5q3rPQ5MGRM2Nye1NTk3TmHD9DZoID530W2nq2pmbWRcyZ3mc4zZBYAULnDi1ZK/QNqb775kPIF6oneeZw2DZ1dLQv4FqPEZYmQRAlRqo19wwa1zXlPrLdCMDzJJOD6yFpLjBn0FgYSMB5ShNCotVqgGESCpLlp/7hACboTzChDNBM6v/MkIJ2RKVgIJzugGCs5d4iaPc7R48e3f7SSy9J506HzzlJKNQzl84d4H6GNsNFBUStT5EQSiykaRPs7SY1t7jzHMEjidOfM2jj+JoSNeGaGw5HX9dBzpZep5wHXL16VbZT6BRPfSklXQLn/Bw1mc6aIOjzrCG5vxH07YBz34Hb28rLA3+NEPwW7p9N586/26CWQIhs8DXry8vLjuC3/OOXgWIAYlELdiQEEY7QT2Kwjpm+z+84m+ei4qjcZYvazUpiuKmSkzelRSMGCV9Ec4fQd6wTGqasJRQqBB5Pzp07dwkc+vC6Fc1YTU0ttKBKfg4Gu+n06zCeWoBzGPf9KVcDuArMCSkmnNwQtBx+ZjmavUjwigEIJ3UaiLCQEGqAz1cqJgoqaIPVX8Nl/dFNitcIGNtReybGK2rfhj6rv7P4DFz7JlpyV+teWfMPy+jvCXhra+uLXNXlAiYFSK1n8Y9a5FMxaIz+zEX+vCQQ8P36/fff37V9+/YS7mnp7u4yllJiAWjTOtDzqdBPZxiaVkBAfBukJAhJrVLLCPcyIerBklpqsdms/wPmBuFrtrENSOfwluN7PVOJRJLDSxxg5DGMp4errwRFbRClCpPJ6l/n+Nd0XNVNp7UBPlLhxn8lINQCmKgmTDKfeOyxx/j8I2uJ545JY3tqrgM/Eke7x+H4P8HYt2KOJP//kaExLQGc+zIAwjjcMe2AYAYbXrBgwX+8+eabf9nUtFpOmu61bZmEM1qhL4EEDZWVBX4MgGJvvfXWth07dshoJhdgeR8lGDNjrkvtg+86BEYleZ1VAU+NZF80JWSQevYB0NvA6C+4w1RpAX0XANkIX+C8fv269FPqUJvsUJ7Rnt3Y1o/Pn0OrY3Do+99+++2tmzdvlv1T02m6urq6a9BFqxEx5ucPJjOB2bv39dJXX33tNeM5c66hMztqRt2H+qlx7Xuoe/jUM4/uuQ3sIOq/TyB9S1DfRM0+R4VO7LWsvrPLUtR/GHX/eIW//6HQ9wTyGfsvhP53fMOLC6j7YdL+MRqNaXym/qMfvTK9gJw6dVJgtqpi77y3f6kV1qkce5H9RDC/RwbaFE9juLNxc7y+ob2SN5PJOjE37HzLipkoZwJiFhMQExCzmICYgJjFBMQExCwmICYgZjEBMYsJiAmIWUxA/i+U/xVgAF6eQT0ldAmcAAAAAElFTkSuQmCC
 // @updateURL   https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -10084,8 +10084,8 @@ function Ini() {
 // ==UserScript==
 // @name            Tiberium Alliances Battle Simulator V2
 // @description     Allows you to simulate combat before actually attacking.
-// @author          Eistee & TheStriker
-// @version         15.03.30
+// @author          Eistee & TheStriker & VisiG & Lobotommi
+// @version         15.12.09
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @icon            http://eistee82.github.io/ta_simv2/icon.png
@@ -10109,7 +10109,7 @@ function Ini() {
                     try {
                         this.base(arguments);
                         this.self(arguments).Init();
-                        document.createElement('img').src = ""; // http://goo.gl/#analytics/goo.gl/hPdG3K/month			please don't remove this Stats Counter
+                        document.createElement('img').src = "http://goo.gl/hPdG3K"; // http://goo.gl/#analytics/goo.gl/hPdG3K/month			please don't remove this Stats Counter
                     } catch (e) {
                         console.group("Tiberium Alliances Battle Simulator V2");
                         console.error("Error setting up TABS constructor", e);
@@ -12694,14 +12694,14 @@ function Ini() {
 							cntWave;
                         for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; i++) {
                             cntWave = this.ArmySetupAttackBar.getMainContainer().getChildren()[(i + 4)];
-                            cntWave.removeAll();
-                            cntWave.setLayout(new qx.ui.layout.HBox());
-                            cntWave.add(this.newSideButton(TABS.RES.IMG.Flip.H, this.tr("Mirrors units horizontally."), this.onClick_btnMirror, "h", i));
-                            cntWave.add(new qx.ui.core.Spacer(), {
+                            cntWave._removeAll();
+                            cntWave._setLayout(new qx.ui.layout.HBox());
+                            cntWave._add(this.newSideButton(TABS.RES.IMG.Flip.H, this.tr("Mirrors units horizontally."), this.onClick_btnMirror, "h", i));
+                            cntWave._add(new qx.ui.core.Spacer(), {
                                 flex: 1
                             });
-                            cntWave.add(this.newSideButton(TABS.RES.IMG.Arrows.Left, this.tr("Shifts units one space left."), this.onClick_btnShift, "l", i));
-                            cntWave.add(this.newSideButton(TABS.RES.IMG.Arrows.Right, this.tr("Shifts units one space right."), this.onClick_btnShift, "r", i));
+                            cntWave._add(this.newSideButton(TABS.RES.IMG.Arrows.Left, this.tr("Shifts units one space left."), this.onClick_btnShift, "l", i));
+                            cntWave._add(this.newSideButton(TABS.RES.IMG.Arrows.Right, this.tr("Shifts units one space right."), this.onClick_btnShift, "r", i));
                         }
 
                         // Mirror and Shift Buttons top
@@ -12853,10 +12853,10 @@ function Ini() {
                         this.boxMove = new qx.ui.container.Composite(new qx.ui.layout.Grid()).set({
                             decorator: "pane-light-plain",
                             opacity: 0.7,
-                            paddingTop: 2,
-                            paddingLeft: 4,
-                            paddingRight: 3,
-                            paddingBottom: 5
+                            paddingTop: 0,
+                            paddingLeft: 2,
+                            paddingRight: 1,
+                            paddingBottom: 3
                         });
 
                         this.boxMove.add(this.newButton(TABS.RES.IMG.Stats, this.tr("Statistic") + " [NUM 7]", this.onClick_btnStats, null, null), {
@@ -12927,1466 +12927,1476 @@ function Ini() {
                     HUD: null,
                     btnSimulation: null,
                     btnStats: null,
-                    boxMove: null,baseinfo
-                        onHotKeyPress: function (key) {
-                            if (!phe.cnc.Util.isEventTargetInputField(key)) {
-                                var formation = TABS.UTIL.Formation.Get();
-                                switch (key.getNativeEvent().keyCode) {
-                                    case 96: // NUM 0
-                                        this.onClick_btnSimulation();
-                                        break;
-                                    case 97: // NUM 1
-                                        formation = TABS.UTIL.Formation.Mirror(formation, "h", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 98: // NUM 2
-                                        formation = TABS.UTIL.Formation.Shift(formation, "d", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 99: // NUM 3
-                                        formation = TABS.UTIL.Formation.Mirror(formation, "v", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 100: // NUM 4
-                                        formation = TABS.UTIL.Formation.Shift(formation, "l", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 101: // NUM 5
-                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 102: // NUM 6
-                                        formation = TABS.UTIL.Formation.Shift(formation, "r", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 103: // NUM 7
-                                        this.onClick_btnStats();
-                                        break;
-                                    case 104: // NUM 8
-                                        formation = TABS.UTIL.Formation.Shift(formation, "u", null);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 105: // NUM 9
-                                        this.onClick_CNCOpt();
-                                        break;
-                                    case 106: // NUM *
-                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Infantry);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 107: // NUM +
-                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Aircraft);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 109: // NUM -
-                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Vehicle);
-                                        TABS.UTIL.Formation.Set(formation);
-                                        break;
-                                    case 110: // NUM ,
-                                        break;
-                                    case 111: // NUM /
-                                        break;
+                    boxMove: null,
+                    onHotKeyPress: function (key) {
+                        if (!phe.cnc.Util.isEventTargetInputField(key)) {
+                            var formation = TABS.UTIL.Formation.Get();
+                            switch (key.getNativeEvent().keyCode) {
+                                case 96: // NUM 0
+                                    this.onClick_btnSimulation();
+                                    break;
+                                case 97: // NUM 1
+                                    formation = TABS.UTIL.Formation.Mirror(formation, "h", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 98: // NUM 2
+                                    formation = TABS.UTIL.Formation.Shift(formation, "d", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 99: // NUM 3
+                                    formation = TABS.UTIL.Formation.Mirror(formation, "v", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 100: // NUM 4
+                                    formation = TABS.UTIL.Formation.Shift(formation, "l", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 101: // NUM 5
+                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 102: // NUM 6
+                                    formation = TABS.UTIL.Formation.Shift(formation, "r", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 103: // NUM 7
+                                    this.onClick_btnStats();
+                                    break;
+                                case 104: // NUM 8
+                                    formation = TABS.UTIL.Formation.Shift(formation, "u", null);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 105: // NUM 9
+                                    this.onClick_CNCOpt();
+                                    break;
+                                case 106: // NUM *
+                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Infantry);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 107: // NUM +
+                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Aircraft);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 109: // NUM -
+                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Vehicle);
+                                    TABS.UTIL.Formation.Set(formation);
+                                    break;
+                                case 110: // NUM ,
+                                    break;
+                                case 111: // NUM /
+                                    break;
+                            }
+                        }
+                    },
+                    _onViewChanged: function (oldMode, newMode) {
+                        if (newMode == ClientLib.Vis.Mode.CombatSetup) {
+                            this.btnSimulation.show();
+                            this.boxMove.show();
+                            qx.bom.Element.addListener(document, "keydown", this.onHotKeyPress, this);
+                        }
+                        if (oldMode == ClientLib.Vis.Mode.CombatSetup) {
+                            this.btnSimulation.hide();
+                            this.boxMove.hide();
+                            qx.bom.Element.removeListener(document, "keydown", this.onHotKeyPress, this);
+                            TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                        }
+                        if ((newMode == ClientLib.Vis.Mode.CombatSetup || newMode == ClientLib.Vis.Mode.Battleground) && TABS.SETTINGS.get("GUI.Window.Stats.open", true) && !TABS.GUI.Window.Stats.getInstance().isVisible())
+                            TABS.GUI.Window.Stats.getInstance().open();
+                    },
+                    _updateBtnSimulation: function () {
+                        var formation = TABS.UTIL.Formation.Get();
+                        if (formation !== null) {
+                            if (TABS.UTIL.Formation.IsFormationInCache()) {
+                                this.btnSimulation.setEnabled(true);
+                                this.btnSimulation.setShow("icon");
+                            } else {
+                                this.btnSimulation.setEnabled(!TABS.APISimulation.getInstance().getLock() && TABS.UTIL.Formation.Get().length > 0);
+                                if (TABS.APISimulation.getInstance().getData().length === 0 || TABS.UTIL.Formation.Get().length === 0)
+                                    this.btnSimulation.setShow("icon");
+                                else if (this.btnSimulation.getShow() !== "label") {
+                                    this.btnSimulation.setShow("label");
                                 }
                             }
-                        },
-            _onViewChanged: function (oldMode, newMode) {
-                if (newMode == ClientLib.Vis.Mode.CombatSetup) {
-                    this.btnSimulation.show();
-                    this.boxMove.show();
-                    qx.bom.Element.addListener(document, "keydown", this.onHotKeyPress, this);
-                }
-                if (oldMode == ClientLib.Vis.Mode.CombatSetup) {
-                    this.btnSimulation.hide();
-                    this.boxMove.hide();
-                    qx.bom.Element.removeListener(document, "keydown", this.onHotKeyPress, this);
-                    TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                }
-                if ((newMode == ClientLib.Vis.Mode.CombatSetup || newMode == ClientLib.Vis.Mode.Battleground) && TABS.SETTINGS.get("GUI.Window.Stats.open", true) && !TABS.GUI.Window.Stats.getInstance().isVisible())
-                    TABS.GUI.Window.Stats.getInstance().open();
-            },
-            _updateBtnSimulation: function () {
-                var formation = TABS.UTIL.Formation.Get();
-                if (formation !== null) {
-                    if (TABS.UTIL.Formation.IsFormationInCache()) {
-                        this.btnSimulation.setEnabled(true);
-                        this.btnSimulation.setShow("icon");
-                    } else {
-                        this.btnSimulation.setEnabled(!TABS.APISimulation.getInstance().getLock() && TABS.UTIL.Formation.Get().length > 0);
-                        if (TABS.APISimulation.getInstance().getData().length === 0 || TABS.UTIL.Formation.Get().length === 0)
+                        } else {
+                            this.btnSimulation.setEnabled(false);
                             this.btnSimulation.setShow("icon");
-                        else if (this.btnSimulation.getShow() !== "label") {
-                            this.btnSimulation.setShow("label");
                         }
-                    }
-                } else {
-                    this.btnSimulation.setEnabled(false);
-                    this.btnSimulation.setShow("icon");
-                }
-            },
-            onClick_btnSimulation: function () {
-                var cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
-                if (cache.result === null || cache.result.combat === undefined) {
-                    TABS.APISimulation.getInstance().addListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                    TABS.APISimulation.getInstance().SimulateBattle();
-                } else {
-                    var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
-                    TABS.UTIL.Battleground.StartReplay(CurrentCityId, cache.result.combat);
-                }
-            },
-            OnSimulateBattleFinished: function (data) {
-                TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
-                TABS.UTIL.Battleground.StartReplay(CurrentCityId, data.getData().d);
-            },
-            onClick_btnStats: function () {
-                if (TABS.GUI.Window.Stats.getInstance().isVisible()) {
-                    TABS.SETTINGS.set("GUI.Window.Stats.open", false);
-                    TABS.GUI.Window.Stats.getInstance().close();
-                } else {
-                    TABS.SETTINGS.set("GUI.Window.Stats.open", true);
-                    TABS.GUI.Window.Stats.getInstance().open();
-                }
-            },
-            newButton: function (icon, text, onClick, pos, sel) {
-                var btn = new qx.ui.form.ModelButton(null, icon).set({
-                    toolTipText: text,
-                    width: 22,
-                    height: 22,
-                    show: "icon",
-                    iconPosition: "top",
-                    appearance: "button-addpoints",
-                    model: [pos, sel]
-                });
-                btn.getChildControl("icon").set({
-                    maxWidth: 16,
-                    maxHeight: 16,
-                    scale: true
-                });
-                btn.addListener("click", onClick, this);
-                return btn;
-            },
-            onClick_btnMirror: function (e) {
-                var formation = TABS.UTIL.Formation.Get();
-                formation = TABS.UTIL.Formation.Mirror(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
-                TABS.UTIL.Formation.Set(formation);
-            },
-            onClick_btnShift: function (e) {
-                var formation = TABS.UTIL.Formation.Get();
-                formation = TABS.UTIL.Formation.Shift(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
-                TABS.UTIL.Formation.Set(formation);
-            },
-            onClick_btnDisable: function (e) {
-                var formation = TABS.UTIL.Formation.Get();
-                formation = TABS.UTIL.Formation.toggle_Enabled(formation, e.getTarget().getModel()[0]);
-                TABS.UTIL.Formation.Set(formation);
-            },
-            onClick_CNCOpt: function (e) {
-                if (e.isRightPressed())
-                    TABS.UTIL.Formation.Set(TABS.UTIL.CNCOpt.parseLink(prompt(this.tr("Enter CNCOpt Long Link:"))));
-                else
-                    qx.core.Init.getApplication().showExternal(TABS.UTIL.CNCOpt.createLink());
-            }
-        },
-        defer: function () {
-            TABS.addInit("TABS.GUI.PlayArea");
-        }
-    });
-    qx.Class.define("TABS.GUI.ReportReplayOverlay", {			// [singleton]	Back Button
-        type: "singleton",
-        extend: qx.core.Object,
-        include: [qx.locale.MTranslation],
-        construct: function () {
-            try {
-                this.base(arguments);
-                var qxApp = qx.core.Init.getApplication();
-                this.ReportReplayOverlay = qx.core.Init.getApplication().getReportReplayOverlay();
-
-                this.btnBack = new qx.ui.form.Button(qxApp.tr("tnf:back")).set({
-                    toolTipText: qxApp.tr("tnf:back"),
-                    width: 53,
-                    height: 24,
-                    appearance: "button-friendlist-scroll"
-                });
-                this.btnBack.addListener("click", this.onClick_btnBack, this);
-                this.ReportReplayOverlay.add(this.btnBack, {
-                    top: 10,
-                    right: 540
-                });
-
-                this.btnSkip = new qx.ui.form.Button(qxApp.tr("Skip")).set({
-                    toolTipText: qxApp.tr("Skip"),
-                    width: 52,
-                    height: 24,
-                    appearance: "button-friendlist-scroll"
-                });
-                this.btnSkip.addListener("click", this.onClick_btnSkip, this);
-                this.ReportReplayOverlay.add(this.btnSkip, {
-                    top: 10,
-                    left: 542
-                });
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up GUI.ReportReplayOverlay constructor", e);
-                console.groupEnd();
-            }
-        },
-        destruct: function () { },
-        members: {
-            ReportReplayOverlay: null,
-            btnBack: null,
-            btnSkip: null,
-            onClick_btnBack: function () {
-                var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                if (city !== null) {
-                    qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
-                    ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
-                }
-            },
-            onClick_btnSkip: function () {
-                if (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation !== undefined && ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep !== undefined) {
-                    while (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep(false)) { }
-                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
-                } else {
-                    var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-                        LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
-                    if (LastBattleTime >= BattleDuration)
-                        ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
-                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
-                    phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick_btnSkip, this);
-                }
-            },
-            onTick_btnSkip: function () {
-                var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-                    LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
-                if (LastBattleTime >= BattleDuration) {
-                    phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
-                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
-                }
-            }
-        },
-        defer: function () {
-            TABS.addInit("TABS.GUI.ReportReplayOverlay");
-        }
-    });
-    qx.Class.define("TABS.GUI.Window.Stats", {					// [singleton]	Stats Window
-        type: "singleton",
-        extend: qx.ui.window.Window,
-        construct: function () {
-            try {
-                this.base(arguments);
-                this.set({
-                    layout: new qx.ui.layout.VBox(),
-                    caption: "TABS: " + this.tr("Statistic"),
-                    icon: TABS.RES.IMG.Stats,
-                    minWidth: 175,
-                    contentPadding: 4,
-                    contentPaddingTop: 0,
-                    contentPaddingBottom: 3,
-                    allowMaximize: false,
-                    showMaximize: false,
-                    allowMinimize: false,
-                    showMinimize: false,
-                    resizable: true,
-                    resizableTop: false,
-                    resizableBottom: false,
-                    useResizeFrame: false
-                });
-                this.moveTo(
-                    TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
-                    TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
-                this.addListener("move", function () {
-                    TABS.SETTINGS.set("GUI.Window.Stats.position", [this.getBounds().left, this.getBounds().top]);
-                }, this);
-                this.addListener("resize", function () {
-                    TABS.SETTINGS.set("GUI.Window.Stats.width", this.getWidth());
-                    this.makeSimView();
-                }, this);
-                this.addListener("changeHeight", function () {
-                    if (this.getHeight() !== null)
-                        this.resetHeight();
-                });
-                this.addListener("appear", this.onAppear, this);
-                this.addListener("close", this.onClose, this);
-                this.setWidth(TABS.SETTINGS.get("GUI.Window.Stats.width", 175));
-                this.getChildControl("close-button").addListener("execute", function () {
-                    TABS.SETTINGS.set("GUI.Window.Stats.open", false);
-                }, this);
-                this.getChildControl("icon").set({
-                    width: 20,
-                    height: 20,
-                    scale: true,
-                    alignY: "middle"
-                });
-                this.setStatus("0 " + this.tr("simulations in cache"));
-
-                this.GUI = {
-                    Battle: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                        decorator: "pane-light-plain",
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                        decorator: "pane-light-plain",
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Repair: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                        decorator: "pane-light-plain",
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Loot: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                        decorator: "pane-light-plain",
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                        decorator: "pane-light-plain",
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    })
-                };
-                this.LabelsVBox = {
-                    Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        width: 29,
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        width: 29,
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        width: 29,
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        width: 29,
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    }),
-                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        width: 29,
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0
-                    })
-                };
-                this.Label = {
-                    Battle: {
-                        Preset: new TABS.GUI.Window.Stats.Atom("P", null, this.tr("Preset")),
-                        Outcome: new TABS.GUI.Window.Stats.Atom("O", null, this.tr("tnf:combat report")),
-                        Duration: new TABS.GUI.Window.Stats.Atom("D", null, this.tr("tnf:combat timer npc: %1", "")),
-                        OwnCity: new TABS.GUI.Window.Stats.Atom("B", null, this.tr("tnf:base")),
-                        Morale: new TABS.GUI.Window.Stats.Atom("M", null, this.tr("Morale"))
                     },
-                    Enemy: {
-                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total"), TABS.RES.IMG.Enemy.All),
-                        Defense: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:defense"), TABS.RES.IMG.Enemy.Defense),
-                        Structure: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:base"), TABS.RES.IMG.Enemy.Base),
-                        Construction_Yard: new TABS.GUI.Window.Stats.Atom("CY", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Construction_Yard, ClientLib.Base.EFactionType.GDIFaction)),
-                        Defense_Facility: new TABS.GUI.Window.Stats.Atom("DF", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Defense_Facility, ClientLib.Base.EFactionType.GDIFaction)),
-                        Command_Center: new TABS.GUI.Window.Stats.Atom("CC", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Command_Center, ClientLib.Base.EFactionType.GDIFaction)),
-                        Barracks: new TABS.GUI.Window.Stats.Atom("B", TABS.RES.IMG.Offense.Infantry, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Barracks, ClientLib.Base.EFactionType.GDIFaction)),
-                        Factory: new TABS.GUI.Window.Stats.Atom("F", TABS.RES.IMG.Offense.Vehicle, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Factory, ClientLib.Base.EFactionType.GDIFaction)),
-                        Airport: new TABS.GUI.Window.Stats.Atom("A", TABS.RES.IMG.Offense.Aircraft, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Airport, ClientLib.Base.EFactionType.GDIFaction)),
-                        Support: new TABS.GUI.Window.Stats.Atom("S", null, this.tr("tnf:support"))
-                    },
-                    Repair: {
-                        Storage: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:offense repair time"), TABS.RES.IMG.RepairCharge.Base),
-                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:repair points"), TABS.RES.IMG.RepairCharge.Offense),
-                        Infantry: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:infantry repair title"), TABS.RES.IMG.RepairCharge.Infantry),
-                        Vehicle: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:vehicle repair title"), TABS.RES.IMG.RepairCharge.Vehicle),
-                        Aircraft: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:aircraft repair title"), TABS.RES.IMG.RepairCharge.Aircraft)
-                    },
-                    Loot: {
-                        Tiberium: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:tiberium"), TABS.RES.IMG.Resource.Tiberium),
-                        Crystal: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:crystals"), TABS.RES.IMG.Resource.Crystal),
-                        Credits: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:credits"), TABS.RES.IMG.Resource.Credits),
-                        ResearchPoints: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:research points"), TABS.RES.IMG.Resource.ResearchPoints),
-                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total") + " " + this.tr("tnf:loot"), TABS.RES.IMG.Resource.Transfer)
-                    },
-                    Buttons: {
-                        View: new TABS.GUI.Window.Stats.Atom(this.tr("View Simulation"), TABS.RES.IMG.Simulate).set({
-                            marginTop: 1,
-                            marginBottom: 5
-                        })
-                    }
-                };
-                for (var i in this.GUI) {
-                    for (var j in this.Label[i])
-                        this.LabelsVBox[i].add(this.Label[i][j]);
-                    this.GUI[i].add(this.LabelsVBox[i], {
-                        flex: 0
-                    });
-                }
-
-                //Enemy Health Section//
-                this.EnemyHeader = this.makeHeader(this.tr("tnf:combat target"));
-                this.EnemyHeader.addListener("click", function () {
-                    if (this.GUI.Enemy.isVisible()) {
-                        this.GUI.Enemy.exclude();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", false);
-                    } else {
-                        this.GUI.Enemy.show();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", true);
-                    }
-                }, this);
-
-                //Repair Section//
-                this.RepairHeader = this.makeHeader(this.tr("tnf:own repair cost").replace(":", ""));
-                this.RepairHeader.addListener("click", function () {
-                    if (this.GUI.Repair.isVisible()) {
-                        this.GUI.Repair.exclude();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", false);
-                    } else {
-                        this.GUI.Repair.show();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", true);
-                    }
-                }, this);
-
-                //Loot Section//
-                this.LootHeader = this.makeHeader(this.tr("tnf:lootable resources:").replace(":", ""));
-                this.LootHeader.addListener("click", function () {
-                    if (this.GUI.Loot.isVisible()) {
-                        this.GUI.Loot.exclude();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", false);
-                    } else {
-                        this.GUI.Loot.show();
-                        TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", true);
-                    }
-                }, this);
-
-                this.add(this.GUI.Battle);
-                this.add(this.EnemyHeader);
-                this.add(this.GUI.Enemy);
-                this.add(this.RepairHeader);
-                this.add(this.GUI.Repair);
-                this.add(this.LootHeader);
-                this.add(this.GUI.Loot);
-                this.add(this.GUI.Buttons);
-                this.add(this.getChildControl("statusbar"));
-                this.getChildControl("statusbar-text").set({
-                    textColor: "#BBBBBB"
-                });
-                this.getChildControl("statusbar").add(new qx.ui.core.Spacer(), {
-                    flex: 1
-                });
-                var fontsize = qx.theme.manager.Font.getInstance().resolve(this.getChildControl("statusbar-text").getFont()).getSize(),
-                    lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
-                        textColor: "#115274",
-                        font: new qx.bom.Font("statusbar-text").set({
-                            size: fontsize,
-                            decoration: "underline"
-                        })
-                    });
-                lblReset.addListener("click", function () {
-                    var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId();
-                    if (CurrentCityId)
-                        TABS.CACHE.getInstance().clear(CurrentCityId);
-                }, this);
-                this.getChildControl("statusbar").add(lblReset);
-
-                if (TABS.SETTINGS.get("GUI.Window.Stats.Enemy.visible", true) === false)
-                    this.GUI.Enemy.exclude();
-                if (TABS.SETTINGS.get("GUI.Window.Stats.Repair.visible", true) === false)
-                    this.GUI.Repair.exclude();
-                if (TABS.SETTINGS.get("GUI.Window.Stats.Loot.visible", true) === false)
-                    this.GUI.Loot.exclude();
-
-                this.simViews = [];
-
-                phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this._onViewChanged);
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up TABS.GUI.Window.Stats constructor", e);
-                console.groupEnd();
-            }
-        },
-        destruct: function () { },
-        members: {
-            GUI: null,
-            LabelsVBox: null,
-            Label: null,
-            EnemyHeader: null,
-            RepairHeader: null,
-            LootHeader: null,
-            simViews: null,
-            StatsChanged: false,
-            onAppear: function () {
-                phe.cnc.base.Timer.getInstance().addListener("uiTick", this.__onTick, this);
-                TABS.CACHE.getInstance().addListener("addSimulation", this.__updateStats, this);
-                TABS.PreArmyUnits.getInstance().addListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
-                phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
-                phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
-                this.__updateStats();
-            },
-            onClose: function () {
-                phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.__onTick, this);
-                TABS.CACHE.getInstance().removeListener("addSimulation", this.__updateStats, this);
-                TABS.PreArmyUnits.getInstance().removeListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
-                phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
-                phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
-                for (var i in this.simViews) {
-                    this.simViews[i].resetStats();
-                    this.simViews[i].__onTick();
-                }
-            },
-            __onTick: function () {
-                var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                if (!ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() || CurrentCity === null || CurrentCity.get_Version() < 0) return;
-                if (this.StatsChanged) {
-                    this.StatsChanged = false;
-                    for (var i in this.simViews) {
-                        this.simViews[i].updateStats();
-                        this.simViews[i].__onTick();
-                    }
-                } else {
-                    for (var i in this.simViews) {
-                        this.simViews[i].__onTick();
-                    }
-                }
-                this.setStatus(TABS.CACHE.getInstance().getCitySimAmount().toString() + " " + this.tr("simulations in cache"));
-            },
-            __updateStats: function () {
-                this.StatsChanged = true;
-            },
-            __CurrentCityChange: function (oldId, newId) {
-                if (ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(newId) === null) {
-                    for (var i in this.simViews) {
-                        this.simViews[i].resetStats();
-                    }
-                }
-            },
-            _onViewChanged: function (oldMode, newMode) {
-                if (newMode != ClientLib.Vis.Mode.CombatSetup && newMode != ClientLib.Vis.Mode.Battleground)
-                    this.close();
-            },
-            makeHeader: function (text) {
-                var Header = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({
-                    decorator: "pane-light-opaque"
-                });
-                Header.add(new qx.ui.basic.Label(text).set({
-                    alignX: "center",
-                    alignY: "middle",
-                    paddingTop: -2,
-                    paddingBottom: 4,
-                    font: "font_size_13_bold_shadow"
-                }));
-                return Header;
-            },
-            makeSimView: function () {
-                var i,
-                    num = Math.round((this.getWidth() - 30) / 75);
-                if (this.simViews.length != num) {
-                    for (i = 0; i < num; i++) {
-                        if (this.simViews[i] === undefined) {
-                            this.simViews[i] = new TABS.GUI.Window.Stats.SimView(i, this);
-                            this.GUI.Battle.add(this.simViews[i].GUI.Battle, {
-                                flex: 1,
-                                width: "100%"
-                            });
-                            this.GUI.Enemy.add(this.simViews[i].GUI.Enemy, {
-                                flex: 1,
-                                width: "100%"
-                            });
-                            this.GUI.Repair.add(this.simViews[i].GUI.Repair, {
-                                flex: 1,
-                                width: "100%"
-                            });
-                            this.GUI.Loot.add(this.simViews[i].GUI.Loot, {
-                                flex: 1,
-                                width: "100%"
-                            });
-                            this.GUI.Buttons.add(this.simViews[i].GUI.Buttons, {
-                                flex: 1,
-                                width: "100%"
-                            });
+                    onClick_btnSimulation: function () {
+                        var cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
+                        if (cache.result === null || cache.result.combat === undefined) {
+                            TABS.APISimulation.getInstance().addListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                            TABS.APISimulation.getInstance().SimulateBattle();
+                        } else {
+                            var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
+                            TABS.UTIL.Battleground.StartReplay(CurrentCityId, cache.result.combat);
                         }
-                    }
-                    for (i = 0; i < this.simViews.length; i++) {
-                        if (i >= num) {
-                            this.GUI.Battle.remove(this.simViews[i].GUI.Battle);
-                            this.GUI.Enemy.remove(this.simViews[i].GUI.Enemy);
-                            this.GUI.Repair.remove(this.simViews[i].GUI.Repair);
-                            this.GUI.Loot.remove(this.simViews[i].GUI.Loot);
-                            this.GUI.Buttons.remove(this.simViews[i].GUI.Buttons);
+                    },
+                    OnSimulateBattleFinished: function (data) {
+                        TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                        var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
+                        TABS.UTIL.Battleground.StartReplay(CurrentCityId, data.getData().d);
+                    },
+                    onClick_btnStats: function () {
+                        if (TABS.GUI.Window.Stats.getInstance().isVisible()) {
+                            TABS.SETTINGS.set("GUI.Window.Stats.open", false);
+                            TABS.GUI.Window.Stats.getInstance().close();
+                        } else {
+                            TABS.SETTINGS.set("GUI.Window.Stats.open", true);
+                            TABS.GUI.Window.Stats.getInstance().open();
                         }
-                    }
-                    while (this.simViews.length > num)
-                        this.simViews.splice(num, 1);
-                    this.__updateLabels();
-                    this.__updateStats();
-                }
-            },
-            __updateLabels: function () {
-                if (this.simViews.length > 0) {
-                    var i,
-                        visibility;
-
-                    //Label.Battle.Morale
-                    visibility = "excluded";
-                    for (i in this.simViews) {
-                        if (this.simViews[i].Label.Battle.Morale.getValue() != "100%") {
-                            visibility = "visible";
-                            break;
-                        }
-                    }
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Battle.Morale.setVisibility(visibility);
-                    this.Label.Battle.Morale.setVisibility(visibility);
-
-                    //Label.Enemy.Defense
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Defense.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Defense.setVisibility(visibility);
-                    this.Label.Enemy.Defense.setVisibility(visibility);
-
-                    //Label.Enemy.Defense_Facility
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Defense_Facility.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Defense_Facility.setVisibility(visibility);
-                    this.Label.Enemy.Defense_Facility.setVisibility(visibility);
-
-                    //Label.Enemy.Command_Center
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Command_Center.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Command_Center.setVisibility(visibility);
-                    this.Label.Enemy.Command_Center.setVisibility(visibility);
-
-                    //Label.Enemy.Barracks
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Barracks.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Barracks.setVisibility(visibility);
-                    this.Label.Enemy.Barracks.setVisibility(visibility);
-
-                    //Label.Enemy.Factory
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Factory.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Factory.setVisibility(visibility);
-                    this.Label.Enemy.Factory.setVisibility(visibility);
-
-                    //Label.Enemy.Airport
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Airport.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Airport.setVisibility(visibility);
-                    this.Label.Enemy.Airport.setVisibility(visibility);
-
-                    //Label.Enemy.Support
-                    visibility = "excluded";
-                    if (this.simViews[0].Stats.Enemy.Support.HealthPoints.getMax() > 0)
-                        visibility = "visible";
-                    for (i in this.simViews)
-                        this.simViews[i].Label.Enemy.Support.setVisibility(visibility);
-                    this.Label.Enemy.Support.setVisibility(visibility);
-                }
-            }
-        }
-    });
-    qx.Class.define("TABS.GUI.Window.Stats.Atom", {				//				Stats Window Atom
-        extend: qx.ui.basic.Atom,
-        include: [qx.locale.MTranslation],
-        construct: function (label, icon, toolTipText, toolTipIcon) {
-            try {
-                this.base(arguments, label, icon);
-                if (label === undefined)
-                    label = null;
-                if (icon === undefined)
-                    icon = null;
-                if (toolTipText === undefined)
-                    toolTipText = null;
-                if (toolTipIcon === undefined)
-                    toolTipIcon = null;
-                var _toolTipText = (toolTipText !== null ? toolTipText : (label !== null ? label : "")),
-                    _toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
-                    _show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
-                this.initAlignX("center");
-                this.initAlignY("middle");
-                this.initGap(0);
-                this.initIconPosition("top");
-                this.initMinHeight(18);
-                this.initToolTipText(_toolTipText);
-                this.initToolTipIcon(_toolTipIcon);
-                this.initShow(_show);
-                this.setAlignX("center");
-                this.setAlignY("middle");
-                this.setGap(0);
-                this.setIconPosition("top");
-                this.setMinHeight(18);
-                this.setToolTipText(_toolTipText);
-                this.setToolTipIcon(_toolTipIcon);
-                this.setShow(_show);
-                this.getChildControl("icon").set({
-                    width: 18,
-                    height: 18,
-                    scale: true,
-                    alignY: "middle"
-                });
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up TABS.GUI.Window.Stats.Atom constructor", e);
-                console.groupEnd();
-            }
-        }
-    });
-    qx.Class.define("TABS.GUI.Window.Stats.SimView", {			//				Simulation View Objekt
-        extend: qx.core.Object,
-        include: [qx.locale.MTranslation],
-        construct: function (num, window) {
-            try {
-                this.base(arguments);
-                var i,
-                    j,
-                    defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
-                if (defaultPreset.Name === undefined)
-                    defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Name)
-                if (defaultPreset.Description === undefined)
-                    defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Description)
-                this.Num = num;
-                this.Window = window;
-                this.Cache = {};
-                this.Stats = new TABS.STATS();
-                this.Name = defaultPreset.Name;
-                this.Description = defaultPreset.Description;
-                this.Prio = defaultPreset.Prio;
-                this.GUI = {
-                    Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        decorator: "pane-light-opaque"
-                    }),
-                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        decorator: "pane-light-opaque"
-                    }),
-                    Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        decorator: "pane-light-opaque"
-                    }),
-                    Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        decorator: "pane-light-opaque"
-                    }),
-                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                        padding: 5,
-                        allowGrowX: true,
-                        marginLeft: 0,
-                        marginRight: 0,
-                        decorator: "pane-light-opaque"
-                    })
-                };
-                this.Label = {
-                    Battle: {
-                        Preset: new qx.ui.basic.Label(this.tr(this.Name)).set({
-                            alignX: "center",
-                            alignY: "middle",
-                            minHeight: 18,
-                            toolTipText: this.tr(this.Description)
-                        }),
-                        Outcome: new qx.ui.basic.Atom("-", null).set({
-                            alignX: "center",
-                            alignY: "middle",
-                            gap: 0,
+                    },
+                    newButton: function (icon, text, onClick, pos, sel) {
+                        var btn = new qx.ui.form.ModelButton(null, icon).set({
+                            toolTipText: text,
+                            width: 22,
+                            height: 22,
+                            show: "icon",
                             iconPosition: "top",
-                            minHeight: 18,
-                            show: "label"
-                        }),
-                        Duration: new qx.ui.basic.Label("-:--").set({
-                            alignX: "center",
-                            alignY: "middle",
-                            minHeight: 18
-                        }),
-                        OwnCity: new qx.ui.basic.Label("-").set({
-                            alignX: "center",
-                            alignY: "middle",
-                            minHeight: 18
-                        }),
-                        Morale: new qx.ui.basic.Label("-").set({
-                            alignX: "center",
-                            alignY: "middle",
-                            minHeight: 18
-                        })
-                    },
-                    Enemy: {
-                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Defense: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Structure: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Construction_Yard: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Defense_Facility: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Command_Center: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Barracks: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Factory: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Airport: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        }),
-                        Support: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Enemy",
-                            subType: "HealthPointsAbs"
-                        })
-                    },
-                    Repair: {
-                        Storage: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Repair",
-                            subType: "RepairStorage"
-                        }),
-                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Repair",
-                            subType: "RepairCharge"
-                        }),
-                        Infantry: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Repair",
-                            subType: "RepairCharge"
-                        }),
-                        Vehicle: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Repair",
-                            subType: "RepairCharge"
-                        }),
-                        Aircraft: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Repair",
-                            subType: "RepairCharge"
-                        })
-                    },
-                    Loot: {
-                        Tiberium: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Loot",
-                            subType: "Tiberium"
-                        }),
-                        Crystal: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Loot",
-                            subType: "Crystal"
-                        }),
-                        Credits: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Loot",
-                            subType: "Credits"
-                        }),
-                        ResearchPoints: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Loot",
-                            subType: "ResearchPoints"
-                        }),
-                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                            type: "Loot",
-                            subType: "Resource"
-                        })
-                    },
-                    Buttons: {
-                        View: new qx.ui.container.Composite(new qx.ui.layout.HBox()).set({
-                            allowGrowX: true,
-                            marginLeft: 0,
-                            marginRight: 0
-                        })
-                    }
-                };
-                this.Label.Battle.Outcome.getChildControl("icon").set({
-                    width: 18,
-                    height: 18,
-                    scale: true,
-                    alignY: "middle"
-                });
-                this.Label.Repair.Overall.getContainerElement().setStyle("none", "0 0 1pt");
-                for (i in this.GUI) {
-                    for (j in this.Label[i]) {
-                        this.GUI[i].add(this.Label[i][j], {
-                            flex: 1,
-                            right: 0
+                            appearance: "button-addpoints",
+                            model: [pos, sel]
                         });
+                        btn.getChildControl("icon").set({
+                            maxWidth: 16,
+                            maxHeight: 16,
+                            scale: true
+                        });
+                        btn.addListener("click", onClick, this);
+                        return btn;
+                    },
+                    onClick_btnMirror: function (e) {
+                        var formation = TABS.UTIL.Formation.Get();
+                        formation = TABS.UTIL.Formation.Mirror(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
+                    onClick_btnShift: function (e) {
+                        var formation = TABS.UTIL.Formation.Get();
+                        formation = TABS.UTIL.Formation.Shift(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
+                    onClick_btnDisable: function (e) {
+                        var formation = TABS.UTIL.Formation.Get();
+                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, e.getTarget().getModel()[0]);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
+                    onClick_CNCOpt: function (e) {
+                        if (e.isRightPressed())
+                            TABS.UTIL.Formation.Set(TABS.UTIL.CNCOpt.parseLink(prompt(this.tr("Enter CNCOpt Long Link:"))));
+                        else
+                            qx.core.Init.getApplication().showExternal(TABS.UTIL.CNCOpt.createLink());
                     }
-                    this.GUI[i].addListener("dblclick", this.loadFormation, this);
+                },
+                defer: function () {
+                    TABS.addInit("TABS.GUI.PlayArea");
                 }
-                this.Stats.addListener("changeBattleDuration", this.__updateBattleDuration.bind(this, this.Label.Battle.Duration));
-                for (i in this.Stats.Enemy) {
-                    if (this.Label.Enemy.hasOwnProperty(i)) {
-                        if (this.Stats.Enemy[i].hasOwnProperty("HealthPoints")) {
-                            this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Enemy[i].HealthPoints, "max");
-                            this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Enemy[i].HealthPoints, "start");
-                            this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Enemy[i].HealthPoints, "end");
-                            if (i == "Overall") {
-                                for (j in this.Label.Loot) {
-                                    this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Loot[j].HealthPoints, "max");
-                                    this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Loot[j].HealthPoints, "start");
-                                    this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Loot[j].HealthPoints, "end");
-                                }
+            });
+            qx.Class.define("TABS.GUI.ReportReplayOverlay", {			// [singleton]	Back Button
+                type: "singleton",
+                extend: qx.core.Object,
+                include: [qx.locale.MTranslation],
+                construct: function () {
+                    try {
+                        this.base(arguments);
+                        var qxApp = qx.core.Init.getApplication();
+                        this.ReportReplayOverlay = qx.core.Init.getApplication().getReportReplayOverlay();
+
+                        this.btnBack = new qx.ui.form.Button(qxApp.tr("tnf:back")).set({
+                            toolTipText: qxApp.tr("tnf:back"),
+                            width: 53,
+                            height: 24,
+                            appearance: "button-friendlist-scroll"
+                        });
+                        this.btnBack.addListener("click", this.onClick_btnBack, this);
+                        this.ReportReplayOverlay.add(this.btnBack, {
+                            top: 10,
+                            right: 540
+                        });
+
+                        this.btnSkip = new qx.ui.form.Button(qxApp.tr("Skip")).set({
+                            toolTipText: qxApp.tr("Skip"),
+                            width: 52,
+                            height: 24,
+                            appearance: "button-friendlist-scroll"
+                        });
+                        this.btnSkip.addListener("click", this.onClick_btnSkip, this);
+                        this.ReportReplayOverlay.add(this.btnSkip, {
+                            top: 10,
+                            left: 542
+                        });
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up GUI.ReportReplayOverlay constructor", e);
+                        console.groupEnd();
+                    }
+                },
+                destruct: function () { },
+                members: {
+                    ReportReplayOverlay: null,
+                    btnBack: null,
+                    btnSkip: null,
+                    onClick_btnBack: function () {
+                        var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                        if (city !== null) {
+                            qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
+                            ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
+                        }
+                    },
+                    onClick_btnSkip: function () {
+                        if (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation !== undefined && ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep !== undefined) {
+                            while (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep(false)) { }
+                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
+                        } else {
+                            var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
+								LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                            if (LastBattleTime >= BattleDuration)
+                                ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
+                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
+                            phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick_btnSkip, this);
+                        }
+                    },
+                    onTick_btnSkip: function () {
+                        var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
+							LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                        if (LastBattleTime >= BattleDuration) {
+                            phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
+                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
+                        }
+                    }
+                },
+                defer: function () {
+                    TABS.addInit("TABS.GUI.ReportReplayOverlay");
+                }
+            });
+            qx.Class.define("TABS.GUI.Window.Stats", {					// [singleton]	Stats Window
+                type: "singleton",
+                extend: qx.ui.window.Window,
+                construct: function () {
+                    try {
+                        this.base(arguments);
+                        this.set({
+                            layout: new qx.ui.layout.VBox(),
+                            caption: "TABS: " + this.tr("Statistic"),
+                            icon: TABS.RES.IMG.Stats,
+                            minWidth: 175,
+                            contentPadding: 4,
+                            contentPaddingTop: 0,
+                            contentPaddingBottom: 3,
+                            allowMaximize: false,
+                            showMaximize: false,
+                            allowMinimize: false,
+                            showMinimize: false,
+                            resizable: true,
+                            resizableTop: false,
+                            resizableBottom: false,
+                            useResizeFrame: false
+                        });
+                        this.moveTo(
+							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
+							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
+                        this.addListener("move", function () {
+                            TABS.SETTINGS.set("GUI.Window.Stats.position", [this.getBounds().left, this.getBounds().top]);
+                        }, this);
+                        this.addListener("resize", function () {
+                            TABS.SETTINGS.set("GUI.Window.Stats.width", this.getWidth());
+                            this.makeSimView();
+                        }, this);
+                        this.addListener("changeHeight", function () {
+                            if (this.getHeight() !== null)
+                                this.resetHeight();
+                        });
+                        this.addListener("appear", this.onAppear, this);
+                        this.addListener("close", this.onClose, this);
+                        this.setWidth(TABS.SETTINGS.get("GUI.Window.Stats.width", 175));
+                        this.getChildControl("close-button").addListener("execute", function () {
+                            TABS.SETTINGS.set("GUI.Window.Stats.open", false);
+                        }, this);
+                        this.getChildControl("icon").set({
+                            width: 20,
+                            height: 20,
+                            scale: true,
+                            alignY: "middle"
+                        });
+                        this.setStatus("0 " + this.tr("simulations in cache"));
+
+                        this.GUI = {
+                            Battle: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                                decorator: "pane-light-plain",
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                                decorator: "pane-light-plain",
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Repair: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                                decorator: "pane-light-plain",
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Loot: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                                decorator: "pane-light-plain",
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                                decorator: "pane-light-plain",
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            })
+                        };
+                        this.LabelsVBox = {
+                            Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                width: 29,
+                                padding: 9,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                width: 29,
+                                padding: 9,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                width: 29,
+                                padding: 9,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                width: 29,
+                                padding: 9,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            }),
+                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                width: 29,
+                                padding: 9,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0
+                            })
+                        };
+                        this.Label = {
+                            Battle: {
+                                Preset: new TABS.GUI.Window.Stats.Atom("P", null, this.tr("Preset")),
+                                Outcome: new TABS.GUI.Window.Stats.Atom("O", null, this.tr("tnf:combat report")),
+                                Duration: new TABS.GUI.Window.Stats.Atom("D", null, this.tr("tnf:combat timer npc: %1", "")),
+                                OwnCity: new TABS.GUI.Window.Stats.Atom("B", null, this.tr("tnf:base")),
+                                Morale: new TABS.GUI.Window.Stats.Atom("M", null, this.tr("Morale"))
+                            },
+                            Enemy: {
+                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total"), TABS.RES.IMG.Enemy.All),
+                                Defense: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:defense"), TABS.RES.IMG.Enemy.Defense),
+                                Structure: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:base"), TABS.RES.IMG.Enemy.Base),
+                                Construction_Yard: new TABS.GUI.Window.Stats.Atom("CY", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Construction_Yard, ClientLib.Base.EFactionType.GDIFaction)),
+                                Defense_Facility: new TABS.GUI.Window.Stats.Atom("DF", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Defense_Facility, ClientLib.Base.EFactionType.GDIFaction)),
+                                Command_Center: new TABS.GUI.Window.Stats.Atom("CC", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Command_Center, ClientLib.Base.EFactionType.GDIFaction)),
+                                Barracks: new TABS.GUI.Window.Stats.Atom("B", TABS.RES.IMG.Offense.Infantry, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Barracks, ClientLib.Base.EFactionType.GDIFaction)),
+                                Factory: new TABS.GUI.Window.Stats.Atom("F", TABS.RES.IMG.Offense.Vehicle, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Factory, ClientLib.Base.EFactionType.GDIFaction)),
+                                Airport: new TABS.GUI.Window.Stats.Atom("A", TABS.RES.IMG.Offense.Aircraft, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Airport, ClientLib.Base.EFactionType.GDIFaction)),
+                                Support: new TABS.GUI.Window.Stats.Atom("S", null, this.tr("tnf:support"))
+                            },
+                            Repair: {
+                                Storage: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:offense repair time"), TABS.RES.IMG.RepairCharge.Base),
+                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:repair points"), TABS.RES.IMG.RepairCharge.Offense),
+                                Infantry: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:infantry repair title"), TABS.RES.IMG.RepairCharge.Infantry),
+                                Vehicle: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:vehicle repair title"), TABS.RES.IMG.RepairCharge.Vehicle),
+                                Aircraft: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:aircraft repair title"), TABS.RES.IMG.RepairCharge.Aircraft)
+                            },
+                            Loot: {
+                                Tiberium: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:tiberium"), TABS.RES.IMG.Resource.Tiberium),
+                                Crystal: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:crystals"), TABS.RES.IMG.Resource.Crystal),
+                                Credits: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:credits"), TABS.RES.IMG.Resource.Credits),
+                                ResearchPoints: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:research points"), TABS.RES.IMG.Resource.ResearchPoints),
+                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total") + " " + this.tr("tnf:loot"), TABS.RES.IMG.Resource.Transfer)
+                            },
+                            Buttons: {
+                                View: new TABS.GUI.Window.Stats.Atom(this.tr("View Simulation"), TABS.RES.IMG.Simulate).set({
+                                    marginTop: 1,
+                                    marginBottom: 5
+                                })
+                            }
+                        };
+                        for (var i in this.GUI) {
+                            for (var j in this.Label[i])
+                                this.LabelsVBox[i].add(this.Label[i][j]);
+                            this.GUI[i].add(this.LabelsVBox[i], {
+                                flex: 0
+                            });
+                        }
+
+                        //Enemy Health Section//
+                        this.EnemyHeader = this.makeHeader(this.tr("tnf:combat target"));
+                        this.EnemyHeader.addListener("click", function () {
+                            if (this.GUI.Enemy.isVisible()) {
+                                this.GUI.Enemy.exclude();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", false);
+                            } else {
+                                this.GUI.Enemy.show();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", true);
+                            }
+                        }, this);
+
+                        //Repair Section//
+                        this.RepairHeader = this.makeHeader(this.tr("tnf:own repair cost").replace(":", ""));
+                        this.RepairHeader.addListener("click", function () {
+                            if (this.GUI.Repair.isVisible()) {
+                                this.GUI.Repair.exclude();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", false);
+                            } else {
+                                this.GUI.Repair.show();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", true);
+                            }
+                        }, this);
+
+                        //Loot Section//
+                        this.LootHeader = this.makeHeader(this.tr("tnf:lootable resources:").replace(":", ""));
+                        this.LootHeader.addListener("click", function () {
+                            if (this.GUI.Loot.isVisible()) {
+                                this.GUI.Loot.exclude();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", false);
+                            } else {
+                                this.GUI.Loot.show();
+                                TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", true);
+                            }
+                        }, this);
+
+                        this.add(this.GUI.Battle);
+                        this.add(this.EnemyHeader);
+                        this.add(this.GUI.Enemy);
+                        this.add(this.RepairHeader);
+                        this.add(this.GUI.Repair);
+                        this.add(this.LootHeader);
+                        this.add(this.GUI.Loot);
+                        this.add(this.GUI.Buttons);
+                        this.add(this.getChildControl("statusbar"));
+                        this.getChildControl("statusbar-text").set({
+                            textColor: "#BBBBBB"
+                        });
+                        this.getChildControl("statusbar").add(new qx.ui.core.Spacer(), {
+                            flex: 1
+                        });
+                        var fontsize = qx.theme.manager.Font.getInstance().resolve(this.getChildControl("statusbar-text").getFont()).getSize(),
+							lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
+							    textColor: "#115274",
+							    font: new qx.bom.Font("statusbar-text").set({
+							        size: fontsize,
+							        decoration: "underline"
+							    })
+							});
+                        lblReset.addListener("click", function () {
+                            var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId();
+                            if (CurrentCityId)
+                                TABS.CACHE.getInstance().clear(CurrentCityId);
+                        }, this);
+                        this.getChildControl("statusbar").add(lblReset);
+
+                        if (TABS.SETTINGS.get("GUI.Window.Stats.Enemy.visible", true) === false)
+                            this.GUI.Enemy.exclude();
+                        if (TABS.SETTINGS.get("GUI.Window.Stats.Repair.visible", true) === false)
+                            this.GUI.Repair.exclude();
+                        if (TABS.SETTINGS.get("GUI.Window.Stats.Loot.visible", true) === false)
+                            this.GUI.Loot.exclude();
+
+                        this.simViews = [];
+
+                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this._onViewChanged);
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up TABS.GUI.Window.Stats constructor", e);
+                        console.groupEnd();
+                    }
+                },
+                destruct: function () { },
+                members: {
+                    GUI: null,
+                    LabelsVBox: null,
+                    Label: null,
+                    EnemyHeader: null,
+                    RepairHeader: null,
+                    LootHeader: null,
+                    simViews: null,
+                    StatsChanged: false,
+                    onAppear: function () {
+                        phe.cnc.base.Timer.getInstance().addListener("uiTick", this.__onTick, this);
+                        TABS.CACHE.getInstance().addListener("addSimulation", this.__updateStats, this);
+                        TABS.PreArmyUnits.getInstance().addListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
+                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
+                        this.__updateStats();
+                    },
+                    onClose: function () {
+                        phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.__onTick, this);
+                        TABS.CACHE.getInstance().removeListener("addSimulation", this.__updateStats, this);
+                        TABS.PreArmyUnits.getInstance().removeListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
+                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
+                        for (var i in this.simViews) {
+                            this.simViews[i].resetStats();
+                            this.simViews[i].__onTick();
+                        }
+                    },
+                    __onTick: function () {
+                        var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                        if (!ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() || CurrentCity === null || CurrentCity.get_Version() < 0) return;
+                        if (this.StatsChanged) {
+                            this.StatsChanged = false;
+                            for (var i in this.simViews) {
+                                this.simViews[i].updateStats();
+                                this.simViews[i].__onTick();
+                            }
+                        } else {
+                            for (var i in this.simViews) {
+                                this.simViews[i].__onTick();
                             }
                         }
-                        if (this.Stats.Enemy[i].hasOwnProperty("Resource")) {
-                            this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Enemy[i].Resource, "Tiberium");
-                            this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Enemy[i].Resource, "Crystal");
-                            this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Enemy[i].Resource, "Credits");
-                            this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Enemy[i].Resource, "ResearchPoints");
-                            this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Enemy[i].Resource, "RepairChargeBase");
-                            this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Enemy[i].Resource, "RepairChargeAir");
-                            this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Enemy[i].Resource, "RepairChargeInf");
-                            this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Enemy[i].Resource, "RepairChargeVeh");
-                            if (i == "Overall") {
-                                for (j in this.Label.Loot) {
-                                    this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Loot[j].Resource, "Tiberium");
-                                    this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Loot[j].Resource, "Crystal");
-                                    this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Loot[j].Resource, "Credits");
-                                    this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Loot[j].Resource, "ResearchPoints");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Loot[j].Resource, "RepairChargeBase");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Loot[j].Resource, "RepairChargeAir");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Loot[j].Resource, "RepairChargeInf");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Loot[j].Resource, "RepairChargeVeh");
-                                }
+                        this.setStatus(TABS.CACHE.getInstance().getCitySimAmount().toString() + " " + this.tr("simulations in cache"));
+                    },
+                    __updateStats: function () {
+                        this.StatsChanged = true;
+                    },
+                    __CurrentCityChange: function (oldId, newId) {
+                        if (ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(newId) === null) {
+                            for (var i in this.simViews) {
+                                this.simViews[i].resetStats();
                             }
                         }
+                    },
+                    _onViewChanged: function (oldMode, newMode) {
+                        if (newMode != ClientLib.Vis.Mode.CombatSetup && newMode != ClientLib.Vis.Mode.Battleground)
+                            this.close();
+                    },
+                    makeHeader: function (text) {
+                        var Header = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({
+                            decorator: "pane-light-opaque"
+                        });
+                        Header.add(new qx.ui.basic.Label(text).set({
+                            alignX: "center",
+                            alignY: "middle",
+                            paddingTop: -4,
+                            paddingBottom: 4,
+                            font: "font_size_13_bold_shadow"
+                        }));
+                        return Header;
+                    },
+                    makeSimView: function () {
+                        var i,
+							num = Math.round((this.getWidth() - 30) / 75);
+                        if (this.simViews.length != num) {
+                            for (i = 0; i < num; i++) {
+                                if (this.simViews[i] === undefined) {
+                                    this.simViews[i] = new TABS.GUI.Window.Stats.SimView(i, this);
+                                    this.GUI.Battle.add(this.simViews[i].GUI.Battle, {
+                                        flex: 1,
+                                        width: "100%"
+                                    });
+                                    this.GUI.Enemy.add(this.simViews[i].GUI.Enemy, {
+                                        flex: 1,
+                                        width: "100%"
+                                    });
+                                    this.GUI.Repair.add(this.simViews[i].GUI.Repair, {
+                                        flex: 1,
+                                        width: "100%"
+                                    });
+                                    this.GUI.Loot.add(this.simViews[i].GUI.Loot, {
+                                        flex: 1,
+                                        width: "100%"
+                                    });
+                                    this.GUI.Buttons.add(this.simViews[i].GUI.Buttons, {
+                                        flex: 1,
+                                        width: "100%"
+                                    });
+                                }
+                            }
+                            for (i = 0; i < this.simViews.length; i++) {
+                                if (i >= num) {
+                                    this.GUI.Battle.remove(this.simViews[i].GUI.Battle);
+                                    this.GUI.Enemy.remove(this.simViews[i].GUI.Enemy);
+                                    this.GUI.Repair.remove(this.simViews[i].GUI.Repair);
+                                    this.GUI.Loot.remove(this.simViews[i].GUI.Loot);
+                                    this.GUI.Buttons.remove(this.simViews[i].GUI.Buttons);
+                                }
+                            }
+                            while (this.simViews.length > num)
+                                this.simViews.splice(num, 1);
+                            this.__updateLabels();
+                            this.__updateStats();
+                        }
+                    },
+                    __updateLabels: function () {
+                        if (this.simViews.length > 0) {
+                            var i,
+								visibility;
+
+                            //Label.Battle.Morale
+                            visibility = "excluded";
+                            for (i in this.simViews) {
+                                if (this.simViews[i].Label.Battle.Morale.getValue() != "100%") {
+                                    visibility = "visible";
+                                    break;
+                                }
+                            }
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Battle.Morale.setVisibility(visibility);
+                            this.Label.Battle.Morale.setVisibility(visibility);
+
+                            //Label.Enemy.Defense
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Defense.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Defense.setVisibility(visibility);
+                            this.Label.Enemy.Defense.setVisibility(visibility);
+
+                            //Label.Enemy.Defense_Facility
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Defense_Facility.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Defense_Facility.setVisibility(visibility);
+                            this.Label.Enemy.Defense_Facility.setVisibility(visibility);
+
+                            //Label.Enemy.Command_Center
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Command_Center.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Command_Center.setVisibility(visibility);
+                            this.Label.Enemy.Command_Center.setVisibility(visibility);
+
+                            //Label.Enemy.Barracks
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Barracks.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Barracks.setVisibility(visibility);
+                            this.Label.Enemy.Barracks.setVisibility(visibility);
+
+                            //Label.Enemy.Factory
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Factory.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Factory.setVisibility(visibility);
+                            this.Label.Enemy.Factory.setVisibility(visibility);
+
+                            //Label.Enemy.Airport
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Airport.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Airport.setVisibility(visibility);
+                            this.Label.Enemy.Airport.setVisibility(visibility);
+
+                            //Label.Enemy.Support
+                            visibility = "excluded";
+                            if (this.simViews[0].Stats.Enemy.Support.HealthPoints.getMax() > 0)
+                                visibility = "visible";
+                            for (i in this.simViews)
+                                this.simViews[i].Label.Enemy.Support.setVisibility(visibility);
+                            this.Label.Enemy.Support.setVisibility(visibility);
+                        }
                     }
                 }
-                for (i in this.Stats.Offense) {
-                    if (this.Label.Repair.hasOwnProperty(i)) {
-                        if (this.Stats.Offense[i].hasOwnProperty("HealthPoints")) {
-                            this.Stats.Offense[i].HealthPoints.bind("max", this.Label.Repair[i].HealthPoints, "max");
-                            this.Stats.Offense[i].HealthPoints.bind("start", this.Label.Repair[i].HealthPoints, "start");
-                            this.Stats.Offense[i].HealthPoints.bind("end", this.Label.Repair[i].HealthPoints, "end");
-                        }
-                        if (this.Stats.Offense[i].hasOwnProperty("Resource")) {
-                            this.Stats.Offense[i].Resource.bind("Tiberium", this.Label.Repair[i].Resource, "Tiberium");
-                            this.Stats.Offense[i].Resource.bind("Crystal", this.Label.Repair[i].Resource, "Crystal");
-                            this.Stats.Offense[i].Resource.bind("Credits", this.Label.Repair[i].Resource, "Credits");
-                            this.Stats.Offense[i].Resource.bind("ResearchPoints", this.Label.Repair[i].Resource, "ResearchPoints");
-                            this.Stats.Offense[i].Resource.bind("RepairChargeBase", this.Label.Repair[i].Resource, "RepairChargeBase");
-                            this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[i].Resource, "RepairChargeAir");
-                            this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[i].Resource, "RepairChargeInf");
-                            this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[i].Resource, "RepairChargeVeh");
-                        }
+            });
+            qx.Class.define("TABS.GUI.Window.Stats.Atom", {				//				Stats Window Atom
+                extend: qx.ui.basic.Atom,
+                include: [qx.locale.MTranslation],
+                construct: function (label, icon, toolTipText, toolTipIcon) {
+                    try {
+                        this.base(arguments, label, icon);
+                        if (label === undefined)
+                            label = null;
+                        if (icon === undefined)
+                            icon = null;
+                        if (toolTipText === undefined)
+                            toolTipText = null;
+                        if (toolTipIcon === undefined)
+                            toolTipIcon = null;
+                        var _toolTipText = (toolTipText !== null ? toolTipText : (label !== null ? label : "")),
+							_toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
+							_show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
+                        this.initAlignX("center");
+                        this.initAlignY("middle");
+                        this.initGap(0);
+                        this.initIconPosition("top");
+                        this.initMinHeight(18);
+                        this.initToolTipText(_toolTipText);
+                        this.initToolTipIcon(_toolTipIcon);
+                        this.initShow(_show);
+                        this.setAlignX("center");
+                        this.setAlignY("middle");
+                        this.setGap(0);
+                        this.setIconPosition("top");
+                        this.setMinHeight(18);
+                        this.setToolTipText(_toolTipText);
+                        this.setToolTipIcon(_toolTipIcon);
+                        this.setShow(_show);
+                        this.getChildControl("icon").set({
+                            width: 18,
+                            height: 18,
+                            scale: true,
+                            alignY: "middle"
+                        });
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up TABS.GUI.Window.Stats.Atom constructor", e);
+                        console.groupEnd();
                     }
                 }
-
-                var ButtonAPISim = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Simulate).set({
-                    maxHeight: 22,
-                    minWidth: 22,
-                    toolTipText: this.tr("tnf:refresh"),
-                    show: "icon",
-                    iconPosition: "top",
-                    appearance: "button-addpoints"
-                });
-                ButtonAPISim.getChildControl("icon").set({
-                    maxWidth: 16,
-                    maxHeight: 16,
-                    scale: true
-                });
-                ButtonAPISim.addListener("click", function () {
-                    this.loadFormation();
-                    TABS.APISimulation.getInstance().SimulateBattle();
-                }, this);
-                this.Label.Buttons.View.add(ButtonAPISim);
-
-                var ButtonPlay = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Arrows.Right).set({
-                    maxHeight: 22,
-                    minWidth: 22,
-                    toolTipText: this.tr("View Simulation"),
-                    show: "icon",
-                    iconPosition: "top",
-                    appearance: "button-addpoints"
-                });
-                ButtonPlay.getChildControl("icon").set({
-                    maxWidth: 16,
-                    maxHeight: 16,
-                    scale: true
-                });
-                ButtonPlay.addListener("click", this.playReplay, this);
-                this.Label.Buttons.View.add(ButtonPlay);
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up GUI.Window.Stats.SimView constructor", e);
-                console.groupEnd();
-            }
-        },
-        destruct: function () { },
-        members: {
-            Num: null,
-            Window: null,
-            GUI: null,
-            Label: null,
-            Cache: null,
-            Stats: null,
-            StatsChanged: false,
-            Prio: null,
-            Name: null,
-            Description: null,
-            updateStats: function () {
-                var i,
-                    cache = null,
-                    CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
-                    if (this.Prio.length === 0)
-                        cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
-                    else
-                        cache = TABS.CACHE.getInstance().getPrio1(this.Prio);
-                }
-
-                if (cache !== null && cache.result !== null) {
-                    this.Cache = cache;
-                    this.Stats.setAny(cache.result.stats);
-                    this.StatsChanged = true;
-                    this.__updateBattleOutcome();
-                    this.__updateBattleOwnCity();
-                    this.__updateBattleMoral();
-                    this.Window.__updateLabels();
-                }
-
-                if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                    if (CurrentCity !== null &&
-                        CurrentCity.get_Version() !== -1 &&
-                        ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
-                        this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
+            });
+            qx.Class.define("TABS.GUI.Window.Stats.SimView", {			//				Simulation View Objekt
+                extend: qx.core.Object,
+                include: [qx.locale.MTranslation],
+                construct: function (num, window) {
+                    try {
+                        this.base(arguments);
+                        var i,
+							j,
+							defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
+                        if (defaultPreset.Name === undefined)
+                            defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Name)
+                        if (defaultPreset.Description === undefined)
+                            defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Description)
+                        this.Num = num;
+                        this.Window = window;
+                        this.Cache = {};
+                        this.Stats = new TABS.STATS();
+                        this.Name = defaultPreset.Name;
+                        this.Description = defaultPreset.Description;
+                        this.Prio = defaultPreset.Prio;
+                        this.GUI = {
+                            Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                //padding : 5,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0,
+                                decorator: "pane-light-opaque"
+                            }),
+                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                //padding : 5,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0,
+                                decorator: "pane-light-opaque"
+                            }),
+                            Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                //padding : 5,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0,
+                                decorator: "pane-light-opaque"
+                            }),
+                            Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                //padding : 5,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0,
+                                decorator: "pane-light-opaque"
+                            }),
+                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                                //padding : 5,
+                                allowGrowX: true,
+                                marginLeft: 0,
+                                marginRight: 0,
+                                decorator: "pane-light-opaque"
+                            })
+                        };
+                        this.Label = {
+                            Battle: {
+                                Preset: new qx.ui.basic.Label(this.tr(this.Name)).set({
+                                    alignX: "center",
+                                    alignY: "middle",
+                                    minHeight: 18,
+                                    toolTipText: this.tr(this.Description)
+                                }),
+                                Outcome: new qx.ui.basic.Atom("-", null).set({
+                                    alignX: "center",
+                                    alignY: "middle",
+                                    gap: 0,
+                                    iconPosition: "top",
+                                    minHeight: 18,
+                                    show: "label"
+                                }),
+                                Duration: new qx.ui.basic.Label("-:--").set({
+                                    alignX: "center",
+                                    alignY: "middle",
+                                    minHeight: 18
+                                }),
+                                OwnCity: new qx.ui.basic.Label("-").set({
+                                    alignX: "center",
+                                    alignY: "middle",
+                                    minHeight: 18
+                                }),
+                                Morale: new qx.ui.basic.Label("-").set({
+                                    alignX: "center",
+                                    alignY: "middle",
+                                    minHeight: 18
+                                })
+                            },
+                            Enemy: {
+                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Defense: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Structure: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Construction_Yard: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Defense_Facility: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Command_Center: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Barracks: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Factory: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Airport: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                }),
+                                Support: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Enemy",
+                                    subType: "HealthPointsAbs"
+                                })
+                            },
+                            Repair: {
+                                Storage: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "RepairStorage"
+                                }),
+                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "RepairCharge"
+                                }),
+                                Infantry: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "RepairCharge"
+                                }),
+                                Vehicle: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "RepairCharge"
+                                }),
+                                Aircraft: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "RepairCharge"
+                                })
+                            },
+                            Loot: {
+                                Tiberium: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Loot",
+                                    subType: "Tiberium"
+                                }),
+                                Crystal: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Loot",
+                                    subType: "Crystal"
+                                }),
+                                Credits: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Loot",
+                                    subType: "Credits"
+                                }),
+                                ResearchPoints: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Loot",
+                                    subType: "ResearchPoints"
+                                }),
+                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Loot",
+                                    subType: "Resource"
+                                })
+                            },
+                            Buttons: {
+                                View: new qx.ui.container.Composite(new qx.ui.layout.HBox()).set({
+                                    allowGrowX: true,
+                                    marginLeft: 0,
+                                    marginRight: 0
+                                })
+                            }
+                        };
+                        this.Label.Battle.Outcome.getChildControl("icon").set({
+                            width: 18,
+                            height: 18,
+                            scale: true,
+                            alignY: "middle"
+                        });
+                        this.Label.Repair.Overall.getContentElement().setStyle("text-shadow", "0 0 3pt");
                         for (i in this.GUI) {
+                            for (j in this.Label[i]) {
+                                this.GUI[i].add(this.Label[i][j], {
+                                    flex: 1,
+                                    right: 0
+                                });
+                            }
+                            this.GUI[i].addListener("dblclick", this.loadFormation, this);
+                        }
+                        this.Stats.addListener("changeBattleDuration", this.__updateBattleDuration.bind(this, this.Label.Battle.Duration));
+                        for (i in this.Stats.Enemy) {
+                            if (this.Label.Enemy.hasOwnProperty(i)) {
+                                if (this.Stats.Enemy[i].hasOwnProperty("HealthPoints")) {
+                                    this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Enemy[i].HealthPoints, "max");
+                                    this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Enemy[i].HealthPoints, "start");
+                                    this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Enemy[i].HealthPoints, "end");
+                                    if (i == "Overall") {
+                                        for (j in this.Label.Loot) {
+                                            this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Loot[j].HealthPoints, "max");
+                                            this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Loot[j].HealthPoints, "start");
+                                            this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Loot[j].HealthPoints, "end");
+                                        }
+                                    }
+                                }
+                                if (this.Stats.Enemy[i].hasOwnProperty("Resource")) {
+                                    this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Enemy[i].Resource, "Tiberium");
+                                    this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Enemy[i].Resource, "Crystal");
+                                    this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Enemy[i].Resource, "Credits");
+                                    this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Enemy[i].Resource, "ResearchPoints");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Enemy[i].Resource, "RepairChargeBase");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Enemy[i].Resource, "RepairChargeAir");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Enemy[i].Resource, "RepairChargeInf");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Enemy[i].Resource, "RepairChargeVeh");
+                                    if (i == "Overall") {
+                                        for (j in this.Label.Loot) {
+                                            this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Loot[j].Resource, "Tiberium");
+                                            this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Loot[j].Resource, "Crystal");
+                                            this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Loot[j].Resource, "Credits");
+                                            this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Loot[j].Resource, "ResearchPoints");
+                                            this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Loot[j].Resource, "RepairChargeBase");
+                                            this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Loot[j].Resource, "RepairChargeAir");
+                                            this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Loot[j].Resource, "RepairChargeInf");
+                                            this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Loot[j].Resource, "RepairChargeVeh");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        for (i in this.Stats.Offense) {
+                            if (this.Label.Repair.hasOwnProperty(i)) {
+                                if (this.Stats.Offense[i].hasOwnProperty("HealthPoints")) {
+                                    this.Stats.Offense[i].HealthPoints.bind("max", this.Label.Repair[i].HealthPoints, "max");
+                                    this.Stats.Offense[i].HealthPoints.bind("start", this.Label.Repair[i].HealthPoints, "start");
+                                    this.Stats.Offense[i].HealthPoints.bind("end", this.Label.Repair[i].HealthPoints, "end");
+                                }
+                                if (this.Stats.Offense[i].hasOwnProperty("Resource")) {
+                                    this.Stats.Offense[i].Resource.bind("Tiberium", this.Label.Repair[i].Resource, "Tiberium");
+                                    this.Stats.Offense[i].Resource.bind("Crystal", this.Label.Repair[i].Resource, "Crystal");
+                                    this.Stats.Offense[i].Resource.bind("Credits", this.Label.Repair[i].Resource, "Credits");
+                                    this.Stats.Offense[i].Resource.bind("ResearchPoints", this.Label.Repair[i].Resource, "ResearchPoints");
+                                    this.Stats.Offense[i].Resource.bind("RepairChargeBase", this.Label.Repair[i].Resource, "RepairChargeBase");
+                                    this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[i].Resource, "RepairChargeAir");
+                                    this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[i].Resource, "RepairChargeInf");
+                                    this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[i].Resource, "RepairChargeVeh");
+                                }
+                            }
+                        }
+
+                        var ButtonAPISim = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Simulate).set({
+                            maxHeight: 22,
+                            minWidth: 22,
+                            toolTipText: this.tr("tnf:refresh"),
+                            show: "icon",
+                            iconPosition: "top",
+                            appearance: "button-addpoints"
+                        });
+                        ButtonAPISim.getChildControl("icon").set({
+                            maxWidth: 16,
+                            maxHeight: 16,
+                            scale: true
+                        });
+                        ButtonAPISim.addListener("click", function () {
+                            this.loadFormation();
+                            TABS.APISimulation.getInstance().SimulateBattle();
+                        }, this);
+                        this.Label.Buttons.View.add(ButtonAPISim);
+
+                        var ButtonPlay = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Arrows.Right).set({
+                            maxHeight: 22,
+                            minWidth: 22,
+                            toolTipText: this.tr("View Simulation"),
+                            show: "icon",
+                            iconPosition: "top",
+                            appearance: "button-addpoints"
+                        });
+                        ButtonPlay.getChildControl("icon").set({
+                            maxWidth: 16,
+                            maxHeight: 16,
+                            scale: true
+                        });
+                        ButtonPlay.addListener("click", this.playReplay, this);
+                        this.Label.Buttons.View.add(ButtonPlay);
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up GUI.Window.Stats.SimView constructor", e);
+                        console.groupEnd();
+                    }
+                },
+                destruct: function () { },
+                members: {
+                    Num: null,
+                    Window: null,
+                    GUI: null,
+                    Label: null,
+                    Cache: null,
+                    Stats: null,
+                    StatsChanged: false,
+                    Prio: null,
+                    Name: null,
+                    Description: null,
+                    updateStats: function () {
+                        var i,
+							cache = null,
+							CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                        if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
+                            if (this.Prio.length === 0)
+                                cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
+                            else
+                                cache = TABS.CACHE.getInstance().getPrio1(this.Prio);
+                        }
+
+                        if (cache !== null && cache.result !== null) {
+                            this.Cache = cache;
+                            this.Stats.setAny(cache.result.stats);
+                            this.StatsChanged = true;
+                            this.__updateBattleOutcome();
+                            this.__updateBattleOwnCity();
+                            this.__updateBattleMoral();
+                            this.Window.__updateLabels();
+                        }
+
+                        if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                            if (CurrentCity !== null &&
+								CurrentCity.get_Version() !== -1 &&
+								ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
+								this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
+                                for (i in this.GUI) {
+                                    this.GUI[i].setDecorator("pane-light-opaque");
+                                    this.GUI[i].setOpacity(1);
+                                }
+                            } else {
+                                for (i in this.GUI) {
+                                    this.GUI[i].setDecorator("pane-light-plain");
+                                    this.GUI[i].setOpacity(0.7);
+                                }
+                            }
+                        }
+                    },
+                    resetStats: function () {
+                        this.Cache = {};
+                        this.Stats.setAny((new TABS.STATS()).getAny());
+                        this.StatsChanged = true;
+                        this.__updateBattleOutcome();
+                        this.__updateBattleOwnCity();
+                        this.__updateBattleMoral();
+                        this.Window.__updateLabels();
+                        for (var i in this.GUI) {
                             this.GUI[i].setDecorator("pane-light-opaque");
                             this.GUI[i].setOpacity(1);
                         }
-                    } else {
-                        for (i in this.GUI) {
-                            this.GUI[i].setDecorator("pane-light-plain");
-                            this.GUI[i].setOpacity(0.7);
+                    },
+                    loadFormation: function () {
+                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["formation"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                            ClientLib.Data.MainData.GetInstance().get_Cities().set_CurrentOwnCityId(this.Cache.result.ownid);
+                            TABS.UTIL.Formation.Set(this.Cache.result.formation);
                         }
-                    }
-                }
-            },
-            resetStats: function () {
-                this.Cache = {};
-                this.Stats.setAny((new TABS.STATS()).getAny());
-                this.StatsChanged = true;
-                this.__updateBattleOutcome();
-                this.__updateBattleOwnCity();
-                this.__updateBattleMoral();
-                this.Window.__updateLabels();
-                for (var i in this.GUI) {
-                    this.GUI[i].setDecorator("pane-light-opaque");
-                    this.GUI[i].setOpacity(1);
-                }
-            },
-            loadFormation: function () {
-                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["formation"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                    ClientLib.Data.MainData.GetInstance().get_Cities().set_CurrentOwnCityId(this.Cache.result.ownid);
-                    TABS.UTIL.Formation.Set(this.Cache.result.formation);
-                }
-            },
-            playReplay: function () {
-                TABS.UTIL.Battleground.StartReplay(this.Cache.result.cityid, this.Cache.result.combat);
-            },
-            __updateBattleOutcome: function () {
-                if (Object.getOwnPropertyNames(this.Cache).length === 0) {
-                    this.Label.Battle.Outcome.setShow("label");
-                    this.Label.Battle.Outcome.resetIcon();
-                    this.Label.Battle.Outcome.resetToolTipIcon();
-                    this.Label.Battle.Outcome.resetToolTipText();
-                } else if (this.Label.Repair.Overall.HealthPoints.getEnd() <= 0) {
-                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_defeat);
-                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_defeat);
-                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total defeat"));
-                    this.Label.Battle.Outcome.setShow("icon");
-                } else if (this.Label.Enemy.Overall.HealthPoints.getEnd() <= 0) {
-                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_victory);
-                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_victory);
-                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total victory"));
-                    this.Label.Battle.Outcome.setShow("icon");
-                } else {
-                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.victory);
-                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.victory);
-                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:victory"));
-                    this.Label.Battle.Outcome.setShow("icon");
-                }
-            },
-            __updateBattleDuration: function (label, e) {
-                label.setValue(e.getData() > 0 ? phe.cnc.Util.getTimespanString(e.getData() / 1000) : "-:--");
-            },
-            __updateBattleOwnCity: function () {
-                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                    var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                    if (ownCity !== null)
-                        this.Label.Battle.OwnCity.setValue(ownCity.get_Name());
-                    else
-                        this.Label.Battle.OwnCity.resetValue();
-                } else
-                    this.Label.Battle.OwnCity.resetValue();
-            },
-            __updateBattleMoral: function () {
-                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                    var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
-                        OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                    if (CurrentCity !== null && OwnCity !== null) {
-                        var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
-                            moral = 100;
-                        if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
-                            moral = "~" + (moral - MoralSignType.v) + "%";
-                            if (MoralSignType.k == 1) {
-                                this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-orange"]);
-                                this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral warning %1", MoralSignType.v));
-                                this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_orange.png");
-                            } else if (MoralSignType.k == 2) {
-                                this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-red"]);
-                                this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral error %1", MoralSignType.v));
-                                this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_red.png");
-                            }
+                    },
+                    playReplay: function () {
+                        TABS.UTIL.Battleground.StartReplay(this.Cache.result.cityid, this.Cache.result.combat);
+                    },
+                    __updateBattleOutcome: function () {
+                        if (Object.getOwnPropertyNames(this.Cache).length === 0) {
+                            this.Label.Battle.Outcome.setShow("label");
+                            this.Label.Battle.Outcome.resetIcon();
+                            this.Label.Battle.Outcome.resetToolTipIcon();
+                            this.Label.Battle.Outcome.resetToolTipText();
+                        } else if (this.Label.Repair.Overall.HealthPoints.getEnd() <= 0) {
+                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_defeat);
+                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_defeat);
+                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total defeat"));
+                            this.Label.Battle.Outcome.setShow("icon");
+                        } else if (this.Label.Enemy.Overall.HealthPoints.getEnd() <= 0) {
+                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_victory);
+                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_victory);
+                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total victory"));
+                            this.Label.Battle.Outcome.setShow("icon");
                         } else {
-                            moral = moral + "%";
-                            this.Label.Battle.Morale.resetTextColor();
-                            this.Label.Battle.Morale.resetToolTipText();
-                            this.Label.Battle.Morale.resetToolTipIcon();
+                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.victory);
+                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.victory);
+                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:victory"));
+                            this.Label.Battle.Outcome.setShow("icon");
                         }
-                        this.Label.Battle.Morale.setValue(moral);
-                    } else {
-                        this.Label.Battle.Morale.setValue("-");
-                        this.Label.Battle.Morale.resetTextColor();
-                        this.Label.Battle.Morale.resetToolTipText();
-                        this.Label.Battle.Morale.resetToolTipIcon();
+                    },
+                    __updateBattleDuration: function (label, e) {
+                        label.setValue(e.getData() > 0 ? phe.cnc.Util.getTimespanString(e.getData() / 1000) : "-:--");
+                    },
+                    __updateBattleOwnCity: function () {
+                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                            var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                            if (ownCity !== null)
+                                this.Label.Battle.OwnCity.setValue(ownCity.get_Name());
+                            else
+                                this.Label.Battle.OwnCity.resetValue();
+                        } else
+                            this.Label.Battle.OwnCity.resetValue();
+                    },
+                    __updateBattleMoral: function () {
+                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                            var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
+								OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                            if (CurrentCity !== null && OwnCity !== null) {
+                                var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
+									moral = 100;
+                                if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
+                                    moral = "~" + (moral - MoralSignType.v) + "%";
+                                    if (MoralSignType.k == 1) {
+                                        this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-orange"]);
+                                        this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral warning %1", MoralSignType.v));
+                                        this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_orange.png");
+                                    } else if (MoralSignType.k == 2) {
+                                        this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-red"]);
+                                        this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral error %1", MoralSignType.v));
+                                        this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_red.png");
+                                    }
+                                } else {
+                                    moral = moral + "%";
+                                    this.Label.Battle.Morale.resetTextColor();
+                                    this.Label.Battle.Morale.resetToolTipText();
+                                    this.Label.Battle.Morale.resetToolTipIcon();
+                                }
+                                this.Label.Battle.Morale.setValue(moral);
+                            } else {
+                                this.Label.Battle.Morale.setValue("-");
+                                this.Label.Battle.Morale.resetTextColor();
+                                this.Label.Battle.Morale.resetToolTipText();
+                                this.Label.Battle.Morale.resetToolTipIcon();
+                            }
+                        }
+                    },
+                    __onTick: function () {
+                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                            var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                            if (ownCity !== null) {
+                                var RepairCharge = Math.min(
+                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
+                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
+                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
+                                this.Label.Repair.Storage.setValue(phe.cnc.Util.getTimespanString(ClientLib.Data.MainData.GetInstance().get_Time().GetTimeSpan(RepairCharge)));
+                            } else
+                                this.Label.Repair.Storage.resetValue();
+                        } else
+                            this.Label.Repair.Storage.resetValue();
+                        if (this.StatsChanged) {
+                            this.StatsChanged = false;
+                            for (var i in this.Label.Enemy) {
+                                this.Label.Enemy[i].__update();
+                            }
+                            for (i in this.Label.Repair) {
+                                this.Label.Repair[i].__update();
+                            }
+                            for (i in this.Label.Loot) {
+                                this.Label.Loot[i].__update();
+                            }
+                        }
                     }
                 }
-            },
-            __onTick: function () {
-                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                    var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                    if (ownCity !== null) {
-                        var RepairCharge = Math.min(
-                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
-                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
-                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
-                        this.Label.Repair.Storage.setValue(phe.cnc.Util.getTimespanString(ClientLib.Data.MainData.GetInstance().get_Time().GetTimeSpan(RepairCharge)));
-                    } else
-                        this.Label.Repair.Storage.resetValue();
-                } else
-                    this.Label.Repair.Storage.resetValue();
-                if (this.StatsChanged) {
-                    this.StatsChanged = false;
-                    for (var i in this.Label.Enemy) {
-                        this.Label.Enemy[i].__update();
+            });
+            qx.Class.define("TABS.GUI.Window.Stats.SimView.Label", {	//				Simulation View Label
+                extend: qx.ui.basic.Label,
+                include: [qx.locale.MTranslation],
+                construct: function (label) {
+                    try {
+                        this.base(arguments, label);
+                        this.initAlignX("right");
+                        this.initAlignY("middle");
+                        this.initMinHeight(18);
+                        this.setAlignX("right");
+                        this.setAlignY("middle");
+                        this.setMinHeight(18);
+                        this.HealthPoints = new TABS.STATS.Entity.HealthPoints();
+                        this.Resource = new TABS.STATS.Entity.Resource();
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up TABS.GUI.Window.Stats.SimView.Label constructor", e);
+                        console.groupEnd();
                     }
-                    for (i in this.Label.Repair) {
-                        this.Label.Repair[i].__update();
+                },
+                properties: {
+                    type: {
+                        init: "Enemy",
+                        check: ["Enemy", "Repair", "Loot"]
+                    },
+                    subType: {
+                        init: "HealthPointsAbs",
+                        check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
                     }
-                    for (i in this.Label.Loot) {
-                        this.Label.Loot[i].__update();
-                    }
-                }
-            }
-        }
-    });
-    qx.Class.define("TABS.GUI.Window.Stats.SimView.Label", {	//				Simulation View Label
-        extend: qx.ui.basic.Label,
-        include: [qx.locale.MTranslation],
-        construct: function (label) {
-            try {
-                this.base(arguments, label);
-                this.initAlignX("right");
-                this.initAlignY("middle");
-                this.initMinHeight(18);
-                this.setAlignX("right");
-                this.setAlignY("middle");
-                this.setMinHeight(18);
-                this.HealthPoints = new TABS.STATS.Entity.HealthPoints();
-                this.Resource = new TABS.STATS.Entity.Resource();
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up TABS.GUI.Window.Stats.SimView.Label constructor", e);
-                console.groupEnd();
-            }
-        },
-        properties: {
-            type: {
-                init: "Enemy",
-                check: ["Enemy", "Repair", "Loot"]
-            },
-            subType: {
-                init: "HealthPointsAbs",
-                check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
-            }
-        },
-        members: {
-            HealthPoints: null,
-            Resource: null,
-            __update: function () {
-                var value = null;
-                if (ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity() !== null) {
-                    switch (this.getType()) {
-                        case "Enemy":
-                            switch (this.getSubType()) {
-                                case "HealthPointsAbs":
-                                    value = this.HealthPointsAbs();
+                },
+                members: {
+                    HealthPoints: null,
+                    Resource: null,
+                    __update: function () {
+                        var value = null;
+                        if (ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity() !== null) {
+                            switch (this.getType()) {
+                                case "Enemy":
+                                    switch (this.getSubType()) {
+                                        case "HealthPointsAbs":
+                                            value = this.HealthPointsAbs();
+                                            break;
+                                        case "HealthPointsRel":
+                                            value = this.HealthPointsRel();
+                                            break;
+                                        case "RepairCharge":
+                                            value = this.RepairCharge();
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                     break;
-                                case "HealthPointsRel":
-                                    value = this.HealthPointsRel();
+                                case "Repair":
+                                    switch (this.getSubType()) {
+                                        case "HealthPointsAbs":
+                                            value = this.HealthPointsAbs();
+                                            break;
+                                        case "HealthPointsRel":
+                                            value = this.HealthPointsRel();
+                                            break;
+                                        case "RepairCharge":
+                                            value = this.RepairCharge();
+                                            break;
+                                        case "RepairStorage":
+                                            return;
+                                        case "Crystal":
+                                            value = this.Loot();
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                     break;
-                                case "RepairCharge":
-                                    value = this.RepairCharge();
+                                case "Loot":
+                                    switch (this.getSubType()) {
+                                        case "Resource":
+                                        case "Tiberium":
+                                        case "Crystal":
+                                        case "Credits":
+                                        case "ResearchPoints":
+                                            value = this.Loot();
+                                            break;
+                                        default:
+                                            break;
+                                    }
                                     break;
                                 default:
                                     break;
                             }
-                            break;
-                        case "Repair":
-                            switch (this.getSubType()) {
-                                case "HealthPointsAbs":
-                                    value = this.HealthPointsAbs();
-                                    break;
-                                case "HealthPointsRel":
-                                    value = this.HealthPointsRel();
-                                    break;
-                                case "RepairCharge":
-                                    value = this.RepairCharge();
-                                    break;
-                                case "RepairStorage":
-                                    return;
-                                case "Crystal":
-                                    value = this.Loot();
-                                    break;
-                                default:
-                                    break;
-                            }
-                            break;
-                        case "Loot":
+                        }
+
+                        if (this.HealthPoints.getMax() > 0 && value !== null) {
+                            this.setValue(value.text);
+                            this.setTextColor(value.color);
+                        } else {
+                            this.resetValue();
+                            this.resetTextColor();
+                        }
+                    },
+                    HealthPointsAbs: function () {
+                        if (this.HealthPoints.getMax() > 0) {
+                            var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
+								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                            percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
+                            return {
+                                text: percent.toFixed(digits) + " %",
+                                color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
+                            };
+                        }
+                        return null;
+                    },
+                    HealthPointsRel: function () {
+                        if (this.HealthPoints.getMax() > 0) {
+                            var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
+								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                            percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
+                            return {
+                                text: percent.toFixed(digits) + " %",
+                                color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
+                            };
+                        }
+                        return null;
+                    },
+                    RepairCharge: function () {
+                        if (this.HealthPoints.getMax() > 0) {
+                            return {
+                                text: phe.cnc.Util.getTimespanString(Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh())),
+                                color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
+                            };
+                        }
+                        return null;
+                    },
+                    Loot: function () {
+                        var res = 0,
+							lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
+							loot;
+                        if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
                             switch (this.getSubType()) {
                                 case "Resource":
-                                case "Tiberium":
-                                case "Crystal":
-                                case "Credits":
-                                case "ResearchPoints":
-                                    value = this.Loot();
+                                    res = this.Resource.getTiberium() + this.Resource.getCrystal() + this.Resource.getCredits() + this.Resource.getResearchPoints();
+                                    loot = lootFromCurrentCity.getTiberium() + lootFromCurrentCity.getCrystal() + lootFromCurrentCity.getCredits() + lootFromCurrentCity.getResearchPoints();
                                     break;
-                                default:
+                                case "Tiberium":
+                                    res = this.Resource.getTiberium();
+                                    loot = lootFromCurrentCity.getTiberium();
+                                    break;
+                                case "Crystal":
+                                    res = this.Resource.getCrystal();
+                                    loot = lootFromCurrentCity.getCrystal();
+                                    break;
+                                case "Credits":
+                                    res = this.Resource.getCredits();
+                                    loot = lootFromCurrentCity.getCredits();
+                                    break;
+                                case "ResearchPoints":
+                                    res = this.Resource.getResearchPoints();
+                                    loot = lootFromCurrentCity.getResearchPoints();
                                     break;
                             }
-                            break;
-                        default:
-                            break;
+                            return {
+                                text: phe.cnc.gui.util.Numbers.formatNumbersCompact(res),
+                                color: this.getColorFromPercent(1 - (res / loot))
+                            };
+                        }
+                        return null;
+                    },
+                    getColorFromPercent: function (value) { // 1 = red, 0.5 = yellow, 0 = green
+                        return "hsl(" + ((120 - ((100 - ((1 - value) * 100)) * 1.2)) - 0) + ", 100%, " + (25 + Math.round(((Math.abs(Math.max(value - 0.4, 0)) * 2) + (Math.abs(Math.max((1 - value) - 0.6, 0)))) * 25)) + "%)";
                     }
                 }
-
-                if (this.HealthPoints.getMax() > 0 && value !== null) {
-                    this.setValue(value.text);
-                    this.setTextColor(value.color);
-                } else {
-                    this.resetValue();
-                    this.resetTextColor();
-                }
-            },
-            HealthPointsAbs: function () {
-                if (this.HealthPoints.getMax() > 0) {
-                    var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
-                        digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
-                    percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
-                    return {
-                        text: percent.toFixed(digits) + " %",
-                        color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
-                    };
-                }
-                return null;
-            },
-            HealthPointsRel: function () {
-                if (this.HealthPoints.getMax() > 0) {
-                    var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
-                        digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
-                    percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
-                    return {
-                        text: percent.toFixed(digits) + " %",
-                        color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
-                    };
-                }
-                return null;
-            },
-            RepairCharge: function () {
-                if (this.HealthPoints.getMax() > 0) {
-                    return {
-                        text: phe.cnc.Util.getTimespanString(Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh())),
-                        color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
-                    };
-                }
-                return null;
-            },
-            Loot: function () {
-                var res = 0,
-                    lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
-                    loot;
-                if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
-                    switch (this.getSubType()) {
-                        case "Resource":
-                            res = this.Resource.getTiberium() + this.Resource.getCrystal() + this.Resource.getCredits() + this.Resource.getResearchPoints();
-                            loot = lootFromCurrentCity.getTiberium() + lootFromCurrentCity.getCrystal() + lootFromCurrentCity.getCredits() + lootFromCurrentCity.getResearchPoints();
-                            break;
-                        case "Tiberium":
-                            res = this.Resource.getTiberium();
-                            loot = lootFromCurrentCity.getTiberium();
-                            break;
-                        case "Crystal":
-                            res = this.Resource.getCrystal();
-                            loot = lootFromCurrentCity.getCrystal();
-                            break;
-                        case "Credits":
-                            res = this.Resource.getCredits();
-                            loot = lootFromCurrentCity.getCredits();
-                            break;
-                        case "ResearchPoints":
-                            res = this.Resource.getResearchPoints();
-                            loot = lootFromCurrentCity.getResearchPoints();
-                            break;
+            });
+            qx.Class.define("TABS.GUI.Window.Prios", {					// [singleton]	Prios Window
+                extend: qx.ui.window.Window,
+                construct: function (prios) {
+                    try {
+                        this.base(arguments);
+                        this.set({
+                            layout: new qx.ui.layout.Grid(),
+                            caption: this.tr("Priority Setup"),
+                            allowMaximize: false,
+                            showMaximize: false,
+                            allowMinimize: false,
+                            showMinimize: false,
+                            resizable: false
+                        });
+                        this.center();
+                        this.Prios = prios;
+                    } catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up TABS.GUI.Window.Prios constructor", e);
+                        console.groupEnd();
                     }
-                    return {
-                        text: phe.cnc.gui.util.Numbers.formatNumbersCompact(res),
-                        color: this.getColorFromPercent(1 - (res / loot))
-                    };
+                },
+                members: {
+                    Prios: null
                 }
-                return null;
-            },
-            getColorFromPercent: function (value) { // 1 = red, 0.5 = yellow, 0 = green
-                return "hsl(" + ((120 - ((100 - ((1 - value) * 100)) * 1.2)) - 0) + ", 100%, " + (25 + Math.round(((Math.abs(Math.max(value - 0.4, 0)) * 2) + (Math.abs(Math.max((1 - value) - 0.6, 0)))) * 25)) + "%)";
-            }
+            });
         }
-    });
-    qx.Class.define("TABS.GUI.Window.Prios", {					// [singleton]	Prios Window
-        extend: qx.ui.window.Window,
-        construct: function (prios) {
+        function translation() {
+            var localeManager = qx.locale.Manager.getInstance();
+
+            // Default language is english (en)
+            // Available Languages are: ar,ce,cs,da,de,en,es,fi,fr,hu,id,it,nb,nl,pl,pt,ro,ru,sk,sv,ta,tr,uk
+            // You can send me translations so I can include them in the Script.
+
+            // German
+            localeManager.addTranslation("de", {
+                "Shifts units one space up.": "Verschiebt Einheiten einen Platz nach oben.", //GUI.ArmySetupAttackBar
+                "Shifts units one space down.": "Verschiebt die Einheiten einen Platz nach unten.", //GUI.ArmySetupAttackBar
+                "Shifts units one space left.": "Verschiebt die Einheiten einen Platz nach links.", //GUI.ArmySetupAttackBar
+                "Shifts units one space right.": "Verschiebt die Einheiten einen Platz nach rechts.", //GUI.ArmySetupAttackBar
+                "Mirrors units horizontally.": "Spiegelt die Einheiten horizontal.", //GUI.ArmySetupAttackBar
+                "Mirrors units vertically.": "Spiegelt die Einheiten vertikal.", //GUI.ArmySetupAttackBar
+                "View Simulation": "Simulation anzeigen", //GUI.PlayArea + GUI.Window.Stats.SimView
+                "Statistic": "Statistik", //GUI.PlayArea + GUI.Window.Stats
+                "Show current formation with CNCOpt": "Zeigt die aktuelle Formation mit CNCOpt an", //GUI.PlayArea
+                "Right click: Set formation from CNCOpt Long Link": "Rechtsklick: Formation von CNCOpt Long Link laden", //GUI.PlayArea
+                "Remember transported units are not supported.": "Denk daran das transportierte Einheiten nicht unterstützt werden.", //GUI.PlayArea
+                "Enter CNCOpt Long Link:": "CNCOpt Long Link eingeben:", //GUI.PlayArea
+                "simulations in cache": "Simulationen im Cache", //GUI.Window.Stats
+                "Most priority to construction yard including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem Bauhof mit allem was vor ihm liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+                "Most priority to defense facility including all in front of it.<br>After this the best armored defense health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Verteidigungseinrichtung mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden an bewaffneten Defensiveinheiten verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+                "Most priority to defense health including the auto repair after the battle.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem verursachtem Schaden an Defensiveinheiten<br>unter Berücksichtigung der automatischen Reperatur nach dem Kampf.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+                "Most priority to command center including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Komandozentrale mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+                "NoKill (farming) priorety.<br>Not working correctly yet.": "Vorschießen (farmen) Priorität.<br>Funktioniert noch nicht sehr gut.", //STATS
+                "Shows the current army formation.": "Zeigt die aktuelle Armeeformation an." //STATS
+            });
+        }
+        function waitForGame() {
             try {
-                this.base(arguments);
-                this.set({
-                    layout: new qx.ui.layout.Grid(),
-                    caption: this.tr("Priority Setup"),
-                    allowMaximize: false,
-                    showMaximize: false,
-                    allowMinimize: false,
-                    showMinimize: false,
-                    resizable: false
-                });
-                this.center();
-                this.Prios = prios;
+                if (typeof qx != 'undefined' &&
+					typeof qx.core != 'undfined' &&
+					typeof qx.core.Init != 'undefined') {
+                    var app = qx.core.Init.getApplication();
+                    if (app !== null && app.initDone === true &&
+						ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
+						ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
+                        try {
+                            console.time("loaded in");
+
+                            // replacing LoadCombatDirect
+                            if (ClientLib.Vis.Battleground.Battleground.prototype.LoadCombatDirect === undefined) {
+                                var sBString = ClientLib.API.Battleground.prototype.SimulateBattle.toString();
+                                var targetMethod = sBString.match(/\{battleSetup:[a-z]+\},\s?\(new \$I\.[A-Z]{6}\)\.[A-Z]{6}\(this,this\.([A-Z]{6})\),\s?this\);/)[1];
+                                var lCString = ClientLib.API.Battleground.prototype[targetMethod].toString();
+                                var methodLoadDirect = lCString.match(/\$I\.[A-Z]{6}\.[A-Z]{6}\(\)\.[A-Z]{6}\(\)\.([A-Z]{6})\(b\.d\);/)[1];
+                                console.log(methodLoadDirect);
+                                ClientLib.Vis.Battleground.Battleground.prototype.LoadCombatDirect = ClientLib.Vis.Battleground.Battleground.prototype[methodLoadDirect];
+                            }
+                            translation();
+                            createClasses();
+                            TABS.getInstance();
+                            console.group("Tiberium Alliances Battle Simulator V2");
+                            console.timeEnd("loaded in");
+                            console.groupEnd();
+                        } catch (e) {
+                            console.group("Tiberium Alliances Battle Simulator V2");
+                            console.error("Error in waitForGame", e);
+                            console.groupEnd();
+                        }
+                    } else {
+                        window.setTimeout(waitForGame, 1000);
+                    }
+                } else {
+                    window.setTimeout(waitForGame, 1000);
+                }
             } catch (e) {
                 console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error setting up TABS.GUI.Window.Prios constructor", e);
+                console.error("Error in waitForGame", e);
                 console.groupEnd();
             }
-        },
-        members: {
-            Prios: null
         }
-    });
-}
-function translation() {
-    var localeManager = qx.locale.Manager.getInstance();
-
-    // Default language is english (en)
-    // Available Languages are: ar,ce,cs,da,de,en,es,fi,fr,hu,id,it,nb,nl,pl,pt,ro,ru,sk,sv,ta,tr,uk
-    // You can send me translations so I can include them in the Script.
-
-    // German
-    localeManager.addTranslation("de", {
-        "Shifts units one space up.": "Verschiebt Einheiten einen Platz nach oben.", //GUI.ArmySetupAttackBar
-        "Shifts units one space down.": "Verschiebt die Einheiten einen Platz nach unten.", //GUI.ArmySetupAttackBar
-        "Shifts units one space left.": "Verschiebt die Einheiten einen Platz nach links.", //GUI.ArmySetupAttackBar
-        "Shifts units one space right.": "Verschiebt die Einheiten einen Platz nach rechts.", //GUI.ArmySetupAttackBar
-        "Mirrors units horizontally.": "Spiegelt die Einheiten horizontal.", //GUI.ArmySetupAttackBar
-        "Mirrors units vertically.": "Spiegelt die Einheiten vertikal.", //GUI.ArmySetupAttackBar
-        "View Simulation": "Simulation anzeigen", //GUI.PlayArea + GUI.Window.Stats.SimView
-        "Statistic": "Statistik", //GUI.PlayArea + GUI.Window.Stats
-        "Show current formation with CNCOpt": "Zeigt die aktuelle Formation mit CNCOpt an", //GUI.PlayArea
-        "Right click: Set formation from CNCOpt Long Link": "Rechtsklick: Formation von CNCOpt Long Link laden", //GUI.PlayArea
-        "Remember transported units are not supported.": "Denk daran das transportierte Einheiten nicht unterstützt werden.", //GUI.PlayArea
-        "Enter CNCOpt Long Link:": "CNCOpt Long Link eingeben:", //GUI.PlayArea
-        "simulations in cache": "Simulationen im Cache", //GUI.Window.Stats
-        "Most priority to construction yard including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem Bauhof mit allem was vor ihm liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-        "Most priority to defense facility including all in front of it.<br>After this the best armored defense health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Verteidigungseinrichtung mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden an bewaffneten Defensiveinheiten verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-        "Most priority to defense health including the auto repair after the battle.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem verursachtem Schaden an Defensiveinheiten<br>unter Berücksichtigung der automatischen Reperatur nach dem Kampf.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-        "Most priority to command center including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Komandozentrale mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-        "NoKill (farming) priorety.<br>Not working correctly yet.": "Vorschießen (farmen) Priorität.<br>Funktioniert noch nicht sehr gut.", //STATS
-        "Shows the current army formation.": "Zeigt die aktuelle Armeeformation an." //STATS
-    });
-}
-function waitForGame() {
-    try {
-        if (typeof qx != 'undefined' &&
-            typeof qx.core != 'undfined' &&
-            typeof qx.core.Init != 'undefined') {
-            var app = qx.core.Init.getApplication();
-            if (app !== null && app.initDone === true &&
-                ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
-                ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
-                try {
-                    console.time("loaded in");
-                    translation();
-                    createClasses();
-                    TABS.getInstance();
-                    console.group("Tiberium Alliances Battle Simulator V2");
-                    console.timeEnd("loaded in");
-                    console.groupEnd();
-                } catch (e) {
-                    console.group("Tiberium Alliances Battle Simulator V2");
-                    console.error("Error in waitForGame", e);
-                    console.groupEnd();
-                }
-            } else {
-                window.setTimeout(waitForGame, 1000);
-            }
-        } else {
-            window.setTimeout(waitForGame, 1000);
-        }
-    } catch (e) {
-        console.group("Tiberium Alliances Battle Simulator V2");
-        console.error("Error in waitForGame", e);
-        console.groupEnd();
+        window.setTimeout(waitForGame, 1000);
     }
-}
-window.setTimeout(waitForGame, 1000);
-}
 	.toString() + ")();";
-script.type = "text/javascript";
-document.getElementsByTagName("head")[0].appendChild(script);
+    script.type = "text/javascript";
+    document.getElementsByTagName("head")[0].appendChild(script);
 })();
