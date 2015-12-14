@@ -11,7 +11,7 @@
 		        - MT Basescanner
 		        - C&C: Tiberium Alliances Chat Helper Enhanced
                 - C&C:TA Compass Movable
-		        - BaseInfo 3.2.5
+		        - BaseInfo v3.2.8
 		        - Tiberium Alliances Zoom (Sky)
 		        - WarChiefs - Tiberium Alliances Upgrade Base/Defense/Army
 		        - CnC: Tiberium Alliances COORDS 500:500
@@ -21,7 +21,7 @@
 		        - TitleMod
 		        - TABS v2 final
 */
-// @version     1.8.8
+// @version     1.8.9
 // @icon		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAE9lJREFUeNrsXXtsVFd6P/P0PDwztrENtnnY4Q0GDARC2jyAQEJTUTVF0W63AlYbNSSt2v4RZbVJ/ugfuw1dKW3TrlbVqiKtYKuugrSbFFUEkTQPAgsEgnklJml4GPzAnvHMeOzxjMczt7/fufeYsbHNjD0eovYe6Whm7tw553zf73udc79zxqJpmjDLt6dYTRaYgJjFBMQExCwmICYgZjEBMQExS5GLJXti+MtfHhCdnZ1iaCgtEolEzo2wDat16thmMpqwWArbJ+9jteTQcK73FZL20lKvsNlsQuEwApBHHvkdcfbsGYCRkp9dLqcV39vx1jZOe2k0MZRMDmYKJSH37tMyhO/Tg4OpnPu02awWu92O9jTbOFYBbVnSQ5DEdDqjFZN2t7tEOJ3OYUDsI9EqFX6/X3i9Ggbkstnt1ircV4ev/GMQwhZiqO2o3Z2dXYMokx4YGCZqambarFbLRH2CCSICKW4D53o6Om7jJT1hu+XlZaKszO8Go2vxcSZ5PcZtSdTbaLc9mUz2EzyAWBTaA4HA+IAMy6Cuti6YkEV4fRS1hpeN7zL4sRpgF+pJqOxpt9s1JUAm6FPDd+hSSje534r3n+LaBfTbfy9ASkqcAmCAudoGfFxJuTPazBgWgrTEUS+gfgjm9PNnxaR9hGCOtOEZbygU+TmIbNJVXPgMCXHo/LJAe9ydPp/vhiE1lYaUXEINT3IMXtSfp1KpJkj8qD4tZELa5yu94fV6usEMi3H/VdQWfO6foF0y8yddXcEApN0NAWSbHjRpJR2gr7+8PPA1XsnJBGgf6u4OfgeMrbNabcWifWJAoK7zvV7v7nXr1onLly8DoLQSDvk+lRoSsVhfvcfjuQ1CaMudlCbYXtucOXNEY2MZQc09xIMzRFvzL1y4sLuxsXHMPhOJJPucB0B6jC9KUNGvZl21ahVN64g+qfpgGnzh2T9funTpY9FoVNy+fXvYWfN7thuNxkrj8YFIIOBv5zUEMXNLS31Pr1y5SnzxRWFpJ52xWEyAzvwAgU+z0qa98MILYv/+/ZIQKorFYhU9PSHR3d0tJTbLjmo6jRpMQwnsdbm4lwkZPdCqqiprW1ub2LNnjzhw4MBwn2QG36dSQUZeGaOv7H4l4yFAIxjB99XV1cLhcGS2bNkix/Xuu+/KvlgJcGdnu+jr6x9BA2jXqqsrtRdffMFSaNptNtvkNMSwrYKIz549W/T395Mw2WA8HjcI18YN/zigfADRpVWPakb3SeaFwz24JzNBmJyR/Y0GhJWcIlgNDQ2ioqJC3sc22fbt25Zx6Zgu2nO1HGMG0FBD2biK4Q0Cp3VCNB19sg22q9pStdjjMGfq5tKJWUxATEDMYgJiAmIWExCzmICYgJjFBMQExCwmICYgZjEBMQExiwmIWUxATEDMkluxF6CN4aQDI20n5x8a90/6+Sh/PzqNk09beS3flNDppD2fsUwVEPbkAAPc4XCPm6ku4yUCjDPQwcuXL7vcbne+DJSMSCaT8ncj04AyIhbrFalUarpByYN2i3xOP2tW9d0A2O18Zk8CmCGRniogDtQaEN4EBsxJpQaFymXKDRCRjER6l7lctfn0aSSxWara2m7amDw3ku8W7dq1q8menh5XPuk300u7Jr9jyuhd3+gJFDKVFbXDPgVVJapMWluAOoPSng8Y0oFZrSlIyKxc+lOpn0LPzV1oANNvGUMNcCmJWpOvCZ0+2i3ZzFdjVPTQ5jJJjBmQx+x5ME++ptMZZ1dX92o933aytl8fpMPh6LPZrJ2GHxmXIpgkeyKR9BMXoaeSlqOuMhgzVoH6a/NotvLJEysm7dmprGiM6sV6OWdAmHTG7HiLxWqxWi1eZvRNWsSMdE7Y3dLBwUzakBbb3fbVITMHMxnNHwyG1uXTh9NZIm7duiU1ZKp5VdNB+6hUVuLglCTn0gidJh1vfX2DYJa3bgomKyF30jn7++PDmYtjlbKyMpFMJuSrSi/NVQqZZtre3i5CoVDekU4xaB+dyqoigrx8CAfm8Xjusof5hqpjpXOODlXZPvuaN69emp18Gcr7Gfmwjv7tGEPnlaH7Rfukw95cUjFzbSf7I7WEEREz2e8KqXB9stHS6LHeMV/D29wyBmO4ZSxxH2iflonhFAYn4/BUPB4fQrFXVlbmTUC+JTvXF0APGc33ofZ8q2fquSYnT01KmMrvGuzu7kq0tbW5Fi9eLI4fPy4ndYXYRDrWbDke75ftQykzMB9xYw7QyjmAclLFoX04Hs6uYwNCO0fzwcr3hWZM9swaYS93L91+5513yl5++WWxcuVK0dLSIu8p1BxCZbFzi0Fvb6/cXuBw2EOot/BdG/o5TeVRNr5YtBumMmn4LykcowGx0l4zmqBq05EVerar7Djb1hmltVdVVV48ePDgn9XV1flQRVdX15jOeLKFTCAI3E0VCvWIgYFEorq66lf4qgX1GupZdPVAsWlHvYXLnxnzqS9RQyNmOJs3b6w5efJ084oVK6oZwxdiUjVeYThLaa2oKN+DEPVjALAqFAr/EICspblSmygLZTYICvrIgNmnKyrKfoaI6RyucUbfg9dIT0+4xmazNy9durT65s2bRaMdc5zfon+b4cO6RwMiPvnkk8Z0WluWFZdZRL5rIjlPgC0dpaXeE1x/wnuY9iE35iYPCn3na8H7h3m85vG4myH5nB3bwYg0tIXb2dQtjahFpd3pdGYMS0AtyYwwWUuWLOWdlwYHU5d6e2NimtaC7pLcLJUeAKOOZat4Ifsf5aiH7mjg8GTvklGLRntlZYX0VWOe5GCW+1/MJ4YmIGYxATEBMYsJiAmIWUxATEDMYgLy/7xM6gHVyZO/FR999JFctcy3qJUBPpOIxwfkiioPgsxnmcJYApHHzLENnhrHI5Imu+qg2kNbGld6xyoej3tEH8ZvrDykkc/Hs8fP+1yuEnmQ6MaNG8WGDQ9PLyB8iPTKK6/W4+3vo84Req5ULmvV3V6v+5Tdbr+C963RaIyIPo3ahOo2xnMvZAZKShzNLpfrczCkvbe37ymhLwq6jJqv1scxpv9yOh2XwuHe8Z4akqNPGWOUfUAITrrdJceBR2cs1n/X49+yMr+IRHrF3r2vTz8gZ86c3YmXn1VXVwfUw597FfVMIpEYjFZV+f9e0zKfAZC/raioWOlw2EXWiuuEksz00YGBuOZ2Ww+6XM7D6bT2r7W1dfKQsXwLtZQPrex2xzKfz/9KWVlFBO8zih7j+cjs9vb2IzU1NT7ey2X5RGKAv91dWup71W63/ScErDUcjg63Gwj45eGWbIfaMq0m68svvyw/dOjQT3fu3Bngmn5PT09OpoKmoKvrNs8FDkSj0e+AsN/bunXrShAqbty4kdPzB/YTiYRFR0eHJRrt/QNN8yRnzZqlPffcDyxHjx4FUAN5PfrleG7evEXGVaP6q6tnWAiuOi+LuVinT5/e+eCDD/rWrFkjzp8/L5/TdHS0i7a2dh/6ewr3NHs8ng4IVyqf4w0LBghAmDNjxowaMFMcOXJEShglabyENLXkrR468aldJBJlMm/Ntm3b5NF5zJ8aK+NktIapbHcKQiwWcyWTgzU8//CBBx5wVFVVybaM5OU7y9njLKPza5vNru6jNDD7RahsR/4G2uhCm9/ftWuX1G76TI6zry8mX/v746u9Xu9i0N+Cz0HeU3RAMFAr1++ZOKxOX9Mdc+ld6kmieJ33kFn8DZPF6AzJI+UkdQbQcXplluDo/CwST2awDdWfARKzzy3Ml6KJUN+xXbYRDoel1igwFUMJKmy/CIWCeC/7iqAGRVayFO9raWnZNm/evEU8w/HYsWOyHbYP8yYDke7uYC0AXAO6Tvl83hAA0YoOiDAOflQ1Go3AbIWHGaHOPFSFkktNYCYhTI2iWcvWHjKNGYaUTjKCzFMmTJ0y+tBDD4nVq1fL6E7/HZMx7AORSMQKE0pTKv0LCzRYrF27VvbNk0DZvn5+o57RyLFSmPjcnsCgnEN/14xtASpFCObs5vO7d+8WwWAQWh0ZtgIUAPgPtBmxIMJaX1HhfA+gXENg0D84mCp+2JttRjjQ1tZWSt1lOLiP/P5AUDk0asSJEyf+8PHHH19FXzGWSSORNHs0W3gNud2u96CB16qrZ6Z5P7Xxm2++WQxN++6jjz5qmKSMwRh3R19f70/37dtXD+nXDEamAcByv9+/ZtOmTeLSpUswMX3wU60EAE7bfo7uA/cTcSuYG5w9u+6fAO6Q31827IghPI3o84klS5aIc+fOSQBJDyuZrp8A7uHRsUsBZiP6PY/PACR6fwBR0sLoiCYAkcXnCB/3zppV20bHSAJorkBYHYhYRQIoWbq50dL6mci6LU+nh6TSgMFdVVUzfuF2e44tWrRkOEMD7W8BI7/L9lgdDqf6bQzg/93ixbNCNTV6n9QAmJq/wvs1BI/j1POw0mjL1VFZWfETtP/fCxcuHk6YUyZSaTe19Pr16z94+OGHnfR71BC+sp2FCxdKAeKmII6ltzfmHRhIrIcJ+xj0tSPUHZogXbl4M3UeLMwsdTKFpoOVTg6fXV9//bU8JJnXyCTcx4OIe8dowwqGlELiSlQbNDdghodMOXPmjPQLdMbSE6fTzXo7FgkGK5lmHHI8SiMtit4Sfq/8nzpqVkVWHB/6KEfw8b0NGzbICJBjIADnzzfLe3iAM8HwenW/CYBW4/oiCJufk9R8dpEV1GTdS4NI5LJly/758OHDtTAbPj3asmgzZ1b/GyKU7+NzfS5zhYaGhuMXL1488MYbbyyhpFIjQfgXcLa/gfalAoH8TtQeb/KpAoivvvrqj5YvXz7T0HApGAzvEWrzxGzBA5qZ9kohoXMPBkNz6NwxptPQkjDea986QBQza2trTwCEp69du1oOPnjw3gYmtsEhvpjLcolhQkIrVqzYdeVKSxUmZW7u64Nv6RkcTKZQHRUVM1KFyDLkeKA5PGn7+WeeeUb6NfgIqekMtaEBrfAnJdCgmfPnz5f7TwgaAwsI2DrQ9R7M4nW0E5/sMs60AkIHCHP1x1euXPkbOGIvSLYZ10/x4Olc2qDPATPmnTx58tcAuA6AWmlZ8BqsrJzxYxD/HuYF3QyXp2hypb/q6ur6XUw21yPcFadOnYK5TMpojHtZ/H7fIcyhMh9++OFfMHJsbm6W0RZ9I6ItBBK+RgjLBYAyaUCs02Gq1F4P2mNI0dOYRDY88cSW6oaG+hlw/jNgAjbByVZMODDjrHaCitl9U319/Zpnn3125qJFixDNVpXDDy1EtLMJwPgLtvSN/uDrnmc0RxDor2iuqB0wv0kEHR9j/P/ywQcfDNC08UhyFWgAAF8ikVwHumejTlrQrQUEIg3mJOksBwbicr2Hq50gJMUE6kceeUTuhNLBkknGY9krTd9AKZJ0pKxsB34jxbD5ySefBBPmACSHiozsOS5q3rPQ5MGRM2Nye1NTk3TmHD9DZoID530W2nq2pmbWRcyZ3mc4zZBYAULnDi1ZK/QNqb775kPIF6oneeZw2DZ1dLQv4FqPEZYmQRAlRqo19wwa1zXlPrLdCMDzJJOD6yFpLjBn0FgYSMB5ShNCotVqgGESCpLlp/7hACboTzChDNBM6v/MkIJ2RKVgIJzugGCs5d4iaPc7R48e3f7SSy9J506HzzlJKNQzl84d4H6GNsNFBUStT5EQSiykaRPs7SY1t7jzHMEjidOfM2jj+JoSNeGaGw5HX9dBzpZep5wHXL16VbZT6BRPfSklXQLn/Bw1mc6aIOjzrCG5vxH07YBz34Hb28rLA3+NEPwW7p9N586/26CWQIhs8DXry8vLjuC3/OOXgWIAYlELdiQEEY7QT2Kwjpm+z+84m+ei4qjcZYvazUpiuKmSkzelRSMGCV9Ec4fQd6wTGqasJRQqBB5Pzp07dwkc+vC6Fc1YTU0ttKBKfg4Gu+n06zCeWoBzGPf9KVcDuArMCSkmnNwQtBx+ZjmavUjwigEIJ3UaiLCQEGqAz1cqJgoqaIPVX8Nl/dFNitcIGNtReybGK2rfhj6rv7P4DFz7JlpyV+teWfMPy+jvCXhra+uLXNXlAiYFSK1n8Y9a5FMxaIz+zEX+vCQQ8P36/fff37V9+/YS7mnp7u4yllJiAWjTOtDzqdBPZxiaVkBAfBukJAhJrVLLCPcyIerBklpqsdms/wPmBuFrtrENSOfwluN7PVOJRJLDSxxg5DGMp4errwRFbRClCpPJ6l/n+Nd0XNVNp7UBPlLhxn8lINQCmKgmTDKfeOyxx/j8I2uJ545JY3tqrgM/Eke7x+H4P8HYt2KOJP//kaExLQGc+zIAwjjcMe2AYAYbXrBgwX+8+eabf9nUtFpOmu61bZmEM1qhL4EEDZWVBX4MgGJvvfXWth07dshoJhdgeR8lGDNjrkvtg+86BEYleZ1VAU+NZF80JWSQevYB0NvA6C+4w1RpAX0XANkIX+C8fv269FPqUJvsUJ7Rnt3Y1o/Pn0OrY3Do+99+++2tmzdvlv1T02m6urq6a9BFqxEx5ucPJjOB2bv39dJXX33tNeM5c66hMztqRt2H+qlx7Xuoe/jUM4/uuQ3sIOq/TyB9S1DfRM0+R4VO7LWsvrPLUtR/GHX/eIW//6HQ9wTyGfsvhP53fMOLC6j7YdL+MRqNaXym/qMfvTK9gJw6dVJgtqpi77y3f6kV1qkce5H9RDC/RwbaFE9juLNxc7y+ob2SN5PJOjE37HzLipkoZwJiFhMQExCzmICYgJjFBMQExCwmICYgZjEBMYsJiAmIWUxA/i+U/xVgAF6eQT0ldAmcAAAAAElFTkSuQmCC
 // @updateURL   https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/LULPack/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -7620,7 +7620,7 @@ Ini();
 
 // ==UserScript==
 // @name           BaseInfo
-// @version        3.2.5
+// @version        3.2.8
 // @author         Dirk Kántor (NurIcke)
 // @contributor    leo7044 (helping out for translations)
 // @description    Basis Informationen zur Auswertung und Übergabe an die Allianz Befehlshaber. Rechts oberhalb des Spielfensters befindet sich ein neuer Button der das Script aufruft.
@@ -7636,8 +7636,40 @@ Ini();
 
 (function () {
     var BaseInfoMain = function () {
-        function BaseInfoCreate() {
-            try {
+        function BaseInfoCreate()
+        {
+            // ########################################### //
+            // ############# S E T T I N G S ############# //
+            // ########################################### //
+            //
+            // ###### CHANGE YOUR OWN BUTTON DESIGN ###### //
+            //
+            // Use 1 for Image and Name Like: [ ((i)) BaseInfo ] *** Standard
+            // Use 2 for Name only. Like: [ BaseInfo ]
+            // Use 3 for Image only. Like: [ ((i)) ]
+            //
+            var BIBUTTONDESIGN = 1; // <- Change only the Number
+            //
+            // ########################################### //
+            //
+            // ##### CHANGE YOUR OWN BUTTON POSITION ##### //
+            //
+            // Use 1 for Top-Right (Left from the World Button) *** Standard
+            // Use 2 for Top-Left (Right from your own Playername)
+            // Use 3 for Bottom-Right (Left from the ServerInfo Area)
+            // Use 4 for Bottom-Left (Top of the Chat)
+            //
+            var BIBUTTONPOSITION = 1; // <- Change only the Number
+            //
+            // ########################################### //
+            // ####### E N D  O F  S E T T I N G S ####### //
+            // ########################################### //
+
+            if(BIBUTTONDESIGN == 3) { var BIBUTTONHEIGHT = 32; var BIBUTTONWIDTH = 41;}
+            else if(BIBUTTONDESIGN == 2) { var BIBUTTONHEIGHT = 32; var BIBUTTONWIDTH = 75;}
+            else { var BIBUTTONHEIGHT = 32; var BIBUTTONWIDTH = 100;}
+            try
+            {
                 qx.Class.define("BaseInfoLang", {
                     type: "singleton",
                     extend: qx.core.Object,
@@ -7650,8 +7682,8 @@ Ini();
                             Norwegisch (nb), Niederländisch (nl), Kroatisch (hr), Griechisch (el), Finnisch (fi),
                             Dänisch (da), Bulgarisch (bg), Arabisch (ar), Polnisch (pl), Indonesisch (id),
                         */
-                        this.Languages = ['de', 'en', 'ro', 'hu', 'it', 'tr', 'fr', 'es', 'pt', 'cs', 'sk', 'uk', 'be', 'ru', 'sv', 'nb', 'nl', 'hr', 'el', 'fi', 'da', 'bg', 'ar', 'pl', 'id'];
-                        if (language != null) {
+                        this.Languages = ['de','en','ro','hu','it','tr','fr','es','pt','cs','sk','uk','be','ru','sv','nb','nl','hr','el','fi','da','bg','ar','pl','id'];
+                        if (language !== null) {
                             this.MyLanguage = language;
                         }
                     },
@@ -7670,67 +7702,73 @@ Ini();
 
                             this.Data = new Object();
 
-                            this.Data["Sprache"] = ['de', 'en', 'ro', 'hu', 'it', 'tr', 'fr', 'es', 'pt', 'cs', 'sk', 'uk', 'be', 'ru', 'sv', 'nb', 'nl', 'hr', 'el', 'fi', 'da', 'bg', 'ar', 'pl', 'id'][l];
-                            this.Data["Server Sprache"] = ["Server Sprache", "Server Language", "Limbaj Server", "Szerver nyelv", "Lingua Server", "Sunucu Dil", "Langage de Serveur", "Idioma del Servidor", "Servidor Idioma", "Serveru Jazyka", "Servera Language", "Cервера мову", "Cэрвэр Язык", "Сервер Язык", "Serverspråk", "Server Språk", "Server Taal", "Poslužitelj Jezik", "διακομιστή Γλώσσα", "Server Kieli", "Server Sprog", "Сървър Език", "الخادم اللغة", "Serwer Język", "Server Bahasa"][l];
-                            this.Data["Öffnen"] = ["Öffnen", "Open", "Deschidere", "Nyitás", "Apertura", "Açılış", "Ouverture", "Apertura", "Abertura", "Otevřít", "otvor", "відкриття", "адкрыццё", "открытие", "öppning", "åpning", "opening", "otvaranje", "άνοιγμα", "aukko", "åbning", "отвор", "افتتاح", "otwarcie", "pembukaan"][l];
-                            this.Data["Basenwerte"] = ["Basenwerte", "Base values", "Valorile de Bază", "Bázis Értékek", "Valori di Base", "Üs Değerler", "Les valeurs de base", "los valores de base", "valores de base", "Základní hodnoty", "základné hodnoty", "базисні показники", "базісныя паказчыкі", "базисные показатели", "basvärden", "verdigrunnlag", "Base waarden", "Baza vrijednosti", "τιμές βάσης", "tukikohta arvot", "uædle værdier", "Базови стойности", "قيم قاعدة", "wartości bazowe", "nilai-nilai dasar"][l];
-                            this.Data["Mitglieder"] = ["Mitglieder", "Members", "Membrii", "Tagok", "Membri", "Üyeler", "membres", "Miembros", "membros", "Členové", "členovia", "члени", "члены", "члены", "Medlemmar", "medlemmer", "leden", "članovi", "Μέλη", "jäsenet", "medlemmer", "Потребители", "الأعضاء", "Użytkownicy", "anggota"][l];
-                            this.Data["Scriptinfo"] = ["Scriptinfo", "Scripts Info", "Informații Scripturi", "Scripts Információkat", "Informazioni Scripts", "Script bilgisi", "Scripts d'infos", "Información Guión", "Informações Script", "skriptu Informace", "script Informácie", "інформація сценарію", "інфармацыя сцэнара", "информация сценария", "Skriptinformation", "skriptet Informasjon", "script Informatie", "Skripta informacije", "σενάριο Πληροφορίες", "skripti tiedot", "script oplysninger", "скрипта Информация", "معلومات النصي", "Informacje script", "Script Informasi"][l];
-                            this.Data["Allgemeine Informationen"] = ["Allgemeine Informationen", "General Informations", "Informații Generale", "Általános Információk", "Informazioni Generali", "Genel bilgi", "Informations Générales", "Información General", "Informação Geral", "Obecná Informace", "Všeobecná Informácie", "Загальна Інформація", "Агульная Інфармацыя", "Общая Информация", "Allmän Information", "Generell Informasjon", "Algemene Informatie", "Opće Informacije", "Γενικές Πληροφορίες", "Yleistiedot", "generelle oplysninger", "Обща Информация", "معلومات عامة", "Informacje Ogólne", "Informasi Umum"][l];
-                            this.Data["Allgemein"] = ["Allgemein", "General", "Generale", "Általános", "General", "Genel", "Générales", "general", "geralmente", "obecný", "obvykle", "в цілому", "Генеральная", "Генеральная", "Allmänt", "Generelt", "algemeen", "obično", "γενικός", "yleinen", "generelt", "общо", "عام", "ogólny", "umum"][l];
-                            this.Data["Gesamte Produktion"] = ["Gesamte Produktion", "Total Production", "Producția Totală de", "Összes Termelés", "La Produzione Totale", "Toplam üretim", "La production totale", "La producción total", "A produção total", "celková produkce", "Celková produkcia", "Загальний обсяг виробництва", "агульны аб'ём вытворчасці", "Общий объем производства", "Den sammanlagda produktionen", "totale produksjonen", "De totale productie", "Ukupna proizvodnja", "Συνολική παραγωγή", "kokonaistuotanto", "samlet produktion", "Общото производство", "إجمالي الإنتاج", "Całkowita produkcja", "produksi total"][l];
-                            this.Data["Erste Offensive"] = ["Erste Offensive", "First Offense", "Primul Ofensivă", "Első Támadó", "Prima Attaccante", "Birinci Ofansif", "Première Offensive", "primero Ofensivo", "primeiro Ofensivo", "První Ofenzivní", "prvý Ofenzívny", "По-перше Образливий", "Па-першае абразлівыя", "Во-первых Оскорбительный", "första offensiv", "First Offensive", "eerste Offensive", "Prvo Uvredljiva", "Πρώτα Επιθετικά", "First Hyökkäävä", "First Offensive", "Първо Offensive", "أول هجوم", "pierwszy Ofensywny", "pertama Serangan"][l];
-                            this.Data["Zweite Offensive"] = ["Zweite Offensive", "Second Offense", "Al Doilea Ofensivă", "Második Támadó", "Secondo Attaccante", "Ikinci bir Ofansif", "Deuxième Offensive", "Segundo Ofensivo", "segundo Ofensivo", "druhý Ofenzivní", "druhý Ofenzívny", "По-друге Образливий", "Па-другое абразлівыя", "Во-вторых Оскорбительный", "andra Offensive", "Second Offensive", "tweede Offensive", "Drugo Uvredljiva", "δεύτερη Επιθετικά", "toinen Hyökkäävä", "Second Offensive", "Второ Offensive", "الهجومية الثانية", "drugi Ofensywny", "kedua Serangan"][l];
-                            this.Data["Werte übertragen"] = ["Werte übertragen", "Transfer Values", "Valorile de Transfer", "Transfer Értékek", "Valori di Trasferimento", "transferi değerler", "Les valeurs de transfert", "valores de Transferencia", "valores de transferência", "hodnoty Přenos", "hodnoty Prenos", "переносити вартість", "пераносіць кошт", "переносить стоимость", "överföringsvärden", "overføre verdier", "Transfer waarden", "vrijednosti prijenos", "τιμές μεταβίβασης", "siirtoarvoja", "Overfør værdier", "прехвърлят", "القيم نقل", "wartości transferowe", "nilai transfer"][l];
-                            this.Data["Weltkarte"] = ["Weltkarte", "Worldmap", "Hartă Lumii", "Térkép a Világ", "Mappamondo", "Dünyada Haritası", "Carte du Monde", "mapa del mundo", "mapa do mundo", "Mapa světa", "mapa sveta", "Карта світу", "карта свету", "Карта мира", "Karta över världen", "verdenskart", "kaart van de wereld", "karta svijeta", "Χάρτης του κόσμου", "Maailmankartta", "kort over verden", "Карта на света", "خريطة العالم", "Mapa świata", "peta dunia"][l];
-                            this.Data["Allianz Rolle"] = ["Allianz Rolle", "Alliance Role", "Rol Alianță", "Szövetség Szerepe", "Ruolo Alleanza", "İttifak rolü", "rôle de l'Alliance", "papel Alianza", "papel Alliance", "Alliance role", "alliance role", "Альянс роль", "альянс ролю", "Альянс роль", "Alliance roll", "Alliance rolle", "Alliance rol", "Savez uloga", "ρόλος της Συμμαχίας", "Alliance rooli", "alliance rolle", "Alliance роля", "دور التحالف", "rola sojuszu", "peran aliansi"][l];
-                            this.Data["Spielername"] = ["Spielername", "Player Name", "Nume Jucător", "Játékos Neve", "Nome Giocatore", "Oyuncu Adı", "Nom du joueur", "Jugadores Nombre", "Nome Jogadores", "hráči Jméno", "hráči Meno", "Гравці Ім'я", "гульцы Імя", "Игроки Имя", "spelare Namn", "spillere Navn", "spelers Naam", "igrači Ime", "Παίκτες Όνομα", "Pelaajat Nimi", "spillere Navn", "Играчи Име", "اللاعبين الاسم", "Gracze Nazwa", "pemain Nama"][l];
-                            this.Data["Spielerklasse"] = ["Spielerklasse", "Player Class", "Clasa Jucător", "Töredék", "Fazione", "Grup", "Faction", "Clase jugador", "Classe jogador", "hráč Class", "hráč Class", "клас гравця", "клас гульца", "Класс игрока", "Spelar klass", "spiller Class", "Player Class", "igrač klase", "παίκτης Class", "Player Class", "Spiller Class", "Player Class", "فئة اللاعب", "Klasa graczem", "pemain Kelas"][l];
-                            this.Data["Aktuelle Uhrzeit"] = ["Aktuelle Uhrzeit", "Current Time", "Ora curenta", "Idő", "Ora Attuale", "şimdiki zaman", "Date actuelle", "Tiempo Actual", "Tempo Atual", "Aktuální čas", "aktuálny čas", "поточне Час", "бягучае Час", "Текущее Время", "Aktuell tid", "Nåværende Tid", "huidige Tijd", "Trenutno vrijeme", "Τρέχουσα Ώρα", "Nykyinen aika", "Aktuel tid", "Current Time", "الوقت الحالي", "Obecny Czas", "Waktu Saat Ini"][l];
-                            this.Data["Rang"] = ["Rang", "Rank", "Rang", "Helyezés", "rango", "Derece", "Classement", "rango", "categoria", "hodnost", "hodnosť", "Ранг", "ранг", "ранг", "Placering", "Rank", "rang", "čin", "τάξη", "arvo", "Rank", "ранг", "مرتبة", "ranga", "pangkat"][l];
-                            this.Data["Maximale KP"] = ["Maximale KP", "Maximal CP", "Puncte de Comando Maxime", "Maximális Parancsnoki Pont", "Comando il Massimo dei Punti", "Maksimum Komutanlığı Puan", "Points de Commandement maximum", "CP máximo", "CP máxima", "Maximální CP", "maximálna CP", "Максимальна CP", "максімальная CP", "Максимальная CP", "maximal CP", "maksimal CP", "maximale CP", "maksimalna CP", "μέγιστη CP", "Suurin CP", "maksimal CP", "Максимална CP", "الحد الأقصى CP", "Maksymalna CP", "maksimum CP"][l];
-                            this.Data["Maximale Repzeit"] = ["Maximale Repzeit", "Maximal Reptime", "Timp Maxim de Reparație", "Maximális Javítási Idő", "Tempo Massimo di Riparazione", "Maksimum onarım süresi", "Temps maximum de réparation", "Repzeit máximo", "Repzeit máxima", "Maximální Repzeit", "maximálna Repzeit", "Максимальна Repzeit", "максімальная Repzeit", "Максимальная Repzeit", "maximal Repzeit", "maksimal Repzeit", "maximale Repzeit", "maksimalna Repzeit", "μέγιστη Repzeit", "Suurin Repzeit", "maksimal Repzeit", "Максимална Repzeit", "أقصى Repzeit", "Maksymalna Repzeit", "Repzeit maksimum"][l];
-                            this.Data["Stunden"] = ["Stunden", "Hours", "Ore", "Óra", "Orario", "Saatleri", "Heures", "horas", "horas", "hodiny", "hodiny", "годин", "гадзін", "часов", "timmar", "timer", "Hours", "Radno vrijeme", "ώρες", "tuntia", "Timer", "Часове", "ساعات", "godziny", "jam"][l];
-                            this.Data["Basenanzahl"] = ["Basenanzahl", "Basecount", "Numarul de Bază", "Szám Bázisok", "Numero di Base", "Üs Numarası", "Nombre de base", "Número Base", "Número de base", "Základní Number", "základné Number", "базовий номер", "базавы нумар", "Базовый номер", "basnummer", "Base Number", "Base Number", "baza broj", "Αριθμός βάση", "Base Number", "Base Number", "Base Number", "عدد قاعدة", "Ilość bazowa", "Jumlah dasar"][l];
-                            this.Data["Anzahl Offensiv Basen"] = ["Anzahl Offensiv Basen", "Offense Bases Count", "Baze număr Ofensivă", "Szám Sértő Bázisok", "Basi numero Attaccante", "Numara saldırgan Üs", "Nombre de bases offensives", "Bases Número ofensivas", "Número bases ofensivas", "Počet ofenzivní základny", "Počet ofenzívnej základne", "Кількість образливі основи", "Колькасць абразлівыя асновы", "Количество оскорбительные основы", "Antal offensiva baser", "Antall offensive baser", "Aantal offensief bases", "Broj uvredljive baze", "Βάσεις Αριθμός προσβλητικό", "Numero loukkaavaa emäkset", "Nummer offensive baser", "Номер обидни бази", "عدد القواعد هجوم", "Podstawy Liczba obraźliwe", "Basis Nomor ofensif"][l];
-                            this.Data["Support Gebäude Level Ø"] = ["Support Gebäude Level Ø", "Support Building Level Ø", "Suport de Constructii Nivel Ø", "Támogatás Építési Szint Ø", "Supporto Livello Edificio Ø", "Destek Bina Seviye Ø", "Bâtiment Niveau de soutien", "Soporte Nivel Edificio Ø", "Suporte Nível Edifício Ø", "Podpora budova úroveň Ø", "Podpora budova úroveň Ø", "Підтримка Будівництво Ø Рівень", "Падтрымка Будаўніцтва Ø Узровень", "Поддержка Строительство Ø Уровень", "Support Building Level Ø", "Support Bygning Nivå Ø", "Ondersteuning Building Level Ø", "Podrška Građevinska Razina Ø", "Υποστήριξη Κτίριο Επίπεδο Ø", "Tuki Building Level Ø", "Support Building Level Ø", "Подкрепа Building Level Ø", "دعم بناء مستوى Ø", "Pomoc budynek Poziom Ø", "Dukungan Building Tingkat Ø"][l];
-                            this.Data["VE Ø aller Basen"] = ["VE Ø aller Basen", "DF Ø all Bases", "Ø Unitate de Apărare Toate Bazele", "Védelem Létrehozása Ø Összes Bázisok", "Stazioni di difesa Ø di tutte le basi", "Savunma Tesis Ø bütün Üs", "Fonds de défense Ø de toutes les bases", "DF Ø todas las bases", "DF Ø todas as bases", "DF Ø Všechny základny", "DF Ø Všetky základne", "DF Ø всі підстави", "DF Ø усе падставы", "DF Ø все основания", "DF Ø alla baser", "DF Ø alle baser", "DF Ø alle bases", "DF Ø Svi baze", "DF Ø όλες τις βάσεις", "DF Ø kaikki alustat", "DF Ø alle baser", "DF Ø всички бази", "DF Ø كل القواعد", "DF Ø wszystkich baz", "DF Ø semua basis"][l];
-                            this.Data["Def Ø aller Basen"] = ["Def Ø aller Basen", "Def Ø all Bases", "Ø Unitate de Def Toate Bazele", "Def Ø Összes Bázisok", "Def Ø di tutte le basi", "Def Ø bütün Üs", "Def Ø de toutes les bases", "Def Ø todas las bases", "Def Ø todas as bases", "Def Ø Všechny základny", "Def Ø Všetky základne", "Def Ø всі підстави", "Def Ø усе падставы", "Def Ø все основания", "Def Ø alla baser", "Def Ø alle baser", "Def Ø alle bases", "Def Ø Svi baze", "Def Ø όλες τις βάσεις", "Def Ø kaikki alustat", "Def Ø alle baser", "Def Ø всички бази", "Def Ø كل القواعد", "Def Ø wszystkich baz", "Def Ø semua basis"][l];
-                            this.Data["Kristall"] = ["Kristall", "Crystal", "Cristal", "Kristály", "Cristallo", "Kristal", "Cristaux", "cristal", "cristal", "krystal", "kryštál", "кристал", "крышталь", "кристалл", "kristall", "krystall", "kristal", "kristal", "κρύσταλλο", "kristalli", "krystal", "кристал", "بلور", "kryształ", "kristal"][l];
-                            this.Data["Tiberium"] = ["Tiberium", "Tiberium", "Tiberium", "Tibérium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "Tiberium", "tiberium من", "tyberium", "Tiberium"][l];
-                            this.Data["Strom"] = ["Strom", "Power", "Putere", "Áram", "Energia", "Enerji", "Énergie", "corriente", "atual", "proud", "prúd", "струм", "ток", "ток", "Aktuell", "Nåværende", "stroom", "struja", "ρεύμα", "nykyinen", "nuværende", "ток", "تيار", "prąd", "arus"][l];
-                            this.Data["Credit"] = ["Credit", "Credit", "Credit", "Kredit", "Crediti", "Kredi", "Crédit", "crédito", "crédito", "úvěr", "úver", "кредит", "крэдыт", "кредит", "kredit", "Credit", "krediet", "kredit", "πίστωση", "luotto", "Credit", "кредит", "ائتمان", "kredyt", "kredit"][l];
-                            this.Data["Kristall Produktion"] = ["Kristall Produktion", "Crystal Production", "Producția de Cristal", "Összes Kristály Termelés", "Produzione del Cristallo", "Toplam Kristal üretimi", "cristaux de production", "la producción de cristal", "produção de cristal", "výroba Crystal", "výroba Crystal", "кристал виробництво", "крышталь вытворчасць", "Кристалл производство", "kristallproduktion", "Crystal produksjon", "Crystal productie", "Crystal proizvodnja", "κρυστάλλινα παραγωγής", "Crystal tuotanto", "krystal produktion", "производство Crystal", "إنتاج الكريستال", "produkcji kryształu", "produksi kristal"][l];
-                            this.Data["Tiberium Produktion"] = ["Tiberium Produktion", "Tiberium Production", "Producția de Tiberium", "Összes Tibérium Termelés", "Produzione del Tiberium", "Toplam Tiberium üretimi", "Tiberium de production", "producción Tiberium", "produção Tiberium", "výroba Tiberium", "výroba Tiberium", "виробництво Tiberium", "вытворчасць Tiberium", "производство Tiberium", "Tiberium produktion", "Tiberium produksjon", "Tiberium productie", "proizvodnja Tiberium", "παραγωγή Tiberium", "Tiberium tuotanto", "Tiberium produktion", "производство Tiberium", "إنتاج tiberium من", "produkcja tyberium", "produksi Tiberium"][l];
-                            this.Data["Strom Produktion"] = ["Strom Produktion", "Power Production", "Producția de Putere", "Összes Áram Termelés", "Produzione del Energia", "Toplam enerji üretimi", "Énergie de production", "La producción actual", "A produção atual", "Aktuální produkce", "aktuálnej produkcie", "продукція, що випускається", "выпускаемая прадукцыя", "Выпускаемая продукция", "Aktuell produktion", "dagens produksjon", "De huidige productie", "Trenutna proizvodnja", "Η τρέχουσα παραγωγή", "Nykyinen tuotanto", "nuværende produktion", "текущото производство", "الإنتاج الحالي", "Obecna produkcja", "produksi saat ini"][l];
-                            this.Data["Credit Produktion"] = ["Credit Produktion", "Credit Production", "Producția de Credit", "Összes Kredit Termelés", "Produzione del Crediti", "Toplam kredi üretimi", "Crédit de production", "la producción de Crédito", "produção de Crédito", "Credit výroba", "credit výroba", "Кредитна виробництво", "крэдытная вытворчасць", "Кредитная производство", "kredit produktion", "Credit produksjon", "credit productie", "Kreditni proizvodnja", "Πιστωτικές παραγωγής", "luotto tuotanto", "Credit produktion", "Credit производство", "إنتاج الائتمان", "produkcja kredytowej", "produksi kredit"][l];
-                            this.Data["Gesamte Kristall Produktion"] = ["Gesamte Kristall Produktion", "Total Crystal Production", "Producția Totală de Cristal", "Összes Kristály Termelés", "Produzione del Cristallo totale", "Toplam Kristal üretimi", "cristaux de production", "La producción total de cristal", "A produção total de cristal", "Celková produkce krystal", "Celková produkcia kryštál", "Загальний обсяг виробництва кристалів", "Агульны аб'ём вытворчасці крышталяў", "Общий объем производства кристаллов", "Totalt kristallproduktion", "Total krystall produksjon", "Totaal kristal productie", "Ukupna proizvodnja kristala", "Συνολική παραγωγή κρυστάλλων", "Total kristalli tuotanto", "Samlede krystal produktion", "Общото производство на кристална", "إجمالي إنتاج الكريستال", "Całkowita produkcja kryształów", "Total produksi kristal"][l];
-                            this.Data["Gesamte Tiberium Produktion"] = ["Gesamte Tiberium Produktion", "Total Tiberium Production", "Producția Totală de Tiberium", "Összes Tibérium Termelés", "Produzione del Tiberium totale", "Toplam Tiberium üretimi", "Tiberium de production", "La producción total de Tiberium", "A produção total de Tiberium", "Celková výroba Tiberium", "Celková výroba Tiberium", "Загальний обсяг виробництва Tiberium", "Агульны аб'ём вытворчасці Tiberium", "Общий объем производства Tiberium", "Totalt Tiberium produktion", "Total Tiberium produksjon", "Totaal Tiberium productie", "Ukupno Tiberium proizvodnja", "Συνολική παραγωγή Tiberium", "Total Tiberium tuotanto", "Total Tiberium produktion", "Общото производство на Tiberium", "إنتاج tiberium من مجموع", "Całkowita produkcja tyberium", "Total produksi Tiberium"][l];
-                            this.Data["Gesamte Strom Produktion"] = ["Gesamte Strom Produktion", "Total Power Production", "Producția Totală de Putere", "Összes Áram Termelés", "Produzione del Energia totale", "Toplam enerji üretimi", "Énergie de production", "La producción total de electricidad", "A produção total de electricidade", "Celková výroba elektrické energie", "Celková výroba elektrickej energie", "Загальний обсяг виробництва електроенергії", "Агульны аб'ём вытворчасці электраэнергіі", "Общий объем производства электроэнергии", "Total elproduktion", "Total produksjon av elektrisitet", "Totale elektriciteitsproductie", "Ukupna proizvodnja električne energije", "Η συνολική παραγωγή ηλεκτρικής ενέργειας", "Koko sähköntuotannosta", "Samlet elproduktion", "Общо количество произведена електроенергия", "إجمالي إنتاج الكهرباء", "Całkowita produkcja energii elektrycznej", "Total produksi listrik"][l];
-                            this.Data["Gesamte Credit Produktion"] = ["Gesamte Credit Produktion", "Total Credit Production", "Producția Totală de Credit", "Összes Kredit Termelés", "Produzione del Crediti totale", "Toplam kredi üretimi", "Crédit de production", "La producción total de crédito", "Produção total de crédito", "Celkový kredit výroba", "Celkový kredit výroba", "Загальний обсяг виробництва кредитні", "Агульны аб'ём вытворчасці крэдытныя", "Общий объем производства кредитные", "Total poäng produktion", "Total kreditt produksjon", "Credit totaal productie", "Ukupna kreditna proizvodnja", "Η συνολική πιστωτική παραγωγής", "Kokonaispisteet tuotanto", "Total credit produktion", "Общо кредити на производството", "إجمالي الإنتاج الائتمان", "Całkowita produkcja kredytowej", "Produksi total kredit"][l];
-                            this.Data["Basis Name"] = ["Basis Name", "Base Name", "Numele de Bază", "Bázis Név", "Nome di Base", "Üs isim", "nom de la base", "basename", "basename", "basename", "basename", "Basename", "Basename", "Basename", "grundnamn", "basename", "basename", "basename", "basename", "basename", "basename", "Basename", "Basename", "basename", "basename"][l];
-                            this.Data["Basis Level"] = ["Basis Level", "Base Level", "Nivelul de Bază", "Bázis Szint", "Livello Base", "Üs seviye", "Niveau de base", "Nivel Básico", "Nível Básico", "Základní Úroveň", "základné Úroveň", "початковий Рівень", "пачатковы Узровень", "Начальный Уровень", "Grundläggande nivå", "grunnleggende nivå", "Basic Level", "Osnovna razina", "Βασικό Επίπεδο", "Perustaso", "grundlæggende Level", "основно ниво", "مستوى الأساسي", "Poziom Podstawowy", "Tingkat Dasar"][l];
-                            this.Data["Offensiv Level"] = ["Offensiv Level", "Offense Level", "Nivelul Ofensivă", "Támadó Szint", "Livello Attaccante", "Saldırgan Seviye", "Niveau offensive", "Nivel Ofensivo", "Nível ofensivo", "Ofenzivní Level", "ofenzívny Level", "наступ Рівень", "наступ Узровень", "Наступление Уровень", "offensiv Nivå", "offensive nivå", "Offensive Level", "Uvredljiva Razina", "Επιθετικά Επίπεδο", "Hyökkäävä Level", "offensiv Level", "Offensive Level", "مستوى الهجومية", "Ofensywny Level", "Tingkat Serangan"][l];
-                            this.Data["Defensiv Level"] = ["Defensiv Level", "Defense Level", "Nivelul Defensiv", "Védelmi Szint", "Livello Difensiva", "Defansif Seviye", "Niveau défensif", "Nivel Defensivo", "Nível defensivo", "defenzivní Level", "defenzívne Level", "оборонна Рівень", "абарончая Узровень", "Оборонительная Уровень", "defensiv Nivå", "defensive nivå", "defensieve Level", "Povučen Razina", "αμυντικά Επίπεδο", "puolustava Level", "defensiv Level", "Отбранителна Level", "المستوى الدفاعي", "Defensywny Level", "Tingkat defensif"][l];
-                            this.Data["Strom Produktion"] = ["Strom Produktion", "Power Produktion", "Producția de Energie", "Áram Termelés", "Produzione di Energia", "enerji üretimi", "la production d'énergie", "La producción actual", "A produção atual", "Aktuální produkce", "aktuálnej produkcie", "продукція, що випускається", "выпускаемая прадукцыя", "Выпускаемая продукция", "Aktuell produktion", "dagens produksjon", "De huidige productie", "Trenutna proizvodnja", "Η τρέχουσα παραγωγή", "Nykyinen tuotanto", "nuværende produktion", "текущото производство", "الإنتاج الحالي", "Obecna produkcja", "produksi saat ini"][l];
-                            this.Data["Fußtruppen Reparaturzeit"] = ["Fußtruppen Reparaturzeit", "Infantry Repairtime", "Timp de Reparații de Infanterie", "Gyalogos Javítási Idő", "Tempo di riparazione Fanteria", "Piyade onarım süresi", "Temps de réparation d'infanterie", "El tiempo de reparación de Infantería", "Tempo de reparação de infantaria", "Pěchota doba opravy", "Pechota doba opravy", "Час піхотної ремонт", "Час пяхотнай рамонт", "Время пехотной ремонт", "Infanteri reparationstiden", "Infantry reparasjonstiden", "Infanterie reparatietijd", "Vrijeme Pješačko popravak", "Χρόνος επισκευής Πεζικού", "Jalkaväki korjausaika", "Infanteri reparationstid", "Време за ремонт пехотна", "وقت الإصلاح المشاة", "Czas naprawy Piechota", "Waktu perbaikan Infanteri"][l];
-                            this.Data["Fahrzeug Reparaturzeit"] = ["Fahrzeug Reparaturzeit", "Vehicle Repairtime", "Timp de Reparații de Vehicul", "Jármű Javítási Idő", "Tempo di riparazione Veicolo", "Araç onarım süresi", "Temps de réparation du véhicule", "El tiempo de reparación de vehículos", "Tempo de reparação de veículos", "Opravy vozidel čas", "Opravy vozidiel čas", "Час ремонту автомобіля", "Час рамонту аўтамабіля", "Время ремонта автомобиля", "Fordonsreparationstiden", "Vehicle reparasjonstiden", "Voertuig reparatietijd", "Vrijeme za popravak vozila", "Χρόνος επισκευής του οχήματος", "Ajoneuvojen korjausaika", "Køretøj reparationstid", "Време за ремонт на превозни средства", "الوقت إصلاح المركبات", "Czas naprawy pojazdu", "Waktu perbaikan kendaraan"][l];
-                            this.Data["Flugzeug Reparaturzeit"] = ["Flugzeug Reparaturzeit", "Aircraft Repairtime", "Timp de Reparații de Avioane", "Repülőgép Javítási Idő", "Tempo di riparazione Aeromobile", "Uçak onarım süresi", "Temps de réparation d'aéronefs", "El tiempo de reparación de aeronaves", "Tempo de reparação de aeronaves", "Oprava letadla čas", "Oprava lietadla čas", "Час ремонту літака", "Час рамонту самалёта", "Время ремонта самолета", "Flygplan reparationstiden", "Aircraft reparasjonstiden", "Vliegtuigen reparatietijd", "Vrijeme popravak zrakoplova", "Χρόνος επισκευής των αεροσκαφών", "Lentokoneiden korjaus- aika", "Aircraft reparationstid", "Време за ремонт на въздухоплавателни средства", "الوقت إصلاح الطائرات", "Samoloty czas naprawy", "Waktu perbaikan Pesawat"][l];
-                            this.Data["Spieler Produktion"] = ["Spieler Produktion", "Players Production", "Jucatori de Producție", "A játékosok Termelés", "Giocatori di produzione", "Oyuncular Üretim", "Les joueurs de production", "Jugadores Producción", "jogadores de Produção", "hráči Production", "hráči Production", "Гравці Виробництво", "гульцы Вытворчасць", "Игроки Производство", "spelare Produktion", "spillere Produksjon", "spelers Production", "igrači Proizvodnja", "Παίκτες παραγωγής", "Pelaajat Tuotanto", "", "Играчите Производство", "إنتاجspillere Produktion لاعبين", "Gracze Produkcja", "Produksi pemain"][l];
-                            this.Data["Gesamte Produktion"] = ["Gesamte Produktion", "Total Production", "Producția totală", "Összes termelés", "La produzione totale", "Toplam Üretim", "La production totale", "La producción total", "A produção total", "celková produkce", "Celková produkcia", "Загальний обсяг виробництва", "агульны аб'ём вытворчасці", "Общий объем производства", "Total produktion", "Total produksjon", "De totale productie", "Ukupna proizvodnja", "Συνολική παραγωγή", "kokonaistuotanto", "samlet produktion", "Общото производство", "إجمالي الإنتاج", "Całkowita produkcja", "total produksi"][l];
-                            this.Data["aller Basen"] = ["aller Basen", "all bases", "toate bazele", "minden bázisok", "tutte le basi", "tüm üsleri", "toutes les bases", "todas las bases", "todas as bases", "všechny základny", "všetky základne", "всі підстави", "усе падставы", "все основания", "alla baser", "alle baser", "alle bases", "sve baze", "όλες οι βάσεις", "kaikki alustat", "alle baser", "всички бази", "كل القواعد", "wszystkie zasady", "semua basis"][l];
-                            this.Data["inklusive POI Bonus"] = ["inklusive POI Bonus", "inclusiv Bonus POI", "inclusiv de POI", "beleértve POI Bonus", "compresi POI Bonus", "dahil POI Bonus", "y compris POI Bonus", "incluyendo PDI Bono", "incluindo POI Bonus", "včetně POI Bonus", "vrátane POI Bonus", "в тому числі об'єкти до досвіду", "у тым ліку аб'екты да вопыту", "в том числе объекты к опыту", "inklusive POI Bonus", "inkludert POI Bonus", "waaronder POI Bonus", "uključujući POI bonus", "συμπεριλαμβανομένων των POI Μπόνους", "mukaan lukien KP Bonus", "herunder POI Bonus", "включително POI Bonus", "بما في ذلك مكافأة POI", "w tym Bonus POI", "termasuk Bonus POI"][l];
-                            this.Data["Name"] = ["Name", "Name", "Numele", "Név", "Nome", "Isim", "Nom", "nombre", "nome", "název", "Názov", "ім'я", "мя", "имя", "namn", "navn", "naam", "naziv", "όνομα", "nimi", "navn", "име", "اسم", "nazwa", "nama"][l];
-                            this.Data["Version"] = ["Version", "Version", "Versiune", "Változat", "Versione", "Versiyon", "Version", "versión", "versão", "verze", "verzia", "версія", "версія", "версия", "version", "versjon", "versie", "verzija", "εκδοχή", "versio", "Version", "версия", "نسخة", "wersja", "versi"][l];
-                            this.Data["Ersteller"] = ["Ersteller", "Creator", "Creator", "Teremtő", "Creatore", "Yaratıcı", "Créateur", "creador", "criador", "tvůrce", "tvorca", "творець", "стваральнік", "создатель", "Skaparen", "Creator", "Schepper", "tvorac", "δημιουργός", "Luoja", "skaberen", "създател", "الخالق", "twórca", "pencipta"][l];
-                            this.Data["Webseite"] = ["Webseite", "Homepage", "Pagina de start", "Honlap", "Homepage", "Anasayfa", "Page d'accueil", "sitio web", "site", "webové stránky", "webové stránky", "сайт", "сайт", "сайт", "Webbplats", "nettsted", "website", "website", "δικτυακός τόπος", "verkkosivusto", "websted", "уебсайт", "الموقع", "witryna internetowa", "situs web"][l];
-                            this.Data["E-Mail"] = ["E-Mail", "E-Mail", "E-Mail", "E-Mail", "E-Mail", "E-Mail", "E-Mail", "E-mail", "E-mail", "E-mail", "E-mail", "Електронна пошта", "Электронная пошта", "Электронная почта", "E-post", "E-post", "E-mail", "E-mail", "E-mail", "E-mail", "E-mail", "Е-поща", "البريد الإلكتروني", "E-mail", "E-mail"][l];
-                            this.Data["Mitglieder Auflistung"] = ["Mitglieder Auflistung", "Members Listing", "Lista de Membrii", "Tagok Listája", "Lista Membri", "Üye Listesini", "Liste des Membres", "lista de Miembros", "lista de membros", "seznam členů", "zoznam členov", "користувачі", "карыстальнікі", "Пользователи", "Medlemmar listan", "medlemmer liste", "ledenlijst", "popis članova", "Λίστα Μελών", "jäsenluettelo", "medlemmer liste", "Списък с членовете", "قائمة الأعضاء", "lista członków", "daftar anggota"][l];
-                            this.Data["Nur für OBH's sichtbar"] = ["Nur für OBH's sichtbar", "Visible only for CiC", "Vizibil doar pentru Commander", "Csak akkor látható, a Commander", "Visibile solo per il Comandante", "Sadece Komutanı görebilir", "Visible uniquement pour le commandant", "Visible sólo para CiC", "Visível apenas para CiC", "Viditelné pouze pro CiC", "Viditeľné len pre CiC", "Відомий тільки для CiC", "Бачны толькі для CiC", "Видимый только для CiC", "Synlig endast för CiC", "Bare synlig for CiC", "Alleen zichtbaar voor CiC", "Vidljivo samo za CiC", "Ορατό μόνο για CiC", "Näkyvä ainoastaan CiC", "Kun synlig for CiC", "Видим само за CiC", "تظهر فقط لفي CiC", "Widoczne tylko dla CiC", "Terlihat hanya untuk CiC dunia"][l];
-                            this.Data["Mitglieder Anpassung"] = ["Mitglieder Anpassung", "Members Adaptation", "Adaptarea Membrilor", "Tagok Adaptáció", "Membri Adattamento", "Üye Adaptasyon", "Membres Adaptation", "Miembros adaptación", "adaptação membros", "Členové adaptace", "členovia adaptácia", "користувачі адаптації", "карыстальнікі адаптацыі", "Пользователи адаптации", "medlemmar anpassning", "medlemmer tilpasning", "aanpassing leden", "Članovi prilagodba", "προσαρμογή Μέλη", "jäsenet sopeutuminen", "medlemmer tilpasning", "членове адаптация", "التكيف الأعضاء", "adaptacja członków", "anggota adaptasi"][l];
-                            this.Data["Mitgliederliste erneuern"] = ["Mitgliederliste erneuern", "Renew Memberlist", "Reînnoi Membri", "Megújítani Taglista", "Rinnovare Iscritti", "Üye Listesini yenilemek", "Renouveler Membres", "Renovar Miembros", "Renove Membros", "obnovit uživatelů", "obnoviť užívateľov", "замінити Користувачі", "замяніць Карыстальнікі", "Заменить Пользователи", "förnya Medlems", "Forny Medlems", "Renew Gebruikerslijst", "obnovite Članstvo", "Ανανέωση Μελών", "Uudista Ohje", "forny Grupper", "Renew Потребители", "تجديد الاعضاء", "Odnów Użytkownicy Użytkownicy", "Renew Anggota"][l];
-                            this.Data["Du mußt auf der BaseInfo-Seite eingeloggt sein"] = ["Du mußt auf der BaseInfo-Seite eingeloggt sein", "You need to log in on the BaseInfo Page", "Trebuie să vă conectați de pe pagina Informații de Bază", "Be kell jelentkezni a Base Információs oldal", "Devi effettuare il login nella pagina Informazioni di base", "Base Bilgileri sayfasında giriş yapmanız gerekiyor", "Vous devez vous connecter sur la Page d'information de Base", "¡Tienes que entrar en la página de Información de Base", "Você precisa fazer o login na página Information Base", "Musíte se přihlásit na základní stránce Informace", "Musíte sa prihlásiť na základnej stránke Informácie", "Ви повинні увійти на сторінці інформаційної бази", "Вы павінны ўвайсці на старонцы інфармацыйнай базы", "Вы должны войти на странице информационной базы", "Du måste logga in på basera informationssidan", "Du må logge inn på Base informasjonssiden", "Je moet inloggen op de Basis Informatie pagina", "Morate se prijaviti na stranicu baze Informacijskog", "Θα πρέπει να συνδεθείτε στην σελίδα Βάση Πληροφοριών", "Sinun täytyy kirjautua sisään Base Infosivu", "Du er nødt til at logge ind på Base Infoside", "Необходимо е да влезете в по въпросите на информационното страницата Base", "تحتاج إلى تسجيل الدخول على الصفحة قاعدة المعلومات", "Musisz zalogować się na stronie Bazy Informacji", "Anda harus login pada halaman Information Base"][l];
-                            this.Data["Account Erstellung"] = ["Account Erstellung", "account creation", "crearea de conturi", "Fiók létrehozása", "creazione di un account", "Hesap oluşturma", "création de compte", "La creación de cuentas", "A criação de contas", "vytvoření účtu", "vytvorenie účtu", "створення облікового запису", "стварэнне ўліковага запісу", "создание учетной записи", "skapa konto", "kontoopprettelse", "aanmaken van een account", "Izrada računa", "δημιουργία λογαριασμού", "tilin luominen", "kontooprettelse", "създаване на профил", "إنشاء حساب", "utworzenie konta", "pembuatan akun"][l];
+                            this.Data["Sprache"] = ['de','en','ro','hu','it','tr','fr','es','pt','cs','sk','uk','be','ru','sv','nb','nl','hr','el','fi','da','bg','ar','pl','id'][l];
+                            this.Data["Server Sprache"] = ["Server Sprache","Server Language","Limbaj Server","Szerver nyelv","Lingua Server","Sunucu Dil","Langage de Serveur","Idioma del Servidor","Servidor Idioma","Serveru Jazyka","Servera Language","Cервера мову","Cэрвэр Язык","Сервер Язык","Serverspråk","Server Språk","Server Taal","Poslužitelj Jezik","διακομιστή Γλώσσα","Server Kieli","Server Sprog","Сървър Език","الخادم اللغة","Serwer Język","Server Bahasa"][l];
+                            this.Data["Öffnen"] = ["Öffnen","Open","Deschidere","Nyitás","Apertura","Açılış","Ouverture","Apertura","Abertura","Otevřít","otvor","відкриття","адкрыццё","открытие","öppning","åpning","opening","otvaranje","άνοιγμα","aukko","åbning","отвор","افتتاح","otwarcie","pembukaan"][l];
+                            this.Data["Basenwerte"] = ["Basenwerte","Base values","Valorile de Bază","Bázis Értékek","Valori di Base","Üs Değerler","Les valeurs de base","los valores de base","valores de base","Základní hodnoty","základné hodnoty","базисні показники","базісныя паказчыкі","базисные показатели","basvärden","verdigrunnlag","Base waarden","Baza vrijednosti","τιμές βάσης","tukikohta arvot","uædle værdier","Базови стойности","قيم قاعدة","wartości bazowe","nilai-nilai dasar"][l];
+                            this.Data["Mitglieder"] = ["Mitglieder","Members","Membrii","Tagok","Membri","Üyeler","membres","Miembros","membros","Členové","členovia","члени","члены","члены","Medlemmar","medlemmer","leden","članovi","Μέλη","jäsenet","medlemmer","Потребители","الأعضاء","Użytkownicy","anggota"][l];
+                            this.Data["Scriptinfo"] = ["Scriptinfo","Scripts Info","Informații Scripturi","Scripts Információkat","Informazioni Scripts","Script bilgisi","Scripts d'infos","Información Guión","Informações Script","skriptu Informace","script Informácie","інформація сценарію","інфармацыя сцэнара","информация сценария","Skriptinformation","skriptet Informasjon","script Informatie","Skripta informacije","σενάριο Πληροφορίες","skripti tiedot","script oplysninger","скрипта Информация","معلومات النصي","Informacje script","Script Informasi"][l];
+                            this.Data["Allgemeine Informationen"] = ["Allgemeine Informationen","General Informations","Informații Generale","Általános Információk","Informazioni Generali","Genel bilgi","Informations Générales","Información General","Informação Geral","Obecná Informace","Všeobecná Informácie","Загальна Інформація","Агульная Інфармацыя","Общая Информация","Allmän Information","Generell Informasjon","Algemene Informatie","Opće Informacije","Γενικές Πληροφορίες","Yleistiedot","generelle oplysninger","Обща Информация","معلومات عامة","Informacje Ogólne","Informasi Umum"][l];
+                            this.Data["Allgemein"] = ["Allgemein","General","Generale","Általános","General","Genel","Générales","general","geralmente","obecný","obvykle","в цілому","Генеральная","Генеральная","Allmänt","Generelt","algemeen","obično","γενικός","yleinen","generelt","общо","عام","ogólny","umum"][l];
+                            this.Data["Gesamte Produktion"] = ["Gesamte Produktion","Total Production","Producția Totală de","Összes Termelés","La Produzione Totale","Toplam üretim","La production totale","La producción total","A produção total","celková produkce","Celková produkcia","Загальний обсяг виробництва","агульны аб'ём вытворчасці","Общий объем производства","Den sammanlagda produktionen","totale produksjonen","De totale productie","Ukupna proizvodnja","Συνολική παραγωγή","kokonaistuotanto","samlet produktion","Общото производство","إجمالي الإنتاج","Całkowita produkcja","produksi total"][l];
+                            this.Data["Erste Offensive"] = ["Erste Offensive","First Offense","Primul Ofensivă","Első Támadó","Prima Attaccante","Birinci Ofansif","Première Offensive","primero Ofensivo","primeiro Ofensivo","První Ofenzivní","prvý Ofenzívny","По-перше Образливий","Па-першае абразлівыя","Во-первых Оскорбительный","första offensiv","First Offensive","eerste Offensive","Prvo Uvredljiva","Πρώτα Επιθετικά","First Hyökkäävä","First Offensive","Първо Offensive","أول هجوم","pierwszy Ofensywny","pertama Serangan"][l];
+                            this.Data["Zweite Offensive"] = ["Zweite Offensive","Second Offense","Al Doilea Ofensivă","Második Támadó","Secondo Attaccante","Ikinci bir Ofansif","Deuxième Offensive","Segundo Ofensivo","segundo Ofensivo","druhý Ofenzivní","druhý Ofenzívny","По-друге Образливий","Па-другое абразлівыя","Во-вторых Оскорбительный","andra Offensive","Second Offensive","tweede Offensive","Drugo Uvredljiva","δεύτερη Επιθετικά","toinen Hyökkäävä","Second Offensive","Второ Offensive","الهجومية الثانية","drugi Ofensywny","kedua Serangan"][l];
+                            this.Data["Werte übertragen"] = ["Werte übertragen","Transfer Values","Valorile de Transfer","Transfer Értékek","Valori di Trasferimento","transferi değerler","Les valeurs de transfert","valores de Transferencia","valores de transferência","hodnoty Přenos","hodnoty Prenos","переносити вартість","пераносіць кошт","переносить стоимость","överföringsvärden","overføre verdier","Transfer waarden","vrijednosti prijenos","τιμές μεταβίβασης","siirtoarvoja","Overfør værdier","прехвърлят","القيم نقل","wartości transferowe","nilai transfer"][l];
+                            this.Data["Weltkarte"] = ["Weltkarte","Worldmap","Hartă Lumii","Térkép a Világ","Mappamondo","Dünyada Haritası","Carte du Monde","mapa del mundo","mapa do mundo","Mapa světa","mapa sveta","Карта світу","карта свету","Карта мира","Karta över världen","verdenskart","kaart van de wereld","karta svijeta","Χάρτης του κόσμου","Maailmankartta","kort over verden","Карта на света","خريطة العالم","Mapa świata","peta dunia"][l];
+                            this.Data["Allianz Rolle"] = ["Allianz Rolle","Alliance Role","Rol Alianță","Szövetség Szerepe","Ruolo Alleanza","İttifak rolü","rôle de l'Alliance","papel Alianza","papel Alliance","Alliance role","alliance role","Альянс роль","альянс ролю","Альянс роль","Alliance roll","Alliance rolle","Alliance rol","Savez uloga","ρόλος της Συμμαχίας","Alliance rooli","alliance rolle","Alliance роля","دور التحالف","rola sojuszu","peran aliansi"][l];
+                            this.Data["Spielername"] = ["Spielername","Player Name","Nume Jucător","Játékos Neve","Nome Giocatore","Oyuncu Adı","Nom du joueur","Jugadores Nombre","Nome Jogadores","hráči Jméno","hráči Meno","Гравці Ім'я","гульцы Імя","Игроки Имя","spelare Namn","spillere Navn","spelers Naam","igrači Ime","Παίκτες Όνομα","Pelaajat Nimi","spillere Navn","Играчи Име","اللاعبين الاسم","Gracze Nazwa","pemain Nama"][l];
+                            this.Data["Spielerklasse"] = ["Spielerklasse","Player Class","Clasa Jucător","Töredék","Fazione","Grup","Faction","Clase jugador","Classe jogador","hráč Class","hráč Class","клас гравця","клас гульца","Класс игрока","Spelar klass","spiller Class","Player Class","igrač klase","παίκτης Class","Player Class","Spiller Class","Player Class","فئة اللاعب","Klasa graczem","pemain Kelas"][l];
+                            this.Data["Aktuelle Uhrzeit"] = ["Aktuelle Uhrzeit","Current Time","Ora curenta","Idő","Ora Attuale","şimdiki zaman","Date actuelle","Tiempo Actual","Tempo Atual","Aktuální čas","aktuálny čas","поточне Час","бягучае Час","Текущее Время","Aktuell tid","Nåværende Tid","huidige Tijd","Trenutno vrijeme","Τρέχουσα Ώρα","Nykyinen aika","Aktuel tid","Current Time","الوقت الحالي","Obecny Czas","Waktu Saat Ini"][l];
+                            this.Data["Rang"] = ["Rang","Rank","Rang","Helyezés","rango","Derece","Classement","rango","categoria","hodnost","hodnosť","Ранг","ранг","ранг","Placering","Rank","rang","čin","τάξη","arvo","Rank","ранг","مرتبة","ranga","pangkat"][l];
+                            this.Data["Maximale KP"] = ["Maximale KP","Maximal CP","Puncte de Comando Maxime","Maximális Parancsnoki Pont","Comando il Massimo dei Punti","Maksimum Komutanlığı Puan","Points de Commandement maximum","CP máximo","CP máxima","Maximální CP","maximálna CP","Максимальна CP","максімальная CP","Максимальная CP","maximal CP","maksimal CP","maximale CP","maksimalna CP","μέγιστη CP","Suurin CP","maksimal CP","Максимална CP","الحد الأقصى CP","Maksymalna CP","maksimum CP"][l];
+                            this.Data["Maximale Repzeit"] = ["Maximale Repzeit","Maximal Reptime","Timp Maxim de Reparație","Maximális Javítási Idő","Tempo Massimo di Riparazione","Maksimum onarım süresi","Temps maximum de réparation","Repzeit máximo","Repzeit máxima","Maximální Repzeit","maximálna Repzeit","Максимальна Repzeit","максімальная Repzeit","Максимальная Repzeit","maximal Repzeit","maksimal Repzeit","maximale Repzeit","maksimalna Repzeit","μέγιστη Repzeit","Suurin Repzeit","maksimal Repzeit","Максимална Repzeit","أقصى Repzeit","Maksymalna Repzeit","Repzeit maksimum"][l];
+                            this.Data["Stunden"] = ["Stunden","Hours","Ore","Óra","Orario","Saatleri","Heures","horas","horas","hodiny","hodiny","годин","гадзін","часов","timmar","timer","Hours","Radno vrijeme","ώρες","tuntia","Timer","Часове","ساعات","godziny","jam"][l];
+                            this.Data["Basenanzahl"] = ["Basenanzahl","Basecount","Numarul de Bază","Szám Bázisok","Numero di Base","Üs Numarası","Nombre de base","Número Base","Número de base","Základní Number","základné Number","базовий номер","базавы нумар","Базовый номер","basnummer","Base Number","Base Number","baza broj","Αριθμός βάση","Base Number","Base Number","Base Number","عدد قاعدة","Ilość bazowa","Jumlah dasar"][l];
+                            this.Data["Anzahl Offensiv Basen"] = ["Anzahl Offensiv Basen","Offense Bases Count","Baze număr Ofensivă","Szám Sértő Bázisok","Basi numero Attaccante","Numara saldırgan Üs","Nombre de bases offensives","Bases Número ofensivas","Número bases ofensivas","Počet ofenzivní základny","Počet ofenzívnej základne","Кількість образливі основи","Колькасць абразлівыя асновы","Количество оскорбительные основы","Antal offensiva baser","Antall offensive baser","Aantal offensief bases","Broj uvredljive baze","Βάσεις Αριθμός προσβλητικό","Numero loukkaavaa emäkset","Nummer offensive baser","Номер обидни бази","عدد القواعد هجوم","Podstawy Liczba obraźliwe","Basis Nomor ofensif"][l];
+                            this.Data["Support Gebäude Level Ø"] = ["Support Gebäude Level Ø","Support Building Level Ø","Suport de Constructii Nivel Ø","Támogatás Építési Szint Ø","Supporto Livello Edificio Ø","Destek Bina Seviye Ø","Bâtiment Niveau de soutien","Soporte Nivel Edificio Ø","Suporte Nível Edifício Ø","Podpora budova úroveň Ø","Podpora budova úroveň Ø","Підтримка Будівництво Ø Рівень","Падтрымка Будаўніцтва Ø Узровень","Поддержка Строительство Ø Уровень","Support Building Level Ø","Support Bygning Nivå Ø","Ondersteuning Building Level Ø","Podrška Građevinska Razina Ø","Υποστήριξη Κτίριο Επίπεδο Ø","Tuki Building Level Ø","Support Building Level Ø","Подкрепа Building Level Ø","دعم بناء مستوى Ø","Pomoc budynek Poziom Ø","Dukungan Building Tingkat Ø"][l];
+                            this.Data["VE Ø aller Basen"] = ["VE Ø aller Basen","DF Ø all Bases","Ø Unitate de Apărare Toate Bazele","Védelem Létrehozása Ø Összes Bázisok","Stazioni di difesa Ø di tutte le basi","Savunma Tesis Ø bütün Üs","Fonds de défense Ø de toutes les bases","DF Ø todas las bases","DF Ø todas as bases","DF Ø Všechny základny","DF Ø Všetky základne","DF Ø всі підстави","DF Ø усе падставы","DF Ø все основания","DF Ø alla baser","DF Ø alle baser","DF Ø alle bases","DF Ø Svi baze","DF Ø όλες τις βάσεις","DF Ø kaikki alustat","DF Ø alle baser","DF Ø всички бази","DF Ø كل القواعد","DF Ø wszystkich baz","DF Ø semua basis"][l];
+                            this.Data["Def Ø aller Basen"] = ["Def Ø aller Basen","Def Ø all Bases","Ø Unitate de Def Toate Bazele","Def Ø Összes Bázisok","Def Ø di tutte le basi","Def Ø bütün Üs","Def Ø de toutes les bases","Def Ø todas las bases","Def Ø todas as bases","Def Ø Všechny základny","Def Ø Všetky základne","Def Ø всі підстави","Def Ø усе падставы","Def Ø все основания","Def Ø alla baser","Def Ø alle baser","Def Ø alle bases","Def Ø Svi baze","Def Ø όλες τις βάσεις","Def Ø kaikki alustat","Def Ø alle baser","Def Ø всички бази","Def Ø كل القواعد","Def Ø wszystkich baz","Def Ø semua basis"][l];
+                            this.Data["Kristall"] = ["Kristall","Crystal","Cristal","Kristály","Cristallo","Kristal","Cristaux","cristal","cristal","krystal","kryštál","кристал","крышталь","кристалл","kristall","krystall","kristal","kristal","κρύσταλλο","kristalli","krystal","кристал","بلور","kryształ","kristal"][l];
+                            this.Data["Tiberium"] = ["Tiberium","Tiberium","Tiberium","Tibérium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","Tiberium","tiberium من","tyberium","Tiberium"][l];
+                            this.Data["Strom"] = ["Strom","Power","Putere","Áram","Energia","Enerji","Énergie","corriente","atual","proud","prúd","струм","ток","ток","Aktuell","Nåværende","stroom","struja","ρεύμα","nykyinen","nuværende","ток","تيار","prąd","arus"][l];
+                            this.Data["Credit"] = ["Credit","Credit","Credit","Kredit","Crediti","Kredi","Crédit","crédito","crédito","úvěr","úver","кредит","крэдыт","кредит","kredit","Credit","krediet","kredit","πίστωση","luotto","Credit","кредит","ائتمان","kredyt","kredit"][l];
+                            this.Data["Kristall Produktion"] = ["Kristall Produktion","Crystal Production","Producția de Cristal","Összes Kristály Termelés","Produzione del Cristallo","Toplam Kristal üretimi","cristaux de production","la producción de cristal","produção de cristal","výroba Crystal","výroba Crystal","кристал виробництво","крышталь вытворчасць","Кристалл производство","kristallproduktion","Crystal produksjon","Crystal productie","Crystal proizvodnja","κρυστάλλινα παραγωγής","Crystal tuotanto","krystal produktion","производство Crystal","إنتاج الكريستال","produkcji kryształu","produksi kristal"][l];
+                            this.Data["Tiberium Produktion"] = ["Tiberium Produktion","Tiberium Production","Producția de Tiberium","Összes Tibérium Termelés","Produzione del Tiberium","Toplam Tiberium üretimi","Tiberium de production","producción Tiberium","produção Tiberium","výroba Tiberium","výroba Tiberium","виробництво Tiberium","вытворчасць Tiberium","производство Tiberium","Tiberium produktion","Tiberium produksjon","Tiberium productie","proizvodnja Tiberium","παραγωγή Tiberium","Tiberium tuotanto","Tiberium produktion","производство Tiberium","إنتاج tiberium من","produkcja tyberium","produksi Tiberium"][l];
+                            this.Data["Strom Produktion"] = ["Strom Produktion","Power Production","Producția de Putere","Összes Áram Termelés","Produzione del Energia","Toplam enerji üretimi","Énergie de production","La producción actual","A produção atual","Aktuální produkce","aktuálnej produkcie","продукція, що випускається","выпускаемая прадукцыя","Выпускаемая продукция","Aktuell produktion","dagens produksjon","De huidige productie","Trenutna proizvodnja","Η τρέχουσα παραγωγή","Nykyinen tuotanto","nuværende produktion","текущото производство","الإنتاج الحالي","Obecna produkcja","produksi saat ini"][l];
+                            this.Data["Credit Produktion"] = ["Credit Produktion","Credit Production","Producția de Credit","Összes Kredit Termelés","Produzione del Crediti","Toplam kredi üretimi","Crédit de production","la producción de Crédito","produção de Crédito","Credit výroba","credit výroba","Кредитна виробництво","крэдытная вытворчасць","Кредитная производство","kredit produktion","Credit produksjon","credit productie","Kreditni proizvodnja","Πιστωτικές παραγωγής","luotto tuotanto","Credit produktion","Credit производство","إنتاج الائتمان","produkcja kredytowej","produksi kredit"][l];
+                            this.Data["Gesamte Kristall Produktion"] = ["Gesamte Kristall Produktion","Total Crystal Production","Producția Totală de Cristal","Összes Kristály Termelés","Produzione del Cristallo totale","Toplam Kristal üretimi","cristaux de production","La producción total de cristal","A produção total de cristal","Celková produkce krystal","Celková produkcia kryštál","Загальний обсяг виробництва кристалів","Агульны аб'ём вытворчасці крышталяў","Общий объем производства кристаллов","Totalt kristallproduktion","Total krystall produksjon","Totaal kristal productie","Ukupna proizvodnja kristala","Συνολική παραγωγή κρυστάλλων","Total kristalli tuotanto","Samlede krystal produktion","Общото производство на кристална","إجمالي إنتاج الكريستال","Całkowita produkcja kryształów","Total produksi kristal"][l];
+                            this.Data["Gesamte Tiberium Produktion"] = ["Gesamte Tiberium Produktion","Total Tiberium Production","Producția Totală de Tiberium","Összes Tibérium Termelés","Produzione del Tiberium totale","Toplam Tiberium üretimi","Tiberium de production","La producción total de Tiberium","A produção total de Tiberium","Celková výroba Tiberium","Celková výroba Tiberium","Загальний обсяг виробництва Tiberium","Агульны аб'ём вытворчасці Tiberium","Общий объем производства Tiberium","Totalt Tiberium produktion","Total Tiberium produksjon","Totaal Tiberium productie","Ukupno Tiberium proizvodnja","Συνολική παραγωγή Tiberium","Total Tiberium tuotanto","Total Tiberium produktion","Общото производство на Tiberium","إنتاج tiberium من مجموع","Całkowita produkcja tyberium","Total produksi Tiberium"][l];
+                            this.Data["Gesamte Strom Produktion"] = ["Gesamte Strom Produktion","Total Power Production","Producția Totală de Putere","Összes Áram Termelés","Produzione del Energia totale","Toplam enerji üretimi","Énergie de production","La producción total de electricidad","A produção total de electricidade","Celková výroba elektrické energie","Celková výroba elektrickej energie","Загальний обсяг виробництва електроенергії","Агульны аб'ём вытворчасці электраэнергіі","Общий объем производства электроэнергии","Total elproduktion","Total produksjon av elektrisitet","Totale elektriciteitsproductie","Ukupna proizvodnja električne energije","Η συνολική παραγωγή ηλεκτρικής ενέργειας","Koko sähköntuotannosta","Samlet elproduktion","Общо количество произведена електроенергия","إجمالي إنتاج الكهرباء","Całkowita produkcja energii elektrycznej","Total produksi listrik"][l];
+                            this.Data["Gesamte Credit Produktion"] = ["Gesamte Credit Produktion","Total Credit Production","Producția Totală de Credit","Összes Kredit Termelés","Produzione del Crediti totale","Toplam kredi üretimi","Crédit de production","La producción total de crédito","Produção total de crédito","Celkový kredit výroba","Celkový kredit výroba","Загальний обсяг виробництва кредитні","Агульны аб'ём вытворчасці крэдытныя","Общий объем производства кредитные","Total poäng produktion","Total kreditt produksjon","Credit totaal productie","Ukupna kreditna proizvodnja","Η συνολική πιστωτική παραγωγής","Kokonaispisteet tuotanto","Total credit produktion","Общо кредити на производството","إجمالي الإنتاج الائتمان","Całkowita produkcja kredytowej","Produksi total kredit"][l];
+                            this.Data["Basis Name"] = ["Basis Name","Base Name","Numele de Bază","Bázis Név","Nome di Base","Üs isim","nom de la base","basename","basename","basename","basename","Basename","Basename","Basename","grundnamn","basename","basename","basename","basename","basename","basename","Basename","Basename","basename","basename"][l];
+                            this.Data["Basis Level"] = ["Basis Level","Base Level","Nivelul de Bază","Bázis Szint","Livello Base","Üs seviye","Niveau de base","Nivel Básico","Nível Básico","Základní Úroveň","základné Úroveň","початковий Рівень","пачатковы Узровень","Начальный Уровень","Grundläggande nivå","grunnleggende nivå","Basic Level","Osnovna razina","Βασικό Επίπεδο","Perustaso","grundlæggende Level","основно ниво","مستوى الأساسي","Poziom Podstawowy","Tingkat Dasar"][l];
+                            this.Data["Offensiv Level"] = ["Offensiv Level","Offense Level","Nivelul Ofensivă","Támadó Szint","Livello Attaccante","Saldırgan Seviye","Niveau offensive","Nivel Ofensivo","Nível ofensivo","Ofenzivní Level","ofenzívny Level","наступ Рівень","наступ Узровень","Наступление Уровень","offensiv Nivå","offensive nivå","Offensive Level","Uvredljiva Razina","Επιθετικά Επίπεδο","Hyökkäävä Level","offensiv Level","Offensive Level","مستوى الهجومية","Ofensywny Level","Tingkat Serangan"][l];
+                            this.Data["Defensiv Level"] = ["Defensiv Level","Defense Level","Nivelul Defensiv","Védelmi Szint","Livello Difensiva","Defansif Seviye","Niveau défensif","Nivel Defensivo","Nível defensivo","defenzivní Level","defenzívne Level","оборонна Рівень","абарончая Узровень","Оборонительная Уровень","defensiv Nivå","defensive nivå","defensieve Level","Povučen Razina","αμυντικά Επίπεδο","puolustava Level","defensiv Level","Отбранителна Level","المستوى الدفاعي","Defensywny Level","Tingkat defensif"][l];
+                            this.Data["Strom Produktion"] = ["Strom Produktion","Power Produktion","Producția de Energie","Áram Termelés","Produzione di Energia","enerji üretimi","la production d'énergie","La producción actual","A produção atual","Aktuální produkce","aktuálnej produkcie","продукція, що випускається","выпускаемая прадукцыя","Выпускаемая продукция","Aktuell produktion","dagens produksjon","De huidige productie","Trenutna proizvodnja","Η τρέχουσα παραγωγή","Nykyinen tuotanto","nuværende produktion","текущото производство","الإنتاج الحالي","Obecna produkcja","produksi saat ini"][l];
+                            this.Data["Fußtruppen Reparaturzeit"] = ["Fußtruppen Reparaturzeit","Infantry Repairtime","Timp de Reparații de Infanterie","Gyalogos Javítási Idő","Tempo di riparazione Fanteria","Piyade onarım süresi","Temps de réparation d'infanterie","El tiempo de reparación de Infantería","Tempo de reparação de infantaria","Pěchota doba opravy","Pechota doba opravy","Час піхотної ремонт","Час пяхотнай рамонт","Время пехотной ремонт","Infanteri reparationstiden","Infantry reparasjonstiden","Infanterie reparatietijd","Vrijeme Pješačko popravak","Χρόνος επισκευής Πεζικού","Jalkaväki korjausaika","Infanteri reparationstid","Време за ремонт пехотна","وقت الإصلاح المشاة","Czas naprawy Piechota","Waktu perbaikan Infanteri"][l];
+                            this.Data["Fahrzeug Reparaturzeit"] = ["Fahrzeug Reparaturzeit","Vehicle Repairtime","Timp de Reparații de Vehicul","Jármű Javítási Idő","Tempo di riparazione Veicolo","Araç onarım süresi","Temps de réparation du véhicule","El tiempo de reparación de vehículos","Tempo de reparação de veículos","Opravy vozidel čas","Opravy vozidiel čas","Час ремонту автомобіля","Час рамонту аўтамабіля","Время ремонта автомобиля","Fordonsreparationstiden","Vehicle reparasjonstiden","Voertuig reparatietijd","Vrijeme za popravak vozila","Χρόνος επισκευής του οχήματος","Ajoneuvojen korjausaika","Køretøj reparationstid","Време за ремонт на превозни средства","الوقت إصلاح المركبات","Czas naprawy pojazdu","Waktu perbaikan kendaraan"][l];
+                            this.Data["Flugzeug Reparaturzeit"] = ["Flugzeug Reparaturzeit","Aircraft Repairtime","Timp de Reparații de Avioane","Repülőgép Javítási Idő","Tempo di riparazione Aeromobile","Uçak onarım süresi","Temps de réparation d'aéronefs","El tiempo de reparación de aeronaves","Tempo de reparação de aeronaves","Oprava letadla čas","Oprava lietadla čas","Час ремонту літака","Час рамонту самалёта","Время ремонта самолета","Flygplan reparationstiden","Aircraft reparasjonstiden","Vliegtuigen reparatietijd","Vrijeme popravak zrakoplova","Χρόνος επισκευής των αεροσκαφών","Lentokoneiden korjaus- aika","Aircraft reparationstid","Време за ремонт на въздухоплавателни средства","الوقت إصلاح الطائرات","Samoloty czas naprawy","Waktu perbaikan Pesawat"][l];
+                            this.Data["Spieler Produktion"] = ["Spieler Produktion","Players Production","Jucatori de Producție","A játékosok Termelés","Giocatori di produzione","Oyuncular Üretim","Les joueurs de production","Jugadores Producción","jogadores de Produção","hráči Production","hráči Production","Гравці Виробництво","гульцы Вытворчасць","Игроки Производство","spelare Produktion","spillere Produksjon","spelers Production","igrači Proizvodnja","Παίκτες παραγωγής","Pelaajat Tuotanto","","Играчите Производство","إنتاجspillere Produktion لاعبين","Gracze Produkcja","Produksi pemain"][l];
+                            this.Data["Gesamte Produktion"] = ["Gesamte Produktion","Total Production","Producția totală","Összes termelés","La produzione totale","Toplam Üretim","La production totale","La producción total","A produção total","celková produkce","Celková produkcia","Загальний обсяг виробництва","агульны аб'ём вытворчасці","Общий объем производства","Total produktion","Total produksjon","De totale productie","Ukupna proizvodnja","Συνολική παραγωγή","kokonaistuotanto","samlet produktion","Общото производство","إجمالي الإنتاج","Całkowita produkcja","total produksi"][l];
+                            this.Data["aller Basen"] = ["aller Basen","all bases","toate bazele","minden bázisok","tutte le basi","tüm üsleri","toutes les bases","todas las bases","todas as bases","všechny základny","všetky základne","всі підстави","усе падставы","все основания","alla baser","alle baser","alle bases","sve baze","όλες οι βάσεις","kaikki alustat","alle baser","всички бази","كل القواعد","wszystkie zasady","semua basis"][l];
+                            this.Data["inklusive POI Bonus"] = ["inklusive POI Bonus","inclusiv Bonus POI","inclusiv de POI","beleértve POI Bonus","compresi POI Bonus","dahil POI Bonus","y compris POI Bonus","incluyendo PDI Bono","incluindo POI Bonus","včetně POI Bonus","vrátane POI Bonus","в тому числі об'єкти до досвіду","у тым ліку аб'екты да вопыту","в том числе объекты к опыту","inklusive POI Bonus","inkludert POI Bonus","waaronder POI Bonus","uključujući POI bonus","συμπεριλαμβανομένων των POI Μπόνους","mukaan lukien KP Bonus","herunder POI Bonus","включително POI Bonus","بما في ذلك مكافأة POI","w tym Bonus POI","termasuk Bonus POI"][l];
+                            this.Data["Name"] = ["Name","Name","Numele","Név","Nome","Isim","Nom","nombre","nome","název","Názov","ім'я","мя","имя","namn","navn","naam","naziv","όνομα","nimi","navn","име","اسم","nazwa","nama"][l];
+                            this.Data["Version"] = ["Version","Version","Versiune","Változat","Versione","Versiyon","Version","versión","versão","verze","verzia","версія","версія","версия","version","versjon","versie","verzija","εκδοχή","versio","Version","версия","نسخة","wersja","versi"][l];
+                            this.Data["Ersteller"] = ["Ersteller","Creator","Creator","Teremtő","Creatore","Yaratıcı","Créateur","creador","criador","tvůrce","tvorca","творець","стваральнік","создатель","Skaparen","Creator","Schepper","tvorac","δημιουργός","Luoja","skaberen","създател","الخالق","twórca","pencipta"][l];
+                            this.Data["Webseite"] = ["Webseite","Homepage","Pagina de start","Honlap","Homepage","Anasayfa","Page d'accueil","sitio web","site","webové stránky","webové stránky","сайт","сайт","сайт","Webbplats","nettsted","website","website","δικτυακός τόπος","verkkosivusto","websted","уебсайт","الموقع","witryna internetowa","situs web"][l];
+                            this.Data["E-Mail"] = ["E-Mail","E-Mail","E-Mail","E-Mail","E-Mail","E-Mail","E-Mail","E-mail","E-mail","E-mail","E-mail","Електронна пошта","Электронная пошта","Электронная почта","E-post","E-post","E-mail","E-mail","E-mail","E-mail","E-mail","Е-поща","البريد الإلكتروني","E-mail","E-mail"][l];
+                            this.Data["Mitglieder Auflistung"] = ["Mitglieder Auflistung","Members Listing","Lista de Membrii","Tagok Listája","Lista Membri","Üye Listesini","Liste des Membres","lista de Miembros","lista de membros","seznam členů","zoznam členov","користувачі","карыстальнікі","Пользователи","Medlemmar listan","medlemmer liste","ledenlijst","popis članova","Λίστα Μελών","jäsenluettelo","medlemmer liste","Списък с членовете","قائمة الأعضاء","lista członków","daftar anggota"][l];
+                            this.Data["Nur für OBH's sichtbar"] = ["Nur für OBH's sichtbar","Visible only for CiC","Vizibil doar pentru Commander","Csak akkor látható, a Commander","Visibile solo per il Comandante","Sadece Komutanı görebilir","Visible uniquement pour le commandant","Visible sólo para CiC","Visível apenas para CiC","Viditelné pouze pro CiC","Viditeľné len pre CiC","Відомий тільки для CiC","Бачны толькі для CiC","Видимый только для CiC","Synlig endast för CiC","Bare synlig for CiC","Alleen zichtbaar voor CiC","Vidljivo samo za CiC","Ορατό μόνο για CiC","Näkyvä ainoastaan CiC","Kun synlig for CiC","Видим само за CiC","تظهر فقط لفي CiC","Widoczne tylko dla CiC","Terlihat hanya untuk CiC dunia"][l];
+                            this.Data["Mitglieder Anpassung"] = ["Mitglieder Anpassung","Members Adaptation","Adaptarea Membrilor","Tagok Adaptáció","Membri Adattamento","Üye Adaptasyon","Membres Adaptation","Miembros adaptación","adaptação membros","Členové adaptace","členovia adaptácia","користувачі адаптації","карыстальнікі адаптацыі","Пользователи адаптации","medlemmar anpassning","medlemmer tilpasning","aanpassing leden","Članovi prilagodba","προσαρμογή Μέλη","jäsenet sopeutuminen","medlemmer tilpasning","членове адаптация","التكيف الأعضاء","adaptacja członków","anggota adaptasi"][l];
+                            this.Data["Mitgliederliste erneuern"] = ["Mitgliederliste erneuern","Renew Memberlist","Reînnoi Membri","Megújítani Taglista","Rinnovare Iscritti","Üye Listesini yenilemek","Renouveler Membres","Renovar Miembros","Renove Membros","obnovit uživatelů","obnoviť užívateľov","замінити Користувачі","замяніць Карыстальнікі","Заменить Пользователи","förnya Medlems","Forny Medlems","Renew Gebruikerslijst","obnovite Članstvo","Ανανέωση Μελών","Uudista Ohje","forny Grupper","Renew Потребители","تجديد الاعضاء","Odnów Użytkownicy Użytkownicy","Renew Anggota"][l];
+                            this.Data["Du mußt auf der BaseInfo-Seite eingeloggt sein"] = ["Du mußt auf der BaseInfo-Seite eingeloggt sein","You need to log in on the BaseInfo Page","Trebuie să vă conectați de pe pagina Informații de Bază","Be kell jelentkezni a Base Információs oldal","Devi effettuare il login nella pagina Informazioni di base","Base Bilgileri sayfasında giriş yapmanız gerekiyor","Vous devez vous connecter sur la Page d'information de Base","¡Tienes que entrar en la página de Información de Base","Você precisa fazer o login na página Information Base","Musíte se přihlásit na základní stránce Informace","Musíte sa prihlásiť na základnej stránke Informácie","Ви повинні увійти на сторінці інформаційної бази","Вы павінны ўвайсці на старонцы інфармацыйнай базы","Вы должны войти на странице информационной базы","Du måste logga in på basera informationssidan","Du må logge inn på Base informasjonssiden","Je moet inloggen op de Basis Informatie pagina","Morate se prijaviti na stranicu baze Informacijskog","Θα πρέπει να συνδεθείτε στην σελίδα Βάση Πληροφοριών","Sinun täytyy kirjautua sisään Base Infosivu","Du er nødt til at logge ind på Base Infoside","Необходимо е да влезете в по въпросите на информационното страницата Base","تحتاج إلى تسجيل الدخول على الصفحة قاعدة المعلومات","Musisz zalogować się na stronie Bazy Informacji","Anda harus login pada halaman Information Base"][l];
+                            this.Data["Account Erstellung"] = ["Account Erstellung","Account Creation","Crearea de Conturi","Fiók Létrehozása","Creazione di un Account","Hesap Oluşturma","Création de Compte","La creación de Cuentas","A criação de Contas","Vytvoření účtu","Vytvorenie účtu","створення облікового запису","стварэнне ўліковага запісу","создание учетной записи","skapa konto","kontoopprettelse","Aanmaken van een Account","Izrada Računa","δημιουργία λογαριασμού","Tilin Luominen","Kontooprettelse","създаване на профил","إنشاء حساب","Utworzenie Konta","Pembuatan Akun"][l];
+                            this.Data["Alle Basen"] = ["Alle Basen","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases","All Bases"][l];
+                            this.Data["Überblick über die Basen"] = ["Überblick über die Basen","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview","All Bases Overview"][l];
+                            this.Data["BH"] = ["BH","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY","CY"][l];
+                            this.Data["KZ"] = ["KZ","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC","CC"][l];
+                            this.Data["VE"] = ["VE","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF","DF"][l];
+                            this.Data["VZ"] = ["VZ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ","HQ"][l];
                         },
                         get: function (ident) {
                             return this.gt(ident);
@@ -7751,7 +7789,7 @@ Ini();
                         window.addEventListener("click", this.onClick, false);
                         window.addEventListener("keyup", this.onKey, false);
                         window.addEventListener("mouseover", this.onMouseOver, false);
-                        BIVERSION = '3.2.5';
+                        BIVERSION = '3.2.8';
                         BIAUTHOR = 'Dirk Kántor (NurIcke)';
                         BICLASS = 'BaseInfo';
                         BIHOMEPAGE = 'http://baseinfo.scriptarea.net';
@@ -7776,18 +7814,19 @@ Ini();
                         BaseinfoButton: null,
                         app: null,
                         initialize: function () {
-                            try {
+                            try
+                            {
                                 console.log("BaseInfo: Initialized...");
                                 Lang.loadData(qx.locale.Manager.getInstance().getLocale().split("_")[0]);
-                                this.BaseinfoFenster = new qx.ui.window.Window(BICLASS + " " + BIVERSION + " [" + Lang.gt("Sprache") + "] (" + Lang.gt("Server Sprache") + ": " + BIUSERLANGUAGE + ")", BIIMAGE).set({
+                                this.BaseinfoFenster = new qx.ui.window.Window(BICLASS + " " + BIVERSION + " (" + Lang.gt("Server Sprache") + ": " + BIUSERLANGUAGE + ")",BIIMAGE).set({
                                     padding: 5,
                                     paddingRight: 0,
-                                    width: 350,
-                                    showMaximize: false,
-                                    showMinimize: false,
-                                    showClose: true,
-                                    allowClose: true,
-                                    resizable: false
+                                    width: 200,
+                                    showMaximize:false,
+                                    showMinimize:false,
+                                    showClose:true,
+                                    allowClose:true,
+                                    resizable:false
                                 });
                                 this.BaseinfoFenster.setTextColor('black');
                                 this.BaseinfoFenster.setLayout(new qx.ui.layout.HBox);
@@ -7823,43 +7862,47 @@ Ini();
                                 this.BaseinfoBasesPage.add(this.BaseinfoBasesVBox);
 
                                 // Tab 3
-                                this.BaseinfoMemberPage = new qx.ui.tabview.Page(Lang.gt("Mitglieder"));
-                                this.BaseinfoMemberPage.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoTab.add(this.BaseinfoMemberPage);
-                                this.BaseinfoMemberVBox = new qx.ui.container.Composite();
-                                this.BaseinfoMemberVBox.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoMemberVBox.setThemedPadding(10);
-                                this.BaseinfoMemberVBox.setThemedBackgroundColor("#eef");
-                                this.BaseinfoMemberPage.add(this.BaseinfoMemberVBox);
+                                this.BaseinfoAllBasesPage = new qx.ui.tabview.Page(Lang.gt("Alle Basen"));
+                                this.BaseinfoAllBasesPage.setLayout(new qx.ui.layout.VBox(5));
+                                this.BaseinfoTab.add(this.BaseinfoAllBasesPage);
+                                this.BaseinfoAllBasesVBox = new qx.ui.container.Composite();
+                                this.BaseinfoAllBasesVBox.setLayout(new qx.ui.layout.VBox(5));
+                                this.BaseinfoAllBasesVBox.setThemedPadding(10);
+                                this.BaseinfoAllBasesVBox.setThemedBackgroundColor("#eef");
+                                this.BaseinfoAllBasesPage.add(this.BaseinfoAllBasesVBox);
 
-                                this.BaseinfoButton = new qx.ui.form.Button("<b>" + BICLASS + "</b>", BIIMAGESMALL).set({
+                                var BIBUTTONIMAGE = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 3) ? BIIMAGESMALL : '' ;
+                                var BIBUTTONNAME = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 2) ? '<b>' + BICLASS + '</b>' : '' ;
+                                this.BaseinfoButton = new qx.ui.form.Button(BIBUTTONNAME,BIBUTTONIMAGE).set({
                                     toolTipText: "" + Lang.gt("Öffnen") + ": " + BICLASS + " " + BIVERSION + "",
-                                    width: 100,
-                                    height: 32,
-                                    maxWidth: 100,
-                                    maxHeight: 32,
+                                    width: BIBUTTONWIDTH,
+                                    height: BIBUTTONHEIGHT,
+                                    maxWidth: BIBUTTONWIDTH,
+                                    maxHeight: BIBUTTONHEIGHT,
                                     center: true,
                                     rich: true
                                 });
                                 this.BaseinfoButton.addListener("click", function (e) {
                                     this.BaseinfoGeneralVBox.removeAll();
                                     this.BaseinfoBasesVBox.removeAll();
-                                    this.BaseinfoMemberVBox.removeAll();
+                                    this.BaseinfoAllBasesVBox.removeAll();
                                     this.showBaseinfo();
                                     this.BaseinfoFenster.show();
                                 }, this);
                                 this.app = qx.core.Init.getApplication();
-                                this.app.getDesktop().add(this.BaseinfoButton, {
-                                    right: 125,
-                                    top: 0
-                                });
+                                if(BIBUTTONPOSITION == 4) this.app.getDesktop().add(this.BaseinfoButton, {left: 125,bottom: 180}); // Chat
+                                else if(BIBUTTONPOSITION == 3) this.app.getDesktop().add(this.BaseinfoButton, {right: 122,bottom: 0}); // Serverinfo
+                                else if(BIBUTTONPOSITION == 2) this.app.getDesktop().add(this.BaseinfoButton, {left: 127,top: 0}); // Playername
+                                else this.app.getDesktop().add(this.BaseinfoButton, {right: 125,top: 0}); // Standard Worldname
                             }
-                            catch (e) {
+                            catch(e)
+                            {
                                 console.log("BaseInfo: Initialize Error - ", e);
                             }
                         },
                         showBaseinfo: function (ev) {
-                            try {
+                            try
+                            {
                                 console.log("BaseInfo: Loading...");
                                 var instance = ClientLib.Data.MainData.GetInstance();
                                 var alliance = instance.get_Alliance();
@@ -7873,24 +7916,24 @@ Ini();
                                 var accountCreate = new Date(player.get_CreationDate());
                                 var Stunde1 = accountCreate.getHours();
                                 var Minute1 = accountCreate.getMinutes();
-                                var Monat1 = accountCreate.getMonth() + 1;
+                                var Monat1 = accountCreate.getMonth()+1 ;
                                 var Tag1 = accountCreate.getDate();
                                 var Jahr1 = accountCreate.getFullYear();
-                                if (Stunde1 < 10) Stunde1 = "0" + Stunde1;
-                                if (Minute1 < 10) Minute1 = "0" + Minute1;
-                                if (Tag1 < 10) Tag1 = "0" + Tag1;
-                                if (Monat1 < 10) Monat1 = "0" + Monat1;
+                                if(Stunde1<10) Stunde1 = "0" + Stunde1;
+                                if(Minute1<10) Minute1 = "0" + Minute1;
+                                if(Tag1<10) Tag1 = "0" + Tag1;
+                                if(Monat1<10) Monat1 = "0" + Monat1;
                                 accountCreate = Tag1 + "." + Monat1 + "." + Jahr1 + " - " + Stunde1 + ":" + Minute1;
                                 var aktuellesDatum = new Date();
                                 var Stunde = aktuellesDatum.getHours();
                                 var Minute = aktuellesDatum.getMinutes();
-                                var Monat = aktuellesDatum.getMonth() + 1;
+                                var Monat = aktuellesDatum.getMonth()+1 ;
                                 var Tag = aktuellesDatum.getDate();
                                 var Jahr = aktuellesDatum.getFullYear();
-                                if (Stunde < 10) Stunde = "0" + Stunde;
-                                if (Minute < 10) Minute = "0" + Minute;
-                                if (Tag < 10) Tag = "0" + Tag;
-                                if (Monat < 10) Monat = "0" + Monat;
+                                if(Stunde<10) Stunde = "0" + Stunde;
+                                if(Minute<10) Minute = "0" + Minute;
+                                if(Tag<10) Tag = "0" + Tag;
+                                if(Monat<10) Monat = "0" + Monat;
                                 var Datum = Tag + "." + Monat + "." + Jahr;
                                 var Uhrzeit = Stunde + ":" + Minute;
                                 var player_basen = 0;
@@ -7965,27 +8008,67 @@ Ini();
                                 var baseidforWorldmap = null;
                                 var coordsforWorldmap = '';
                                 var worldidforWorldmap = document.URL.split("/");
-                                if (AllianzID > 0) {
-                                    while (len--) {
+                                var AllianzMemberList = '';
+                                if(AllianzID > 0)
+                                {
+                                    while (len--)
+                                    {
                                         member = members[keys[len]];
                                         AllianzRolle[member.Id] = member.RoleName;
                                         AllianzSpieler[member.Id] = member.Name;
+                                        AllianzMemberList += (AllianzMemberList != '') ? '|||' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '' : '' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '' ;
                                     }
                                 }
                                 var allBases = '';
-                                var aB_basename, aB_baselvl, aB_offlvl, aB_deflvl, aB_velvl, aB_vzlvl, aB_cclvl, aB_supportlvl, aB_credits, aB_strom, aB_tiberium, aB_crystal;
-                                for (var key in apcl) {
+                                var aB_basename,aB_baselvl,aB_offlvl,aB_deflvl,aB_bhlvl,aB_velvl,aB_vzlvl,aB_cclvl,aB_supportweapon,aB_supportlvl,aB_credits,aB_strom,aB_tiberium,aB_crystal;
+                                var aB__basename,aB__baselvl,aB__offlvl,aB__deflvl,aB__bhlvl,aB__velvl,aB__vzlvl,aB__cclvl,aB__supportweapon,aB__supportlvl,aB__credits,aB__strom,aB__tiberium,aB__crystal = new Array();
+                                var GeneralField5 = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "center"}));
+                                GeneralField5.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Überblick über die Basen") + "</b></u></big>").set({rich: true}));
+                                GeneralField5.add(new qx.ui.basic.Label("").set({rich: true}));
+                                var Basen = new qx.ui.container.Composite(new qx.ui.layout.HBox(10).set({alignX: "center"}));
+                                var BasenName = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenBase = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenOffensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenDefensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenBH = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenCC = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenVE = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenVZ = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenSupport = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenTiberium = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenCrystal = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenPower = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                var BasenCredits = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({alignX: "right"}));
+                                BasenName.add(new qx.ui.basic.Label("<b>" + Lang.gt("Basis Name") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenBase.add(new qx.ui.basic.Label("<b>Lvl</b>").set({rich: true, alignX: "center"}));
+                                BasenOffensive.add(new qx.ui.basic.Label("<b>Off</b>").set({rich: true, alignX: "center"}));
+                                BasenDefensive.add(new qx.ui.basic.Label("<b>Def</b>").set({rich: true, alignX: "center"}));
+                                BasenBH.add(new qx.ui.basic.Label("<b>" + Lang.gt("BH") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenCC.add(new qx.ui.basic.Label("<b>" + Lang.gt("KZ") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenVE.add(new qx.ui.basic.Label("<b>" + Lang.gt("VE") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenVZ.add(new qx.ui.basic.Label("<b>" + Lang.gt("VZ") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenSupport.add(new qx.ui.basic.Label("<b>Support</b>").set({rich: true, alignX: "center"}));
+                                BasenTiberium.add(new qx.ui.basic.Label("<b>" + Lang.gt("Tiberium") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenCrystal.add(new qx.ui.basic.Label("<b>" + Lang.gt("Kristall") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenPower.add(new qx.ui.basic.Label("<b>" + Lang.gt("Strom") + "</b>").set({rich: true, alignX: "center"}));
+                                BasenCredits.add(new qx.ui.basic.Label("<b>" + Lang.gt("Credit") + "</b>").set({rich: true, alignX: "center"}));
+
+                                for (var key in apcl)
+                                {
                                     player_basen++;
                                     var c = apcl[key];
-                                    try {
+                                    try
+                                    {
                                         sd = c.get_SupportData();
-                                        if (sd !== null) {
+                                        if(sd !== null)
+                                        {
                                             support_gebaeude++;
                                             support = sd.get_Level();
-                                            supportlvl = supportlvl + support;
-                                            supportname = c.get_SupportWeapon().n.replace(/NOD_SUPPORT_/gi, "").replace(/GDI_SUPPORT_/gi, "").replace(/FOR_SUPPORT_/gi, "");
+                                            supportlvl = supportlvl+support;
+                                            supportname = c.get_SupportWeapon().n.replace(/NOD_SUPPORT_/gi,"").replace(/GDI_SUPPORT_/gi,"").replace(/FOR_SUPPORT_/gi,"");
                                         }
-                                        else {
+                                        else
+                                        {
                                             support = 0;
                                             supportname = '-';
                                         }
@@ -8014,9 +8097,11 @@ Ini();
                                         CrystalsPerHour = CrystalsPerHour + CrystalPerHour;
                                         CrystalsProduction = CrystalsProduction + CrystalProduction;
 
-                                        if (c.get_CommandCenterLevel() > 0) {
+                                        if(c.get_CommandCenterLevel() > 0)
+                                        {
                                             repairMaxTime = c.GetResourceMaxStorage(ClientLib.Base.EResourceType.RepairChargeInf);
-                                            if (firstOfflvl < c.get_LvlOffense()) {
+                                            if(firstOfflvl < c.get_LvlOffense())
+                                            {
                                                 secondBaseName = firstBaseName;
                                                 secondBaselvl = firstBaselvl;
                                                 secondOfflvl = firstOfflvl;
@@ -8035,7 +8120,8 @@ Ini();
                                                 firstRepairVehicle = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false);
                                                 firstRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
                                             }
-                                            else if (c.get_LvlOffense() > secondOfflvl) {
+                                            else if(c.get_LvlOffense() > secondOfflvl)
+                                            {
                                                 secondBaseName = c.get_Name();
                                                 secondBaselvl = c.get_LvlBase();
                                                 secondOfflvl = c.get_LvlOffense();
@@ -8046,105 +8132,144 @@ Ini();
                                                 secondRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
                                             }
                                         }
-                                        if (c.get_CommandCenterLevel() > 0 && c.get_LvlOffense() > 0) {
+                                        if(c.get_CommandCenterLevel() > 0 && c.get_LvlOffense() > 0)
+                                        {
                                             offbasen++;
                                         }
-                                        if (ve !== null) {
+                                        if(ve !== null)
+                                        {
                                             v++;
-                                            VE_lvl = VE_lvl + ve.get_CurrentLevel();
+                                            VE_lvl = VE_lvl+ve.get_CurrentLevel();
                                         }
-                                        if (c.get_LvlDefense()) {
+                                        if(c.get_LvlDefense())
+                                        {
                                             def_durchschnitt = def_durchschnitt + c.get_LvlDefense();
                                         }
-                                        if (allBases != "") {
+                                        if(allBases != "")
+                                        {
                                             allBases += ' |||| ';
                                         }
-                                        if (ve !== null) { aB_velvl = ve.get_CurrentLevel().toString(); } else { aB_velvl = 0; }
-                                        if (vz !== null) { aB_vzlvl = vz.get_CurrentLevel().toString(); } else { aB_vzlvl = 0; }
-                                        if (bh !== null) { aB_bhlvl = bh.get_CurrentLevel().toString(); } else { aB_bhlvl = 0; }
-                                        if (cc !== null) { aB_cclvl = cc.get_CurrentLevel().toString(); } else { aB_cclvl = 0; }
+                                        if(ve !== null) { aB_velvl = ve.get_CurrentLevel().toString(); } else { aB_velvl = '-';}
+                                        if(vz !== null) { aB_vzlvl = vz.get_CurrentLevel().toString(); } else { aB_vzlvl = '-';}
+                                        if(bh !== null) { aB_bhlvl = bh.get_CurrentLevel().toString(); } else { aB_bhlvl = '-';}
+                                        if(cc !== null) { aB_cclvl = cc.get_CurrentLevel().toString(); } else { aB_cclvl = '-';}
                                         allBases += '' + c.get_Name().toString() + ' | ' + c.get_LvlBase().toFixed(2).toString() + ' | ' + c.get_LvlOffense().toFixed(2).toString() + ' | ' + c.get_LvlDefense().toFixed(2).toString() + ' | ' + aB_bhlvl + ' | ' + aB_velvl + ' | ' + aB_vzlvl + ' | ' + aB_cclvl + ' | ' + support.toFixed(2).toString() + ' | ' + supportname.toString() + ' | ' + parseInt(creditPerHour) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Tiberium)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Crystal)) + ' | ' + key + '';
-                                        if (baseidforWorldmap == null) {
+                                        if(baseidforWorldmap == null)
+                                        {
                                             baseidforWorldmap = key;
                                             coordsforWorldmap = c.get_PosX() + ':' + c.get_PosY();
                                         }
+
+                                        // all Bases Tab
+                                        BasenName.add(new qx.ui.basic.Label(c.get_Name().toString()).set({rich: true, alignX: "left"}));
+                                        BasenBase.add(new qx.ui.basic.Label(c.get_LvlBase().toFixed(2).toString()).set({rich: true, alignX: "right"}));
+                                        BasenOffensive.add(new qx.ui.basic.Label(c.get_LvlOffense().toFixed(2).toString()).set({rich: true, alignX: "right"}));
+                                        BasenDefensive.add(new qx.ui.basic.Label(c.get_LvlDefense().toFixed(2).toString()).set({rich: true, alignX: "right"}));
+                                        BasenBH.add(new qx.ui.basic.Label(aB_bhlvl).set({rich: true, alignX: "right"}));
+                                        BasenCC.add(new qx.ui.basic.Label(aB_cclvl).set({rich: true, alignX: "right"}));
+                                        BasenVE.add(new qx.ui.basic.Label(aB_velvl).set({rich: true, alignX: "right"}));
+                                        BasenVZ.add(new qx.ui.basic.Label(aB_vzlvl).set({rich: true, alignX: "right"}));
+                                        BasenSupport.add(new qx.ui.basic.Label(support.toFixed(0).toString() + " " + supportname.toString()).set({rich: true, alignX: "left"}));
+                                        BasenTiberium.add(new qx.ui.basic.Label(parseInt(TiberiumProduction).toLocaleString()).set({rich: true, alignX: "right"}));
+                                        BasenCrystal.add(new qx.ui.basic.Label(parseInt(CrystalProduction).toLocaleString()).set({rich: true, alignX: "right"}));
+                                        BasenPower.add(new qx.ui.basic.Label(parseInt(PowerProduction).toLocaleString()).set({rich: true, alignX: "right"}));
+                                        BasenCredits.add(new qx.ui.basic.Label(parseInt(creditPerHour).toLocaleString()).set({rich: true, alignX: "right"}));
                                     }
-                                    catch (e) {
+                                    catch (e)
+                                    {
                                         console.warn("BaseInfo: AllBases - ", e);
                                     }
                                 }
 
                                 def_durchschnitt = def_durchschnitt / player_basen;
                                 newAusgabe["off_basen"] = offbasen;
-                                if (player_basen > 0) {
+                                if(player_basen>0)
+                                {
                                     newAusgabe["def_durchschnitt"] = "" + def_durchschnitt.toFixed(2).toString() + "";
                                 }
-                                else {
+                                else
+                                {
                                     newAusgabe["def_durchschnitt"] = 0;
                                 }
                                 newAusgabe["support_basen"] = support_gebaeude;
-                                if (support_gebaeude > 0) {
+                                if(support_gebaeude>0)
+                                {
                                     supportlvl = supportlvl / support_gebaeude;
                                     newAusgabe["support_lvl"] = "" + supportlvl.toFixed(2).toString() + "";
                                 }
-                                else {
+                                else
+                                {
                                     newAusgabe["support_lvl"] = 0;
                                 }
                                 VE_durchschnitt = VE_lvl / v;
-                                if (v > 0) {
+                                if(v>0)
+                                {
                                     newAusgabe["ve"] = "" + VE_durchschnitt.toFixed(2).toString() + "";
                                 }
-                                else {
+                                else
+                                {
                                     newAusgabe["ve"] = 0;
                                 }
                                 first_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(firstRepairAir);
                                 first_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(firstRepairVehicle);
                                 first_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(firstRepairInfantry);
-                                if (first_rep_flug.split(":").length < 3) {
+                                if(first_rep_flug.split(":").length < 3)
+                                {
                                     first_rep_flug = "0:" + first_rep_flug;
                                 }
-                                if (first_rep_flug.split(":").length < 4) {
+                                if(first_rep_flug.split(":").length < 4)
+                                {
                                     first_rep_flug = "0:" + first_rep_flug;
                                 }
-                                if (first_rep_fahr.split(":").length < 3) {
+                                if(first_rep_fahr.split(":").length < 3)
+                                {
                                     first_rep_fahr = "0:" + first_rep_fahr;
                                 }
-                                if (first_rep_fahr.split(":").length < 4) {
+                                if(first_rep_fahr.split(":").length < 4)
+                                {
                                     first_rep_fahr = "0:" + first_rep_fahr;
                                 }
-                                if (first_rep_fuss.split(":").length < 3) {
+                                if(first_rep_fuss.split(":").length < 3)
+                                {
                                     first_rep_fuss = "0:" + first_rep_fuss;
                                 }
-                                if (first_rep_fuss.split(":").length < 4) {
+                                if(first_rep_fuss.split(":").length < 4)
+                                {
                                     first_rep_fuss = "0:" + first_rep_fuss;
                                 }
                                 second_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(secondRepairAir);
                                 second_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(secondRepairVehicle);
                                 second_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(secondRepairInfantry);
-                                if (second_rep_flug.split(":").length < 3) {
+                                if(second_rep_flug.split(":").length < 3)
+                                {
                                     second_rep_flug = "0:" + second_rep_flug;
                                 }
-                                if (second_rep_flug.split(":").length < 4) {
+                                if(second_rep_flug.split(":").length < 4)
+                                {
                                     second_rep_flug = "0:" + second_rep_flug;
                                 }
-                                if (second_rep_fahr.split(":").length < 3) {
+                                if(second_rep_fahr.split(":").length < 3)
+                                {
                                     second_rep_fahr = "0:" + second_rep_fahr;
                                 }
-                                if (second_rep_fahr.split(":").length < 4) {
+                                if(second_rep_fahr.split(":").length < 4)
+                                {
                                     second_rep_fahr = "0:" + second_rep_fahr;
                                 }
-                                if (second_rep_fuss.split(":").length < 3) {
+                                if(second_rep_fuss.split(":").length < 3)
+                                {
                                     second_rep_fuss = "0:" + second_rep_fuss;
                                 }
-                                if (second_rep_fuss.split(":").length < 4) {
+                                if(second_rep_fuss.split(":").length < 4)
+                                {
                                     second_rep_fuss = "0:" + second_rep_fuss;
                                 }
 
                                 newAusgabe["AccountID"] = accountId;
                                 newAusgabe["AllianzID"] = AllianzID;
-                                if (AllianzID > 0) newAusgabe["AllianzName"] = AllianzName.toString();
+                                if(AllianzID > 0) newAusgabe["AllianzName"] = AllianzName.toString();
                                 else newAusgabe["AllianzName"] = " ";
-                                if (AllianzID > 0) newAusgabe["AllianzRolle"] = AllianzRolle[PlayerID].toString();
+                                if(AllianzID > 0) newAusgabe["AllianzRolle"] = AllianzRolle[PlayerID].toString();
                                 else newAusgabe["AllianzRolle"] = " ";
                                 newAusgabe["ServerName"] = serverName.toString();
                                 newAusgabe["SpielerID"] = PlayerID;
@@ -8182,191 +8307,195 @@ Ini();
                                 newAusgabe["Version"] = BIVERSION;
 
                                 var usersubmit = '';
-                                for (var werte in newAusgabe) {
+                                for(var werte in newAusgabe)
+                                {
                                     usersubmit += "[" + werte + "] == " + newAusgabe[werte] + "\n";
                                 }
 
                                 // Field 1
-                                var GeneralField1 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                GeneralField1.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Allgemeine Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var GeneralField1 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                GeneralField1.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Allgemeine Informationen") + "</b></u></big>").set({rich: true, selectable: true}));
+                                GeneralField1.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
 
-                                var GeneralField2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                GeneralField2.add(new qx.ui.basic.Label("<br><big><u><b>" + Lang.gt("Script Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                GeneralField2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var GeneralField2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                GeneralField2.add(new qx.ui.basic.Label("<br><big><u><b>" + Lang.gt("Script Informationen") + "</b></u></big>").set({rich: true, selectable: true}));
+                                GeneralField2.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
 
                                 // Field 2
-                                var field2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                field2.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Gesamte Produktion") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                field2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var field2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                field2.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Gesamte Produktion") + "</b></u></big>").set({rich: true, selectable: true}));
+                                field2.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
 
-                                var production = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
+                                var production = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({alignX: "center"}));
                                 // 2.1
-                                var playerproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                playerproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Spieler Produktion") + "</b><br><i>(" + Lang.gt("aller Basen") + ")</i>").set({ rich: true, selectable: true }));
+                                var playerproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                playerproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Spieler Produktion") + "</b><br><i>(" + Lang.gt("aller Basen") + ")</i>").set({rich: true, selectable: true}));
                                 // 2.2
-                                var overallproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                overallproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Gesamte Produktion") + "</b><br><i>(" + Lang.gt("inklusive POI Bonus") + ")</i>").set({ rich: true, selectable: true }));
+                                var overallproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                overallproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Gesamte Produktion") + "</b><br><i>(" + Lang.gt("inklusive POI Bonus") + ")</i>").set({rich: true, selectable: true}));
 
                                 // Field 3
-                                var field3 = new qx.ui.container.Composite(new qx.ui.layout.VBox(5).set({ alignX: "center" }));
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var field3 = new qx.ui.container.Composite(new qx.ui.layout.VBox(5).set({alignX: "center"}));
+                                field3.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
 
-                                var offensive = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
+                                var offensive = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({alignX: "center"}));
                                 // 3.1
-                                var firstoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                firstoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Erste Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                firstoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var firstoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                firstoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Erste Offensive") + "</b></u></big>").set({rich: true, selectable: true}));
+                                firstoff.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
                                 // 3.2
-                                var secondoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                secondoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Zweite Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                secondoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                var secondoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({alignX: "center"}));
+                                secondoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Zweite Offensive") + "</b></u></big>").set({rich: true, selectable: true}));
+                                secondoff.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
 
-                                var chrystal, tiberium, power, dollar, squad, vehicle, plane, firstoff, secondoff, name, level, off, def, strom;
+                                var chrystal,tiberium,power,dollar,squad,vehicle,plane,firstoff,secondoff,name,level,off,def,strom;
 
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Account Erstellung") + ":</b> " + accountCreate.toString()).set({ rich: true }));
-                                if (AllianzID > 0) GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> " + AllianzRolle[PlayerID].toString()).set({ rich: true }));
-                                else GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> ---").set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielername") + ":</b> " + PlayerName).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielerklasse") + ":</b> " + factionArt[faction1]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Aktuelle Uhrzeit") + ":</b> " + Datum + " " + Uhrzeit).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Rang") + ":</b> " + playerRank).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale KP") + ":</b> " + commandpointsMaxStorage).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale Repzeit") + ":</b> " + repairMaxTime / 60 / 60 + " " + Lang.gt("Stunden")).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Basenanzahl") + ":</b> " + player_basen).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Anzahl Offensiv Basen") + ":</b> " + offbasen).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Support Gebäude Level Ø") + ":</b> " + newAusgabe["support_lvl"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("VE Ø aller Basen") + ":</b> " + newAusgabe["ve"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Def Ø aller Basen") + ":</b> " + newAusgabe["def_durchschnitt"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                if (AllianzID > 0) {
-                                    GeneralField1.add(new qx.ui.basic.Label('<form action="http://baseinfo.scriptarea.net/index.php" method="post" target="_blank"><input type="hidden" name="usersubmit" value="' + usersubmit + '" /><input type="hidden" name="allBases" value="' + allBases + '" /><input type="submit" name="" value="&nbsp;' + Lang.gt("Werte übertragen") + '&nbsp;" style="font-weight: bold; font-size: 18px;" /></form>').set({ rich: true, selectable: true }));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Account Erstellung") + ":</b> " + accountCreate.toString()).set({rich: true}));
+                                if(AllianzID > 0) GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> " + AllianzRolle[PlayerID].toString()).set({rich: true}));
+                                else GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> ---").set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielername") + ":</b> " + PlayerName).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielerklasse") + ":</b> " + factionArt[faction1]).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Aktuelle Uhrzeit") + ":</b> " + Datum + " " + Uhrzeit).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Rang") + ":</b> " + playerRank).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale KP") + ":</b> " + commandpointsMaxStorage).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale Repzeit") + ":</b> " + repairMaxTime / 60 / 60 + " " + Lang.gt("Stunden")).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Basenanzahl") + ":</b> " + player_basen).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Anzahl Offensiv Basen") + ":</b> " + offbasen).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Support Gebäude Level Ø") + ":</b> " + newAusgabe["support_lvl"]).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("VE Ø aller Basen") + ":</b> " + newAusgabe["ve"]).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Def Ø aller Basen") + ":</b> " + newAusgabe["def_durchschnitt"]).set({rich: true}));
+                                GeneralField1.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
+                                var worldmap = '&nbsp;&nbsp;&nbsp;<a href="http://map.tiberium-alliances.com/map/'+worldidforWorldmap[3]+'#'+coordsforWorldmap+'|3|'+baseidforWorldmap+'|~" target="_blank"><button style="font-weight: bold; font-size: 18px;"><b>&nbsp;' + Lang.gt("Weltkarte") + '&nbsp;</b></button></a>';
+                                if(AllianzID > 0)
+                                {
+                                    GeneralField1.add(new qx.ui.basic.Label('<form action="http://baseinfo.scriptarea.net/index.php" method="post" target="_blank" style="display:inline;"><input type="hidden" name="usersubmit" value="' + usersubmit + '" /><input type="hidden" name="allBases" value="' + allBases + '" /><input type="hidden" name="allMembers" value="' + AllianzMemberList + '" /><input type="submit" name="" value="&nbsp;' + Lang.gt("Werte übertragen") + '&nbsp;" style="font-weight: bold; font-size: 18px;" /></form> ' + worldmap + '').set({rich: true, selectable: true}));
                                 }
-                                else {
-                                    GeneralField1.add(new qx.ui.basic.Label("<button disabled='disabled'><s>&nbsp;" + Lang.gt('Werte übertragen') + "&nbsp;</s></button>").set({ rich: true, selectable: true, toolTipText: "Deactivated" }));
+                                else
+                                {
+                                    GeneralField1.add(new qx.ui.basic.Label("<button disabled='disabled'><s>&nbsp;" + Lang.gt('Werte übertragen') + "&nbsp;</s></button>").set({rich: true, selectable: true, toolTipText: "Deactivated"}));
                                 }
 
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Name") + ":</b> " + BICLASS).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Version") + ":</b> " + BIVERSION).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Ersteller") + ":</b> " + BIAUTHOR).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Webseite") + ":</b> <a href='" + BIHOMEPAGE + "' target='_blank'>" + BIHOMEPAGE + "</a>").set({ rich: true }));
-                                if (AllianzID > 0) GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im in the alliance " + AllianzName.toString() + " and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
-                                else GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im not in a alliance and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
+                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Name") + ":</b> " + BICLASS).set({rich: true}));
+                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Version") + ":</b> " + BIVERSION).set({rich: true}));
+                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Ersteller") + ":</b> " + BIAUTHOR).set({rich: true}));
+                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Webseite") + ":</b> <a href='" + BIHOMEPAGE + "' target='_blank'>" + BIHOMEPAGE + "</a>").set({rich: true}));
+                                if(AllianzID > 0) GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im in the alliance " + AllianzName.toString() + " and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({rich: true}));
+                                else GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im not in a alliance and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({rich: true}));
 
-                                playerproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
+                                playerproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({rich: true}));
                                 chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
                                 chrystal.setToolTipText(Lang.gt("Kristall Produktion"));
                                 chrystal.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(playerproduction);
-                                playerproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
+                                playerproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_tiberium.png").set({rich: true}));
                                 tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
                                 tiberium.setToolTipText(Lang.gt("Tiberium Produktion"));
                                 tiberium.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(playerproduction);
-                                playerproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                playerproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_power.png").set({rich: true}));
                                 power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
                                 power.setToolTipText(Lang.gt("Strom Produktion"));
                                 power.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(playerproduction);
-                                playerproduction.add(dollar = new qx.ui.basic.Atom("" + parseInt(creditsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_dollar.png").set({ rich: true }));
+                                playerproduction.add(dollar = new qx.ui.basic.Atom("" + parseInt(creditsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_dollar.png").set({rich: true}));
                                 dollar.setToolTipIcon("webfrontend/ui/common/icn_res_dollar.png");
                                 dollar.setToolTipText(Lang.gt("Credit Produktion"));
                                 dollar.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(playerproduction);
 
-                                overallproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
+                                overallproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({rich: true}));
                                 chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
                                 chrystal.setToolTipText(Lang.gt("Gesamte Kristall Produktion"));
                                 chrystal.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(overallproduction);
-                                overallproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
+                                overallproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_tiberium.png").set({rich: true}));
                                 tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
                                 tiberium.setToolTipText(Lang.gt("Gesamte Tiberium Produktion"));
                                 tiberium.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(overallproduction);
-                                overallproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                overallproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({rich: true}));
                                 power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
                                 power.setToolTipText(Lang.gt("Gesamte Strom Produktion"));
                                 power.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 production.add(overallproduction);
 
-                                firstoff.add(name = new qx.ui.basic.Atom(firstBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                firstoff.add(name = new qx.ui.basic.Atom(firstBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({rich: true}));
                                 name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
                                 name.setToolTipText("1st-OFF: " + Lang.gt("Basis Name"));
                                 name.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(level = new qx.ui.basic.Atom(firstBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                firstoff.add(level = new qx.ui.basic.Atom(firstBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({rich: true}));
                                 level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
                                 level.setToolTipText("1st-OFF: " + Lang.gt("Basis Level"));
                                 level.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(off = new qx.ui.basic.Atom(firstOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
+                                firstoff.add(off = new qx.ui.basic.Atom(firstOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({rich: true}));
                                 off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
                                 off.setToolTipText("1st-OFF: " + Lang.gt("Offensiv Level"));
                                 off.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(def = new qx.ui.basic.Atom(firstDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
+                                firstoff.add(def = new qx.ui.basic.Atom(firstDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({rich: true}));
                                 def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
                                 def.setToolTipText("1st-OFF: " + Lang.gt("Defensiv Level"));
                                 def.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(strom = new qx.ui.basic.Atom(parseInt(firstPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                firstoff.add(strom = new qx.ui.basic.Atom(parseInt(firstPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({rich: true}));
                                 strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
                                 strom.setToolTipText("1st-OFF: " + Lang.gt("Strom Produktion"));
                                 strom.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(squad = new qx.ui.basic.Atom(first_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
+                                firstoff.add(squad = new qx.ui.basic.Atom(first_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({rich: true}));
                                 squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
                                 squad.setToolTipText("1st-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
                                 squad.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(vehicle = new qx.ui.basic.Atom(first_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
+                                firstoff.add(vehicle = new qx.ui.basic.Atom(first_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({rich: true}));
                                 vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
                                 vehicle.setToolTipText("1st-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
                                 vehicle.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
-                                firstoff.add(plane = new qx.ui.basic.Atom(first_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
+                                firstoff.add(plane = new qx.ui.basic.Atom(first_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({rich: true}));
                                 plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
                                 plane.setToolTipText("1st-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
                                 plane.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(firstoff);
 
-                                secondoff.add(name = new qx.ui.basic.Atom(secondBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                secondoff.add(name = new qx.ui.basic.Atom(secondBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({rich: true}));
                                 name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
                                 name.setToolTipText("2nd-OFF: " + Lang.gt("Basis Name"));
                                 name.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(level = new qx.ui.basic.Atom(secondBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                secondoff.add(level = new qx.ui.basic.Atom(secondBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({rich: true}));
                                 level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
                                 level.setToolTipText("2nd-OFF: " + Lang.gt("Basis Level"));
                                 level.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(off = new qx.ui.basic.Atom(secondOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
+                                secondoff.add(off = new qx.ui.basic.Atom(secondOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({rich: true}));
                                 off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
                                 off.setToolTipText("2nd-OFF: " + Lang.gt("Offensiv Level"));
                                 off.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(def = new qx.ui.basic.Atom(secondDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
+                                secondoff.add(def = new qx.ui.basic.Atom(secondDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({rich: true}));
                                 def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
                                 def.setToolTipText("2nd-OFF: " + Lang.gt("Defensive Level"));
                                 def.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(strom = new qx.ui.basic.Atom(parseInt(secondPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                secondoff.add(strom = new qx.ui.basic.Atom(parseInt(secondPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({rich: true}));
                                 strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
                                 strom.setToolTipText("2nd-OFF: " + Lang.gt("Strom Produktion"));
                                 strom.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(squad = new qx.ui.basic.Atom(second_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
+                                secondoff.add(squad = new qx.ui.basic.Atom(second_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({rich: true}));
                                 squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
                                 squad.setToolTipText("2nd-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
                                 squad.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(vehicle = new qx.ui.basic.Atom(second_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
+                                secondoff.add(vehicle = new qx.ui.basic.Atom(second_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({rich: true}));
                                 vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
                                 vehicle.setToolTipText("2nd-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
                                 vehicle.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
                                 offensive.add(secondoff);
-                                secondoff.add(plane = new qx.ui.basic.Atom(second_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
+                                secondoff.add(plane = new qx.ui.basic.Atom(second_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({rich: true}));
                                 plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
                                 plane.setToolTipText("2nd-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
                                 plane.getChildControl("icon").set({ width: 18, height: 18, scale: true, alignY: "middle" });
@@ -8380,72 +8509,58 @@ Ini();
                                 field2.add(production);
                                 field3.add(offensive);
                                 this.BaseinfoBasesVBox.add(field2);
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                field3.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
+                                field3.add(new qx.ui.basic.Label("").set({rich: true, selectable: true}));
                                 this.BaseinfoBasesVBox.add(field3);
 
-                                // Tab 3 Members
-                                if (AllianzID > 0) {
-                                    var keys = Object.keys(AllianzSpieler);
-                                    var anzahl = keys.length;
-                                    var len = keys.length;
-                                    var member = '', userreplace = '', i = 0;
-                                    userreplace += newAusgabe["AllianzID"] + ',' + newAusgabe["AllianzName"] + ',' + newAusgabe["AllianzRolle"] + ',' + newAusgabe["ServerName"] + ',' + worldidforWorldmap[3] + ',';
-                                    while (len--) {
-                                        i++;
-                                        if (member != '') {
-                                            if (i == 5) {
-                                                member += ',<br>';
-                                                i = 0;
-                                            }
-                                            else {
-                                                member += ', ';
-                                            }
-                                            userreplace += ',';
-                                        }
-                                        member += AllianzSpieler[keys[len]];
-                                        userreplace += AllianzSpieler[keys[len]];
-                                    }
-                                    this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><big><b><u>" + Lang.gt("Mitglieder Auflistung") + " (" + anzahl + ")</u></b></big><br><br>" + member + "</td></tr></table>").set({ rich: true, selectable: true }));
-                                    if (leaders.l.indexOf(PlayerID) != "-1") {
-                                        this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><span style='color: #bb0000;'><u>" + Lang.gt("Nur für OBH's sichtbar") + ":</u></span></td></tr></table>").set({ rich: true }));
-                                        this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><big><b><u>" + Lang.gt("Mitglieder Anpassung") + "</u></b></big><br>Mit diesem Button kannste du deine Mitglieder auf<br>der BaseInfo Seite anpassen, sollten ehemalige Mitglieder,<br>die z.Z. einer anderen Allianz angehören,<br>noch in der Auflistung angezeigt werden.</td></tr></table>").set({ rich: true }));
-                                        if (!playerSubstitution) {
-                                            this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><form action='http://baseinfo.scriptarea.net/index.php' method='post' target='_blank'><input type='hidden' name='userreplace' value='" + userreplace + "'/><input type='submit' name='submit' value='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Lang.gt("Mitgliederliste erneuern") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' style='font-weight: bold;' /></form><br><span style='color: #bb0000;'><i>" + Lang.gt("Du musst auf der BaseInfo-Seite eingeloggt sein") + "</i></span></td></tr></table>").set({ rich: true }));
-                                        }
-                                        else {
-                                            this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><button disabled='disabled'><s>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Lang.gt("Mitgliederliste erneuern") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</s></button><br><span style='color: #bb0000;'><i>If you are in Substitution, you cant use them!</i></span></td></tr></table>").set({ rich: true }));
-                                        }
-                                    }
-                                }
-                                else {
-                                    this.BaseinfoMemberVBox.add(new qx.ui.basic.Label("<table cellspacing='1' cellpadding='10'><tr><td><big><b><u>" + Lang.gt("Mitglieder Auflistung") + "</u></b></big><br><br>No Alliance available..</td></tr></table>").set({ rich: true, selectable: true }));
-                                }
+                                // Tab 3 Basen
+                                Basen.add(BasenName);
+                                Basen.add(BasenBase);
+                                Basen.add(BasenOffensive);
+                                Basen.add(BasenDefensive);
+                                Basen.add(BasenBH);
+                                Basen.add(BasenCC);
+                                Basen.add(BasenVE);
+                                Basen.add(BasenVZ);
+                                Basen.add(BasenSupport);
+                                Basen.add(BasenTiberium);
+                                Basen.add(BasenCrystal);
+                                Basen.add(BasenPower);
+                                Basen.add(BasenCredits);
+                                GeneralField5.add(Basen);
+                                this.BaseinfoAllBasesVBox.add(GeneralField5);
                             }
-                            catch (e) {
+                            catch(e)
+                            {
                                 console.log("BaseInfo: Loading Error - ", e);
                             }
                         }
                     }
                 });
             }
-            catch (e) {
+            catch (e)
+            {
                 console.warn("qx.Class.define(BaseInfo: ", e);
             }
             var Lang = BaseInfoLang.getInstance();
             BaseInfo.getInstance();
         }
-        function LoadExtension() {
-            try {
-                if (typeof (qx) != 'undefined') {
-                    if (!!qx.core.Init.getApplication().getMenuBar()) {
+        function LoadExtension()
+        {
+            try
+            {
+                if (typeof(qx)!='undefined')
+                {
+                    if (!!qx.core.Init.getApplication().getMenuBar())
+                    {
                         BaseInfoCreate();
                         BaseInfo.getInstance().initialize();
                         return;
                     }
                 }
             }
-            catch (e) {
+            catch (e)
+            {
                 if (console !== undefined) console.log(e);
                 else if (window.opera) opera.postError(e);
                 else GM_log(e);
@@ -8454,8 +8569,10 @@ Ini();
         }
         LoadExtension();
     }
-    function Inject() {
-        if (window.location.pathname != ("/login/auth")) {
+    function Inject()
+    {
+        if (window.location.pathname != ("/login/auth"))
+        {
             var Script = document.createElement("script");
             Script.innerHTML = "(" + BaseInfoMain.toString() + ")();";
             Script.type = "text/javascript";
@@ -11311,1466 +11428,1466 @@ Ini();
                     HUD: null,
                     btnSimulation: null,
                     btnStats: null,
-                    boxMove: null,
-                    onHotKeyPress: function (key) {
-                        if (!phe.cnc.Util.isEventTargetInputField(key)) {
-                            var formation = TABS.UTIL.Formation.Get();
-                            switch (key.getNativeEvent().keyCode) {
-                                case 96: // NUM 0
-                                    this.onClick_btnSimulation();
-                                    break;
-                                case 97: // NUM 1
-                                    formation = TABS.UTIL.Formation.Mirror(formation, "h", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 98: // NUM 2
-                                    formation = TABS.UTIL.Formation.Shift(formation, "d", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 99: // NUM 3
-                                    formation = TABS.UTIL.Formation.Mirror(formation, "v", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 100: // NUM 4
-                                    formation = TABS.UTIL.Formation.Shift(formation, "l", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 101: // NUM 5
-                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 102: // NUM 6
-                                    formation = TABS.UTIL.Formation.Shift(formation, "r", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 103: // NUM 7
-                                    this.onClick_btnStats();
-                                    break;
-                                case 104: // NUM 8
-                                    formation = TABS.UTIL.Formation.Shift(formation, "u", null);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 105: // NUM 9
-                                    this.onClick_CNCOpt();
-                                    break;
-                                case 106: // NUM *
-                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Infantry);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 107: // NUM +
-                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Aircraft);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 109: // NUM -
-                                    formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Vehicle);
-                                    TABS.UTIL.Formation.Set(formation);
-                                    break;
-                                case 110: // NUM ,
-                                    break;
-                                case 111: // NUM /
-                                    break;
-                            }
-                        }
-                    },
-                    _onViewChanged: function (oldMode, newMode) {
-                        if (newMode == ClientLib.Vis.Mode.CombatSetup) {
-                            this.btnSimulation.show();
-                            this.boxMove.show();
-                            qx.bom.Element.addListener(document, "keydown", this.onHotKeyPress, this);
-                        }
-                        if (oldMode == ClientLib.Vis.Mode.CombatSetup) {
-                            this.btnSimulation.hide();
-                            this.boxMove.hide();
-                            qx.bom.Element.removeListener(document, "keydown", this.onHotKeyPress, this);
-                            TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                        }
-                        if ((newMode == ClientLib.Vis.Mode.CombatSetup || newMode == ClientLib.Vis.Mode.Battleground) && TABS.SETTINGS.get("GUI.Window.Stats.open", true) && !TABS.GUI.Window.Stats.getInstance().isVisible())
-                            TABS.GUI.Window.Stats.getInstance().open();
-                    },
-                    _updateBtnSimulation: function () {
-                        var formation = TABS.UTIL.Formation.Get();
-                        if (formation !== null) {
-                            if (TABS.UTIL.Formation.IsFormationInCache()) {
-                                this.btnSimulation.setEnabled(true);
-                                this.btnSimulation.setShow("icon");
-                            } else {
-                                this.btnSimulation.setEnabled(!TABS.APISimulation.getInstance().getLock() && TABS.UTIL.Formation.Get().length > 0);
-                                if (TABS.APISimulation.getInstance().getData().length === 0 || TABS.UTIL.Formation.Get().length === 0)
-                                    this.btnSimulation.setShow("icon");
-                                else if (this.btnSimulation.getShow() !== "label") {
-                                    this.btnSimulation.setShow("label");
+                    boxMove: null,baseinfo
+                        onHotKeyPress: function (key) {
+                            if (!phe.cnc.Util.isEventTargetInputField(key)) {
+                                var formation = TABS.UTIL.Formation.Get();
+                                switch (key.getNativeEvent().keyCode) {
+                                    case 96: // NUM 0
+                                        this.onClick_btnSimulation();
+                                        break;
+                                    case 97: // NUM 1
+                                        formation = TABS.UTIL.Formation.Mirror(formation, "h", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 98: // NUM 2
+                                        formation = TABS.UTIL.Formation.Shift(formation, "d", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 99: // NUM 3
+                                        formation = TABS.UTIL.Formation.Mirror(formation, "v", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 100: // NUM 4
+                                        formation = TABS.UTIL.Formation.Shift(formation, "l", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 101: // NUM 5
+                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 102: // NUM 6
+                                        formation = TABS.UTIL.Formation.Shift(formation, "r", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 103: // NUM 7
+                                        this.onClick_btnStats();
+                                        break;
+                                    case 104: // NUM 8
+                                        formation = TABS.UTIL.Formation.Shift(formation, "u", null);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 105: // NUM 9
+                                        this.onClick_CNCOpt();
+                                        break;
+                                    case 106: // NUM *
+                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Infantry);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 107: // NUM +
+                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Aircraft);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 109: // NUM -
+                                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, ClientLib.Data.EUnitGroup.Vehicle);
+                                        TABS.UTIL.Formation.Set(formation);
+                                        break;
+                                    case 110: // NUM ,
+                                        break;
+                                    case 111: // NUM /
+                                        break;
                                 }
                             }
-                        } else {
-                            this.btnSimulation.setEnabled(false);
+                        },
+            _onViewChanged: function (oldMode, newMode) {
+                if (newMode == ClientLib.Vis.Mode.CombatSetup) {
+                    this.btnSimulation.show();
+                    this.boxMove.show();
+                    qx.bom.Element.addListener(document, "keydown", this.onHotKeyPress, this);
+                }
+                if (oldMode == ClientLib.Vis.Mode.CombatSetup) {
+                    this.btnSimulation.hide();
+                    this.boxMove.hide();
+                    qx.bom.Element.removeListener(document, "keydown", this.onHotKeyPress, this);
+                    TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                }
+                if ((newMode == ClientLib.Vis.Mode.CombatSetup || newMode == ClientLib.Vis.Mode.Battleground) && TABS.SETTINGS.get("GUI.Window.Stats.open", true) && !TABS.GUI.Window.Stats.getInstance().isVisible())
+                    TABS.GUI.Window.Stats.getInstance().open();
+            },
+            _updateBtnSimulation: function () {
+                var formation = TABS.UTIL.Formation.Get();
+                if (formation !== null) {
+                    if (TABS.UTIL.Formation.IsFormationInCache()) {
+                        this.btnSimulation.setEnabled(true);
+                        this.btnSimulation.setShow("icon");
+                    } else {
+                        this.btnSimulation.setEnabled(!TABS.APISimulation.getInstance().getLock() && TABS.UTIL.Formation.Get().length > 0);
+                        if (TABS.APISimulation.getInstance().getData().length === 0 || TABS.UTIL.Formation.Get().length === 0)
                             this.btnSimulation.setShow("icon");
+                        else if (this.btnSimulation.getShow() !== "label") {
+                            this.btnSimulation.setShow("label");
                         }
-                    },
-                    onClick_btnSimulation: function () {
-                        var cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
-                        if (cache.result === null || cache.result.combat === undefined) {
-                            TABS.APISimulation.getInstance().addListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                            TABS.APISimulation.getInstance().SimulateBattle();
-                        } else {
-                            var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
-                            TABS.UTIL.Battleground.StartReplay(CurrentCityId, cache.result.combat);
-                        }
-                    },
-                    OnSimulateBattleFinished: function (data) {
-                        TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
-                        var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
-                        TABS.UTIL.Battleground.StartReplay(CurrentCityId, data.getData().d);
-                    },
-                    onClick_btnStats: function () {
-                        if (TABS.GUI.Window.Stats.getInstance().isVisible()) {
-                            TABS.SETTINGS.set("GUI.Window.Stats.open", false);
-                            TABS.GUI.Window.Stats.getInstance().close();
-                        } else {
-                            TABS.SETTINGS.set("GUI.Window.Stats.open", true);
-                            TABS.GUI.Window.Stats.getInstance().open();
-                        }
-                    },
-                    newButton: function (icon, text, onClick, pos, sel) {
-                        var btn = new qx.ui.form.ModelButton(null, icon).set({
-                            toolTipText: text,
-                            width: 22,
-                            height: 22,
-                            show: "icon",
-                            iconPosition: "top",
-                            appearance: "button-addpoints",
-                            model: [pos, sel]
-                        });
-                        btn.getChildControl("icon").set({
-                            maxWidth: 16,
-                            maxHeight: 16,
-                            scale: true
-                        });
-                        btn.addListener("click", onClick, this);
-                        return btn;
-                    },
-                    onClick_btnMirror: function (e) {
-                        var formation = TABS.UTIL.Formation.Get();
-                        formation = TABS.UTIL.Formation.Mirror(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
-                        TABS.UTIL.Formation.Set(formation);
-                    },
-                    onClick_btnShift: function (e) {
-                        var formation = TABS.UTIL.Formation.Get();
-                        formation = TABS.UTIL.Formation.Shift(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
-                        TABS.UTIL.Formation.Set(formation);
-                    },
-                    onClick_btnDisable: function (e) {
-                        var formation = TABS.UTIL.Formation.Get();
-                        formation = TABS.UTIL.Formation.toggle_Enabled(formation, e.getTarget().getModel()[0]);
-                        TABS.UTIL.Formation.Set(formation);
-                    },
-                    onClick_CNCOpt: function (e) {
-                        if (e.isRightPressed())
-                            TABS.UTIL.Formation.Set(TABS.UTIL.CNCOpt.parseLink(prompt(this.tr("Enter CNCOpt Long Link:"))));
-                        else
-                            qx.core.Init.getApplication().showExternal(TABS.UTIL.CNCOpt.createLink());
                     }
-                },
-                defer: function () {
-                    TABS.addInit("TABS.GUI.PlayArea");
+                } else {
+                    this.btnSimulation.setEnabled(false);
+                    this.btnSimulation.setShow("icon");
                 }
-            });
-            qx.Class.define("TABS.GUI.ReportReplayOverlay", {			// [singleton]	Back Button
-                type: "singleton",
-                extend: qx.core.Object,
-                include: [qx.locale.MTranslation],
-                construct: function () {
-                    try {
-                        this.base(arguments);
-                        var qxApp = qx.core.Init.getApplication();
-                        this.ReportReplayOverlay = qx.core.Init.getApplication().getReportReplayOverlay();
-
-                        this.btnBack = new qx.ui.form.Button(qxApp.tr("tnf:back")).set({
-                            toolTipText: qxApp.tr("tnf:back"),
-                            width: 53,
-                            height: 24,
-                            appearance: "button-friendlist-scroll"
-                        });
-                        this.btnBack.addListener("click", this.onClick_btnBack, this);
-                        this.ReportReplayOverlay.add(this.btnBack, {
-                            top: 10,
-                            right: 540
-                        });
-
-                        this.btnSkip = new qx.ui.form.Button(qxApp.tr("Skip")).set({
-                            toolTipText: qxApp.tr("Skip"),
-                            width: 52,
-                            height: 24,
-                            appearance: "button-friendlist-scroll"
-                        });
-                        this.btnSkip.addListener("click", this.onClick_btnSkip, this);
-                        this.ReportReplayOverlay.add(this.btnSkip, {
-                            top: 10,
-                            left: 542
-                        });
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up GUI.ReportReplayOverlay constructor", e);
-                        console.groupEnd();
-                    }
-                },
-                destruct: function () { },
-                members: {
-                    ReportReplayOverlay: null,
-                    btnBack: null,
-                    btnSkip: null,
-                    onClick_btnBack: function () {
-                        var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                        if (city !== null) {
-                            qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
-                            ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
-                        }
-                    },
-                    onClick_btnSkip: function () {
-                        if (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation !== undefined && ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep !== undefined) {
-                            while (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep(false)) { }
-                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
-                        } else {
-                            var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-								LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
-                            if (LastBattleTime >= BattleDuration)
-                                ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
-                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
-                            phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick_btnSkip, this);
-                        }
-                    },
-                    onTick_btnSkip: function () {
-                        var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-							LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
-                        if (LastBattleTime >= BattleDuration) {
-                            phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
-                            ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
-                        }
-                    }
-                },
-                defer: function () {
-                    TABS.addInit("TABS.GUI.ReportReplayOverlay");
+            },
+            onClick_btnSimulation: function () {
+                var cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
+                if (cache.result === null || cache.result.combat === undefined) {
+                    TABS.APISimulation.getInstance().addListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                    TABS.APISimulation.getInstance().SimulateBattle();
+                } else {
+                    var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
+                    TABS.UTIL.Battleground.StartReplay(CurrentCityId, cache.result.combat);
                 }
-            });
-            qx.Class.define("TABS.GUI.Window.Stats", {					// [singleton]	Stats Window
-                type: "singleton",
-                extend: qx.ui.window.Window,
-                construct: function () {
-                    try {
-                        this.base(arguments);
-                        this.set({
-                            layout: new qx.ui.layout.VBox(),
-                            caption: "TABS: " + this.tr("Statistic"),
-                            icon: TABS.RES.IMG.Stats,
-                            minWidth: 175,
-                            contentPadding: 4,
-                            contentPaddingTop: 0,
-                            contentPaddingBottom: 3,
-                            allowMaximize: false,
-                            showMaximize: false,
-                            allowMinimize: false,
-                            showMinimize: false,
-                            resizable: true,
-                            resizableTop: false,
-                            resizableBottom: false,
-                            useResizeFrame: false
-                        });
-                        this.moveTo(
-							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
-							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
-                        this.addListener("move", function () {
-                            TABS.SETTINGS.set("GUI.Window.Stats.position", [this.getBounds().left, this.getBounds().top]);
-                        }, this);
-                        this.addListener("resize", function () {
-                            TABS.SETTINGS.set("GUI.Window.Stats.width", this.getWidth());
-                            this.makeSimView();
-                        }, this);
-                        this.addListener("changeHeight", function () {
-                            if (this.getHeight() !== null)
-                                this.resetHeight();
-                        });
-                        this.addListener("appear", this.onAppear, this);
-                        this.addListener("close", this.onClose, this);
-                        this.setWidth(TABS.SETTINGS.get("GUI.Window.Stats.width", 175));
-                        this.getChildControl("close-button").addListener("execute", function () {
-                            TABS.SETTINGS.set("GUI.Window.Stats.open", false);
-                        }, this);
-                        this.getChildControl("icon").set({
-                            width: 20,
-                            height: 20,
-                            scale: true,
-                            alignY: "middle"
-                        });
-                        this.setStatus("0 " + this.tr("simulations in cache"));
+            },
+            OnSimulateBattleFinished: function (data) {
+                TABS.APISimulation.getInstance().removeListener("OnSimulateBattleFinished", this.OnSimulateBattleFinished, this);
+                var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity().get_Id();
+                TABS.UTIL.Battleground.StartReplay(CurrentCityId, data.getData().d);
+            },
+            onClick_btnStats: function () {
+                if (TABS.GUI.Window.Stats.getInstance().isVisible()) {
+                    TABS.SETTINGS.set("GUI.Window.Stats.open", false);
+                    TABS.GUI.Window.Stats.getInstance().close();
+                } else {
+                    TABS.SETTINGS.set("GUI.Window.Stats.open", true);
+                    TABS.GUI.Window.Stats.getInstance().open();
+                }
+            },
+            newButton: function (icon, text, onClick, pos, sel) {
+                var btn = new qx.ui.form.ModelButton(null, icon).set({
+                    toolTipText: text,
+                    width: 22,
+                    height: 22,
+                    show: "icon",
+                    iconPosition: "top",
+                    appearance: "button-addpoints",
+                    model: [pos, sel]
+                });
+                btn.getChildControl("icon").set({
+                    maxWidth: 16,
+                    maxHeight: 16,
+                    scale: true
+                });
+                btn.addListener("click", onClick, this);
+                return btn;
+            },
+            onClick_btnMirror: function (e) {
+                var formation = TABS.UTIL.Formation.Get();
+                formation = TABS.UTIL.Formation.Mirror(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
+                TABS.UTIL.Formation.Set(formation);
+            },
+            onClick_btnShift: function (e) {
+                var formation = TABS.UTIL.Formation.Get();
+                formation = TABS.UTIL.Formation.Shift(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
+                TABS.UTIL.Formation.Set(formation);
+            },
+            onClick_btnDisable: function (e) {
+                var formation = TABS.UTIL.Formation.Get();
+                formation = TABS.UTIL.Formation.toggle_Enabled(formation, e.getTarget().getModel()[0]);
+                TABS.UTIL.Formation.Set(formation);
+            },
+            onClick_CNCOpt: function (e) {
+                if (e.isRightPressed())
+                    TABS.UTIL.Formation.Set(TABS.UTIL.CNCOpt.parseLink(prompt(this.tr("Enter CNCOpt Long Link:"))));
+                else
+                    qx.core.Init.getApplication().showExternal(TABS.UTIL.CNCOpt.createLink());
+            }
+        },
+        defer: function () {
+            TABS.addInit("TABS.GUI.PlayArea");
+        }
+    });
+    qx.Class.define("TABS.GUI.ReportReplayOverlay", {			// [singleton]	Back Button
+        type: "singleton",
+        extend: qx.core.Object,
+        include: [qx.locale.MTranslation],
+        construct: function () {
+            try {
+                this.base(arguments);
+                var qxApp = qx.core.Init.getApplication();
+                this.ReportReplayOverlay = qx.core.Init.getApplication().getReportReplayOverlay();
 
-                        this.GUI = {
-                            Battle: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                                decorator: "pane-light-plain",
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                                decorator: "pane-light-plain",
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Repair: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                                decorator: "pane-light-plain",
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Loot: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                                decorator: "pane-light-plain",
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
-                                decorator: "pane-light-plain",
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            })
-                        };
-                        this.LabelsVBox = {
-                            Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                width: 29,
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                width: 29,
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                width: 29,
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                width: 29,
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            }),
-                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                width: 29,
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0
-                            })
-                        };
-                        this.Label = {
-                            Battle: {
-                                Preset: new TABS.GUI.Window.Stats.Atom("P", null, this.tr("Preset")),
-                                Outcome: new TABS.GUI.Window.Stats.Atom("O", null, this.tr("tnf:combat report")),
-                                Duration: new TABS.GUI.Window.Stats.Atom("D", null, this.tr("tnf:combat timer npc: %1", "")),
-                                OwnCity: new TABS.GUI.Window.Stats.Atom("B", null, this.tr("tnf:base")),
-                                Morale: new TABS.GUI.Window.Stats.Atom("M", null, this.tr("Morale"))
-                            },
-                            Enemy: {
-                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total"), TABS.RES.IMG.Enemy.All),
-                                Defense: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:defense"), TABS.RES.IMG.Enemy.Defense),
-                                Structure: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:base"), TABS.RES.IMG.Enemy.Base),
-                                Construction_Yard: new TABS.GUI.Window.Stats.Atom("CY", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Construction_Yard, ClientLib.Base.EFactionType.GDIFaction)),
-                                Defense_Facility: new TABS.GUI.Window.Stats.Atom("DF", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Defense_Facility, ClientLib.Base.EFactionType.GDIFaction)),
-                                Command_Center: new TABS.GUI.Window.Stats.Atom("CC", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Command_Center, ClientLib.Base.EFactionType.GDIFaction)),
-                                Barracks: new TABS.GUI.Window.Stats.Atom("B", TABS.RES.IMG.Offense.Infantry, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Barracks, ClientLib.Base.EFactionType.GDIFaction)),
-                                Factory: new TABS.GUI.Window.Stats.Atom("F", TABS.RES.IMG.Offense.Vehicle, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Factory, ClientLib.Base.EFactionType.GDIFaction)),
-                                Airport: new TABS.GUI.Window.Stats.Atom("A", TABS.RES.IMG.Offense.Aircraft, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Airport, ClientLib.Base.EFactionType.GDIFaction)),
-                                Support: new TABS.GUI.Window.Stats.Atom("S", null, this.tr("tnf:support"))
-                            },
-                            Repair: {
-                                Storage: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:offense repair time"), TABS.RES.IMG.RepairCharge.Base),
-                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:repair points"), TABS.RES.IMG.RepairCharge.Offense),
-                                Infantry: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:infantry repair title"), TABS.RES.IMG.RepairCharge.Infantry),
-                                Vehicle: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:vehicle repair title"), TABS.RES.IMG.RepairCharge.Vehicle),
-                                Aircraft: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:aircraft repair title"), TABS.RES.IMG.RepairCharge.Aircraft)
-                            },
-                            Loot: {
-                                Tiberium: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:tiberium"), TABS.RES.IMG.Resource.Tiberium),
-                                Crystal: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:crystals"), TABS.RES.IMG.Resource.Crystal),
-                                Credits: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:credits"), TABS.RES.IMG.Resource.Credits),
-                                ResearchPoints: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:research points"), TABS.RES.IMG.Resource.ResearchPoints),
-                                Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total") + " " + this.tr("tnf:loot"), TABS.RES.IMG.Resource.Transfer)
-                            },
-                            Buttons: {
-                                View: new TABS.GUI.Window.Stats.Atom(this.tr("View Simulation"), TABS.RES.IMG.Simulate).set({
-                                    marginTop: 1,
-                                    marginBottom: 5
-                                })
-                            }
-                        };
-                        for (var i in this.GUI) {
-                            for (var j in this.Label[i])
-                                this.LabelsVBox[i].add(this.Label[i][j]);
-                            this.GUI[i].add(this.LabelsVBox[i], {
-                                flex: 0
+                this.btnBack = new qx.ui.form.Button(qxApp.tr("tnf:back")).set({
+                    toolTipText: qxApp.tr("tnf:back"),
+                    width: 53,
+                    height: 24,
+                    appearance: "button-friendlist-scroll"
+                });
+                this.btnBack.addListener("click", this.onClick_btnBack, this);
+                this.ReportReplayOverlay.add(this.btnBack, {
+                    top: 10,
+                    right: 540
+                });
+
+                this.btnSkip = new qx.ui.form.Button(qxApp.tr("Skip")).set({
+                    toolTipText: qxApp.tr("Skip"),
+                    width: 52,
+                    height: 24,
+                    appearance: "button-friendlist-scroll"
+                });
+                this.btnSkip.addListener("click", this.onClick_btnSkip, this);
+                this.ReportReplayOverlay.add(this.btnSkip, {
+                    top: 10,
+                    left: 542
+                });
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up GUI.ReportReplayOverlay constructor", e);
+                console.groupEnd();
+            }
+        },
+        destruct: function () { },
+        members: {
+            ReportReplayOverlay: null,
+            btnBack: null,
+            btnSkip: null,
+            onClick_btnBack: function () {
+                var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                if (city !== null) {
+                    qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
+                    ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
+                }
+            },
+            onClick_btnSkip: function () {
+                if (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation !== undefined && ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep !== undefined) {
+                    while (ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_Simulation().DoStep(false)) { }
+                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
+                } else {
+                    var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
+                        LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                    if (LastBattleTime >= BattleDuration)
+                        ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
+                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
+                    phe.cnc.base.Timer.getInstance().addListener("uiTick", this.onTick_btnSkip, this);
+                }
+            },
+            onTick_btnSkip: function () {
+                var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
+                    LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                if (LastBattleTime >= BattleDuration) {
+                    phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
+                    ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
+                }
+            }
+        },
+        defer: function () {
+            TABS.addInit("TABS.GUI.ReportReplayOverlay");
+        }
+    });
+    qx.Class.define("TABS.GUI.Window.Stats", {					// [singleton]	Stats Window
+        type: "singleton",
+        extend: qx.ui.window.Window,
+        construct: function () {
+            try {
+                this.base(arguments);
+                this.set({
+                    layout: new qx.ui.layout.VBox(),
+                    caption: "TABS: " + this.tr("Statistic"),
+                    icon: TABS.RES.IMG.Stats,
+                    minWidth: 175,
+                    contentPadding: 4,
+                    contentPaddingTop: 0,
+                    contentPaddingBottom: 3,
+                    allowMaximize: false,
+                    showMaximize: false,
+                    allowMinimize: false,
+                    showMinimize: false,
+                    resizable: true,
+                    resizableTop: false,
+                    resizableBottom: false,
+                    useResizeFrame: false
+                });
+                this.moveTo(
+                    TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
+                    TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
+                this.addListener("move", function () {
+                    TABS.SETTINGS.set("GUI.Window.Stats.position", [this.getBounds().left, this.getBounds().top]);
+                }, this);
+                this.addListener("resize", function () {
+                    TABS.SETTINGS.set("GUI.Window.Stats.width", this.getWidth());
+                    this.makeSimView();
+                }, this);
+                this.addListener("changeHeight", function () {
+                    if (this.getHeight() !== null)
+                        this.resetHeight();
+                });
+                this.addListener("appear", this.onAppear, this);
+                this.addListener("close", this.onClose, this);
+                this.setWidth(TABS.SETTINGS.get("GUI.Window.Stats.width", 175));
+                this.getChildControl("close-button").addListener("execute", function () {
+                    TABS.SETTINGS.set("GUI.Window.Stats.open", false);
+                }, this);
+                this.getChildControl("icon").set({
+                    width: 20,
+                    height: 20,
+                    scale: true,
+                    alignY: "middle"
+                });
+                this.setStatus("0 " + this.tr("simulations in cache"));
+
+                this.GUI = {
+                    Battle: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                        decorator: "pane-light-plain",
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                        decorator: "pane-light-plain",
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Repair: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                        decorator: "pane-light-plain",
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Loot: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                        decorator: "pane-light-plain",
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.HBox(-2)).set({
+                        decorator: "pane-light-plain",
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    })
+                };
+                this.LabelsVBox = {
+                    Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        width: 29,
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        width: 29,
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        width: 29,
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        width: 29,
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    }),
+                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        width: 29,
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0
+                    })
+                };
+                this.Label = {
+                    Battle: {
+                        Preset: new TABS.GUI.Window.Stats.Atom("P", null, this.tr("Preset")),
+                        Outcome: new TABS.GUI.Window.Stats.Atom("O", null, this.tr("tnf:combat report")),
+                        Duration: new TABS.GUI.Window.Stats.Atom("D", null, this.tr("tnf:combat timer npc: %1", "")),
+                        OwnCity: new TABS.GUI.Window.Stats.Atom("B", null, this.tr("tnf:base")),
+                        Morale: new TABS.GUI.Window.Stats.Atom("M", null, this.tr("Morale"))
+                    },
+                    Enemy: {
+                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total"), TABS.RES.IMG.Enemy.All),
+                        Defense: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:defense"), TABS.RES.IMG.Enemy.Defense),
+                        Structure: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:base"), TABS.RES.IMG.Enemy.Base),
+                        Construction_Yard: new TABS.GUI.Window.Stats.Atom("CY", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Construction_Yard, ClientLib.Base.EFactionType.GDIFaction)),
+                        Defense_Facility: new TABS.GUI.Window.Stats.Atom("DF", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Defense_Facility, ClientLib.Base.EFactionType.GDIFaction)),
+                        Command_Center: new TABS.GUI.Window.Stats.Atom("CC", null, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Command_Center, ClientLib.Base.EFactionType.GDIFaction)),
+                        Barracks: new TABS.GUI.Window.Stats.Atom("B", TABS.RES.IMG.Offense.Infantry, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Barracks, ClientLib.Base.EFactionType.GDIFaction)),
+                        Factory: new TABS.GUI.Window.Stats.Atom("F", TABS.RES.IMG.Offense.Vehicle, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Factory, ClientLib.Base.EFactionType.GDIFaction)),
+                        Airport: new TABS.GUI.Window.Stats.Atom("A", TABS.RES.IMG.Offense.Aircraft, TABS.RES.getDisplayName(ClientLib.Base.ETechName.Airport, ClientLib.Base.EFactionType.GDIFaction)),
+                        Support: new TABS.GUI.Window.Stats.Atom("S", null, this.tr("tnf:support"))
+                    },
+                    Repair: {
+                        Storage: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:offense repair time"), TABS.RES.IMG.RepairCharge.Base),
+                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:repair points"), TABS.RES.IMG.RepairCharge.Offense),
+                        Infantry: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:infantry repair title"), TABS.RES.IMG.RepairCharge.Infantry),
+                        Vehicle: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:vehicle repair title"), TABS.RES.IMG.RepairCharge.Vehicle),
+                        Aircraft: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:aircraft repair title"), TABS.RES.IMG.RepairCharge.Aircraft)
+                    },
+                    Loot: {
+                        Tiberium: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:tiberium"), TABS.RES.IMG.Resource.Tiberium),
+                        Crystal: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:crystals"), TABS.RES.IMG.Resource.Crystal),
+                        Credits: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:credits"), TABS.RES.IMG.Resource.Credits),
+                        ResearchPoints: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:research points"), TABS.RES.IMG.Resource.ResearchPoints),
+                        Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:total") + " " + this.tr("tnf:loot"), TABS.RES.IMG.Resource.Transfer)
+                    },
+                    Buttons: {
+                        View: new TABS.GUI.Window.Stats.Atom(this.tr("View Simulation"), TABS.RES.IMG.Simulate).set({
+                            marginTop: 1,
+                            marginBottom: 5
+                        })
+                    }
+                };
+                for (var i in this.GUI) {
+                    for (var j in this.Label[i])
+                        this.LabelsVBox[i].add(this.Label[i][j]);
+                    this.GUI[i].add(this.LabelsVBox[i], {
+                        flex: 0
+                    });
+                }
+
+                //Enemy Health Section//
+                this.EnemyHeader = this.makeHeader(this.tr("tnf:combat target"));
+                this.EnemyHeader.addListener("click", function () {
+                    if (this.GUI.Enemy.isVisible()) {
+                        this.GUI.Enemy.exclude();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", false);
+                    } else {
+                        this.GUI.Enemy.show();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", true);
+                    }
+                }, this);
+
+                //Repair Section//
+                this.RepairHeader = this.makeHeader(this.tr("tnf:own repair cost").replace(":", ""));
+                this.RepairHeader.addListener("click", function () {
+                    if (this.GUI.Repair.isVisible()) {
+                        this.GUI.Repair.exclude();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", false);
+                    } else {
+                        this.GUI.Repair.show();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", true);
+                    }
+                }, this);
+
+                //Loot Section//
+                this.LootHeader = this.makeHeader(this.tr("tnf:lootable resources:").replace(":", ""));
+                this.LootHeader.addListener("click", function () {
+                    if (this.GUI.Loot.isVisible()) {
+                        this.GUI.Loot.exclude();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", false);
+                    } else {
+                        this.GUI.Loot.show();
+                        TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", true);
+                    }
+                }, this);
+
+                this.add(this.GUI.Battle);
+                this.add(this.EnemyHeader);
+                this.add(this.GUI.Enemy);
+                this.add(this.RepairHeader);
+                this.add(this.GUI.Repair);
+                this.add(this.LootHeader);
+                this.add(this.GUI.Loot);
+                this.add(this.GUI.Buttons);
+                this.add(this.getChildControl("statusbar"));
+                this.getChildControl("statusbar-text").set({
+                    textColor: "#BBBBBB"
+                });
+                this.getChildControl("statusbar").add(new qx.ui.core.Spacer(), {
+                    flex: 1
+                });
+                var fontsize = qx.theme.manager.Font.getInstance().resolve(this.getChildControl("statusbar-text").getFont()).getSize(),
+                    lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
+                        textColor: "#115274",
+                        font: new qx.bom.Font("statusbar-text").set({
+                            size: fontsize,
+                            decoration: "underline"
+                        })
+                    });
+                lblReset.addListener("click", function () {
+                    var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId();
+                    if (CurrentCityId)
+                        TABS.CACHE.getInstance().clear(CurrentCityId);
+                }, this);
+                this.getChildControl("statusbar").add(lblReset);
+
+                if (TABS.SETTINGS.get("GUI.Window.Stats.Enemy.visible", true) === false)
+                    this.GUI.Enemy.exclude();
+                if (TABS.SETTINGS.get("GUI.Window.Stats.Repair.visible", true) === false)
+                    this.GUI.Repair.exclude();
+                if (TABS.SETTINGS.get("GUI.Window.Stats.Loot.visible", true) === false)
+                    this.GUI.Loot.exclude();
+
+                this.simViews = [];
+
+                phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this._onViewChanged);
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up TABS.GUI.Window.Stats constructor", e);
+                console.groupEnd();
+            }
+        },
+        destruct: function () { },
+        members: {
+            GUI: null,
+            LabelsVBox: null,
+            Label: null,
+            EnemyHeader: null,
+            RepairHeader: null,
+            LootHeader: null,
+            simViews: null,
+            StatsChanged: false,
+            onAppear: function () {
+                phe.cnc.base.Timer.getInstance().addListener("uiTick", this.__onTick, this);
+                TABS.CACHE.getInstance().addListener("addSimulation", this.__updateStats, this);
+                TABS.PreArmyUnits.getInstance().addListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
+                phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
+                phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
+                this.__updateStats();
+            },
+            onClose: function () {
+                phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.__onTick, this);
+                TABS.CACHE.getInstance().removeListener("addSimulation", this.__updateStats, this);
+                TABS.PreArmyUnits.getInstance().removeListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
+                phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
+                phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
+                for (var i in this.simViews) {
+                    this.simViews[i].resetStats();
+                    this.simViews[i].__onTick();
+                }
+            },
+            __onTick: function () {
+                var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                if (!ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() || CurrentCity === null || CurrentCity.get_Version() < 0) return;
+                if (this.StatsChanged) {
+                    this.StatsChanged = false;
+                    for (var i in this.simViews) {
+                        this.simViews[i].updateStats();
+                        this.simViews[i].__onTick();
+                    }
+                } else {
+                    for (var i in this.simViews) {
+                        this.simViews[i].__onTick();
+                    }
+                }
+                this.setStatus(TABS.CACHE.getInstance().getCitySimAmount().toString() + " " + this.tr("simulations in cache"));
+            },
+            __updateStats: function () {
+                this.StatsChanged = true;
+            },
+            __CurrentCityChange: function (oldId, newId) {
+                if (ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(newId) === null) {
+                    for (var i in this.simViews) {
+                        this.simViews[i].resetStats();
+                    }
+                }
+            },
+            _onViewChanged: function (oldMode, newMode) {
+                if (newMode != ClientLib.Vis.Mode.CombatSetup && newMode != ClientLib.Vis.Mode.Battleground)
+                    this.close();
+            },
+            makeHeader: function (text) {
+                var Header = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({
+                    decorator: "pane-light-opaque"
+                });
+                Header.add(new qx.ui.basic.Label(text).set({
+                    alignX: "center",
+                    alignY: "middle",
+                    paddingTop: -2,
+                    paddingBottom: 4,
+                    font: "font_size_13_bold_shadow"
+                }));
+                return Header;
+            },
+            makeSimView: function () {
+                var i,
+                    num = Math.round((this.getWidth() - 30) / 75);
+                if (this.simViews.length != num) {
+                    for (i = 0; i < num; i++) {
+                        if (this.simViews[i] === undefined) {
+                            this.simViews[i] = new TABS.GUI.Window.Stats.SimView(i, this);
+                            this.GUI.Battle.add(this.simViews[i].GUI.Battle, {
+                                flex: 1,
+                                width: "100%"
+                            });
+                            this.GUI.Enemy.add(this.simViews[i].GUI.Enemy, {
+                                flex: 1,
+                                width: "100%"
+                            });
+                            this.GUI.Repair.add(this.simViews[i].GUI.Repair, {
+                                flex: 1,
+                                width: "100%"
+                            });
+                            this.GUI.Loot.add(this.simViews[i].GUI.Loot, {
+                                flex: 1,
+                                width: "100%"
+                            });
+                            this.GUI.Buttons.add(this.simViews[i].GUI.Buttons, {
+                                flex: 1,
+                                width: "100%"
                             });
                         }
-
-                        //Enemy Health Section//
-                        this.EnemyHeader = this.makeHeader(this.tr("tnf:combat target"));
-                        this.EnemyHeader.addListener("click", function () {
-                            if (this.GUI.Enemy.isVisible()) {
-                                this.GUI.Enemy.exclude();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", false);
-                            } else {
-                                this.GUI.Enemy.show();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Enemy.visible", true);
-                            }
-                        }, this);
-
-                        //Repair Section//
-                        this.RepairHeader = this.makeHeader(this.tr("tnf:own repair cost").replace(":", ""));
-                        this.RepairHeader.addListener("click", function () {
-                            if (this.GUI.Repair.isVisible()) {
-                                this.GUI.Repair.exclude();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", false);
-                            } else {
-                                this.GUI.Repair.show();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Repair.visible", true);
-                            }
-                        }, this);
-
-                        //Loot Section//
-                        this.LootHeader = this.makeHeader(this.tr("tnf:lootable resources:").replace(":", ""));
-                        this.LootHeader.addListener("click", function () {
-                            if (this.GUI.Loot.isVisible()) {
-                                this.GUI.Loot.exclude();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", false);
-                            } else {
-                                this.GUI.Loot.show();
-                                TABS.SETTINGS.set("GUI.Window.Stats.Loot.visible", true);
-                            }
-                        }, this);
-
-                        this.add(this.GUI.Battle);
-                        this.add(this.EnemyHeader);
-                        this.add(this.GUI.Enemy);
-                        this.add(this.RepairHeader);
-                        this.add(this.GUI.Repair);
-                        this.add(this.LootHeader);
-                        this.add(this.GUI.Loot);
-                        this.add(this.GUI.Buttons);
-                        this.add(this.getChildControl("statusbar"));
-                        this.getChildControl("statusbar-text").set({
-                            textColor: "#BBBBBB"
-                        });
-                        this.getChildControl("statusbar").add(new qx.ui.core.Spacer(), {
-                            flex: 1
-                        });
-                        var fontsize = qx.theme.manager.Font.getInstance().resolve(this.getChildControl("statusbar-text").getFont()).getSize(),
-							lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
-							    textColor: "#115274",
-							    font: new qx.bom.Font("statusbar-text").set({
-							        size: fontsize,
-							        decoration: "underline"
-							    })
-							});
-                        lblReset.addListener("click", function () {
-                            var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId();
-                            if (CurrentCityId)
-                                TABS.CACHE.getInstance().clear(CurrentCityId);
-                        }, this);
-                        this.getChildControl("statusbar").add(lblReset);
-
-                        if (TABS.SETTINGS.get("GUI.Window.Stats.Enemy.visible", true) === false)
-                            this.GUI.Enemy.exclude();
-                        if (TABS.SETTINGS.get("GUI.Window.Stats.Repair.visible", true) === false)
-                            this.GUI.Repair.exclude();
-                        if (TABS.SETTINGS.get("GUI.Window.Stats.Loot.visible", true) === false)
-                            this.GUI.Loot.exclude();
-
-                        this.simViews = [];
-
-                        phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this._onViewChanged);
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up TABS.GUI.Window.Stats constructor", e);
-                        console.groupEnd();
                     }
-                },
-                destruct: function () { },
-                members: {
-                    GUI: null,
-                    LabelsVBox: null,
-                    Label: null,
-                    EnemyHeader: null,
-                    RepairHeader: null,
-                    LootHeader: null,
-                    simViews: null,
-                    StatsChanged: false,
-                    onAppear: function () {
-                        phe.cnc.base.Timer.getInstance().addListener("uiTick", this.__onTick, this);
-                        TABS.CACHE.getInstance().addListener("addSimulation", this.__updateStats, this);
-                        TABS.PreArmyUnits.getInstance().addListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
-                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
-                        phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
-                        this.__updateStats();
-                    },
-                    onClose: function () {
-                        phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.__onTick, this);
-                        TABS.CACHE.getInstance().removeListener("addSimulation", this.__updateStats, this);
-                        TABS.PreArmyUnits.getInstance().removeListener("OnCityPreArmyUnitsChanged", this.__updateStats, this);
-                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, this.__CurrentCityChange);
-                        phe.cnc.Util.detachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentChange", ClientLib.Data.CurrentCityChange, this, this.__CurrentCityChange);
-                        for (var i in this.simViews) {
-                            this.simViews[i].resetStats();
-                            this.simViews[i].__onTick();
+                    for (i = 0; i < this.simViews.length; i++) {
+                        if (i >= num) {
+                            this.GUI.Battle.remove(this.simViews[i].GUI.Battle);
+                            this.GUI.Enemy.remove(this.simViews[i].GUI.Enemy);
+                            this.GUI.Repair.remove(this.simViews[i].GUI.Repair);
+                            this.GUI.Loot.remove(this.simViews[i].GUI.Loot);
+                            this.GUI.Buttons.remove(this.simViews[i].GUI.Buttons);
                         }
-                    },
-                    __onTick: function () {
-                        var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                        if (!ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() || CurrentCity === null || CurrentCity.get_Version() < 0) return;
-                        if (this.StatsChanged) {
-                            this.StatsChanged = false;
-                            for (var i in this.simViews) {
-                                this.simViews[i].updateStats();
-                                this.simViews[i].__onTick();
-                            }
-                        } else {
-                            for (var i in this.simViews) {
-                                this.simViews[i].__onTick();
-                            }
+                    }
+                    while (this.simViews.length > num)
+                        this.simViews.splice(num, 1);
+                    this.__updateLabels();
+                    this.__updateStats();
+                }
+            },
+            __updateLabels: function () {
+                if (this.simViews.length > 0) {
+                    var i,
+                        visibility;
+
+                    //Label.Battle.Morale
+                    visibility = "excluded";
+                    for (i in this.simViews) {
+                        if (this.simViews[i].Label.Battle.Morale.getValue() != "100%") {
+                            visibility = "visible";
+                            break;
                         }
-                        this.setStatus(TABS.CACHE.getInstance().getCitySimAmount().toString() + " " + this.tr("simulations in cache"));
-                    },
-                    __updateStats: function () {
-                        this.StatsChanged = true;
-                    },
-                    __CurrentCityChange: function (oldId, newId) {
-                        if (ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(newId) === null) {
-                            for (var i in this.simViews) {
-                                this.simViews[i].resetStats();
-                            }
-                        }
-                    },
-                    _onViewChanged: function (oldMode, newMode) {
-                        if (newMode != ClientLib.Vis.Mode.CombatSetup && newMode != ClientLib.Vis.Mode.Battleground)
-                            this.close();
-                    },
-                    makeHeader: function (text) {
-                        var Header = new qx.ui.container.Composite(new qx.ui.layout.VBox(5)).set({
-                            decorator: "pane-light-opaque"
-                        });
-                        Header.add(new qx.ui.basic.Label(text).set({
+                    }
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Battle.Morale.setVisibility(visibility);
+                    this.Label.Battle.Morale.setVisibility(visibility);
+
+                    //Label.Enemy.Defense
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Defense.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Defense.setVisibility(visibility);
+                    this.Label.Enemy.Defense.setVisibility(visibility);
+
+                    //Label.Enemy.Defense_Facility
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Defense_Facility.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Defense_Facility.setVisibility(visibility);
+                    this.Label.Enemy.Defense_Facility.setVisibility(visibility);
+
+                    //Label.Enemy.Command_Center
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Command_Center.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Command_Center.setVisibility(visibility);
+                    this.Label.Enemy.Command_Center.setVisibility(visibility);
+
+                    //Label.Enemy.Barracks
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Barracks.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Barracks.setVisibility(visibility);
+                    this.Label.Enemy.Barracks.setVisibility(visibility);
+
+                    //Label.Enemy.Factory
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Factory.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Factory.setVisibility(visibility);
+                    this.Label.Enemy.Factory.setVisibility(visibility);
+
+                    //Label.Enemy.Airport
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Airport.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Airport.setVisibility(visibility);
+                    this.Label.Enemy.Airport.setVisibility(visibility);
+
+                    //Label.Enemy.Support
+                    visibility = "excluded";
+                    if (this.simViews[0].Stats.Enemy.Support.HealthPoints.getMax() > 0)
+                        visibility = "visible";
+                    for (i in this.simViews)
+                        this.simViews[i].Label.Enemy.Support.setVisibility(visibility);
+                    this.Label.Enemy.Support.setVisibility(visibility);
+                }
+            }
+        }
+    });
+    qx.Class.define("TABS.GUI.Window.Stats.Atom", {				//				Stats Window Atom
+        extend: qx.ui.basic.Atom,
+        include: [qx.locale.MTranslation],
+        construct: function (label, icon, toolTipText, toolTipIcon) {
+            try {
+                this.base(arguments, label, icon);
+                if (label === undefined)
+                    label = null;
+                if (icon === undefined)
+                    icon = null;
+                if (toolTipText === undefined)
+                    toolTipText = null;
+                if (toolTipIcon === undefined)
+                    toolTipIcon = null;
+                var _toolTipText = (toolTipText !== null ? toolTipText : (label !== null ? label : "")),
+                    _toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
+                    _show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
+                this.initAlignX("center");
+                this.initAlignY("middle");
+                this.initGap(0);
+                this.initIconPosition("top");
+                this.initMinHeight(18);
+                this.initToolTipText(_toolTipText);
+                this.initToolTipIcon(_toolTipIcon);
+                this.initShow(_show);
+                this.setAlignX("center");
+                this.setAlignY("middle");
+                this.setGap(0);
+                this.setIconPosition("top");
+                this.setMinHeight(18);
+                this.setToolTipText(_toolTipText);
+                this.setToolTipIcon(_toolTipIcon);
+                this.setShow(_show);
+                this.getChildControl("icon").set({
+                    width: 18,
+                    height: 18,
+                    scale: true,
+                    alignY: "middle"
+                });
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up TABS.GUI.Window.Stats.Atom constructor", e);
+                console.groupEnd();
+            }
+        }
+    });
+    qx.Class.define("TABS.GUI.Window.Stats.SimView", {			//				Simulation View Objekt
+        extend: qx.core.Object,
+        include: [qx.locale.MTranslation],
+        construct: function (num, window) {
+            try {
+                this.base(arguments);
+                var i,
+                    j,
+                    defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
+                if (defaultPreset.Name === undefined)
+                    defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Name)
+                if (defaultPreset.Description === undefined)
+                    defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Description)
+                this.Num = num;
+                this.Window = window;
+                this.Cache = {};
+                this.Stats = new TABS.STATS();
+                this.Name = defaultPreset.Name;
+                this.Description = defaultPreset.Description;
+                this.Prio = defaultPreset.Prio;
+                this.GUI = {
+                    Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        decorator: "pane-light-opaque"
+                    }),
+                    Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        decorator: "pane-light-opaque"
+                    }),
+                    Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        decorator: "pane-light-opaque"
+                    }),
+                    Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        decorator: "pane-light-opaque"
+                    }),
+                    Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
+                        padding: 5,
+                        allowGrowX: true,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        decorator: "pane-light-opaque"
+                    })
+                };
+                this.Label = {
+                    Battle: {
+                        Preset: new qx.ui.basic.Label(this.tr(this.Name)).set({
                             alignX: "center",
                             alignY: "middle",
-                            paddingTop: -2,
-                            paddingBottom: 4,
-                            font: "font_size_13_bold_shadow"
-                        }));
-                        return Header;
+                            minHeight: 18,
+                            toolTipText: this.tr(this.Description)
+                        }),
+                        Outcome: new qx.ui.basic.Atom("-", null).set({
+                            alignX: "center",
+                            alignY: "middle",
+                            gap: 0,
+                            iconPosition: "top",
+                            minHeight: 18,
+                            show: "label"
+                        }),
+                        Duration: new qx.ui.basic.Label("-:--").set({
+                            alignX: "center",
+                            alignY: "middle",
+                            minHeight: 18
+                        }),
+                        OwnCity: new qx.ui.basic.Label("-").set({
+                            alignX: "center",
+                            alignY: "middle",
+                            minHeight: 18
+                        }),
+                        Morale: new qx.ui.basic.Label("-").set({
+                            alignX: "center",
+                            alignY: "middle",
+                            minHeight: 18
+                        })
                     },
-                    makeSimView: function () {
-                        var i,
-							num = Math.round((this.getWidth() - 30) / 75);
-                        if (this.simViews.length != num) {
-                            for (i = 0; i < num; i++) {
-                                if (this.simViews[i] === undefined) {
-                                    this.simViews[i] = new TABS.GUI.Window.Stats.SimView(i, this);
-                                    this.GUI.Battle.add(this.simViews[i].GUI.Battle, {
-                                        flex: 1,
-                                        width: "100%"
-                                    });
-                                    this.GUI.Enemy.add(this.simViews[i].GUI.Enemy, {
-                                        flex: 1,
-                                        width: "100%"
-                                    });
-                                    this.GUI.Repair.add(this.simViews[i].GUI.Repair, {
-                                        flex: 1,
-                                        width: "100%"
-                                    });
-                                    this.GUI.Loot.add(this.simViews[i].GUI.Loot, {
-                                        flex: 1,
-                                        width: "100%"
-                                    });
-                                    this.GUI.Buttons.add(this.simViews[i].GUI.Buttons, {
-                                        flex: 1,
-                                        width: "100%"
-                                    });
+                    Enemy: {
+                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Defense: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Structure: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Construction_Yard: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Defense_Facility: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Command_Center: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Barracks: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Factory: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Airport: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        }),
+                        Support: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Enemy",
+                            subType: "HealthPointsAbs"
+                        })
+                    },
+                    Repair: {
+                        Storage: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Repair",
+                            subType: "RepairStorage"
+                        }),
+                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Repair",
+                            subType: "RepairCharge"
+                        }),
+                        Infantry: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Repair",
+                            subType: "RepairCharge"
+                        }),
+                        Vehicle: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Repair",
+                            subType: "RepairCharge"
+                        }),
+                        Aircraft: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Repair",
+                            subType: "RepairCharge"
+                        })
+                    },
+                    Loot: {
+                        Tiberium: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Loot",
+                            subType: "Tiberium"
+                        }),
+                        Crystal: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Loot",
+                            subType: "Crystal"
+                        }),
+                        Credits: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Loot",
+                            subType: "Credits"
+                        }),
+                        ResearchPoints: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Loot",
+                            subType: "ResearchPoints"
+                        }),
+                        Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                            type: "Loot",
+                            subType: "Resource"
+                        })
+                    },
+                    Buttons: {
+                        View: new qx.ui.container.Composite(new qx.ui.layout.HBox()).set({
+                            allowGrowX: true,
+                            marginLeft: 0,
+                            marginRight: 0
+                        })
+                    }
+                };
+                this.Label.Battle.Outcome.getChildControl("icon").set({
+                    width: 18,
+                    height: 18,
+                    scale: true,
+                    alignY: "middle"
+                });
+                this.Label.Repair.Overall.getContainerElement().setStyle("none", "0 0 1pt");
+                for (i in this.GUI) {
+                    for (j in this.Label[i]) {
+                        this.GUI[i].add(this.Label[i][j], {
+                            flex: 1,
+                            right: 0
+                        });
+                    }
+                    this.GUI[i].addListener("dblclick", this.loadFormation, this);
+                }
+                this.Stats.addListener("changeBattleDuration", this.__updateBattleDuration.bind(this, this.Label.Battle.Duration));
+                for (i in this.Stats.Enemy) {
+                    if (this.Label.Enemy.hasOwnProperty(i)) {
+                        if (this.Stats.Enemy[i].hasOwnProperty("HealthPoints")) {
+                            this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Enemy[i].HealthPoints, "max");
+                            this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Enemy[i].HealthPoints, "start");
+                            this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Enemy[i].HealthPoints, "end");
+                            if (i == "Overall") {
+                                for (j in this.Label.Loot) {
+                                    this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Loot[j].HealthPoints, "max");
+                                    this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Loot[j].HealthPoints, "start");
+                                    this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Loot[j].HealthPoints, "end");
                                 }
                             }
-                            for (i = 0; i < this.simViews.length; i++) {
-                                if (i >= num) {
-                                    this.GUI.Battle.remove(this.simViews[i].GUI.Battle);
-                                    this.GUI.Enemy.remove(this.simViews[i].GUI.Enemy);
-                                    this.GUI.Repair.remove(this.simViews[i].GUI.Repair);
-                                    this.GUI.Loot.remove(this.simViews[i].GUI.Loot);
-                                    this.GUI.Buttons.remove(this.simViews[i].GUI.Buttons);
-                                }
-                            }
-                            while (this.simViews.length > num)
-                                this.simViews.splice(num, 1);
-                            this.__updateLabels();
-                            this.__updateStats();
                         }
-                    },
-                    __updateLabels: function () {
-                        if (this.simViews.length > 0) {
-                            var i,
-								visibility;
-
-                            //Label.Battle.Morale
-                            visibility = "excluded";
-                            for (i in this.simViews) {
-                                if (this.simViews[i].Label.Battle.Morale.getValue() != "100%") {
-                                    visibility = "visible";
-                                    break;
+                        if (this.Stats.Enemy[i].hasOwnProperty("Resource")) {
+                            this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Enemy[i].Resource, "Tiberium");
+                            this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Enemy[i].Resource, "Crystal");
+                            this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Enemy[i].Resource, "Credits");
+                            this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Enemy[i].Resource, "ResearchPoints");
+                            this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Enemy[i].Resource, "RepairChargeBase");
+                            this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Enemy[i].Resource, "RepairChargeAir");
+                            this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Enemy[i].Resource, "RepairChargeInf");
+                            this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Enemy[i].Resource, "RepairChargeVeh");
+                            if (i == "Overall") {
+                                for (j in this.Label.Loot) {
+                                    this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Loot[j].Resource, "Tiberium");
+                                    this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Loot[j].Resource, "Crystal");
+                                    this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Loot[j].Resource, "Credits");
+                                    this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Loot[j].Resource, "ResearchPoints");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Loot[j].Resource, "RepairChargeBase");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Loot[j].Resource, "RepairChargeAir");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Loot[j].Resource, "RepairChargeInf");
+                                    this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Loot[j].Resource, "RepairChargeVeh");
                                 }
                             }
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Battle.Morale.setVisibility(visibility);
-                            this.Label.Battle.Morale.setVisibility(visibility);
-
-                            //Label.Enemy.Defense
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Defense.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Defense.setVisibility(visibility);
-                            this.Label.Enemy.Defense.setVisibility(visibility);
-
-                            //Label.Enemy.Defense_Facility
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Defense_Facility.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Defense_Facility.setVisibility(visibility);
-                            this.Label.Enemy.Defense_Facility.setVisibility(visibility);
-
-                            //Label.Enemy.Command_Center
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Command_Center.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Command_Center.setVisibility(visibility);
-                            this.Label.Enemy.Command_Center.setVisibility(visibility);
-
-                            //Label.Enemy.Barracks
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Barracks.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Barracks.setVisibility(visibility);
-                            this.Label.Enemy.Barracks.setVisibility(visibility);
-
-                            //Label.Enemy.Factory
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Factory.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Factory.setVisibility(visibility);
-                            this.Label.Enemy.Factory.setVisibility(visibility);
-
-                            //Label.Enemy.Airport
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Airport.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Airport.setVisibility(visibility);
-                            this.Label.Enemy.Airport.setVisibility(visibility);
-
-                            //Label.Enemy.Support
-                            visibility = "excluded";
-                            if (this.simViews[0].Stats.Enemy.Support.HealthPoints.getMax() > 0)
-                                visibility = "visible";
-                            for (i in this.simViews)
-                                this.simViews[i].Label.Enemy.Support.setVisibility(visibility);
-                            this.Label.Enemy.Support.setVisibility(visibility);
                         }
                     }
                 }
-            });
-            qx.Class.define("TABS.GUI.Window.Stats.Atom", {				//				Stats Window Atom
-                extend: qx.ui.basic.Atom,
-                include: [qx.locale.MTranslation],
-                construct: function (label, icon, toolTipText, toolTipIcon) {
-                    try {
-                        this.base(arguments, label, icon);
-                        if (label === undefined)
-                            label = null;
-                        if (icon === undefined)
-                            icon = null;
-                        if (toolTipText === undefined)
-                            toolTipText = null;
-                        if (toolTipIcon === undefined)
-                            toolTipIcon = null;
-                        var _toolTipText = (toolTipText !== null ? toolTipText : (label !== null ? label : "")),
-							_toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
-							_show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
-                        this.initAlignX("center");
-                        this.initAlignY("middle");
-                        this.initGap(0);
-                        this.initIconPosition("top");
-                        this.initMinHeight(18);
-                        this.initToolTipText(_toolTipText);
-                        this.initToolTipIcon(_toolTipIcon);
-                        this.initShow(_show);
-                        this.setAlignX("center");
-                        this.setAlignY("middle");
-                        this.setGap(0);
-                        this.setIconPosition("top");
-                        this.setMinHeight(18);
-                        this.setToolTipText(_toolTipText);
-                        this.setToolTipIcon(_toolTipIcon);
-                        this.setShow(_show);
-                        this.getChildControl("icon").set({
-                            width: 18,
-                            height: 18,
-                            scale: true,
-                            alignY: "middle"
-                        });
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up TABS.GUI.Window.Stats.Atom constructor", e);
-                        console.groupEnd();
+                for (i in this.Stats.Offense) {
+                    if (this.Label.Repair.hasOwnProperty(i)) {
+                        if (this.Stats.Offense[i].hasOwnProperty("HealthPoints")) {
+                            this.Stats.Offense[i].HealthPoints.bind("max", this.Label.Repair[i].HealthPoints, "max");
+                            this.Stats.Offense[i].HealthPoints.bind("start", this.Label.Repair[i].HealthPoints, "start");
+                            this.Stats.Offense[i].HealthPoints.bind("end", this.Label.Repair[i].HealthPoints, "end");
+                        }
+                        if (this.Stats.Offense[i].hasOwnProperty("Resource")) {
+                            this.Stats.Offense[i].Resource.bind("Tiberium", this.Label.Repair[i].Resource, "Tiberium");
+                            this.Stats.Offense[i].Resource.bind("Crystal", this.Label.Repair[i].Resource, "Crystal");
+                            this.Stats.Offense[i].Resource.bind("Credits", this.Label.Repair[i].Resource, "Credits");
+                            this.Stats.Offense[i].Resource.bind("ResearchPoints", this.Label.Repair[i].Resource, "ResearchPoints");
+                            this.Stats.Offense[i].Resource.bind("RepairChargeBase", this.Label.Repair[i].Resource, "RepairChargeBase");
+                            this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[i].Resource, "RepairChargeAir");
+                            this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[i].Resource, "RepairChargeInf");
+                            this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[i].Resource, "RepairChargeVeh");
+                        }
                     }
                 }
-            });
-            qx.Class.define("TABS.GUI.Window.Stats.SimView", {			//				Simulation View Objekt
-                extend: qx.core.Object,
-                include: [qx.locale.MTranslation],
-                construct: function (num, window) {
-                    try {
-                        this.base(arguments);
-                        var i,
-							j,
-							defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
-                        if (defaultPreset.Name === undefined)
-                            defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Name)
-                        if (defaultPreset.Description === undefined)
-                            defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Description)
-                        this.Num = num;
-                        this.Window = window;
-                        this.Cache = {};
-                        this.Stats = new TABS.STATS();
-                        this.Name = defaultPreset.Name;
-                        this.Description = defaultPreset.Description;
-                        this.Prio = defaultPreset.Prio;
-                        this.GUI = {
-                            Battle: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                decorator: "pane-light-opaque"
-                            }),
-                            Enemy: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                decorator: "pane-light-opaque"
-                            }),
-                            Repair: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                decorator: "pane-light-opaque"
-                            }),
-                            Loot: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                decorator: "pane-light-opaque"
-                            }),
-                            Buttons: new qx.ui.container.Composite(new qx.ui.layout.VBox()).set({
-                                padding: 5,
-                                allowGrowX: true,
-                                marginLeft: 0,
-                                marginRight: 0,
-                                decorator: "pane-light-opaque"
-                            })
-                        };
-                        this.Label = {
-                            Battle: {
-                                Preset: new qx.ui.basic.Label(this.tr(this.Name)).set({
-                                    alignX: "center",
-                                    alignY: "middle",
-                                    minHeight: 18,
-                                    toolTipText: this.tr(this.Description)
-                                }),
-                                Outcome: new qx.ui.basic.Atom("-", null).set({
-                                    alignX: "center",
-                                    alignY: "middle",
-                                    gap: 0,
-                                    iconPosition: "top",
-                                    minHeight: 18,
-                                    show: "label"
-                                }),
-                                Duration: new qx.ui.basic.Label("-:--").set({
-                                    alignX: "center",
-                                    alignY: "middle",
-                                    minHeight: 18
-                                }),
-                                OwnCity: new qx.ui.basic.Label("-").set({
-                                    alignX: "center",
-                                    alignY: "middle",
-                                    minHeight: 18
-                                }),
-                                Morale: new qx.ui.basic.Label("-").set({
-                                    alignX: "center",
-                                    alignY: "middle",
-                                    minHeight: 18
-                                })
-                            },
-                            Enemy: {
-                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Defense: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Structure: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Construction_Yard: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Defense_Facility: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Command_Center: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Barracks: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Factory: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Airport: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                }),
-                                Support: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Enemy",
-                                    subType: "HealthPointsAbs"
-                                })
-                            },
-                            Repair: {
-                                Storage: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Repair",
-                                    subType: "RepairStorage"
-                                }),
-                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Repair",
-                                    subType: "RepairCharge"
-                                }),
-                                Infantry: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Repair",
-                                    subType: "RepairCharge"
-                                }),
-                                Vehicle: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Repair",
-                                    subType: "RepairCharge"
-                                }),
-                                Aircraft: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Repair",
-                                    subType: "RepairCharge"
-                                })
-                            },
-                            Loot: {
-                                Tiberium: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Loot",
-                                    subType: "Tiberium"
-                                }),
-                                Crystal: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Loot",
-                                    subType: "Crystal"
-                                }),
-                                Credits: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Loot",
-                                    subType: "Credits"
-                                }),
-                                ResearchPoints: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Loot",
-                                    subType: "ResearchPoints"
-                                }),
-                                Overall: new TABS.GUI.Window.Stats.SimView.Label("-").set({
-                                    type: "Loot",
-                                    subType: "Resource"
-                                })
-                            },
-                            Buttons: {
-                                View: new qx.ui.container.Composite(new qx.ui.layout.HBox()).set({
-                                    allowGrowX: true,
-                                    marginLeft: 0,
-                                    marginRight: 0
-                                })
-                            }
-                        };
-                        this.Label.Battle.Outcome.getChildControl("icon").set({
-                            width: 18,
-                            height: 18,
-                            scale: true,
-                            alignY: "middle"
-                        });
-                        this.Label.Repair.Overall.getContainerElement().setStyle("none", "0 0 1pt");
+
+                var ButtonAPISim = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Simulate).set({
+                    maxHeight: 22,
+                    minWidth: 22,
+                    toolTipText: this.tr("tnf:refresh"),
+                    show: "icon",
+                    iconPosition: "top",
+                    appearance: "button-addpoints"
+                });
+                ButtonAPISim.getChildControl("icon").set({
+                    maxWidth: 16,
+                    maxHeight: 16,
+                    scale: true
+                });
+                ButtonAPISim.addListener("click", function () {
+                    this.loadFormation();
+                    TABS.APISimulation.getInstance().SimulateBattle();
+                }, this);
+                this.Label.Buttons.View.add(ButtonAPISim);
+
+                var ButtonPlay = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Arrows.Right).set({
+                    maxHeight: 22,
+                    minWidth: 22,
+                    toolTipText: this.tr("View Simulation"),
+                    show: "icon",
+                    iconPosition: "top",
+                    appearance: "button-addpoints"
+                });
+                ButtonPlay.getChildControl("icon").set({
+                    maxWidth: 16,
+                    maxHeight: 16,
+                    scale: true
+                });
+                ButtonPlay.addListener("click", this.playReplay, this);
+                this.Label.Buttons.View.add(ButtonPlay);
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up GUI.Window.Stats.SimView constructor", e);
+                console.groupEnd();
+            }
+        },
+        destruct: function () { },
+        members: {
+            Num: null,
+            Window: null,
+            GUI: null,
+            Label: null,
+            Cache: null,
+            Stats: null,
+            StatsChanged: false,
+            Prio: null,
+            Name: null,
+            Description: null,
+            updateStats: function () {
+                var i,
+                    cache = null,
+                    CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
+                    if (this.Prio.length === 0)
+                        cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
+                    else
+                        cache = TABS.CACHE.getInstance().getPrio1(this.Prio);
+                }
+
+                if (cache !== null && cache.result !== null) {
+                    this.Cache = cache;
+                    this.Stats.setAny(cache.result.stats);
+                    this.StatsChanged = true;
+                    this.__updateBattleOutcome();
+                    this.__updateBattleOwnCity();
+                    this.__updateBattleMoral();
+                    this.Window.__updateLabels();
+                }
+
+                if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                    if (CurrentCity !== null &&
+                        CurrentCity.get_Version() !== -1 &&
+                        ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
+                        this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
                         for (i in this.GUI) {
-                            for (j in this.Label[i]) {
-                                this.GUI[i].add(this.Label[i][j], {
-                                    flex: 1,
-                                    right: 0
-                                });
-                            }
-                            this.GUI[i].addListener("dblclick", this.loadFormation, this);
-                        }
-                        this.Stats.addListener("changeBattleDuration", this.__updateBattleDuration.bind(this, this.Label.Battle.Duration));
-                        for (i in this.Stats.Enemy) {
-                            if (this.Label.Enemy.hasOwnProperty(i)) {
-                                if (this.Stats.Enemy[i].hasOwnProperty("HealthPoints")) {
-                                    this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Enemy[i].HealthPoints, "max");
-                                    this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Enemy[i].HealthPoints, "start");
-                                    this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Enemy[i].HealthPoints, "end");
-                                    if (i == "Overall") {
-                                        for (j in this.Label.Loot) {
-                                            this.Stats.Enemy[i].HealthPoints.bind("max", this.Label.Loot[j].HealthPoints, "max");
-                                            this.Stats.Enemy[i].HealthPoints.bind("start", this.Label.Loot[j].HealthPoints, "start");
-                                            this.Stats.Enemy[i].HealthPoints.bind("end", this.Label.Loot[j].HealthPoints, "end");
-                                        }
-                                    }
-                                }
-                                if (this.Stats.Enemy[i].hasOwnProperty("Resource")) {
-                                    this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Enemy[i].Resource, "Tiberium");
-                                    this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Enemy[i].Resource, "Crystal");
-                                    this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Enemy[i].Resource, "Credits");
-                                    this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Enemy[i].Resource, "ResearchPoints");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Enemy[i].Resource, "RepairChargeBase");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Enemy[i].Resource, "RepairChargeAir");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Enemy[i].Resource, "RepairChargeInf");
-                                    this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Enemy[i].Resource, "RepairChargeVeh");
-                                    if (i == "Overall") {
-                                        for (j in this.Label.Loot) {
-                                            this.Stats.Enemy[i].Resource.bind("Tiberium", this.Label.Loot[j].Resource, "Tiberium");
-                                            this.Stats.Enemy[i].Resource.bind("Crystal", this.Label.Loot[j].Resource, "Crystal");
-                                            this.Stats.Enemy[i].Resource.bind("Credits", this.Label.Loot[j].Resource, "Credits");
-                                            this.Stats.Enemy[i].Resource.bind("ResearchPoints", this.Label.Loot[j].Resource, "ResearchPoints");
-                                            this.Stats.Enemy[i].Resource.bind("RepairChargeBase", this.Label.Loot[j].Resource, "RepairChargeBase");
-                                            this.Stats.Enemy[i].Resource.bind("RepairChargeAir", this.Label.Loot[j].Resource, "RepairChargeAir");
-                                            this.Stats.Enemy[i].Resource.bind("RepairChargeInf", this.Label.Loot[j].Resource, "RepairChargeInf");
-                                            this.Stats.Enemy[i].Resource.bind("RepairChargeVeh", this.Label.Loot[j].Resource, "RepairChargeVeh");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        for (i in this.Stats.Offense) {
-                            if (this.Label.Repair.hasOwnProperty(i)) {
-                                if (this.Stats.Offense[i].hasOwnProperty("HealthPoints")) {
-                                    this.Stats.Offense[i].HealthPoints.bind("max", this.Label.Repair[i].HealthPoints, "max");
-                                    this.Stats.Offense[i].HealthPoints.bind("start", this.Label.Repair[i].HealthPoints, "start");
-                                    this.Stats.Offense[i].HealthPoints.bind("end", this.Label.Repair[i].HealthPoints, "end");
-                                }
-                                if (this.Stats.Offense[i].hasOwnProperty("Resource")) {
-                                    this.Stats.Offense[i].Resource.bind("Tiberium", this.Label.Repair[i].Resource, "Tiberium");
-                                    this.Stats.Offense[i].Resource.bind("Crystal", this.Label.Repair[i].Resource, "Crystal");
-                                    this.Stats.Offense[i].Resource.bind("Credits", this.Label.Repair[i].Resource, "Credits");
-                                    this.Stats.Offense[i].Resource.bind("ResearchPoints", this.Label.Repair[i].Resource, "ResearchPoints");
-                                    this.Stats.Offense[i].Resource.bind("RepairChargeBase", this.Label.Repair[i].Resource, "RepairChargeBase");
-                                    this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[i].Resource, "RepairChargeAir");
-                                    this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[i].Resource, "RepairChargeInf");
-                                    this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[i].Resource, "RepairChargeVeh");
-                                }
-                            }
-                        }
-
-                        var ButtonAPISim = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Simulate).set({
-                            maxHeight: 22,
-                            minWidth: 22,
-                            toolTipText: this.tr("tnf:refresh"),
-                            show: "icon",
-                            iconPosition: "top",
-                            appearance: "button-addpoints"
-                        });
-                        ButtonAPISim.getChildControl("icon").set({
-                            maxWidth: 16,
-                            maxHeight: 16,
-                            scale: true
-                        });
-                        ButtonAPISim.addListener("click", function () {
-                            this.loadFormation();
-                            TABS.APISimulation.getInstance().SimulateBattle();
-                        }, this);
-                        this.Label.Buttons.View.add(ButtonAPISim);
-
-                        var ButtonPlay = new qx.ui.form.ModelButton(null, TABS.RES.IMG.Arrows.Right).set({
-                            maxHeight: 22,
-                            minWidth: 22,
-                            toolTipText: this.tr("View Simulation"),
-                            show: "icon",
-                            iconPosition: "top",
-                            appearance: "button-addpoints"
-                        });
-                        ButtonPlay.getChildControl("icon").set({
-                            maxWidth: 16,
-                            maxHeight: 16,
-                            scale: true
-                        });
-                        ButtonPlay.addListener("click", this.playReplay, this);
-                        this.Label.Buttons.View.add(ButtonPlay);
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up GUI.Window.Stats.SimView constructor", e);
-                        console.groupEnd();
-                    }
-                },
-                destruct: function () { },
-                members: {
-                    Num: null,
-                    Window: null,
-                    GUI: null,
-                    Label: null,
-                    Cache: null,
-                    Stats: null,
-                    StatsChanged: false,
-                    Prio: null,
-                    Name: null,
-                    Description: null,
-                    updateStats: function () {
-                        var i,
-							cache = null,
-							CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                        if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
-                            if (this.Prio.length === 0)
-                                cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
-                            else
-                                cache = TABS.CACHE.getInstance().getPrio1(this.Prio);
-                        }
-
-                        if (cache !== null && cache.result !== null) {
-                            this.Cache = cache;
-                            this.Stats.setAny(cache.result.stats);
-                            this.StatsChanged = true;
-                            this.__updateBattleOutcome();
-                            this.__updateBattleOwnCity();
-                            this.__updateBattleMoral();
-                            this.Window.__updateLabels();
-                        }
-
-                        if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                            if (CurrentCity !== null &&
-								CurrentCity.get_Version() !== -1 &&
-								ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
-								this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
-                                for (i in this.GUI) {
-                                    this.GUI[i].setDecorator("pane-light-opaque");
-                                    this.GUI[i].setOpacity(1);
-                                }
-                            } else {
-                                for (i in this.GUI) {
-                                    this.GUI[i].setDecorator("pane-light-plain");
-                                    this.GUI[i].setOpacity(0.7);
-                                }
-                            }
-                        }
-                    },
-                    resetStats: function () {
-                        this.Cache = {};
-                        this.Stats.setAny((new TABS.STATS()).getAny());
-                        this.StatsChanged = true;
-                        this.__updateBattleOutcome();
-                        this.__updateBattleOwnCity();
-                        this.__updateBattleMoral();
-                        this.Window.__updateLabels();
-                        for (var i in this.GUI) {
                             this.GUI[i].setDecorator("pane-light-opaque");
                             this.GUI[i].setOpacity(1);
                         }
-                    },
-                    loadFormation: function () {
-                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["formation"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                            ClientLib.Data.MainData.GetInstance().get_Cities().set_CurrentOwnCityId(this.Cache.result.ownid);
-                            TABS.UTIL.Formation.Set(this.Cache.result.formation);
-                        }
-                    },
-                    playReplay: function () {
-                        TABS.UTIL.Battleground.StartReplay(this.Cache.result.cityid, this.Cache.result.combat);
-                    },
-                    __updateBattleOutcome: function () {
-                        if (Object.getOwnPropertyNames(this.Cache).length === 0) {
-                            this.Label.Battle.Outcome.setShow("label");
-                            this.Label.Battle.Outcome.resetIcon();
-                            this.Label.Battle.Outcome.resetToolTipIcon();
-                            this.Label.Battle.Outcome.resetToolTipText();
-                        } else if (this.Label.Repair.Overall.HealthPoints.getEnd() <= 0) {
-                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_defeat);
-                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_defeat);
-                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total defeat"));
-                            this.Label.Battle.Outcome.setShow("icon");
-                        } else if (this.Label.Enemy.Overall.HealthPoints.getEnd() <= 0) {
-                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_victory);
-                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_victory);
-                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total victory"));
-                            this.Label.Battle.Outcome.setShow("icon");
-                        } else {
-                            this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.victory);
-                            this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.victory);
-                            this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:victory"));
-                            this.Label.Battle.Outcome.setShow("icon");
-                        }
-                    },
-                    __updateBattleDuration: function (label, e) {
-                        label.setValue(e.getData() > 0 ? phe.cnc.Util.getTimespanString(e.getData() / 1000) : "-:--");
-                    },
-                    __updateBattleOwnCity: function () {
-                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                            var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                            if (ownCity !== null)
-                                this.Label.Battle.OwnCity.setValue(ownCity.get_Name());
-                            else
-                                this.Label.Battle.OwnCity.resetValue();
-                        } else
-                            this.Label.Battle.OwnCity.resetValue();
-                    },
-                    __updateBattleMoral: function () {
-                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                            var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
-								OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                            if (CurrentCity !== null && OwnCity !== null) {
-                                var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
-									moral = 100;
-                                if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
-                                    moral = "~" + (moral - MoralSignType.v) + "%";
-                                    if (MoralSignType.k == 1) {
-                                        this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-orange"]);
-                                        this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral warning %1", MoralSignType.v));
-                                        this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_orange.png");
-                                    } else if (MoralSignType.k == 2) {
-                                        this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-red"]);
-                                        this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral error %1", MoralSignType.v));
-                                        this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_red.png");
-                                    }
-                                } else {
-                                    moral = moral + "%";
-                                    this.Label.Battle.Morale.resetTextColor();
-                                    this.Label.Battle.Morale.resetToolTipText();
-                                    this.Label.Battle.Morale.resetToolTipIcon();
-                                }
-                                this.Label.Battle.Morale.setValue(moral);
-                            } else {
-                                this.Label.Battle.Morale.setValue("-");
-                                this.Label.Battle.Morale.resetTextColor();
-                                this.Label.Battle.Morale.resetToolTipText();
-                                this.Label.Battle.Morale.resetToolTipIcon();
-                            }
-                        }
-                    },
-                    __onTick: function () {
-                        if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
-                            var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
-                            if (ownCity !== null) {
-                                var RepairCharge = Math.min(
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
-                                this.Label.Repair.Storage.setValue(phe.cnc.Util.getTimespanString(ClientLib.Data.MainData.GetInstance().get_Time().GetTimeSpan(RepairCharge)));
-                            } else
-                                this.Label.Repair.Storage.resetValue();
-                        } else
-                            this.Label.Repair.Storage.resetValue();
-                        if (this.StatsChanged) {
-                            this.StatsChanged = false;
-                            for (var i in this.Label.Enemy) {
-                                this.Label.Enemy[i].__update();
-                            }
-                            for (i in this.Label.Repair) {
-                                this.Label.Repair[i].__update();
-                            }
-                            for (i in this.Label.Loot) {
-                                this.Label.Loot[i].__update();
-                            }
+                    } else {
+                        for (i in this.GUI) {
+                            this.GUI[i].setDecorator("pane-light-plain");
+                            this.GUI[i].setOpacity(0.7);
                         }
                     }
                 }
-            });
-            qx.Class.define("TABS.GUI.Window.Stats.SimView.Label", {	//				Simulation View Label
-                extend: qx.ui.basic.Label,
-                include: [qx.locale.MTranslation],
-                construct: function (label) {
-                    try {
-                        this.base(arguments, label);
-                        this.initAlignX("right");
-                        this.initAlignY("middle");
-                        this.initMinHeight(18);
-                        this.setAlignX("right");
-                        this.setAlignY("middle");
-                        this.setMinHeight(18);
-                        this.HealthPoints = new TABS.STATS.Entity.HealthPoints();
-                        this.Resource = new TABS.STATS.Entity.Resource();
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up TABS.GUI.Window.Stats.SimView.Label constructor", e);
-                        console.groupEnd();
+            },
+            resetStats: function () {
+                this.Cache = {};
+                this.Stats.setAny((new TABS.STATS()).getAny());
+                this.StatsChanged = true;
+                this.__updateBattleOutcome();
+                this.__updateBattleOwnCity();
+                this.__updateBattleMoral();
+                this.Window.__updateLabels();
+                for (var i in this.GUI) {
+                    this.GUI[i].setDecorator("pane-light-opaque");
+                    this.GUI[i].setOpacity(1);
+                }
+            },
+            loadFormation: function () {
+                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["formation"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                    ClientLib.Data.MainData.GetInstance().get_Cities().set_CurrentOwnCityId(this.Cache.result.ownid);
+                    TABS.UTIL.Formation.Set(this.Cache.result.formation);
+                }
+            },
+            playReplay: function () {
+                TABS.UTIL.Battleground.StartReplay(this.Cache.result.cityid, this.Cache.result.combat);
+            },
+            __updateBattleOutcome: function () {
+                if (Object.getOwnPropertyNames(this.Cache).length === 0) {
+                    this.Label.Battle.Outcome.setShow("label");
+                    this.Label.Battle.Outcome.resetIcon();
+                    this.Label.Battle.Outcome.resetToolTipIcon();
+                    this.Label.Battle.Outcome.resetToolTipText();
+                } else if (this.Label.Repair.Overall.HealthPoints.getEnd() <= 0) {
+                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_defeat);
+                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_defeat);
+                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total defeat"));
+                    this.Label.Battle.Outcome.setShow("icon");
+                } else if (this.Label.Enemy.Overall.HealthPoints.getEnd() <= 0) {
+                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.total_victory);
+                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.total_victory);
+                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:total victory"));
+                    this.Label.Battle.Outcome.setShow("icon");
+                } else {
+                    this.Label.Battle.Outcome.setIcon(TABS.RES.IMG.Outcome.victory);
+                    this.Label.Battle.Outcome.setToolTipIcon(TABS.RES.IMG.Outcome.victory);
+                    this.Label.Battle.Outcome.setToolTipText(this.tr("tnf:victory"));
+                    this.Label.Battle.Outcome.setShow("icon");
+                }
+            },
+            __updateBattleDuration: function (label, e) {
+                label.setValue(e.getData() > 0 ? phe.cnc.Util.getTimespanString(e.getData() / 1000) : "-:--");
+            },
+            __updateBattleOwnCity: function () {
+                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                    var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                    if (ownCity !== null)
+                        this.Label.Battle.OwnCity.setValue(ownCity.get_Name());
+                    else
+                        this.Label.Battle.OwnCity.resetValue();
+                } else
+                    this.Label.Battle.OwnCity.resetValue();
+            },
+            __updateBattleMoral: function () {
+                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                    var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
+                        OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                    if (CurrentCity !== null && OwnCity !== null) {
+                        var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
+                            moral = 100;
+                        if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
+                            moral = "~" + (moral - MoralSignType.v) + "%";
+                            if (MoralSignType.k == 1) {
+                                this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-orange"]);
+                                this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral warning %1", MoralSignType.v));
+                                this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_orange.png");
+                            } else if (MoralSignType.k == 2) {
+                                this.Label.Battle.Morale.setTextColor(webfrontend.theme.Color.colors["res-red"]);
+                                this.Label.Battle.Morale.setToolTipText(this.tr("tnf:region moral error %1", MoralSignType.v));
+                                this.Label.Battle.Morale.setToolTipIcon("resource/webfrontend/ui/common/icon_moral_alert_red.png");
+                            }
+                        } else {
+                            moral = moral + "%";
+                            this.Label.Battle.Morale.resetTextColor();
+                            this.Label.Battle.Morale.resetToolTipText();
+                            this.Label.Battle.Morale.resetToolTipIcon();
+                        }
+                        this.Label.Battle.Morale.setValue(moral);
+                    } else {
+                        this.Label.Battle.Morale.setValue("-");
+                        this.Label.Battle.Morale.resetTextColor();
+                        this.Label.Battle.Morale.resetToolTipText();
+                        this.Label.Battle.Morale.resetToolTipIcon();
                     }
-                },
-                properties: {
-                    type: {
-                        init: "Enemy",
-                        check: ["Enemy", "Repair", "Loot"]
-                    },
-                    subType: {
-                        init: "HealthPointsAbs",
-                        check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
+                }
+            },
+            __onTick: function () {
+                if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
+                    var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                    if (ownCity !== null) {
+                        var RepairCharge = Math.min(
+                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
+                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
+                                ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
+                        this.Label.Repair.Storage.setValue(phe.cnc.Util.getTimespanString(ClientLib.Data.MainData.GetInstance().get_Time().GetTimeSpan(RepairCharge)));
+                    } else
+                        this.Label.Repair.Storage.resetValue();
+                } else
+                    this.Label.Repair.Storage.resetValue();
+                if (this.StatsChanged) {
+                    this.StatsChanged = false;
+                    for (var i in this.Label.Enemy) {
+                        this.Label.Enemy[i].__update();
                     }
-                },
-                members: {
-                    HealthPoints: null,
-                    Resource: null,
-                    __update: function () {
-                        var value = null;
-                        if (ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity() !== null) {
-                            switch (this.getType()) {
-                                case "Enemy":
-                                    switch (this.getSubType()) {
-                                        case "HealthPointsAbs":
-                                            value = this.HealthPointsAbs();
-                                            break;
-                                        case "HealthPointsRel":
-                                            value = this.HealthPointsRel();
-                                            break;
-                                        case "RepairCharge":
-                                            value = this.RepairCharge();
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                    for (i in this.Label.Repair) {
+                        this.Label.Repair[i].__update();
+                    }
+                    for (i in this.Label.Loot) {
+                        this.Label.Loot[i].__update();
+                    }
+                }
+            }
+        }
+    });
+    qx.Class.define("TABS.GUI.Window.Stats.SimView.Label", {	//				Simulation View Label
+        extend: qx.ui.basic.Label,
+        include: [qx.locale.MTranslation],
+        construct: function (label) {
+            try {
+                this.base(arguments, label);
+                this.initAlignX("right");
+                this.initAlignY("middle");
+                this.initMinHeight(18);
+                this.setAlignX("right");
+                this.setAlignY("middle");
+                this.setMinHeight(18);
+                this.HealthPoints = new TABS.STATS.Entity.HealthPoints();
+                this.Resource = new TABS.STATS.Entity.Resource();
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up TABS.GUI.Window.Stats.SimView.Label constructor", e);
+                console.groupEnd();
+            }
+        },
+        properties: {
+            type: {
+                init: "Enemy",
+                check: ["Enemy", "Repair", "Loot"]
+            },
+            subType: {
+                init: "HealthPointsAbs",
+                check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
+            }
+        },
+        members: {
+            HealthPoints: null,
+            Resource: null,
+            __update: function () {
+                var value = null;
+                if (ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity() !== null) {
+                    switch (this.getType()) {
+                        case "Enemy":
+                            switch (this.getSubType()) {
+                                case "HealthPointsAbs":
+                                    value = this.HealthPointsAbs();
                                     break;
-                                case "Repair":
-                                    switch (this.getSubType()) {
-                                        case "HealthPointsAbs":
-                                            value = this.HealthPointsAbs();
-                                            break;
-                                        case "HealthPointsRel":
-                                            value = this.HealthPointsRel();
-                                            break;
-                                        case "RepairCharge":
-                                            value = this.RepairCharge();
-                                            break;
-                                        case "RepairStorage":
-                                            return;
-                                        case "Crystal":
-                                            value = this.Loot();
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                                case "HealthPointsRel":
+                                    value = this.HealthPointsRel();
                                     break;
-                                case "Loot":
-                                    switch (this.getSubType()) {
-                                        case "Resource":
-                                        case "Tiberium":
-                                        case "Crystal":
-                                        case "Credits":
-                                        case "ResearchPoints":
-                                            value = this.Loot();
-                                            break;
-                                        default:
-                                            break;
-                                    }
+                                case "RepairCharge":
+                                    value = this.RepairCharge();
                                     break;
                                 default:
                                     break;
                             }
-                        }
-
-                        if (this.HealthPoints.getMax() > 0 && value !== null) {
-                            this.setValue(value.text);
-                            this.setTextColor(value.color);
-                        } else {
-                            this.resetValue();
-                            this.resetTextColor();
-                        }
-                    },
-                    HealthPointsAbs: function () {
-                        if (this.HealthPoints.getMax() > 0) {
-                            var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
-								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
-                            percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
-                            return {
-                                text: percent.toFixed(digits) + " %",
-                                color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
-                            };
-                        }
-                        return null;
-                    },
-                    HealthPointsRel: function () {
-                        if (this.HealthPoints.getMax() > 0) {
-                            var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
-								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
-                            percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
-                            return {
-                                text: percent.toFixed(digits) + " %",
-                                color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
-                            };
-                        }
-                        return null;
-                    },
-                    RepairCharge: function () {
-                        if (this.HealthPoints.getMax() > 0) {
-                            return {
-                                text: phe.cnc.Util.getTimespanString(Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh())),
-                                color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
-                            };
-                        }
-                        return null;
-                    },
-                    Loot: function () {
-                        var res = 0,
-							lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
-							loot;
-                        if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
+                            break;
+                        case "Repair":
                             switch (this.getSubType()) {
-                                case "Resource":
-                                    res = this.Resource.getTiberium() + this.Resource.getCrystal() + this.Resource.getCredits() + this.Resource.getResearchPoints();
-                                    loot = lootFromCurrentCity.getTiberium() + lootFromCurrentCity.getCrystal() + lootFromCurrentCity.getCredits() + lootFromCurrentCity.getResearchPoints();
+                                case "HealthPointsAbs":
+                                    value = this.HealthPointsAbs();
                                     break;
-                                case "Tiberium":
-                                    res = this.Resource.getTiberium();
-                                    loot = lootFromCurrentCity.getTiberium();
+                                case "HealthPointsRel":
+                                    value = this.HealthPointsRel();
                                     break;
+                                case "RepairCharge":
+                                    value = this.RepairCharge();
+                                    break;
+                                case "RepairStorage":
+                                    return;
                                 case "Crystal":
-                                    res = this.Resource.getCrystal();
-                                    loot = lootFromCurrentCity.getCrystal();
+                                    value = this.Loot();
                                     break;
-                                case "Credits":
-                                    res = this.Resource.getCredits();
-                                    loot = lootFromCurrentCity.getCredits();
-                                    break;
-                                case "ResearchPoints":
-                                    res = this.Resource.getResearchPoints();
-                                    loot = lootFromCurrentCity.getResearchPoints();
+                                default:
                                     break;
                             }
-                            return {
-                                text: phe.cnc.gui.util.Numbers.formatNumbersCompact(res),
-                                color: this.getColorFromPercent(1 - (res / loot))
-                            };
-                        }
-                        return null;
-                    },
-                    getColorFromPercent: function (value) { // 1 = red, 0.5 = yellow, 0 = green
-                        return "hsl(" + ((120 - ((100 - ((1 - value) * 100)) * 1.2)) - 0) + ", 100%, " + (25 + Math.round(((Math.abs(Math.max(value - 0.4, 0)) * 2) + (Math.abs(Math.max((1 - value) - 0.6, 0)))) * 25)) + "%)";
+                            break;
+                        case "Loot":
+                            switch (this.getSubType()) {
+                                case "Resource":
+                                case "Tiberium":
+                                case "Crystal":
+                                case "Credits":
+                                case "ResearchPoints":
+                                    value = this.Loot();
+                                    break;
+                                default:
+                                    break;
+                            }
+                            break;
+                        default:
+                            break;
                     }
                 }
-            });
-            qx.Class.define("TABS.GUI.Window.Prios", {					// [singleton]	Prios Window
-                extend: qx.ui.window.Window,
-                construct: function (prios) {
-                    try {
-                        this.base(arguments);
-                        this.set({
-                            layout: new qx.ui.layout.Grid(),
-                            caption: this.tr("Priority Setup"),
-                            allowMaximize: false,
-                            showMaximize: false,
-                            allowMinimize: false,
-                            showMinimize: false,
-                            resizable: false
-                        });
-                        this.center();
-                        this.Prios = prios;
-                    } catch (e) {
-                        console.group("Tiberium Alliances Battle Simulator V2");
-                        console.error("Error setting up TABS.GUI.Window.Prios constructor", e);
-                        console.groupEnd();
-                    }
-                },
-                members: {
-                    Prios: null
-                }
-            });
-        }
-        function translation() {
-            var localeManager = qx.locale.Manager.getInstance();
 
-            // Default language is english (en)
-            // Available Languages are: ar,ce,cs,da,de,en,es,fi,fr,hu,id,it,nb,nl,pl,pt,ro,ru,sk,sv,ta,tr,uk
-            // You can send me translations so I can include them in the Script.
-
-            // German
-            localeManager.addTranslation("de", {
-                "Shifts units one space up.": "Verschiebt Einheiten einen Platz nach oben.", //GUI.ArmySetupAttackBar
-                "Shifts units one space down.": "Verschiebt die Einheiten einen Platz nach unten.", //GUI.ArmySetupAttackBar
-                "Shifts units one space left.": "Verschiebt die Einheiten einen Platz nach links.", //GUI.ArmySetupAttackBar
-                "Shifts units one space right.": "Verschiebt die Einheiten einen Platz nach rechts.", //GUI.ArmySetupAttackBar
-                "Mirrors units horizontally.": "Spiegelt die Einheiten horizontal.", //GUI.ArmySetupAttackBar
-                "Mirrors units vertically.": "Spiegelt die Einheiten vertikal.", //GUI.ArmySetupAttackBar
-                "View Simulation": "Simulation anzeigen", //GUI.PlayArea + GUI.Window.Stats.SimView
-                "Statistic": "Statistik", //GUI.PlayArea + GUI.Window.Stats
-                "Show current formation with CNCOpt": "Zeigt die aktuelle Formation mit CNCOpt an", //GUI.PlayArea
-                "Right click: Set formation from CNCOpt Long Link": "Rechtsklick: Formation von CNCOpt Long Link laden", //GUI.PlayArea
-                "Remember transported units are not supported.": "Denk daran das transportierte Einheiten nicht unterstützt werden.", //GUI.PlayArea
-                "Enter CNCOpt Long Link:": "CNCOpt Long Link eingeben:", //GUI.PlayArea
-                "simulations in cache": "Simulationen im Cache", //GUI.Window.Stats
-                "Most priority to construction yard including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem Bauhof mit allem was vor ihm liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-                "Most priority to defense facility including all in front of it.<br>After this the best armored defense health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Verteidigungseinrichtung mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden an bewaffneten Defensiveinheiten verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-                "Most priority to defense health including the auto repair after the battle.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem verursachtem Schaden an Defensiveinheiten<br>unter Berücksichtigung der automatischen Reperatur nach dem Kampf.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-                "Most priority to command center including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Komandozentrale mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
-                "NoKill (farming) priorety.<br>Not working correctly yet.": "Vorschießen (farmen) Priorität.<br>Funktioniert noch nicht sehr gut.", //STATS
-                "Shows the current army formation.": "Zeigt die aktuelle Armeeformation an." //STATS
-            });
-        }
-        function waitForGame() {
-            try {
-                if (typeof qx != 'undefined' &&
-					typeof qx.core != 'undfined' &&
-					typeof qx.core.Init != 'undefined') {
-                    var app = qx.core.Init.getApplication();
-                    if (app !== null && app.initDone === true &&
-						ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
-						ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
-                        try {
-                            console.time("loaded in");
-                            translation();
-                            createClasses();
-                            TABS.getInstance();
-                            console.group("Tiberium Alliances Battle Simulator V2");
-                            console.timeEnd("loaded in");
-                            console.groupEnd();
-                        } catch (e) {
-                            console.group("Tiberium Alliances Battle Simulator V2");
-                            console.error("Error in waitForGame", e);
-                            console.groupEnd();
-                        }
-                    } else {
-                        window.setTimeout(waitForGame, 1000);
-                    }
+                if (this.HealthPoints.getMax() > 0 && value !== null) {
+                    this.setValue(value.text);
+                    this.setTextColor(value.color);
                 } else {
-                    window.setTimeout(waitForGame, 1000);
+                    this.resetValue();
+                    this.resetTextColor();
                 }
-            } catch (e) {
-                console.group("Tiberium Alliances Battle Simulator V2");
-                console.error("Error in waitForGame", e);
-                console.groupEnd();
+            },
+            HealthPointsAbs: function () {
+                if (this.HealthPoints.getMax() > 0) {
+                    var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
+                        digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                    percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
+                    return {
+                        text: percent.toFixed(digits) + " %",
+                        color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
+                    };
+                }
+                return null;
+            },
+            HealthPointsRel: function () {
+                if (this.HealthPoints.getMax() > 0) {
+                    var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
+                        digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                    percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
+                    return {
+                        text: percent.toFixed(digits) + " %",
+                        color: this.getColorFromPercent(this.HealthPoints.getEnd() / this.HealthPoints.getMax())
+                    };
+                }
+                return null;
+            },
+            RepairCharge: function () {
+                if (this.HealthPoints.getMax() > 0) {
+                    return {
+                        text: phe.cnc.Util.getTimespanString(Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh())),
+                        color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
+                    };
+                }
+                return null;
+            },
+            Loot: function () {
+                var res = 0,
+                    lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
+                    loot;
+                if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
+                    switch (this.getSubType()) {
+                        case "Resource":
+                            res = this.Resource.getTiberium() + this.Resource.getCrystal() + this.Resource.getCredits() + this.Resource.getResearchPoints();
+                            loot = lootFromCurrentCity.getTiberium() + lootFromCurrentCity.getCrystal() + lootFromCurrentCity.getCredits() + lootFromCurrentCity.getResearchPoints();
+                            break;
+                        case "Tiberium":
+                            res = this.Resource.getTiberium();
+                            loot = lootFromCurrentCity.getTiberium();
+                            break;
+                        case "Crystal":
+                            res = this.Resource.getCrystal();
+                            loot = lootFromCurrentCity.getCrystal();
+                            break;
+                        case "Credits":
+                            res = this.Resource.getCredits();
+                            loot = lootFromCurrentCity.getCredits();
+                            break;
+                        case "ResearchPoints":
+                            res = this.Resource.getResearchPoints();
+                            loot = lootFromCurrentCity.getResearchPoints();
+                            break;
+                    }
+                    return {
+                        text: phe.cnc.gui.util.Numbers.formatNumbersCompact(res),
+                        color: this.getColorFromPercent(1 - (res / loot))
+                    };
+                }
+                return null;
+            },
+            getColorFromPercent: function (value) { // 1 = red, 0.5 = yellow, 0 = green
+                return "hsl(" + ((120 - ((100 - ((1 - value) * 100)) * 1.2)) - 0) + ", 100%, " + (25 + Math.round(((Math.abs(Math.max(value - 0.4, 0)) * 2) + (Math.abs(Math.max((1 - value) - 0.6, 0)))) * 25)) + "%)";
             }
         }
-        window.setTimeout(waitForGame, 1000);
+    });
+    qx.Class.define("TABS.GUI.Window.Prios", {					// [singleton]	Prios Window
+        extend: qx.ui.window.Window,
+        construct: function (prios) {
+            try {
+                this.base(arguments);
+                this.set({
+                    layout: new qx.ui.layout.Grid(),
+                    caption: this.tr("Priority Setup"),
+                    allowMaximize: false,
+                    showMaximize: false,
+                    allowMinimize: false,
+                    showMinimize: false,
+                    resizable: false
+                });
+                this.center();
+                this.Prios = prios;
+            } catch (e) {
+                console.group("Tiberium Alliances Battle Simulator V2");
+                console.error("Error setting up TABS.GUI.Window.Prios constructor", e);
+                console.groupEnd();
+            }
+        },
+        members: {
+            Prios: null
+        }
+    });
+}
+function translation() {
+    var localeManager = qx.locale.Manager.getInstance();
+
+    // Default language is english (en)
+    // Available Languages are: ar,ce,cs,da,de,en,es,fi,fr,hu,id,it,nb,nl,pl,pt,ro,ru,sk,sv,ta,tr,uk
+    // You can send me translations so I can include them in the Script.
+
+    // German
+    localeManager.addTranslation("de", {
+        "Shifts units one space up.": "Verschiebt Einheiten einen Platz nach oben.", //GUI.ArmySetupAttackBar
+        "Shifts units one space down.": "Verschiebt die Einheiten einen Platz nach unten.", //GUI.ArmySetupAttackBar
+        "Shifts units one space left.": "Verschiebt die Einheiten einen Platz nach links.", //GUI.ArmySetupAttackBar
+        "Shifts units one space right.": "Verschiebt die Einheiten einen Platz nach rechts.", //GUI.ArmySetupAttackBar
+        "Mirrors units horizontally.": "Spiegelt die Einheiten horizontal.", //GUI.ArmySetupAttackBar
+        "Mirrors units vertically.": "Spiegelt die Einheiten vertikal.", //GUI.ArmySetupAttackBar
+        "View Simulation": "Simulation anzeigen", //GUI.PlayArea + GUI.Window.Stats.SimView
+        "Statistic": "Statistik", //GUI.PlayArea + GUI.Window.Stats
+        "Show current formation with CNCOpt": "Zeigt die aktuelle Formation mit CNCOpt an", //GUI.PlayArea
+        "Right click: Set formation from CNCOpt Long Link": "Rechtsklick: Formation von CNCOpt Long Link laden", //GUI.PlayArea
+        "Remember transported units are not supported.": "Denk daran das transportierte Einheiten nicht unterstützt werden.", //GUI.PlayArea
+        "Enter CNCOpt Long Link:": "CNCOpt Long Link eingeben:", //GUI.PlayArea
+        "simulations in cache": "Simulationen im Cache", //GUI.Window.Stats
+        "Most priority to construction yard including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem Bauhof mit allem was vor ihm liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+        "Most priority to defense facility including all in front of it.<br>After this the best armored defense health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Verteidigungseinrichtung mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden an bewaffneten Defensiveinheiten verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+        "Most priority to defense health including the auto repair after the battle.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf dem verursachtem Schaden an Defensiveinheiten<br>unter Berücksichtigung der automatischen Reperatur nach dem Kampf.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+        "Most priority to command center including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.": "Die größte Priorität liegt auf der Komandozentrale mit allem was vor ihr liegt.<br>Danach wird die Simulation aus dem Cache herausgesucht die den meisten<br>Schaden am Gegner verursacht.<br>Wenn keine bessere Formation gefunden wird, wird die Simulation mit der<br>niedrigsten Offensiv Reperaturzeit und besten Kampfdauer aus dem Cache herausgesucht.", //STATS
+        "NoKill (farming) priorety.<br>Not working correctly yet.": "Vorschießen (farmen) Priorität.<br>Funktioniert noch nicht sehr gut.", //STATS
+        "Shows the current army formation.": "Zeigt die aktuelle Armeeformation an." //STATS
+    });
+}
+function waitForGame() {
+    try {
+        if (typeof qx != 'undefined' &&
+            typeof qx.core != 'undfined' &&
+            typeof qx.core.Init != 'undefined') {
+            var app = qx.core.Init.getApplication();
+            if (app !== null && app.initDone === true &&
+                ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
+                ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
+                try {
+                    console.time("loaded in");
+                    translation();
+                    createClasses();
+                    TABS.getInstance();
+                    console.group("Tiberium Alliances Battle Simulator V2");
+                    console.timeEnd("loaded in");
+                    console.groupEnd();
+                } catch (e) {
+                    console.group("Tiberium Alliances Battle Simulator V2");
+                    console.error("Error in waitForGame", e);
+                    console.groupEnd();
+                }
+            } else {
+                window.setTimeout(waitForGame, 1000);
+            }
+        } else {
+            window.setTimeout(waitForGame, 1000);
+        }
+    } catch (e) {
+        console.group("Tiberium Alliances Battle Simulator V2");
+        console.error("Error in waitForGame", e);
+        console.groupEnd();
     }
+}
+window.setTimeout(waitForGame, 1000);
+}
 	.toString() + ")();";
-    script.type = "text/javascript";
-    document.getElementsByTagName("head")[0].appendChild(script);
+script.type = "text/javascript";
+document.getElementsByTagName("head")[0].appendChild(script);
 })();
