@@ -18,9 +18,9 @@
                 - CCTA NavBar Reorderer 1.0 (removed)
                 - PVE/PVP Player Info Mod v1.3
                 - TitleMod
-                - TABS v2 final v15.12.09
+                - TABS v2 final v15.12.23
 */
-// @version     1.9.0
+// @version     1.9.1
 // @icon        data:image/png;base64,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
 // @updateURL   https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -10330,7 +10330,7 @@ function Ini() {
 // @name            Tiberium Alliances Battle Simulator V2
 // @description     Allows you to simulate combat before actually attacking.
 // @author          Eistee & TheStriker & VisiG & Lobotommi
-// @version         15.12.09
+// @version         15.12.23
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @icon            http://eistee82.github.io/ta_simv2/icon.png
@@ -10452,8 +10452,8 @@ function Ini() {
                     __reader: null,
                     _Init: function () {
                         var localStorage = ClientLib.Base.LocalStorage,
-                            player = ClientLib.Data.MainData.GetInstance().get_Player(),
-                            server = ClientLib.Data.MainData.GetInstance().get_Server();
+							player = ClientLib.Data.MainData.GetInstance().get_Player(),
+							server = ClientLib.Data.MainData.GetInstance().get_Server();
                         this.__name = "TABS.SETTINGS." + player.get_Id() + "." + server.get_WorldId();
                         if (this.__store === null) {
                             if (localStorage.get_IsSupported() && localStorage.GetItem(this.__name) !== null)
@@ -10489,7 +10489,7 @@ function Ini() {
                     },
                     reset: function () {
                         var player = ClientLib.Data.MainData.GetInstance().get_Player(),
-                            server = ClientLib.Data.MainData.GetInstance().get_Server();
+							server = ClientLib.Data.MainData.GetInstance().get_Server();
                         this.__name = "TABS.SETTINGS." + player.get_Id() + "." + server.get_WorldId();
                         window.localStorage.removeItem(this.__name);
                         this.__store = null;
@@ -10500,7 +10500,7 @@ function Ini() {
                         var textFileAsBlob = new Blob([JSON.stringify(this.__store)], {
                             type: 'text/plain'
                         }),
-                            downloadLink = document.createElement("a");
+							downloadLink = document.createElement("a");
                         downloadLink.download = "TABS_Backup.json";
                         if (window.webkitURL !== undefined)
                             downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
@@ -10551,7 +10551,7 @@ function Ini() {
                 statics: {
                     GetFormation: function (cityid, ownid) {
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            OwnCity = ((ownid !== undefined && ownid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity());
+							OwnCity = ((ownid !== undefined && ownid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity());
                         if (OwnCity !== null)
                             return OwnCity.get_CityArmyFormationsManager().GetFormationByTargetBaseId(CityId);
                         else
@@ -10576,21 +10576,21 @@ function Ini() {
                     },
                     Get: function (cityid, ownid) {
                         /**
-                         *	[{
-                         *		id: [Number],		// UnitId (internal)
-                         *		gid: [Number],		// Garnison Id (internal)
-                         *		gs: [Number],		// Garnison State
-                         *		i: [Number],		// MdbId
-                         *		l: [Number],		// Level
-                         *		h: [Number],		// Health
-                         *		enabled: [Bool],	// Enabled (internal)
-                         *		x: [Number],		// CoordX
-                         *		y: [Number],		// CoordY
-                         *		t: [Bool]			// IsTransportedCityEntity (internal/todo:kommt weg)
-                         *	},{...}]
-                         */
+						 *	[{
+						 *		id: [Number],		// UnitId (internal)
+						 *		gid: [Number],		// Garnison Id (internal)
+						 *		gs: [Number],		// Garnison State
+						 *		i: [Number],		// MdbId
+						 *		l: [Number],		// Level
+						 *		h: [Number],		// Health
+						 *		enabled: [Bool],	// Enabled (internal)
+						 *		x: [Number],		// CoordX
+						 *		y: [Number],		// CoordY
+						 *		t: [Bool]			// IsTransportedCityEntity (internal/todo:kommt weg)
+						 *	},{...}]
+						 */
                         var units = this.GetUnits(cityid, ownid),
-                            formation = [];
+							formation = [];
                         if (units !== null) {
                             for (var i = 0; i < units.length; i++) {
                                 formation.push({
@@ -10612,40 +10612,40 @@ function Ini() {
                     },
                     Set: function (formation, cityid, ownid) {
                         /**
-                         *	[{
-                         *		id: [Number],		// UnitId
-                         *		enabled: [Bool],	// Enabled
-                         *		x: [Number],		// CoordX
-                         *		y: [Number],		// CoordY
-                         *		t: [Bool]			// IsTransportedCityEntity
-                         *	},{...}]
-                         */
+						 *	[{
+						 *		id: [Number],		// UnitId
+						 *		enabled: [Bool],	// Enabled
+						 *		x: [Number],		// CoordX
+						 *		y: [Number],		// CoordY
+						 *		t: [Bool]			// IsTransportedCityEntity
+						 *	},{...}]
+						 */
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            OwnId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-                            unit,
-                            target,
-                            freePos,
-                            transported = [],
-                            i,
-                            targetFormation = this.GetFormation(CityId, OwnId),
-                            getFreePos = function (formation) {
-                                for (var x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; x++) {
-                                    for (var y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; y++) {
-                                        if (formation.GetUnitByCoord(x, y) === null)
-                                            return {
-                                                x: x,
-                                                y: y
-                                            };
-                                    }
-                                }
-                                return null;
-                            },
-                            freeTransported = function (unit, freePos) {
-                                if (unit.get_TransportedCityEntity() !== null)
-                                    unit = unit.get_TransportedCityEntity();
-                                if (unit.get_IsTransportedCityEntity() && freePos !== null)
-                                    unit.MoveBattleUnit(freePos.x, freePos.y);
-                            };
+							OwnId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+							unit,
+							target,
+							freePos,
+							transported = [],
+							i,
+							targetFormation = this.GetFormation(CityId, OwnId),
+							getFreePos = function (formation) {
+							    for (var x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; x++) {
+							        for (var y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; y++) {
+							            if (formation.GetUnitByCoord(x, y) === null)
+							                return {
+							                    x: x,
+							                    y: y
+							                };
+							        }
+							    }
+							    return null;
+							},
+							freeTransported = function (unit, freePos) {
+							    if (unit.get_TransportedCityEntity() !== null)
+							        unit = unit.get_TransportedCityEntity();
+							    if (unit.get_IsTransportedCityEntity() && freePos !== null)
+							        unit.MoveBattleUnit(freePos.x, freePos.y);
+							};
                         if (targetFormation !== null) {
                             for (i = 0; i < formation.length; i++) {
                                 unit = this.GetUnitById(formation[i].id, CityId, OwnId);
@@ -10702,10 +10702,10 @@ function Ini() {
                         for (var i in formation) {
                             for (var j in attacker) {
                                 if (formation[i].gs == attacker[j].gs &&
-                                    formation[i].i == attacker[j].i &&
-                                    formation[i].l == attacker[j].l &&
-                                    formation[i].x == attacker[j].x &&
-                                    formation[i].y == attacker[j].y) {
+									formation[i].i == attacker[j].i &&
+									formation[i].l == attacker[j].l &&
+									formation[i].x == attacker[j].x &&
+									formation[i].y == attacker[j].y) {
                                     for (var k in attacker[j])
                                         formation[i][k] = attacker[j][k];
                                 }
@@ -10737,7 +10737,7 @@ function Ini() {
                     },
                     Shift: function (formation, pos, sel) {
                         var v_shift = 0,
-                            h_shift = 0;
+							h_shift = 0;
 
                         switch (pos) {
                             case "u":
@@ -10834,8 +10834,8 @@ function Ini() {
                 statics: {
                     get_LootFromCurrentCity: function () {
                         var LootFromCurrentCity = ClientLib.API.Battleground.GetInstance().GetLootFromCurrentCity(),
-                            LootClass = new TABS.STATS.Entity.Resource(),
-                            Loot = LootClass.getAny();
+							LootClass = new TABS.STATS.Entity.Resource(),
+							Loot = LootClass.getAny();
                         if (LootFromCurrentCity !== null) {
                             for (var i = 0; i < LootFromCurrentCity.length; i++)
                                 Loot[LootFromCurrentCity[i].Type] = LootFromCurrentCity[i].Count;
@@ -10846,11 +10846,11 @@ function Ini() {
                     },
                     get_RepairCosts: function (mdbId, level, HealthPoints, AttackCounter) {
                         var ResourcesClass = new TABS.STATS.Entity.Resource(),
-                            Resources = ResourcesClass.getAny(),
-                            unit = ClientLib.Res.ResMain.GetInstance().GetUnit_Obj(mdbId),
-                            Health,
-                            dmgRatio,
-                            costs;
+							Resources = ResourcesClass.getAny(),
+							unit = ClientLib.Res.ResMain.GetInstance().GetUnit_Obj(mdbId),
+							Health,
+							dmgRatio,
+							costs;
                         AttackCounter = (AttackCounter !== undefined && AttackCounter !== null ? AttackCounter : 0);
 
                         if (HealthPoints instanceof TABS.STATS.Entity.HealthPoints)
@@ -10887,19 +10887,19 @@ function Ini() {
                     },
                     get_BuildingInfo: function (cityid) {
                         var BuildingInfo = {},
-                            City = ((cityid !== undefined && cityid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity());
+							City = ((cityid !== undefined && cityid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity());
                         if (City !== null) {
                             var CityBuildingsData = City.get_CityBuildingsData(),
-                                get_BuildingInfo = function (Building) {
-                                    if (Building !== null)
-                                        return {
-                                            MdbId: Building.get_TechGameData_Obj().c,
-                                            x: Building.get_CoordX(),
-                                            y: Building.get_CoordY()
-                                        };
-                                    else
-                                        return null;
-                                };
+								get_BuildingInfo = function (Building) {
+								    if (Building !== null)
+								        return {
+								            MdbId: Building.get_TechGameData_Obj().c,
+								            x: Building.get_CoordX(),
+								            y: Building.get_CoordY()
+								        };
+								    else
+								        return null;
+								};
 
                             BuildingInfo.Construction_Yard = get_BuildingInfo(CityBuildingsData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Construction_Yard) || CityBuildingsData.GetBuildingByMDBId(ClientLib.Base.ETech.FOR_Fortress_ConstructionYard));
                             BuildingInfo.Command_Center = get_BuildingInfo(CityBuildingsData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Command_Center));
@@ -10921,7 +10921,7 @@ function Ini() {
                     },
                     _patchUnitLifePoints: function (unit, activeModules) {
                         var newUnit = qx.lang.Object.clone(unit, true),
-                            module = this._GetModuleByType(newUnit.m, ClientLib.Base.EUnitModuleType.HitpointOverride);
+							module = this._GetModuleByType(newUnit.m, ClientLib.Base.EUnitModuleType.HitpointOverride);
 
                         if (module !== null && activeModules.indexOf(module.i) != -1)
                             newUnit.lp = module.h;
@@ -11429,21 +11429,21 @@ function Ini() {
                         }
 
                         var link = "http://cncopt.com/?map=",
-                            defense_units = [],
-                            offense_units = [],
-                            defense_unit_list = getDefenseUnits(city),
-                            army = own_city.get_CityArmyFormationsManager().GetFormationByTargetBaseId(city.get_Id()),
-                            offense_unit_list,
-                            techLayout = findTechLayout(city),
-                            buildings = findBuildings(city),
-                            row,
-                            spot,
-                            level,
-                            building,
-                            defense_unit,
-                            offense_unit,
-                            alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
-                            i;
+							defense_units = [],
+							offense_units = [],
+							defense_unit_list = getDefenseUnits(city),
+							army = own_city.get_CityArmyFormationsManager().GetFormationByTargetBaseId(city.get_Id()),
+							offense_unit_list,
+							techLayout = findTechLayout(city),
+							buildings = findBuildings(city),
+							row,
+							spot,
+							level,
+							building,
+							defense_unit,
+							offense_unit,
+							alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
+							i;
 
                         link += "3|"; // link version
                         link += getFactionKey(city.get_CityFaction()) + "|";
@@ -11559,32 +11559,26 @@ function Ini() {
                         }
                         function initMapRev() {
                             var units = GAMEDATA.units,
-                                keys = Object.keys(GAMEDATA.units),
-                                len = keys.length,
-                                unit,
-                                data = {
-                                    1: {
-                                        0: {},
-                                        1: {
-                                        },
-                                        2: {
-                                        }
-                                    },
-                                    2: {
-                                        0: {},
-                                        1: {
-                                        },
-                                        2: {
-                                        }
-                                    },
-                                    3: {
-                                        0: {},
-                                        1: {
-                                        },
-                                        2: {
-                                        }
-                                    }
-                                };
+								keys = Object.keys(GAMEDATA.units),
+								len = keys.length,
+								unit,
+								data = {
+								    1: {
+								        0: {},
+								        1: {},
+								        2: {}
+								    },
+								    2: {
+								        0: {},
+								        1: {},
+								        2: {}
+								    },
+								    3: {
+								        0: {},
+								        1: {},
+								        2: {}
+								    }
+								};
                             while (len--) {
                                 unit = units[keys[len]];
                                 if (typeof TABS.UTIL.CNCOpt.keymap[unit.n] !== "undefined") {
@@ -11637,22 +11631,22 @@ function Ini() {
                                 return formation;
                             }
                             var keymapRev = initMapRev(),
-                                faction1 = getFaction(parts[1]),
-                                faction2 = getFaction(parts[2]),
-                                re = /[chjklnt.]|[\d]+[^.]/g,
-                                count = -1,
-                                step,
-                                type,
-                                id,
-                                level,
-                                section,
-                                i,
-                                j,
-                                x,
-                                y,
-                                result,
-                                units = [],
-                                freePos;
+								faction1 = getFaction(parts[1]),
+								faction2 = getFaction(parts[2]),
+								re = /[chjklnt.]|[\d]+[^.]/g,
+								count = -1,
+								step,
+								type,
+								id,
+								level,
+								section,
+								i,
+								j,
+								x,
+								y,
+								result,
+								units = [],
+								freePos;
                             while ((result = re.exec(parts[4]))) {
                                 result = result ? result[0] : null;
                                 step = ++count % 72;
@@ -11807,11 +11801,11 @@ function Ini() {
                                     Name: "CY",
                                     Description: "Most priority to construction yard including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.",
                                     Prio: [
-                                    [TABS.STATS.Prio.Construction_Yard, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
+                                        [TABS.STATS.Prio.Construction_Yard, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
                                     ]
                                 };
                             case 2: // Defense_Facility
@@ -11819,11 +11813,11 @@ function Ini() {
                                     Name: "DF",
                                     Description: "Most priority to defense facility including all in front of it.<br>After this the best armored defense health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.",
                                     Prio: [
-                                    [TABS.STATS.Prio.Defense_Facility, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.DefenseArmored, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
+                                        [TABS.STATS.Prio.Defense_Facility, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.DefenseArmored, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
                                     ]
                                 };
                             case 3: // Defense
@@ -11831,10 +11825,10 @@ function Ini() {
                                     Name: "Deff",
                                     Description: "Most priority to defense health including the auto repair after the battle.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.",
                                     Prio: [
-                                    [TABS.STATS.Prio.AutoRepair, TABS.STATS.Type.HealthPointAutoRepairPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
+                                        [TABS.STATS.Prio.AutoRepair, TABS.STATS.Type.HealthPointAutoRepairPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
                                     ]
                                 };
                             case 4: // Command_Center
@@ -11842,11 +11836,11 @@ function Ini() {
                                     Name: "CC",
                                     Description: "Most priority to command center including all in front of it.<br>After this the best total enemy health from the cached simulations is selected.<br>If no better simulation is found, the best offence unit repair charge and<br>battle duration from the cached simulations is selected.",
                                     Prio: [
-                                    [TABS.STATS.Prio.Command_Center, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
+                                        [TABS.STATS.Prio.Command_Center, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
                                     ]
                                 };
                             case 5: // Construction_Yard nokill 10%
@@ -11854,13 +11848,13 @@ function Ini() {
                                     Name: "CY*",
                                     Description: "NoKill (farming) priorety.<br>Not working correctly yet.",
                                     Prio: [
-                                    [TABS.STATS.Prio.DefenseArmored, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Defense_Facility, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.Construction_Yard, TABS.STATS.Type.HealthPointPercent, false, 0.1, true],
-                                    [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, true, 0.8, true],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
-                                    [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
-                                    [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
+                                        [TABS.STATS.Prio.DefenseArmored, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Defense_Facility, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.Construction_Yard, TABS.STATS.Type.HealthPointPercent, false, 0.1, true],
+                                        [TABS.STATS.Prio.Enemy, TABS.STATS.Type.HealthPointPercent, true, 0.8, true],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.RepairChargeOffense, false, 0, false],
+                                        [TABS.STATS.Prio.Offense, TABS.STATS.Type.HealthPointPercent, false, 0, false],
+                                        [TABS.STATS.Prio.BattleDuration, null, false, 0, false]
                                     ]
                                 };
                             default:
@@ -11937,9 +11931,9 @@ function Ini() {
                     },
                     _calcCosts: function (Resource /*{ ClientLib.Base.EResourceType.Tiberium: 0, ClientLib.Base.EResourceType.Crystal: 0, ClientLib.Base.EResourceType.Credits: 0, ClientLib.Base.EResourceType.ResearchPoints: 0 }*/, prio) {
                         var costs = Resource[ClientLib.Base.EResourceType.Tiberium] +
-                            Resource[ClientLib.Base.EResourceType.Crystal] +
-                            Resource[ClientLib.Base.EResourceType.Credits] +
-                            Resource[ClientLib.Base.EResourceType.ResearchPoints];
+							Resource[ClientLib.Base.EResourceType.Crystal] +
+							Resource[ClientLib.Base.EResourceType.Credits] +
+							Resource[ClientLib.Base.EResourceType.ResearchPoints];
                         return costs * (prio[2] ? -1 : 1); // Negate
                     },
                     _calcHealthPoints: function (HealthPoints /*{ max: 0, end: 0 }*/, prio) { //Todo: better front value selection
@@ -11984,7 +11978,7 @@ function Ini() {
                     },
                     _calcBattleDuration: function (BattleDuration /*int*/, prio) {
                         var result = BattleDuration,
-                            max = 120000;
+							max = 120000;
                         if (result < (prio[3] * max)) // Limit
                             result = (prio[3] * max);
                         if (result > max) // max 1
@@ -12469,8 +12463,8 @@ function Ini() {
                         if (units !== null) {
                             units.sort(this.sortByPosition);
                             var OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-                                i,
-                                data = [];
+								i,
+								data = [];
                             for (i = 0; i < units.length; i++)
                                 if (units[i].enabled && units[i].h > 0)
                                     data.push(units[i].x, units[i].y, units[i].i, units[i].l);
@@ -12480,8 +12474,8 @@ function Ini() {
                     },
                     check: function (units, cityid, ownid) { // returns { key : "", result : { ownid : 0, cityid: 0, stats : {}, formation : [], combat : {}, valid: true } }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-                            Hash = this.calcUnitsHash(units, OwnCityId);
+							OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+							Hash = this.calcUnitsHash(units, OwnCityId);
                         if (CityId !== null && OwnCityId !== null && Hash !== null) {
                             this.__validate(CityId, OwnCityId, Hash);
                             return {
@@ -12499,22 +12493,21 @@ function Ini() {
                         if (typeof this.cities[CityId] === "undefined")
                             this.cities[CityId] = {
                                 data: {},
-                                caches: {
-                                }
+                                caches: {}
                             };
                         return this.cities[CityId];
                     },
                     get: function (key, cityid) { // returns { ownid : 0, cityid: 0, stats : {}, formation : [], combat : {}, valid: true }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            caches = this.getAll(CityId).caches;
+							caches = this.getAll(CityId).caches;
                         if (typeof caches[key] !== "undefined" && caches[key].valid)
                             return caches[key];
                         return null;
                     },
                     getPrio: function (prios, cityid, ownid) {
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            caches = this.getAll(CityId).caches,
-                            results = [];
+							caches = this.getAll(CityId).caches,
+							results = [];
                         for (var key in caches) {
                             if (ownid === null || ownid === undefined || (ownid !== null && ownid !== undefined && caches[key].ownid == ownid))
                                 results.push({
@@ -12557,9 +12550,9 @@ function Ini() {
                     },
                     add: function (data, cityid, ownid) { // { key : "", result : { stats : {}, formation : [], combat : {} } }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-                            OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-                            OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(OwnCityId),
-                            caches = this.getAll(CityId).caches;
+							OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+							OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(OwnCityId),
+							caches = this.getAll(CityId).caches;
                         caches[data.key] = data.result;
                         caches[data.key].cityid = CityId;
                         caches[data.key].ownid = OwnCityId;
@@ -12608,9 +12601,9 @@ function Ini() {
                     },
                     __validate: function (cityid, ownid, hash) {
                         var targetCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid),
-                            ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid),
-                            city = (typeof hash != "object" ? this.getAll(cityid) : hash),
-                            key;
+							ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid),
+							city = (typeof hash != "object" ? this.getAll(cityid) : hash),
+							key;
 
                         if (targetCity !== null && targetCity.get_Version() !== -1) {
                             var version = targetCity.get_Version();
@@ -12624,7 +12617,7 @@ function Ini() {
 
                         if (ownCity !== null && ownCity.get_Version() !== -1) {
                             var alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
-                                recovery = ownCity.get_hasRecovery();
+								recovery = ownCity.get_hasRecovery();
 
                             if (typeof hash != "object" && typeof city.caches[hash] !== "undefined" && city.caches[hash].recovery != recovery)
                                 city.caches[hash].valid = false;
@@ -12635,9 +12628,9 @@ function Ini() {
 
                             if (alliance !== null) {
                                 if ((city.data.air != alliance.get_POIAirBonus() ||
-                                        city.data.inf != alliance.get_POIInfantryBonus() ||
-                                        city.data.veh != alliance.get_POIVehicleBonus()) &&
-                                    recovery === false) {
+										city.data.inf != alliance.get_POIInfantryBonus() ||
+										city.data.veh != alliance.get_POIVehicleBonus()) &&
+									recovery === false) {
                                     city.data.air = alliance.get_POIAirBonus();
                                     city.data.inf = alliance.get_POIInfantryBonus();
                                     city.data.veh = alliance.get_POIVehicleBonus();
@@ -12711,14 +12704,14 @@ function Ini() {
                     SimulateBattle: function () {
                         if (!this.getLock()) {
                             var CurrentOwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity(),
-                                CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+								CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
                             if (CurrentOwnCity !== null && CurrentCity !== null && CurrentCity.CheckInvokeBattle(CurrentOwnCity, true) == ClientLib.Data.EAttackBaseResult.OK) {
                                 clearTimeout(this.__Timeout);
                                 this.__Timeout = setTimeout(this._reset.bind(this), 10000);
                                 this.resetData();
                                 this.setLock(true);
                                 var formation = TABS.UTIL.Formation.Get(),
-                                    armyUnits = [];
+									armyUnits = [];
                                 for (var i in formation)
                                     if (formation[i].enabled && formation[i].h > 0)
                                         armyUnits.push({
@@ -12751,7 +12744,7 @@ function Ini() {
                         var data = e.getData();
                         if (data === null) return;
                         var mergedformation = TABS.UTIL.Formation.Merge(this.getFormation(), data.d.a),
-                            cache = TABS.CACHE.getInstance().check(mergedformation, data.d.di, data.d.ai);
+							cache = TABS.CACHE.getInstance().check(mergedformation, data.d.di, data.d.ai);
                         this.setData(data.e);
                         cache.result = {
                             stats: TABS.UTIL.Stats.get_Stats(data).getAny(),
@@ -12945,7 +12938,11 @@ function Ini() {
                         var i,
 							cntWave;
                         for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; i++) {
-                            cntWave = this.ArmySetupAttackBar.getMainContainer().getChildren()[(i + 4)];
+                            if (PerforceChangelist >= 441469) { // 15.4 patch
+                                cntWave = this.ArmySetupAttackBar.getMainContainer().getChildren()[(i + 3)];
+                            } else { //old
+                                cntWave = this.ArmySetupAttackBar.getMainContainer().getChildren()[(i + 4)];
+                            }
                             cntWave._removeAll();
                             cntWave._setLayout(new qx.ui.layout.HBox());
                             cntWave._add(this.newSideButton(TABS.RES.IMG.Flip.H, this.tr("Mirrors units horizontally."), this.onClick_btnMirror, "h", i));
@@ -12967,11 +12964,14 @@ function Ini() {
                         btnHBoxouter.add(new qx.ui.core.Spacer(), {
                             flex: 1
                         });
-                        this.ArmySetupAttackBar.add(btnHBoxouter, {
+                        this.ArmySetupAttackBar.getChildren()[2].addAt(btnHBoxouter, 0, {
                             left: 16,
-                            top: 7,
+                            top: 2,
                             right: 0
                         });
+                        var formationContainer = this.ArmySetupAttackBar.getMainContainer();
+                        formationContainer.setMarginTop(formationContainer.getMarginTop() + 20);
+
                         formation.bind("changeWidth", btnHBox, "width");
 
                         for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; i++) {
@@ -13399,7 +13399,7 @@ function Ini() {
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
                         } else {
                             var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-                                LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+								LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
                             if (LastBattleTime >= BattleDuration)
                                 ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
@@ -13408,7 +13408,7 @@ function Ini() {
                     },
                     onTick_btnSkip: function () {
                         var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-                            LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+							LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
                         if (LastBattleTime >= BattleDuration) {
                             phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
@@ -13744,7 +13744,7 @@ function Ini() {
                     },
                     makeSimView: function () {
                         var i,
-                        num = Math.round((this.getWidth() - 30) / 75);
+							num = Math.round((this.getWidth() - 30) / 75);
                         if (this.simViews.length != num) {
                             for (i = 0; i < num; i++) {
                                 if (this.simViews[i] === undefined) {
@@ -13789,7 +13789,7 @@ function Ini() {
                     __updateLabels: function () {
                         if (this.simViews.length > 0) {
                             var i,
-                            visibility;
+								visibility;
 
                             //Label.Battle.Morale
                             visibility = "excluded";
@@ -14220,8 +14220,8 @@ function Ini() {
                     Description: null,
                     updateStats: function () {
                         var i,
-                        cache = null,
-                        CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+							cache = null,
+							CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
                         if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
                             if (this.Prio.length === 0)
                                 cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
@@ -14241,9 +14241,9 @@ function Ini() {
 
                         if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
                             if (CurrentCity !== null &&
-                                CurrentCity.get_Version() !== -1 &&
-                                ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
-                                this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
+								CurrentCity.get_Version() !== -1 &&
+								ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
+								this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
                                 for (i in this.GUI) {
                                     this.GUI[i].setDecorator("pane-light-opaque");
                                     this.GUI[i].setOpacity(1);
@@ -14317,10 +14317,10 @@ function Ini() {
                     __updateBattleMoral: function () {
                         if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
                             var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
-                                OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+								OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
                             if (CurrentCity !== null && OwnCity !== null) {
                                 var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
-                                    moral = 100;
+									moral = 100;
                                 if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
                                     moral = "~" + (moral - MoralSignType.v) + "%";
                                     if (MoralSignType.k == 1) {
@@ -14476,7 +14476,7 @@ function Ini() {
                     HealthPointsAbs: function () {
                         if (this.HealthPoints.getMax() > 0) {
                             var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
-                                digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
                             percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
                             return {
                                 text: percent.toFixed(digits) + " %",
@@ -14488,7 +14488,7 @@ function Ini() {
                     HealthPointsRel: function () {
                         if (this.HealthPoints.getMax() > 0) {
                             var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
-                                digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
                             percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
                             return {
                                 text: percent.toFixed(digits) + " %",
@@ -14508,8 +14508,8 @@ function Ini() {
                     },
                     Loot: function () {
                         var res = 0,
-                            lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
-                            loot;
+							lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
+							loot;
                         if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
                             switch (this.getSubType()) {
                                 case "Resource":
