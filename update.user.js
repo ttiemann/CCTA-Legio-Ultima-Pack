@@ -5,7 +5,7 @@
 /* @description Auf Legio Ultima zugeschnittenes Scripte Pack.
                 Pack list :
                 - Infernal Wrapper (API needed) v0.390737.6
-                - Maelstorm Tools v0.1.4.4
+                - Maelstorm Tools v0.1.4.46
                 - CnCOpt Button v1.7.7
                 - MT Basescanner v1.8.5
                 - C&C: Tiberium Alliances Chat Helper Enhanced v3.2.0
@@ -20,7 +20,7 @@
                 - TitleMod
                 - TABS v2 final v15.12.23
 */
-// @version     1.9.1
+// @version     1.9.2
 // @icon        data:image/png;base64,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
 // @updateURL   https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -167,8 +167,8 @@
 // @name        MaelstromTools Dev
 // @namespace   MaelstromTools
 // @description Just a set of statistics & summaries about repair time and base resources. Mainly for internal use, but you are free to test and comment it.
-// @version     0.1.4.4
-// @author      Maelstrom, HuffyLuf, KRS_L and Krisan
+// @version     0.1.4.46
+// @author      Maelstrom, HuffyLuf, KRS_L, Krisan and DLwarez
 // @include     http*://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // ==/UserScript==
 //var offense_units = own_city.get_CityArmyFormationsManager().GetFormationByTargetBaseId(current_city.get_Id()).get_ArmyUnits().l;
@@ -239,38 +239,38 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.Data["Base resources"] = ["Basis Ressourcen", "Recursos base", "ressources de base", "Üs önizlemesi"][l];
                             this.Data["Main menu"] = ["Hauptmenü", "Menu Principal", "menu principal", "Ana menü"][l];
                             this.Data["Repair all units"] = ["Alle Einheiten reparieren", "Reparar todas as unidades", "Réparer toutes les unités", "Tüm üniteleri onar"][l];
-                            this.Data["Repair all defense buildings"] = ["Alle Verteidigungsgebäude reparieren", "Reparar todos os edifícios de defesa", "Réparer tous les bâtiments de défense", "Tüm savunma binalarını onar"][l];
-                            this.Data["Repair all buildings"] = ["Alle Gebäurde reparieren", "Reparar todos os edifícios", "Réparer tous les bâtiments", "Tüm binaları onar"][l];
+                            this.Data["Repair all defense buildings"] = ["Alle Verteidigungsgebäude reparieren", "Reparar todos os edifícios de defesa", "Réparer tous les bâtiments de défense", "Tüm savunma binalarini onar"][l];
+                            this.Data["Repair all buildings"] = ["Alle Gebäurde reparieren", "Reparar todos os edifícios", "Réparer tous les bâtiments", "Tüm binalari onar"][l];
                             this.Data["Base status overview"] = ["Basisübersicht", "Estado geral da base", "aperçu de l'état de base", "Üs durumu önizlemesi"][l];
-                            this.Data["Upgrade priority overview"] = ["Upgrade Übersicht", "Prioridade de upgrades", "aperçu des priorités de mise à niveau", "Yükseltme önceliği önizlemesi"][l];
-                            this.Data["MaelstromTools Preferences"] = ["MaelstromTools Einstellungen", "Preferências de MaelstromTools", "Préférences MaelstromTools", "MaelstromTools Ayarları"][l];
+                            this.Data["Upgrade priority overview"] = ["Upgrade Übersicht", "Prioridade de upgrades", "aperçu des priorités de mise à niveau", "Yükseltme önceligi önizlemesi"][l];
+                            this.Data["MaelstromTools Preferences"] = ["MaelstromTools Einstellungen", "Preferências de MaelstromTools", "Préférences MaelstromTools", "MaelstromTools Ayarlari"][l];
                             this.Data["Options"] = ["Einstellungen", "Opções", "Options", "Seçenekler"][l];
                             this.Data["Target out of range, no resource calculation possible"] = ["Ziel nicht in Reichweite, kann die plünderbaren Ressourcen nicht berechnen", "Alvo fora do alcance, não é possivel calcular os recursos", "Cible hors de portée, pas de calcul de ressources possible",
-                            "Hedef menzil dışında, kaynak hesaplaması olanaksız"][l];
-                            this.Data["Lootable resources"] = ["Plünderbare Ressourcen", "Recursos roubáveis", "Ressources à piller", "Yağmalanabilir kaynaklar"][l];
-                            this.Data["per CP"] = ["pro KP", "por PC", "par PC", "KP başına"][l];
-                            this.Data["2nd run"] = ["2. Angriff", "2º ataque", "2° attaque", "2. saldırı"][l];
-                            this.Data["3rd run"] = ["3. Angriff", "3º ataque", "3° attaque", "3. saldırı"][l];
-                            this.Data["Calculating resources..."] = ["Berechne plünderbare Ressourcen...", "A calcular recursos...", "calcul de ressources ...", "Kaynaklar hesaplanıyor..."][l];
+                            "Hedef menzil disinda, kaynak hesaplamasi olanaksiz"][l];
+                            this.Data["Lootable resources"] = ["Plünderbare Ressourcen", "Recursos roubáveis", "Ressources à piller", "Yagmalanabilir kaynaklar"][l];
+                            this.Data["per CP"] = ["pro KP", "por PC", "par PC", "KP basina"][l];
+                            this.Data["2nd run"] = ["2. Angriff", "2º ataque", "2° attaque", "2. saldiri"][l];
+                            this.Data["3rd run"] = ["3. Angriff", "3º ataque", "3° attaque", "3. saldiri"][l];
+                            this.Data["Calculating resources..."] = ["Berechne plünderbare Ressourcen...", "A calcular recursos...", "calcul de ressources ...", "Kaynaklar hesaplaniyor..."][l];
                             this.Data["Next MCV"] = ["MBF", "MCV", "VCM"][l];
-                            this.Data["Show time to next MCV"] = ["Zeige Zeit bis zum nächsten MBF", "Mostrar tempo restante até ao próximo MCV", "Afficher l'heure pour le prochain VCM ", "Sırdaki MCV için gereken süreyi göster"][l];
-                            this.Data["Show lootable resources (restart required)"] = ["Zeige plünderbare Ressourcen (Neustart nötig)", "Mostrar recursos roubáveis (é necessário reiniciar)", "Afficher les ressources fouiller (redémarrage nécessaire)", "Yağmalanabilir kaynakları göster (yeniden başlatma gerekli)"][l];
-                            this.Data["Use dedicated Main Menu (restart required)"] = ["Verwende extra Hauptmenü (Neustart nötig)", "Usar botão para o Menu Principal (é necessário reiniciar)", "Utiliser dédiée du menu principal (redémarrage nécessaire)", "Ana menü tuşunu kullan (yeniden başlatma gerekli)"][l];
+                            this.Data["Show time to next MCV"] = ["Zeige Zeit bis zum nächsten MBF", "Mostrar tempo restante até ao próximo MCV", "Afficher l'heure pour le prochain VCM ", "Sirdaki MCV için gereken süreyi göster"][l];
+                            this.Data["Show lootable resources (restart required)"] = ["Zeige plünderbare Ressourcen (Neustart nötig)", "Mostrar recursos roubáveis (é necessário reiniciar)", "Afficher les ressources fouiller (redémarrage nécessaire)", "Yagmalanabilir kaynaklari göster (yeniden baslatma gerekli)"][l];
+                            this.Data["Use dedicated Main Menu (restart required)"] = ["Verwende extra Hauptmenü (Neustart nötig)", "Usar botão para o Menu Principal (é necessário reiniciar)", "Utiliser dédiée du menu principal (redémarrage nécessaire)", "Ana menü tusunu kullan (yeniden baslatma gerekli)"][l];
                             this.Data["Autocollect packages"] = ["Sammle Pakete automatisch", "Auto recolher pacotes", "paquets autocollecté", "Paketleri otomatik topla"][l];
                             this.Data["Autorepair units"] = ["Repariere Einheiten automatisch", "Auto reparar o exército", "unités autoréparé", "Üniteleri otomatik onar"][l];
-                            this.Data["Autorepair defense (higher prio than buildings)"] = ["Repariere Verteidigung automatisch (höhere Prio als Gebäude)", "Auto reparar defesa (maior prioridade do que os edifícios)", "réparation automatique la défense (priorité plus élevé que les bâtiments) ", "Savunmayı otomatik onar (binalardan daha yüksek öncelikli olarak)"][l];
-                            this.Data["Autorepair buildings"] = ["Repariere Gebäude automatisch", "Auto reparar edifícios", "bâtiments autoréparé", "Binaları otomatik onar"][l];
-                            this.Data["Automatic interval in minutes"] = ["Auto-Intervall in Minuten", "Intervalo de tempo automático (em minutos)", "intervalle automatique en quelques minutes", "Otomatik toplama aralığı (dk)"][l];
+                            this.Data["Autorepair defense (higher prio than buildings)"] = ["Repariere Verteidigung automatisch (höhere Prio als Gebäude)", "Auto reparar defesa (maior prioridade do que os edifícios)", "réparation automatique la défense (priorité plus élevé que les bâtiments) ", "Savunmayi otomatik onar (binalardan daha yüksek öncelikli olarak)"][l];
+                            this.Data["Autorepair buildings"] = ["Repariere Gebäude automatisch", "Auto reparar edifícios", "bâtiments autoréparé", "Binalari otomatik onar"][l];
+                            this.Data["Automatic interval in minutes"] = ["Auto-Intervall in Minuten", "Intervalo de tempo automático (em minutos)", "intervalle automatique en quelques minutes", "Otomatik toplama araligi (dk)"][l];
                             this.Data["Apply changes"] = ["Speichern", "Confirmar", "Appliquer changements", "Uygula"][l];
-                            this.Data["Discard changes"] = ["Abbrechen", "Cancelar", "Annuler changements", "İptal"][l];
-                            this.Data["Reset to default"] = ["Auf Standard zurücksetzen", "Definições padrão", "Réinitialiser", "Sıfırla"][l];
+                            this.Data["Discard changes"] = ["Abbrechen", "Cancelar", "Annuler changements", "Iptal"][l];
+                            this.Data["Reset to default"] = ["Auf Standard zurücksetzen", "Definições padrão", "Réinitialiser", "Sifirla"][l];
                             this.Data["Continuous"] = ["Kontinuierlich", "Contínua", "continue", "Sürekli"][l];
                             this.Data["Bonus"] = ["Pakete", "Bónus", "Bonus", "Bonus"][l];
                             this.Data["POI"] = ["POI", "POI", "POI", "POI"][l];
                             this.Data["Total / h"] = ["Gesamt / h", "Total / h", "Total / h", "Toplam / sa."][l];
-                            this.Data["Repaircharges"] = ["Reparaturzeiten", "Custo de reparação", "frais de réparation", "Onarım maliyeti"][l];
-                            this.Data["Repairtime"] = ["Max. verfügbar", "Tempo de reparação", "Temps de réparation", "Onarım süresi"][l];
-                            this.Data["Attacks"] = ["Angriffe", "Ataques", "Attaques", "Saldırılar"][l];
+                            this.Data["Repaircharges"] = ["Reparaturzeiten", "Custo de reparação", "frais de réparation", "Onarim maliyeti"][l];
+                            this.Data["Repairtime"] = ["Max. verfügbar", "Tempo de reparação", "Temps de réparation", "Onarim süresi"][l];
+                            this.Data["Attacks"] = ["Angriffe", "Ataques", "Attaques", "Saldirilar"][l];
                             this.Data[MaelstromTools.Statics.Infantry] = ["Infanterie", "Infantaria", "Infanterie", "Piyade"][l];
                             this.Data[MaelstromTools.Statics.Vehicle] = ["Fahrzeuge", "Veículos", "Vehicule", "Motorlu B."][l];
                             this.Data[MaelstromTools.Statics.Aircraft] = ["Flugzeuge", "Aeronaves", "Aviation", "Hava A."][l];
@@ -278,15 +278,15 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.Data[MaelstromTools.Statics.Crystal] = ["Kristalle", "Cristal", "Cristal", "Kristal"][l];
                             this.Data[MaelstromTools.Statics.Power] = ["Strom", "Potência", "Energie", "Güç"][l];
                             this.Data[MaelstromTools.Statics.Dollar] = ["Credits", "Créditos", "Crédit", "Kredi"][l];
-                            this.Data[MaelstromTools.Statics.Research] = ["Forschung", "Investigação", "Recherche", "Araştırma"][l];
+                            this.Data[MaelstromTools.Statics.Research] = ["Forschung", "Investigação", "Recherche", "Arastirma"][l];
                             this.Data["Base"] = ["Basis", "Base", "Base", "Üs"][l];
                             this.Data["Defense"] = ["Verteidigung", "Defesa", "Défense", "Savunma"][l];
                             this.Data["Army"] = ["Armee", "Exército", "Armée", "Ordu"][l];
                             this.Data["Level"] = ["Stufe", "Nível", "Niveau", "Seviye"][l];
                             this.Data["Buildings"] = ["Gebäude", "Edifícios", "Bâtiments", "Binalar"][l];
-                            this.Data["Health"] = ["Leben", "Vida", "Santé", "Sağlık"][l];
+                            this.Data["Health"] = ["Leben", "Vida", "Santé", "Saglik"][l];
                             this.Data["Units"] = ["Einheiten", "Unidades", "Unités", "Üniteler"][l];
-                            this.Data["Hide Mission Tracker"] = ["Missionsfenster ausblenden", "Esconder janela das Missões", "Cacher la fenêtre de mission", "Görev İzleyicisini Gizle"][l];
+                            this.Data["Hide Mission Tracker"] = ["Missionsfenster ausblenden", "Esconder janela das Missões", "Cacher la fenêtre de mission", "Görev Izleyicisini Gizle"][l];
                             this.Data["none"] = ["keine", "nenhum", "aucun", "hiçbiri"][l];
                             this.Data["Cooldown"] = ["Cooldown", "Relocalização", "Recharge", "Cooldown"][l];
                             this.Data["Protection"] = ["Geschützt bis", "Protecção", "Protection", "Koruma"][l];
@@ -296,9 +296,9 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.Data["Max. storage"] = ["Max. Kapazität", "Armazenamento Máx.", "Max. de stockage", "Maks. Depo"][l];
                             this.Data["Storage full!"] = ["Lager voll!", "Armazenamento cheio!", "Stockage plein", "Depo dolu!"][l];
                             this.Data["Storage"] = ["Lagerstand", "Armazenamento", "Stockage", "Depo"][l];
-                            this.Data["display only top buildings"] = ["Nur Top-Gebäude anzeigen", "Mostrar apenas melhores edifícios", "afficher uniquement les bâtiments principaux", "yalnızca en iyi binaları göster"][l];
-                            this.Data["display only affordable buildings"] = ["Nur einsetzbare Gebäude anzeigen", "Mostrar apenas edíficios acessíveis", "afficher uniquement les bâtiments abordables", "yalnızca satın alınabilir binaları göster"][l];
-                            this.Data["City"] = ["Stadt", "Base", "Base", "Şehir"][l];
+                            this.Data["display only top buildings"] = ["Nur Top-Gebäude anzeigen", "Mostrar apenas melhores edifícios", "afficher uniquement les bâtiments principaux", "yalnizca en iyi binalari göster"][l];
+                            this.Data["display only affordable buildings"] = ["Nur einsetzbare Gebäude anzeigen", "Mostrar apenas edíficios acessíveis", "afficher uniquement les bâtiments abordables", "yalnizca satin alinabilir binalari göster"][l];
+                            this.Data["City"] = ["Stadt", "Base", "Base", "Sehir"][l];
                             this.Data["Type (coord)"] = ["Typ (Koord.)", "Escrever (coord)", "Type (coord)", "Tip (koord.)"][l];
                             this.Data["to Level"] = ["Auf Stufe", "para nível", "à Niveau ", "Seviye için"][l];
                             this.Data["Gain/h"] = ["Zuwachs/h", "Melhoria/h", "Gain / h", "Kazanç / sa."][l];
@@ -315,7 +315,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.Data["Calibrate support"] = ["Artillerie kalibrieren", "Calibrar apoio", "Calibrer soutien", "Takviyeyi kalibre et"][l];
                             this.Data["Access"] = ["Öffne", "Aceder", "Accès ", "Aç"][l];
                             this.Data["Focus on"] = ["Zentriere auf", "Concentrar em", "Centré sur", "Odaklan"][l];
-                            this.Data["Possible attacks from this base (available CP)"] = ["Mögliche Angriffe (verfügbare KP)", "Possible attacks from this base (available CP)", "Possible attacks from this base (available CP)", "Bu üsten yapılması mümkün olan saldırılar (mevcut KP)"][l];
+                            this.Data["Possible attacks from this base (available CP)"] = ["Mögliche Angriffe (verfügbare KP)", "Possible attacks from this base (available CP)", "Possible attacks from this base (available CP)", "Bu üsten yapilmasi mümkün olan saldirilar (mevcut KP)"][l];
                             //this.Data[""] = [""][l];
                         },
                         get: function (ident) {
@@ -1031,6 +1031,8 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                         mcvPopupX: 0,
                         mcvPopupY: 0,
                         mcvTimerLabel: null,
+                        mcvCreditProcentageLabel: null,
+                        mcvResearchTimerLabel: null,
                         calculateCostsForNextMCV: function () {
                             try {
                                 if (!MT_Preferences.Settings.showCostsForNextMCV) {
@@ -1072,18 +1074,40 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                                             y: base.mcvPopupY
                                         });
                                     });
-                                    var font = qx.bom.Font.fromString('bold').set({
-                                        size: 20
+                                    var font1 = qx.bom.Font.fromString('bold').set({
+                                        size: 15
+                                    });
+                                    var font2 = qx.bom.Font.fromString('bold').set({
+                                        size: 14
+                                    });
+                                    var font3 = qx.bom.Font.fromString('bold').set({
+                                        size: 14
                                     });
 
                                     this.mcvTimerLabel = new qx.ui.basic.Label().set({
-                                        font: font,
-                                        textColor: 'red',
+                                        font: font1,
+                                        textColor: 'cyan',
+                                        width: 155,
+                                        textAlign: 'center',
+                                        marginBottom: 5
+                                    });
+                                    this.mcvCreditProcentageLabel = new qx.ui.basic.Label().set({
+                                        font: font2,
+                                        textColor: 'yellow',
+                                        width: 155,
+                                        textAlign: 'center',
+                                        marginBottom: 5
+                                    });
+                                    this.mcvResearchTimerLabel = new qx.ui.basic.Label().set({
+                                        font: font3,
+                                        textColor: 'yellow',
                                         width: 155,
                                         textAlign: 'center',
                                         marginBottom: 5
                                     });
                                     this.mcvPopup.add(this.mcvTimerLabel);
+                                    this.mcvPopup.add(this.mcvCreditProcentageLabel);
+                                    this.mcvPopup.add(this.mcvResearchTimerLabel);
                                     var serverBar = qx.core.Init.getApplication().getServerBar().getBounds();
                                     var pos = MaelstromTools.LocalStorage.get("mcvPopup", {
                                         x: serverBar.width + 150,
@@ -1103,23 +1127,47 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                                         resourcesNeeded[nextLevelInfo.rr[i].t] = nextLevelInfo.rr[i].c;
                                     }
                                 }
-                                //var researchNeeded = resourcesNeeded[ClientLib.Base.EResourceType.ResearchPoints];
-                                //var currentResearchPoints = player.get_ResearchPoints();
+                                var researchNeeded = resourcesNeeded[ClientLib.Base.EResourceType.ResearchPoints];
+                                var currentResearchPoints = player.get_ResearchPoints();
+                                XY = 100 / researchNeeded
+                                XYX = currentResearchPoints
+                                PercentageOfResearchPoints = XYX * XY
+                                //PercentageOfResearchPoints = 150.23
 
                                 var creditsNeeded = resourcesNeeded[ClientLib.Base.EResourceType.Gold];
                                 var creditsResourceData = player.get_Credits();
                                 var creditGrowthPerHour = (creditsResourceData.Delta + creditsResourceData.ExtraBonusDelta) * ClientLib.Data.MainData.GetInstance().get_Time().get_StepsPerHour();
                                 var creditTimeLeftInHours = (creditsNeeded - player.GetCreditsCount()) / creditGrowthPerHour;
+                                var ZX = 100 / creditsNeeded;
+                                var ZXZ = player.GetCreditsCount();
+                                var PercentageOfCredits = ZXZ * ZX
+                                //PercentageOfCredits = ZXZ * 1% of ZX
 
-                                if (creditGrowthPerHour == 0 || creditTimeLeftInHours <= 0) {
-                                    if (this.mcvPopup) {
-                                        this.mcvPopup.close();
-                                    }
-                                    return;
-                                }
+                                //if (creditGrowthPerHour == 0 || creditTimeLeftInHours <= 0) {
+                                //  if (this.mcvPopup) {
+                                //    this.mcvPopup.close();
+                                //  }
+                                //  return;
+                                //}
 
                                 this.mcvPopup.setCaption(Lang.gt("Next MCV") + " ($ " + MaelstromTools.Wrapper.FormatNumbersCompact(creditsNeeded) + ")");
-                                this.mcvTimerLabel.setValue(MaelstromTools.Wrapper.FormatTimespan(creditTimeLeftInHours * 60 * 60));
+                                if (creditTimeLeftInHours > 0) {
+                                    this.mcvTimerLabel.setValue("$-timer : " + MaelstromTools.Wrapper.FormatTimespan(creditTimeLeftInHours * 60 * 60));
+                                } else {
+                                    this.mcvTimerLabel.setValue("");
+                                }
+                                if (PercentageOfCredits >= 100) {
+                                    this.mcvCreditProcentageLabel.setValue("Credits READY");
+                                }
+                                if (PercentageOfCredits < 100) {
+                                    this.mcvCreditProcentageLabel.setValue("Credits @ " + (PercentageOfCredits).toFixed(2) + "%");
+                                }
+                                if (PercentageOfResearchPoints >= 100) {
+                                    this.mcvResearchTimerLabel.setValue("Res.Points READY");
+                                }
+                                if (PercentageOfResearchPoints < 100) {
+                                    this.mcvResearchTimerLabel.setValue("Res.Points @ " + (PercentageOfResearchPoints).toFixed(2) + "%");
+                                }
 
                                 if (!this.mcvPopup.isVisible()) {
                                     this.mcvPopup.open();
@@ -1379,8 +1427,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                     members: {
                         Window: null,
                         Widget: null,
-                        Cache: {
-                        }, //k null
+                        Cache: {}, //k null
                         IsTimerEnabled: true,
 
                         calc: function () {
@@ -2244,8 +2291,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                     type: "static",
                     statics: {
                         ArrayUnique: function (array) {
-                            var o = {
-                            };
+                            var o = {};
                             var l = array.length;
                             r = [];
                             for (var i = 0; i < l; i++) o[array[i]] = array[i];
