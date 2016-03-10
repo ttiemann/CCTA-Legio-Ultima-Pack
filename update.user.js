@@ -18,9 +18,9 @@
                 - CCTA NavBar Reorderer 1.0 (removed)
                 - PVE/PVP Player Info Mod v1.3
                 - TitleMod
-                - TABS v2 final v15.12.23
+                - TABS v2 final v16.02.25.01
 */
-// @version     1.9.2
+// @version     1.10.0
 // @icon        data:image/png;base64,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
 // @updateURL   https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
 // @downloadURL https://github.com/w166er/CCTA-Legio-Ultima-Pack/raw/master/update.user.js
@@ -10375,8 +10375,8 @@ function Ini() {
 // ==UserScript==
 // @name            Tiberium Alliances Battle Simulator V2
 // @description     Allows you to simulate combat before actually attacking.
-// @author          Eistee & TheStriker & VisiG & Lobotommi
-// @version         15.12.23
+// @author          Eistee & TheStriker & VisiG & Lobotommi & XDaast
+// @version         16.02.25.01
 // @namespace       https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @include         https://prodgame*.alliances.commandandconquer.com/*/index.aspx*
 // @icon            http://eistee82.github.io/ta_simv2/icon.png
@@ -10485,7 +10485,10 @@ function Ini() {
                         Transfer: "FactionUI/icons/icon_transfer_resource.png"
                     },
                     Simulate: "FactionUI/icons/icon_attack_simulate_combat.png",
-                    CNCOpt: "http://cncopt.com/favicon.ico"
+                    CNCOpt: "http://cncopt.com/favicon.ico",
+                    one: "https://www.openmerchantaccount.com/img/swap1_2.png",
+                    two: "https://www.openmerchantaccount.com/img/swap2_3.png",
+                    three: "https://www.openmerchantaccount.com/img/swap3_4.png"
                 }
             });
             qx.Class.define("TABS.SETTINGS", {							// [static]		Settings
@@ -10781,6 +10784,21 @@ function Ini() {
                         }
                         return formation;
                     },
+                    SwapLines: function (formation, lineA, lineB) {
+                        lineAZoroBasedIndex = lineA - 1;
+                        lineBZeroBasedIndex = lineB - 1;
+                        for (var f = 0; f < formation.length; f++) {
+                            switch (formation[f].y) {
+                                case lineAZoroBasedIndex:
+                                    formation[f].y = lineBZeroBasedIndex;
+                                    break;
+                                case lineBZeroBasedIndex:
+                                    formation[f].y = lineAZoroBasedIndex;
+                                    break;
+                            }
+                        }
+                        return formation;
+                    },
                     Shift: function (formation, pos, sel) {
                         var v_shift = 0,
 							h_shift = 0;
@@ -11015,14 +11033,16 @@ function Ini() {
                                     case ClientLib.Base.EFactionType.GDIFaction:
                                     case ClientLib.Base.EFactionType.NODFaction:
                                         unitMaxHealthPoints = this.get_UnitMaxHealthByLevel(buildings[i].l, unit, true, data.d.dm);
+                                        unitHealthPoints.setMax(sim[buildings[i].ci].mh);
+                                        unitHealthPoints.setStart(sim[buildings[i].ci].h);
                                         break;
                                     default:
                                         unitMaxHealthPoints = this.get_UnitMaxHealthByLevel(buildings[i].l, unit, false, data.d.dm);
+                                        unitHealthPoints.setMax(Math.max(unitMaxHealthPoints, buildings[i].h * 16));
+                                        unitHealthPoints.setStart(buildings[i].h * 16);
                                         break;
                                 }
 
-                                unitHealthPoints.setMax(Math.max(unitMaxHealthPoints, buildings[i].h * 16));
-                                unitHealthPoints.setStart(buildings[i].h * 16);
                                 unitHealthPoints.setEnd(sim[buildings[i].ci].h);
                                 unitRepairCosts = this.get_RepairCosts(buildings[i].i, buildings[i].l, unitHealthPoints);
 
@@ -12082,6 +12102,8 @@ function Ini() {
                             this.Offense.Vehicle.HealthPoints.setAny(data.Offense.Vehicle.HealthPoints);
                         if (data.Offense.Aircraft.HealthPoints !== undefined)
                             this.Offense.Aircraft.HealthPoints.setAny(data.Offense.Aircraft.HealthPoints);
+                        if (data.Offense.Crystal.HealthPoints !== undefined)
+                            this.Offense.Crystal.HealthPoints.setAny(data.Offense.Overall.HealthPoints);
                         //Entity.Resource
                         if (data.Enemy.Overall.Resource !== undefined)
                             this.Enemy.Overall.Resource.setAny(data.Enemy.Overall.Resource);
@@ -12117,6 +12139,8 @@ function Ini() {
                             this.Offense.Vehicle.Resource.setAny(data.Offense.Vehicle.Resource);
                         if (data.Offense.Aircraft.Resource !== undefined)
                             this.Offense.Aircraft.Resource.setAny(data.Offense.Aircraft.Resource);
+                        if (data.Offense.Crystal.Resource !== undefined)
+                            this.Offense.Crystal.Resource.setAny(data.Offense.Overall.Resource);
                     },
                     getAny: function () {
                         return {
@@ -12191,6 +12215,10 @@ function Ini() {
                                 Aircraft: {
                                     HealthPoints: this.Offense.Aircraft.HealthPoints.getAny(),
                                     Resource: this.Offense.Aircraft.Resource.getAny()
+                                },
+                                Crystal: {
+                                    HealthPoints: this.Offense.Overall.HealthPoints.getAny(),
+                                    Resource: this.Offense.Overall.Resource.getAny()
                                 }
                             }
                         };
@@ -12269,7 +12297,11 @@ function Ini() {
                             Aircraft: {
                                 HealthPoints: new TABS.STATS.Entity.HealthPoints(),
                                 Resource: new TABS.STATS.Entity.Resource()
-                            }
+                            },
+                            Crystal: {
+                                HealthPoints: new TABS.STATS.Entity.HealthPoints(),
+                                Resource: new TABS.STATS.Entity.Resource()
+                            },
                         };
 
                         if (data !== undefined)
@@ -12464,6 +12496,7 @@ function Ini() {
                     "changeCrystal": "qx.event.type.Data",
                     "changeCredits": "qx.event.type.Data",
                     "changeResearchPoints": "qx.event.type.Data",
+                    "changeRepairCrystal": "qx.event.type.Data",
                     "changeRepairChargeBase": "qx.event.type.Data",
                     "changeRepairChargeAir": "qx.event.type.Data",
                     "changeRepairChargeInf": "qx.event.type.Data",
@@ -13107,6 +13140,25 @@ function Ini() {
                     TABS.addInit("TABS.GUI.ArmySetupAttackBar");
                 }
             });
+
+            qx.Class.define("TABS.GUI.MovableBox", {
+                extend: qx.ui.container.Composite,
+                include: qx.ui.core.MMovable,
+                construct: function (layout) {
+                    this.base(arguments);
+                    try {
+                        this.setLayout(layout);
+                        this._activateMoveHandle(this);
+                        //resizer.setLayout(new qx.ui.layout.HBox());
+                    }
+                    catch (e) {
+                        console.group("Tiberium Alliances Battle Simulator V2");
+                        console.error("Error setting up GUI.MovableBox constructor", e);
+                        console.groupEnd();
+                    }
+                }
+            });
+
             qx.Class.define("TABS.GUI.PlayArea", {						// [singleton]	View Simulation, Open Stats Window
                 type: "singleton",
                 extend: qx.core.Object,
@@ -13148,13 +13200,15 @@ function Ini() {
                         WDG_COMBATSWAPVIEW.getLayoutParent().addAfter(this.btnSimulation, WDG_COMBATSWAPVIEW);
 
                         //Move Box
-                        this.boxMove = new qx.ui.container.Composite(new qx.ui.layout.Grid()).set({
+                        this.boxMove = new TABS.GUI.MovableBox(new qx.ui.layout.Grid()).set({
                             decorator: "pane-light-plain",
                             opacity: 0.7,
                             paddingTop: 0,
                             paddingLeft: 2,
                             paddingRight: 1,
-                            paddingBottom: 3
+                            paddingBottom: 3,
+                            allowGrowX: false,
+                            allowGrowY: false,
                         });
 
                         this.boxMove.add(this.newButton(TABS.RES.IMG.Stats, this.tr("Statistic") + " [NUM 7]", this.onClick_btnStats, null, null), {
@@ -13205,10 +13259,24 @@ function Ini() {
                             row: 3,
                             column: 2
                         });
-
+                        this.boxMove.add(this.newButton(TABS.RES.IMG.one, this.tr("Swaps lines 1 & 2."), this.onClick_btnSwap_1_2, "k", null), {
+                            row: 4,
+                            column: 0
+                        });
+                        this.boxMove.add(this.newButton(TABS.RES.IMG.two, this.tr("Swaps lines 2 & 3."), this.onClick_btnSwap_2_3, "z", null), {
+                            row: 4,
+                            column: 1
+                        });
+                        this.boxMove.add(this.newButton(TABS.RES.IMG.three, this.tr("Swaps lines 3 & 4."), this.onClick_btnSwap_3_4, "c", null), {
+                            row: 4,
+                            column: 2
+                        });
                         this.PlayArea.add(this.boxMove, {
-                            left: 65,
-                            bottom: 67
+                            top: 400,
+                            left: 65
+                            //left : 65,
+                            //right : 7,
+                            //bottom : 170
                         });
 
                         phe.cnc.Util.attachNetEvent(ClientLib.Vis.VisMain.GetInstance(), "ViewModeChange", ClientLib.Vis.ViewModeChange, this, this._onViewChanged);
@@ -13372,13 +13440,28 @@ function Ini() {
                         formation = TABS.UTIL.Formation.Shift(formation, e.getTarget().getModel()[0], e.getTarget().getModel()[1]);
                         TABS.UTIL.Formation.Set(formation);
                     },
+                    onClick_btnSwap_1_2: function (e) {
+                        var formation = TABS.UTIL.Formation.Get(),
+						formation = TABS.UTIL.Formation.SwapLines(formation, 1, 2);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
+                    onClick_btnSwap_2_3: function (e) {
+                        var formation = TABS.UTIL.Formation.Get(),
+						formation = TABS.UTIL.Formation.SwapLines(formation, 2, 3);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
+                    onClick_btnSwap_3_4: function (e) {
+                        var formation = TABS.UTIL.Formation.Get(),
+						formation = TABS.UTIL.Formation.SwapLines(formation, 3, 4);
+                        TABS.UTIL.Formation.Set(formation);
+                    },
                     onClick_btnDisable: function (e) {
                         var formation = TABS.UTIL.Formation.Get();
                         formation = TABS.UTIL.Formation.toggle_Enabled(formation, e.getTarget().getModel()[0]);
                         TABS.UTIL.Formation.Set(formation);
                     },
                     onClick_CNCOpt: function (e) {
-                        if (e.isRightPressed())
+                        if (e && e.isRightPressed())
                             TABS.UTIL.Formation.Set(TABS.UTIL.CNCOpt.parseLink(prompt(this.tr("Enter CNCOpt Long Link:"))));
                         else
                             qx.core.Init.getApplication().showExternal(TABS.UTIL.CNCOpt.createLink());
@@ -13433,10 +13516,17 @@ function Ini() {
                     btnBack: null,
                     btnSkip: null,
                     onClick_btnBack: function () {
-                        var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
-                        if (city !== null) {
-                            qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
-                            ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
+                        try {
+                            var city = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                            if (city !== null) {
+                                qx.core.Init.getApplication().getPlayArea().setView(ClientLib.Data.PlayerAreaViewMode.pavmCombatSetupDefense, city.get_Id(), 0, 0);
+                                ClientLib.Vis.VisMain.GetInstance().get_CombatSetup().SetPosition(0, qx.core.Init.getApplication().getPlayArea().getHUD().getCombatSetupOffset(ClientLib.Vis.CombatSetup.CombatSetupViewMode.Defense));
+                            }
+                        }
+                        catch (e) {
+                            console.group("Tiberium Alliances Battle Simulator V2");
+                            console.error("Error onClick_btnBack", e);
+                            console.groupEnd();
                         }
                     },
                     onClick_btnSkip: function () {
@@ -13608,6 +13698,7 @@ function Ini() {
                             Repair: {
                                 Storage: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:offense repair time"), TABS.RES.IMG.RepairCharge.Base),
                                 Overall: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:repair points"), TABS.RES.IMG.RepairCharge.Offense),
+                                Crystal: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:crystals"), TABS.RES.IMG.Resource.Crystal),
                                 Infantry: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:infantry repair title"), TABS.RES.IMG.RepairCharge.Infantry),
                                 Vehicle: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:vehicle repair title"), TABS.RES.IMG.RepairCharge.Vehicle),
                                 Aircraft: new TABS.GUI.Window.Stats.Atom(this.tr("tnf:aircraft repair title"), TABS.RES.IMG.RepairCharge.Aircraft)
@@ -14094,17 +14185,21 @@ function Ini() {
                                     type: "Repair",
                                     subType: "RepairCharge"
                                 }),
+                                Crystal: new TABS.GUI.Window.Stats.SimView.Label("-").set({
+                                    type: "Repair",
+                                    subType: "Resource"
+                                }),
                                 Infantry: new TABS.GUI.Window.Stats.SimView.Label("-").set({
                                     type: "Repair",
-                                    subType: "RepairCharge"
+                                    subType: "RepairChargeInf"
                                 }),
                                 Vehicle: new TABS.GUI.Window.Stats.SimView.Label("-").set({
                                     type: "Repair",
-                                    subType: "RepairCharge"
+                                    subType: "RepairChargeVeh"
                                 }),
                                 Aircraft: new TABS.GUI.Window.Stats.SimView.Label("-").set({
                                     type: "Repair",
-                                    subType: "RepairCharge"
+                                    subType: "RepairChargeAir"
                                 })
                             },
                             Loot: {
@@ -14208,6 +14303,18 @@ function Ini() {
                                     this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[i].Resource, "RepairChargeAir");
                                     this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[i].Resource, "RepairChargeInf");
                                     this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[i].Resource, "RepairChargeVeh");
+                                    if (i == "Crystal") {
+                                        for (j in this.Label.Repair) {
+                                            this.Stats.Offense[i].Resource.bind("Tiberium", this.Label.Repair[j].Resource, "Tiberium");
+                                            this.Stats.Offense[i].Resource.bind("Crystal", this.Label.Repair[j].Resource, "Crystal");
+                                            this.Stats.Offense[i].Resource.bind("Credits", this.Label.Repair[j].Resource, "Credits");
+                                            this.Stats.Offense[i].Resource.bind("ResearchPoints", this.Label.Repair[j].Resource, "ResearchPoints");
+                                            this.Stats.Offense[i].Resource.bind("RepairChargeBase", this.Label.Repair[j].Resource, "RepairChargeBase");
+                                            this.Stats.Offense[i].Resource.bind("RepairChargeAir", this.Label.Repair[j].Resource, "RepairChargeAir");
+                                            this.Stats.Offense[i].Resource.bind("RepairChargeInf", this.Label.Repair[j].Resource, "RepairChargeInf");
+                                            this.Stats.Offense[i].Resource.bind("RepairChargeVeh", this.Label.Repair[j].Resource, "RepairChargeVeh");
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -14448,7 +14555,7 @@ function Ini() {
                     },
                     subType: {
                         init: "HealthPointsAbs",
-                        check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
+                        check: ["HealthPointsAbs", "HealthPointsRel", "RepairCharge", "RepairStorage", "RepairCrystal", "Resource", "Tiberium", "Crystal", "Credits", "ResearchPoints"]
                     }
                 },
                 members: {
@@ -14482,12 +14589,15 @@ function Ini() {
                                             value = this.HealthPointsRel();
                                             break;
                                         case "RepairCharge":
+                                        case "RepairChargeInf":
+                                        case "RepairChargeVeh":
+                                        case "RepairChargeAir":
                                             value = this.RepairCharge();
                                             break;
                                         case "RepairStorage":
                                             return;
-                                        case "Crystal":
-                                            value = this.Loot();
+                                        case "Resource":
+                                            value = this.RepairCharge();
                                             break;
                                         default:
                                             break;
@@ -14544,11 +14654,37 @@ function Ini() {
                         return null;
                     },
                     RepairCharge: function () {
-                        if (this.HealthPoints.getMax() > 0) {
+                        if (this.getSubType() == "Resource") {
+                            res = 0;
+                            res = this.Resource.getCrystal();
+
                             return {
-                                text: phe.cnc.Util.getTimespanString(Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh())),
-                                color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
+                                text: phe.cnc.gui.util.Numbers.formatNumbersCompact(res),
+                                color: this.getColorFromPercent(1)
                             };
+                        }
+                        else {
+                            res = 0;
+                            if (this.HealthPoints.getMax() > 0) {
+                                switch (this.getSubType()) {
+                                    case "RepairChargeInf":
+                                        res = this.Resource.getRepairChargeInf();
+                                        break;
+                                    case "RepairChargeVeh":
+                                        res = this.Resource.getRepairChargeVeh();
+                                        break;
+                                    case "RepairChargeAir":
+                                        res = this.Resource.getRepairChargeAir();
+                                        break;
+                                    case "RepairCharge":
+                                        res = Math.max(this.Resource.getRepairChargeBase(), this.Resource.getRepairChargeAir(), this.Resource.getRepairChargeInf(), this.Resource.getRepairChargeVeh());
+                                        break;
+                                }
+                                return {
+                                    text: phe.cnc.Util.getTimespanString(res),
+                                    color: this.getColorFromPercent(1 - (this.HealthPoints.getEnd() / this.HealthPoints.getMax()))
+                                };
+                            }
                         }
                         return null;
                     },
