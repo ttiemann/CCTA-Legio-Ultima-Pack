@@ -246,7 +246,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.Data["MaelstromTools Preferences"] = ["MaelstromTools Einstellungen", "Preferências de MaelstromTools", "Préférences MaelstromTools", "MaelstromTools Ayarlari"][l];
                             this.Data["Options"] = ["Einstellungen", "Opções", "Options", "Seçenekler"][l];
                             this.Data["Target out of range, no resource calculation possible"] = ["Ziel nicht in Reichweite, kann die plünderbaren Ressourcen nicht berechnen", "Alvo fora do alcance, não é possivel calcular os recursos", "Cible hors de portée, pas de calcul de ressources possible",
-                            "Hedef menzil disinda, kaynak hesaplamasi olanaksiz"][l];
+                                "Hedef menzil disinda, kaynak hesaplamasi olanaksiz"][l];
                             this.Data["Lootable resources"] = ["Plünderbare Ressourcen", "Recursos roubáveis", "Ressources à piller", "Yagmalanabilir kaynaklar"][l];
                             this.Data["per CP"] = ["pro KP", "por PC", "par PC", "KP basina"][l];
                             this.Data["2nd run"] = ["2. Angriff", "2º ataque", "2° attaque", "2. saldiri"][l];
@@ -333,851 +333,851 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                     }
                 }),
 
-                // define Base
-                qx.Class.define("MaelstromTools.Base", {
-                    type: "singleton",
-                    extend: qx.core.Object,
-                    members: {
-                        /* Desktop */
-                        timerInterval: 1500,
-                        mainTimerInterval: 5000,
-                        lootStatusInfoInterval: null,
-                        images: null,
-                        mWindows: null,
-                        mainMenuWindow: null,
-
-                        itemsOnDesktop: null,
-                        itemsOnDesktopCount: null,
-                        itemsInMainMenu: null,
-                        itemsInMainMenuCount: null,
-                        buttonCollectAllResources: null,
-                        buttonRepairAllUnits: null,
-                        buttonRepairAllBuildings: null,
-
-                        lootWidget: null,
-
-                        initialize: function () {
-                            try {
-                                //console.log(qx.locale.Manager.getInstance().getLocale());
-                                Lang.loadData(qx.locale.Manager.getInstance().getLocale());
-                                //console.log("Client version: " + MaelstromTools.Wrapper.GetClientVersion());
-                                this.itemsOnDesktopCount = [];
-                                this.itemsOnDesktop = {};
-                                this.itemsInMainMenuCount = [];
-                                this.itemsInMainMenu = {};
-
-                                var fileManager = ClientLib.File.FileManager.GetInstance();
-                                //ui/icons/icon_mainui_defense_button
-                                //ui/icons/icon_mainui_base_button
-                                //ui/icons/icon_army_points
-                                //icon_def_army_points
-                                var factionText = ClientLib.Base.Util.GetFactionGuiPatchText();
-                                this.createNewImage(MaelstromTools.Statics.Tiberium, "ui/common/icn_res_tiberium.png", fileManager);
-                                this.createNewImage(MaelstromTools.Statics.Crystal, "ui/common/icn_res_chrystal.png", fileManager);
-                                this.createNewImage(MaelstromTools.Statics.Power, "ui/common/icn_res_power.png", fileManager);
-                                this.createNewImage(MaelstromTools.Statics.Dollar, "ui/common/icn_res_dollar.png", fileManager);
-                                this.createNewImage(MaelstromTools.Statics.Research, "ui/common/icn_res_research.png", fileManager);
-                                this.createNewImage("Sum", "ui/common/icn_build_slots.png", fileManager);
-                                this.createNewImage("AccessBase", "ui/" + factionText + "/icons/icon_mainui_enterbase.png", fileManager);
-                                this.createNewImage("FocusBase", "ui/" + factionText + "/icons/icon_mainui_focusbase.png", fileManager);
-                                this.createNewImage("Packages", "ui/" + factionText + "/icons/icon_collect_packages.png", fileManager);
-                                this.createNewImage("RepairAllUnits", "ui/" + factionText + "/icons/icon_army_points.png", fileManager);
-                                this.createNewImage("RepairAllBuildings", "ui/" + factionText + "/icons/icn_build_slots.png", fileManager);
-                                this.createNewImage("ResourceOverviewMenu", "ui/common/icn_res_chrystal.png", fileManager);
-                                this.createNewImage("ProductionMenu", "ui/" + factionText + "/icons/icn_build_slots.png", fileManager);
-                                this.createNewImage("RepairTimeMenu", "ui/" + factionText + "/icons/icon_repair_all_button.png", fileManager);
-                                this.createNewImage("Crosshair", "ui/icons/icon_support_tnk_white.png", fileManager);
-                                this.createNewImage("UpgradeBuilding", "ui/" + factionText + "/icons/icon_building_detail_upgrade.png", fileManager);
-
-                                this.createNewWindow("MainMenu", "R", 125, 140, 120, 100, "B");
-                                this.createNewWindow("Production", "L", 120, 60, 340, 140);
-                                this.createNewWindow("RepairTime", "L", 120, 60, 340, 140);
-                                this.createNewWindow("ResourceOverview", "L", 120, 60, 340, 140);
-                                this.createNewWindow("BaseStatusOverview", "L", 120, 60, 340, 140);
-                                this.createNewWindow("Preferences", "L", 120, 60, 440, 140);
-                                this.createNewWindow("UpgradePriority", "L", 120, 60, 870, 400);
-
-                                if (!this.mainMenuWindow) {
-                                    this.mainMenuWindow = new qx.ui.popup.Popup(new qx.ui.layout.Canvas()).set({
-                                        //backgroundColor: "#303030",
-                                        padding: 5,
-                                        paddingRight: 0
-                                    });
-                                    if (MT_Preferences.Settings.useDedicatedMainMenu) {
-                                        this.mainMenuWindow.setPlaceMethod("mouse");
-                                        this.mainMenuWindow.setPosition("top-left");
-                                    } else {
-                                        this.mainMenuWindow.setPlaceMethod("widget");
-                                        this.mainMenuWindow.setPosition("bottom-right");
-                                        this.mainMenuWindow.setAutoHide(false);
-                                        this.mainMenuWindow.setBackgroundColor("transparent");
-                                        //this.mainMenuWindow.setShadow(null);
-                                        this.mainMenuWindow.setDecorator(new qx.ui.decoration.Background());
-                                    }
-                                }
-
-                                var desktopPositionModifier = 0;
-
-                                this.buttonCollectAllResources = this.createDesktopButton(Lang.gt("Collect all packages"), "Packages", true, this.desktopPosition(desktopPositionModifier));
-                                this.buttonCollectAllResources.addListener("execute", this.collectAllPackages, this);
-
-                                var openProductionWindowButton = this.createDesktopButton(Lang.gt("Overall production"), "ProductionMenu", false, this.desktopPosition(desktopPositionModifier));
-                                openProductionWindowButton.addListener("execute", function () {
-                                    MaelstromTools.Production.getInstance().openWindow("Production", Lang.gt("Overall production"));
-                                }, this);
-
-                                var openResourceOverviewWindowButton = this.createDesktopButton(Lang.gt("Base resources"), "ResourceOverviewMenu", false, this.desktopPosition(desktopPositionModifier));
-                                openResourceOverviewWindowButton.addListener("execute", function () {
-                                    MaelstromTools.ResourceOverview.getInstance().openWindow("ResourceOverview", Lang.gt("Base resources"));
-                                }, this);
-
-                                desktopPositionModifier++;
-                                var openMainMenuButton = this.createDesktopButton(Lang.gt("Main menu"), "ProductionMenu", false, this.desktopPosition(desktopPositionModifier));
-                                openMainMenuButton.addListener("click", function (e) {
-                                    this.mainMenuWindow.placeToMouse(e);
-                                    this.mainMenuWindow.show();
-                                }, this);
-
-                                this.buttonRepairAllUnits = this.createDesktopButton(Lang.gt("Repair all units"), "RepairAllUnits", true, this.desktopPosition(desktopPositionModifier));
-                                this.buttonRepairAllUnits.addListener("execute", this.repairAllUnits, this);
-
-                                this.buttonRepairAllBuildings = this.createDesktopButton(Lang.gt("Repair all buildings"), "RepairAllBuildings", true, this.desktopPosition(desktopPositionModifier));
-                                this.buttonRepairAllBuildings.addListener("execute", this.repairAllBuildings, this);
-
-                                var openRepairTimeWindowButton = this.createDesktopButton(Lang.gt("Army overview"), "RepairTimeMenu", false, this.desktopPosition(desktopPositionModifier));
-                                openRepairTimeWindowButton.addListener("execute", function () {
-                                    MaelstromTools.RepairTime.getInstance().openWindow("RepairTime", Lang.gt("Army overview"));
-                                }, this);
-
-                                var openBaseStatusOverview = this.createDesktopButton(Lang.gt("Base status overview"), "Crosshair", false, this.desktopPosition(desktopPositionModifier));
-                                openBaseStatusOverview.addListener("execute", function () {
-                                    MaelstromTools.BaseStatus.getInstance().openWindow("BaseStatusOverview", Lang.gt("Base status overview"));
-                                }, this);
-
-                                desktopPositionModifier++;
-                                var openHuffyUpgradeOverview = this.createDesktopButton(Lang.gt("Upgrade priority overview"), "UpgradeBuilding", false, this.desktopPosition(desktopPositionModifier));
-                                openHuffyUpgradeOverview.addListener("execute", function () {
-                                    HuffyTools.UpgradePriorityGUI.getInstance().openWindow("UpgradePriority", Lang.gt("Upgrade priority overview"));
-                                }, this);
-
-                                desktopPositionModifier++;
-                                var preferencesButton = new qx.ui.form.Button(Lang.gt("Options")).set({
-                                    appearance: "button-text-small",
-                                    width: 100,
-                                    minWidth: 100,
-                                    maxWidth: 100
-                                });
-                                preferencesButton.setUserData("desktopPosition", this.desktopPosition(desktopPositionModifier));
-                                preferencesButton.addListener("execute", function () {
-                                    MaelstromTools.Preferences.getInstance().openWindow("Preferences", Lang.gt("MaelstromTools Preferences"), true);
-                                }, this);
-
-                                if (MT_Preferences.Settings.useDedicatedMainMenu) {
-                                    this.addToDesktop("MainMenu", openMainMenuButton);
-                                }
-                                this.addToMainMenu("ResourceOverviewMenu", openResourceOverviewWindowButton);
-                                this.addToMainMenu("ProductionMenu", openProductionWindowButton);
-                                this.addToMainMenu("BaseStatusMenu", openBaseStatusOverview);
-                                this.addToMainMenu("RepairTimeMenu", openRepairTimeWindowButton);
-                                this.addToMainMenu("UpgradeBuilding", openHuffyUpgradeOverview);
-
-                                this.addToMainMenu("PreferencesMenu", preferencesButton);
-
-                                if (!MT_Preferences.Settings.useDedicatedMainMenu) {
-                                    this.mainMenuWindow.show();
-                                    var target = qx.core.Init.getApplication().getOptionsBar(); //getServerBar(); //qx.core.Init.getApplication().getUIItem(ClientLib.Data.Missions.PATH.BAR_APPOINTMENTS);
-                                    this.mainMenuWindow.placeToWidget(target, true);
-                                }
-
-                                phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, function () {
-                                    MaelstromTools.Cache.getInstance().SelectedBaseForLoot = null;
-                                });
-
-                                webfrontend.gui.chat.ChatWidget.recvbufsize = MaelstromTools.LocalStorage.get(MaelstromTools.Preferences.CHATHISTORYLENGTH, 64);
-                                this.runSecondlyTimer();
-                                this.runMainTimer();
-                                this.runAutoCollectTimer();
-                            } catch (e) {
-                                console.log("MaelstromTools.initialize: ", e);
-                            }
-                        },
-
-                        desktopPosition: function (modifier) {
-                            if (!modifier) modifier = 0;
-                            return modifier;
-                        },
-
-                        createDesktopButton: function (title, imageName, isNotification, desktopPosition) {
-                            try {
-                                if (!isNotification) {
-                                    isNotification = false;
-                                }
-                                if (!desktopPosition) {
-                                    desktopPosition = this.desktopPosition();
-                                }
-                                var desktopButton = new qx.ui.form.Button(null, this.images[imageName]).set({
-                                    toolTipText: title,
-                                    width: 50,
-                                    height: 40,
-                                    maxWidth: 50,
-                                    maxHeight: 40,
-                                    appearance: (isNotification ? "button-standard-nod" : "button-playarea-mode-frame"), //"button-standard-"+factionText), button-playarea-mode-red-frame
-                                    center: true
-                                });
-
-                                desktopButton.setUserData("isNotification", isNotification);
-                                desktopButton.setUserData("desktopPosition", desktopPosition);
-                                return desktopButton;
-                            } catch (e) {
-                                console.log("MaelstromTools.createDesktopButton: ", e);
-                            }
-                        },
-
-                        createNewImage: function (name, path, fileManager) {
-                            try {
-                                if (!this.images) {
-                                    this.images = {};
-                                }
-                                if (!fileManager) {
-                                    return;
-                                }
-
-                                this.images[name] = fileManager.GetPhysicalPath(path);
-                            } catch (e) {
-                                console.log("MaelstromTools.createNewImage: ", e);
-                            }
-                        },
-
-                        createNewWindow: function (name, align, x, y, w, h, alignV) {
-                            try {
-                                if (!this.mWindows) {
-                                    this.mWindows = {};
-                                }
-                                this.mWindows[name] = {};
-                                this.mWindows[name]["Align"] = align;
-                                this.mWindows[name]["AlignV"] = alignV;
-                                this.mWindows[name]["x"] = x;
-                                this.mWindows[name]["y"] = y;
-                                this.mWindows[name]["w"] = w;
-                                this.mWindows[name]["h"] = h;
-                            } catch (e) {
-                                console.log("MaelstromTools.createNewWindow: ", e);
-                            }
-                        },
-
-                        addToMainMenu: function (name, button) {
-                            try {
-                                /*if(!this.useDedicatedMainMenu) {
-                                  return;
-                                }*/
-                                if (this.itemsInMainMenu[name] != null) {
-                                    return;
-                                }
-                                var desktopPosition = button.getUserData("desktopPosition");
-                                var isNotification = button.getUserData("isNotification");
-                                if (!desktopPosition) {
-                                    desktopPosition = this.desktopPosition();
-                                }
-                                if (!isNotification) {
-                                    isNotification = false;
-                                }
-
-                                if (isNotification && MT_Preferences.Settings.useDedicatedMainMenu) {
-                                    this.addToDesktop(name, button);
-                                } else {
-                                    if (!this.itemsInMainMenuCount[desktopPosition]) {
-                                        this.itemsInMainMenuCount[desktopPosition] = 0;
-                                    }
-                                    this.mainMenuWindow.add(button, {
-                                        right: 5 + (52 * this.itemsInMainMenuCount[desktopPosition]),
-                                        top: 0 + (42 * (desktopPosition)) //bottom: 0 - (42 * (desktopPosition - 1))
-                                    });
-
-                                    this.itemsInMainMenu[name] = button;
-                                    this.itemsInMainMenuCount[desktopPosition]++;
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.addToMainMenu: ", e);
-                            }
-                        },
-
-                        removeFromMainMenu: function (name, rearrange) {
-                            try {
-                                if (rearrange == null) {
-                                    rearrange = true;
-                                }
-                                if (this.itemsOnDesktop[name] != null) {
-                                    var isNotification = this.itemsOnDesktop[name].getUserData("isNotification");
-                                    if (!isNotification) {
-                                        isNotification = false;
-                                    }
-                                    if (isNotification && MT_Preferences.Settings.useDedicatedMainMenu) {
-                                        this.removeFromDesktop(name, rearrange);
-                                    }
-                                } else if (this.itemsInMainMenu[name] != null) {
-                                    var desktopPosition = this.itemsInMainMenu[name].getUserData("desktopPosition");
-                                    var isNotification = this.itemsInMainMenu[name].getUserData("isNotification");
-                                    if (!desktopPosition) {
-                                        desktopPosition = this.desktopPosition();
-                                    }
-                                    if (!isNotification) {
-                                        isNotification = false;
-                                    }
-
-                                    this.mainMenuWindow.remove(this.itemsInMainMenu[name]);
-                                    this.itemsInMainMenu[name] = null;
-                                    this.itemsInMainMenuCount[desktopPosition]--;
-
-                                    if (rearrange && this.itemsInMainMenu[desktopPosition] > 1) {
-                                        var tmpItems = {};
-                                        // remove notifications
-                                        for (var itemName in this.itemsOnDesktop) {
-                                            if (this.itemsInMainMenu[itemName] == null) {
-                                                continue;
-                                            }
-                                            if (!isNotification) {
-                                                continue;
-                                            }
-                                            tmpItems[itemName] = this.itemsInMainMenu[itemName];
-                                            this.removeFromMainMenu(itemName, false);
-                                        }
-                                        // rearrange notifications
-                                        for (var itemName2 in tmpItems) {
-                                            var tmp = tmpItems[itemName2];
-                                            if (tmp == null) {
-                                                continue;
-                                            }
-                                            this.addToMainMenu(itemName2, tmp);
-                                        }
-                                    }
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.removeFromDesktop: ", e);
-                            }
-                        },
-
-                        addToDesktop: function (name, button) {
-                            try {
-                                if (this.itemsOnDesktop[name] != null) {
-                                    return;
-                                }
-                                var desktopPosition = button.getUserData("desktopPosition");
-                                if (!desktopPosition) {
-                                    desktopPosition = this.desktopPosition();
-                                }
-
-                                if (!this.itemsOnDesktopCount[desktopPosition]) {
-                                    this.itemsOnDesktopCount[desktopPosition] = 0;
-                                }
-
-                                var app = qx.core.Init.getApplication();
-                                //var navBar = app.getNavigationBar();
-
-                                // console.log("add to Desktop at pos: " + this.itemsOnDesktopCount);
-                                app.getDesktop().add(button, {
-                                    //right: navBar.getBounds().width + (52 * this.itemsOnDesktopCount[desktopPosition]),
-                                    //top: 42 * (desktopPosition - 1)
-                                    right: 5 + (52 * this.itemsOnDesktopCount[desktopPosition]),
-                                    //top: this.initialAppointmentBarHeight + 125 + (42 * (desktopPosition - 1))
-                                    bottom: 140 - (42 * (desktopPosition - 1))
-                                });
-
-                                this.itemsOnDesktop[name] = button;
-                                this.itemsOnDesktopCount[desktopPosition]++;
-                            } catch (e) {
-                                console.log("MaelstromTools.addToDesktop: ", e);
-                            }
-                        },
-
-                        removeFromDesktop: function (name, rearrange) {
-                            try {
-                                if (rearrange == null) {
-                                    rearrange = true;
-                                }
-                                var app = qx.core.Init.getApplication();
-
-                                if (this.itemsOnDesktop[name] != null) {
-                                    var desktopPosition = this.itemsOnDesktop[name].getUserData("desktopPosition");
-                                    var isNotification = this.itemsOnDesktop[name].getUserData("isNotification");
-                                    if (!desktopPosition) {
-                                        desktopPosition = this.desktopPosition();
-                                    }
-                                    if (!isNotification) {
-                                        isNotification = false;
-                                    }
-
-                                    app.getDesktop().remove(this.itemsOnDesktop[name]);
-                                    this.itemsOnDesktop[name] = null;
-                                    this.itemsOnDesktopCount[desktopPosition]--;
-
-                                    if (rearrange && this.itemsOnDesktopCount[desktopPosition] > 1) {
-                                        var tmpItems = {};
-                                        // remove notifications
-                                        for (var itemName in this.itemsOnDesktop) {
-                                            if (this.itemsOnDesktop[itemName] == null) {
-                                                continue;
-                                            }
-                                            if (!this.itemsOnDesktop[itemName].getUserData("isNotification")) {
-                                                continue;
-                                            }
-                                            tmpItems[itemName] = this.itemsOnDesktop[itemName];
-                                            this.removeFromDesktop(itemName, false);
-                                        }
-                                        // rearrange notifications
-                                        for (var itemName2 in tmpItems) {
-                                            var tmp = tmpItems[itemName2];
-                                            if (tmp == null) {
-                                                continue;
-                                            }
-                                            this.addToMainMenu(itemName2, tmp);
-                                        }
-                                    }
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.removeFromDesktop: ", e);
-                            }
-                        },
-
-                        runSecondlyTimer: function () {
-                            try {
-                                this.calculateCostsForNextMCV();
-
-                                var self = this;
-                                setTimeout(function () {
-                                    self.runSecondlyTimer();
-                                }, 1000);
-                            } catch (e) {
-                                console.log("MaelstromTools.runSecondlyTimer: ", e);
-                            }
-                        },
-
-                        runMainTimer: function () {
-                            try {
-                                this.checkForPackages();
-                                this.checkRepairAllUnits();
-                                this.checkRepairAllBuildings();
-
-                                var missionTracker = typeof (qx.core.Init.getApplication().getMissionsBar) === 'function' ? qx.core.Init.getApplication().getMissionsBar() : qx.core.Init.getApplication().getMissionTracker(); //fix for PerforceChangelist>=376877
-                                if (MT_Preferences.Settings.autoHideMissionTracker) {
-                                    if (missionTracker.isVisible()) {
-                                        missionTracker.hide();
-                                    }
-                                    if (typeof (qx.core.Init.getApplication().getMissionsBar) === 'function') {
-                                        if (qx.core.Init.getApplication().getMissionsBar().getSizeHint().height != 0) {
-                                            qx.core.Init.getApplication().getMissionsBar().getSizeHint().height = 0;
-                                            qx.core.Init.getApplication().triggerDesktopResize();
-                                        }
-                                    }
-                                } else {
-                                    if (!missionTracker.isVisible()) {
-                                        missionTracker.show();
-                                        if (typeof (qx.core.Init.getApplication().getMissionsBar) === 'function') {
-                                            qx.core.Init.getApplication().getMissionsBar().initHeight();
-                                            qx.core.Init.getApplication().triggerDesktopResize();
-                                        }
-                                    }
-                                }
-
-                                var self = this;
-                                setTimeout(function () {
-                                    self.runMainTimer();
-                                }, this.mainTimerInterval);
-                            } catch (e) {
-                                console.log("MaelstromTools.runMainTimer: ", e);
-                            }
-                        },
-
-                        runAutoCollectTimer: function () {
-                            try {
-                                //console.log("runAutoCollectTimer ", MT_Preferences.Settings.AutoCollectTimer);
-                                if (!CCTAWrapperIsInstalled()) return; // run timer only then wrapper is running
-                                if (this.checkForPackages() && MT_Preferences.Settings.autoCollectPackages) {
-                                    this.collectAllPackages();
-                                }
-                                if (this.checkRepairAllUnits() && MT_Preferences.Settings.autoRepairUnits) {
-                                    this.repairAllUnits();
-                                }
-                                if (this.checkRepairAllBuildings() && MT_Preferences.Settings.autoRepairBuildings) {
-                                    this.repairAllBuildings();
-                                }
-
-                                var self = this;
-                                setTimeout(function () {
-                                    self.runAutoCollectTimer();
-                                }, MT_Preferences.Settings.AutoCollectTimer * 60000);
-                            } catch (e) {
-                                console.log("MaelstromTools.runMainTimer: ", e);
-                            }
-                        },
-
-                        openWindow: function (windowObj, windowName, skipMoveWindow) {
-                            try {
-                                if (!windowObj.isVisible()) {
-                                    if (windowName == "MainMenu") {
-                                        windowObj.show();
-                                    } else {
-                                        if (!skipMoveWindow) {
-                                            this.moveWindow(windowObj, windowName);
-                                        }
-                                        windowObj.open();
-                                    }
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.openWindow: ", e);
-                            }
-                        },
-
-                        moveWindow: function (windowObj, windowName) {
-                            try {
-                                var x = this.mWindows[windowName]["x"];
-                                var y = this.mWindows[windowName]["y"];
-                                if (this.mWindows[windowName]["Align"] == "R") {
-                                    x = qx.bom.Viewport.getWidth(window) - this.mWindows[windowName]["x"];
-                                }
-                                if (this.mWindows[windowName]["AlignV"] == "B") {
-                                    y = qx.bom.Viewport.getHeight(window) - this.mWindows[windowName]["y"] - windowObj.height;
-                                }
-                                windowObj.moveTo(x, y);
-                                if (windowName != "MainMenu") {
-                                    windowObj.setHeight(this.mWindows[windowName]["h"]);
-                                    windowObj.setWidth(this.mWindows[windowName]["w"]);
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.moveWindow: ", e);
-                            }
-                        },
-
-                        checkForPackages: function () {
-                            try {
-                                MT_Cache.updateCityCache();
-
-                                for (var cname in MT_Cache.Cities) {
-                                    var ncity = MT_Cache.Cities[cname].Object;
-                                    if (ncity.get_CityBuildingsData().get_HasCollectableBuildings() && !ncity.get_IsGhostMode()) {
-                                        this.addToMainMenu("CollectAllResources", this.buttonCollectAllResources);
-                                        return true;
-                                    }
-                                }
-                                this.removeFromMainMenu("CollectAllResources");
-                                return false;
-                            } catch (e) {
-                                console.log("MaelstromTools.checkForPackages: ", e);
-                                return false;
-                            }
-                        },
-
-                        collectAllPackages: function () {
-                            try {
-                                MT_Cache.updateCityCache();
-                                for (var cname in MT_Cache.Cities) {
-                                    var ncity = MT_Cache.Cities[cname].Object;
-                                    if (ncity.get_CityBuildingsData().get_HasCollectableBuildings()) {
-                                        ncity.CollectAllResources();
-                                    }
-                                }
-                                this.removeFromMainMenu("CollectAllResources");
-                            } catch (e) {
-                                console.log("MaelstromTools.collectAllPackages: ", e);
-                            }
-                        },
-
-                        checkRepairAll: function (visMode, buttonName, button) {
-                            try {
-                                MT_Cache.updateCityCache();
-
-                                for (var cname in MT_Cache.Cities) {
-                                    var ncity = MT_Cache.Cities[cname].Object;
-                                    if (!ncity.get_IsGhostMode() && ncity.get_CityRepairData().CanRepairAll(visMode)) {
-                                        this.addToMainMenu(buttonName, button);
-                                        return true;
-                                    }
-                                }
-
-                                this.removeFromMainMenu(buttonName);
-                                return false;
-                            } catch (e) {
-                                console.log("MaelstromTools.checkRepairAll: ", e);
-                                return false;
-                            }
-                        },
-
-                        checkRepairAllUnits: function () {
-                            return this.checkRepairAll(ClientLib.Vis.Mode.ArmySetup, "RepairAllUnits", this.buttonRepairAllUnits);
-                        },
-
-                        checkRepairAllBuildings: function () {
-                            return this.checkRepairAll(ClientLib.Vis.Mode.City, "RepairAllBuildings", this.buttonRepairAllBuildings);
-                        },
-
-                        repairAll: function (visMode, buttonName) {
-                            try {
-                                MT_Cache.updateCityCache();
-
-                                for (var cname in MT_Cache.Cities) {
-                                    var ncity = MT_Cache.Cities[cname].Object;
-                                    if (!ncity.get_IsGhostMode() && ncity.get_CityRepairData().CanRepairAll(visMode)) {
-                                        ncity.get_CityRepairData().RepairAll(visMode);
-                                    }
-                                }
-                                this.removeFromMainMenu(buttonName);
-                            } catch (e) {
-                                console.log("MaelstromTools.repairAll: ", e);
-                            }
-                        },
-
-                        //ClientLib.Data.City.prototype.get_CityRepairData
-                        //ClientLib.Data.CityRepair.prototype.CanRepairAll
-                        //ClientLib.Data.CityRepair.prototype.RepairAll
-                        repairAllUnits: function () {
-                            try {
-                                this.repairAll(ClientLib.Vis.Mode.ArmySetup, "RepairAllUnits");
-                            } catch (e) {
-                                console.log("MaelstromTools.repairAllUnits: ", e);
-                            }
-                        },
-
-                        repairAllBuildings: function () {
-                            try {
-                                this.repairAll(ClientLib.Vis.Mode.City, "RepairAllBuildings");
-                            } catch (e) {
-                                console.log("MaelstromTools.repairAllBuildings: ", e);
-                            }
-                        },
-
-                        updateLoot: function (ident, visCity, widget) {
-                            try {
-                                clearInterval(this.lootStatusInfoInterval);
-                                if (!MT_Preferences.Settings.showLoot) {
-                                    if (this.lootWidget[ident]) {
-                                        this.lootWidget[ident].removeAll();
-                                    }
-                                    return;
-                                }
-
-                                var baseLoadState = MT_Cache.updateLoot(visCity);
-                                if (baseLoadState == -2) { // base already cached and base not changed
-                                    return;
-                                }
-
-                                if (!this.lootWidget) {
-                                    this.lootWidget = {};
-                                }
-                                if (!this.lootWidget[ident]) {
-                                    this.lootWidget[ident] = new qx.ui.container.Composite(new qx.ui.layout.Grid(5, 5));
-                                    this.lootWidget[ident].setTextColor("white");
-                                    widget.add(this.lootWidget[ident]);
-                                }
-                                var lootWidget = this.lootWidget[ident];
-
-                                var rowIdx = 1;
-                                var colIdx = 1;
-                                lootWidget.removeAll();
-                                switch (baseLoadState) {
-                                    case -1:
-                                        {
-                                            MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, "Target out of range, no resource calculation possible", null, null, 'bold', null);
-                                            break;
-                                        }
-                                    case 1:
-                                        {
-                                            var Resources = MT_Cache.SelectedBaseResources;
-                                            this.createResourceLabels(lootWidget, ++rowIdx, "Possible attacks from this base (available CP)", Resources, -1);
-                                            this.createResourceLabels(lootWidget, ++rowIdx, "Lootable resources", Resources, 1);
-                                            this.createResourceLabels(lootWidget, ++rowIdx, "per CP", Resources, 1 * Resources.CPNeeded);
-                                            this.createResourceLabels(lootWidget, ++rowIdx, "2nd run", Resources, 2 * Resources.CPNeeded);
-                                            this.createResourceLabels(lootWidget, ++rowIdx, "3rd run", Resources, 3 * Resources.CPNeeded);
-                                            break;
-                                        }
-                                    default:
-                                        {
-                                            MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, "Calculating resources...", null, null, 'bold', null);
-                                            this.lootStatusInfoInterval = setInterval(function () {
-                                                MaelstromTools.Base.getInstance().updateLoot(ident, visCity, widget);
-                                            }, 100);
-                                            break;
-                                        }
-                                }
-                            } catch (e) {
-                                console.log("MaelstromTools.updateLoot: ", e);
-                            }
-                        },
-
-                        createResourceLabels: function (lootWidget, rowIdx, Label, Resources, Modifier) {
-                            var colIdx = 1;
-                            var font = (Modifier > 1 ? null : 'bold');
-
-                            if (Modifier == -1 && Resources.CPNeeded > 0) {
-                                Label = Lang.gt(Label) + ": " + Math.floor(ClientLib.Data.MainData.GetInstance().get_Player().GetCommandPointCount() / Resources.CPNeeded);
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, Label, null, 'left', font, null, 9);
-                                return;
-                            }
-                            colIdx = 1;
-                            if (Modifier > 0) {
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, Lang.gt(Label) + ":", null, null, font);
-                                MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Research));
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Research] / Modifier), 50, 'right', font);
-                                MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Tiberium));
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Tiberium] / Modifier), 50, 'right', font);
-                                MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Crystal));
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Crystal] / Modifier), 50, 'right', font);
-                                MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Dollar));
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Dollar] / Modifier), 50, 'right', font);
-                                MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage("Sum"));
-                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources["Total"] / Modifier), 50, 'right', font);
-                            }
-                        },
-
-                        mcvPopup: null,
-                        mcvPopupX: 0,
-                        mcvPopupY: 0,
-                        mcvTimerLabel: null,
-                        mcvCreditProcentageLabel: null,
-                        mcvResearchTimerLabel: null,
-                        calculateCostsForNextMCV: function () {
-                            try {
-                                if (!MT_Preferences.Settings.showCostsForNextMCV) {
-                                    if (this.mcvPopup) {
-                                        this.mcvPopup.close();
-                                    }
-                                    return;
-                                }
-                                var player = ClientLib.Data.MainData.GetInstance().get_Player();
-                                var cw = player.get_Faction();
-                                var cj = ClientLib.Base.Tech.GetTechIdFromTechNameAndFaction(ClientLib.Base.ETechName.Research_BaseFound, cw);
-                                var cr = player.get_PlayerResearch();
-                                var cd = cr.GetResearchItemFomMdbId(cj);
-                                if (cd == null) {
-                                    if (this.mcvPopup) {
-                                        this.mcvPopup.close();
-                                    }
-                                    return;
-                                }
-
-                                if (!this.mcvPopup) {
-                                    this.mcvPopup = new qx.ui.window.Window("").set({
-                                        contentPadding: 0,
-                                        showMinimize: false,
-                                        showMaximize: false,
-                                        showClose: false,
-                                        resizable: false
-                                    });
-                                    this.mcvPopup.setLayout(new qx.ui.layout.VBox());
-                                    this.mcvPopup.addListener("move", function (e) {
-                                        var base = MaelstromTools.Base.getInstance();
-                                        var size = qx.core.Init.getApplication().getRoot().getBounds();
-                                        var value = size.width - e.getData().left;
-                                        base.mcvPopupX = value < 0 ? 150 : value;
-                                        value = size.height - e.getData().top;
-                                        base.mcvPopupY = value < 0 ? 70 : value;
-                                        MaelstromTools.LocalStorage.set("mcvPopup", {
-                                            x: base.mcvPopupX,
-                                            y: base.mcvPopupY
+                    // define Base
+                    qx.Class.define("MaelstromTools.Base", {
+                        type: "singleton",
+                        extend: qx.core.Object,
+                        members: {
+                            /* Desktop */
+                            timerInterval: 1500,
+                            mainTimerInterval: 5000,
+                            lootStatusInfoInterval: null,
+                            images: null,
+                            mWindows: null,
+                            mainMenuWindow: null,
+
+                            itemsOnDesktop: null,
+                            itemsOnDesktopCount: null,
+                            itemsInMainMenu: null,
+                            itemsInMainMenuCount: null,
+                            buttonCollectAllResources: null,
+                            buttonRepairAllUnits: null,
+                            buttonRepairAllBuildings: null,
+
+                            lootWidget: null,
+
+                            initialize: function () {
+                                try {
+                                    //console.log(qx.locale.Manager.getInstance().getLocale());
+                                    Lang.loadData(qx.locale.Manager.getInstance().getLocale());
+                                    //console.log("Client version: " + MaelstromTools.Wrapper.GetClientVersion());
+                                    this.itemsOnDesktopCount = [];
+                                    this.itemsOnDesktop = {};
+                                    this.itemsInMainMenuCount = [];
+                                    this.itemsInMainMenu = {};
+
+                                    var fileManager = ClientLib.File.FileManager.GetInstance();
+                                    //ui/icons/icon_mainui_defense_button
+                                    //ui/icons/icon_mainui_base_button
+                                    //ui/icons/icon_army_points
+                                    //icon_def_army_points
+                                    var factionText = ClientLib.Base.Util.GetFactionGuiPatchText();
+                                    this.createNewImage(MaelstromTools.Statics.Tiberium, "ui/common/icn_res_tiberium.png", fileManager);
+                                    this.createNewImage(MaelstromTools.Statics.Crystal, "ui/common/icn_res_chrystal.png", fileManager);
+                                    this.createNewImage(MaelstromTools.Statics.Power, "ui/common/icn_res_power.png", fileManager);
+                                    this.createNewImage(MaelstromTools.Statics.Dollar, "ui/common/icn_res_dollar.png", fileManager);
+                                    this.createNewImage(MaelstromTools.Statics.Research, "ui/common/icn_res_research.png", fileManager);
+                                    this.createNewImage("Sum", "ui/common/icn_build_slots.png", fileManager);
+                                    this.createNewImage("AccessBase", "ui/" + factionText + "/icons/icon_mainui_enterbase.png", fileManager);
+                                    this.createNewImage("FocusBase", "ui/" + factionText + "/icons/icon_mainui_focusbase.png", fileManager);
+                                    this.createNewImage("Packages", "ui/" + factionText + "/icons/icon_collect_packages.png", fileManager);
+                                    this.createNewImage("RepairAllUnits", "ui/" + factionText + "/icons/icon_army_points.png", fileManager);
+                                    this.createNewImage("RepairAllBuildings", "ui/" + factionText + "/icons/icn_build_slots.png", fileManager);
+                                    this.createNewImage("ResourceOverviewMenu", "ui/common/icn_res_chrystal.png", fileManager);
+                                    this.createNewImage("ProductionMenu", "ui/" + factionText + "/icons/icn_build_slots.png", fileManager);
+                                    this.createNewImage("RepairTimeMenu", "ui/" + factionText + "/icons/icon_repair_all_button.png", fileManager);
+                                    this.createNewImage("Crosshair", "ui/icons/icon_support_tnk_white.png", fileManager);
+                                    this.createNewImage("UpgradeBuilding", "ui/" + factionText + "/icons/icon_building_detail_upgrade.png", fileManager);
+
+                                    this.createNewWindow("MainMenu", "R", 125, 140, 120, 100, "B");
+                                    this.createNewWindow("Production", "L", 120, 60, 340, 140);
+                                    this.createNewWindow("RepairTime", "L", 120, 60, 340, 140);
+                                    this.createNewWindow("ResourceOverview", "L", 120, 60, 340, 140);
+                                    this.createNewWindow("BaseStatusOverview", "L", 120, 60, 340, 140);
+                                    this.createNewWindow("Preferences", "L", 120, 60, 440, 140);
+                                    this.createNewWindow("UpgradePriority", "L", 120, 60, 870, 400);
+
+                                    if (!this.mainMenuWindow) {
+                                        this.mainMenuWindow = new qx.ui.popup.Popup(new qx.ui.layout.Canvas()).set({
+                                            //backgroundColor: "#303030",
+                                            padding: 5,
+                                            paddingRight: 0
                                         });
-                                    });
-                                    var font1 = qx.bom.Font.fromString('bold').set({
-                                        size: 15
-                                    });
-                                    var font2 = qx.bom.Font.fromString('bold').set({
-                                        size: 14
-                                    });
-                                    var font3 = qx.bom.Font.fromString('bold').set({
-                                        size: 14
-                                    });
-
-                                    this.mcvTimerLabel = new qx.ui.basic.Label().set({
-                                        font: font1,
-                                        textColor: 'cyan',
-                                        width: 155,
-                                        textAlign: 'center',
-                                        marginBottom: 5
-                                    });
-                                    this.mcvCreditProcentageLabel = new qx.ui.basic.Label().set({
-                                        font: font2,
-                                        textColor: 'yellow',
-                                        width: 155,
-                                        textAlign: 'center',
-                                        marginBottom: 5
-                                    });
-                                    this.mcvResearchTimerLabel = new qx.ui.basic.Label().set({
-                                        font: font3,
-                                        textColor: 'yellow',
-                                        width: 155,
-                                        textAlign: 'center',
-                                        marginBottom: 5
-                                    });
-                                    this.mcvPopup.add(this.mcvTimerLabel);
-                                    this.mcvPopup.add(this.mcvCreditProcentageLabel);
-                                    this.mcvPopup.add(this.mcvResearchTimerLabel);
-                                    var serverBar = qx.core.Init.getApplication().getServerBar().getBounds();
-                                    var pos = MaelstromTools.LocalStorage.get("mcvPopup", {
-                                        x: serverBar.width + 150,
-                                        y: 70
-                                    });
-                                    this.mcvPopupX = pos.x;
-                                    this.mcvPopupY = pos.y;
-                                    this.mcvPopup.open();
-                                }
-                                var size = qx.core.Init.getApplication().getRoot().getBounds();
-                                this.mcvPopup.moveTo(size.width - this.mcvPopupX, size.height - this.mcvPopupY);
-
-                                var nextLevelInfo = cd.get_NextLevelInfo_Obj();
-                                var resourcesNeeded = [];
-                                for (var i in nextLevelInfo.rr) {
-                                    if (nextLevelInfo.rr[i].t > 0) {
-                                        resourcesNeeded[nextLevelInfo.rr[i].t] = nextLevelInfo.rr[i].c;
+                                        if (MT_Preferences.Settings.useDedicatedMainMenu) {
+                                            this.mainMenuWindow.setPlaceMethod("mouse");
+                                            this.mainMenuWindow.setPosition("top-left");
+                                        } else {
+                                            this.mainMenuWindow.setPlaceMethod("widget");
+                                            this.mainMenuWindow.setPosition("bottom-right");
+                                            this.mainMenuWindow.setAutoHide(false);
+                                            this.mainMenuWindow.setBackgroundColor("transparent");
+                                            //this.mainMenuWindow.setShadow(null);
+                                            this.mainMenuWindow.setDecorator(new qx.ui.decoration.Background());
+                                        }
                                     }
-                                }
-                                var researchNeeded = resourcesNeeded[ClientLib.Base.EResourceType.ResearchPoints];
-                                var currentResearchPoints = player.get_ResearchPoints();
-                                XY = 100 / researchNeeded
-                                XYX = currentResearchPoints
-                                PercentageOfResearchPoints = XYX * XY
-                                //PercentageOfResearchPoints = 150.23
 
-                                var creditsNeeded = resourcesNeeded[ClientLib.Base.EResourceType.Gold];
-                                var creditsResourceData = player.get_Credits();
-                                var creditGrowthPerHour = (creditsResourceData.Delta + creditsResourceData.ExtraBonusDelta) * ClientLib.Data.MainData.GetInstance().get_Time().get_StepsPerHour();
-                                var creditTimeLeftInHours = (creditsNeeded - player.GetCreditsCount()) / creditGrowthPerHour;
-                                var ZX = 100 / creditsNeeded;
-                                var ZXZ = player.GetCreditsCount();
-                                var PercentageOfCredits = ZXZ * ZX
-                                //PercentageOfCredits = ZXZ * 1% of ZX
+                                    var desktopPositionModifier = 0;
 
-                                //if (creditGrowthPerHour == 0 || creditTimeLeftInHours <= 0) {
-                                //  if (this.mcvPopup) {
-                                //    this.mcvPopup.close();
-                                //  }
-                                //  return;
-                                //}
+                                    this.buttonCollectAllResources = this.createDesktopButton(Lang.gt("Collect all packages"), "Packages", true, this.desktopPosition(desktopPositionModifier));
+                                    this.buttonCollectAllResources.addListener("execute", this.collectAllPackages, this);
 
-                                this.mcvPopup.setCaption(Lang.gt("Next MCV") + " ($ " + MaelstromTools.Wrapper.FormatNumbersCompact(creditsNeeded) + ")");
-                                if (creditTimeLeftInHours > 0) {
-                                    this.mcvTimerLabel.setValue("$-timer : " + MaelstromTools.Wrapper.FormatTimespan(creditTimeLeftInHours * 60 * 60));
-                                } else {
-                                    this.mcvTimerLabel.setValue("");
-                                }
-                                if (PercentageOfCredits >= 100) {
-                                    this.mcvCreditProcentageLabel.setValue("Credits READY");
-                                }
-                                if (PercentageOfCredits < 100) {
-                                    this.mcvCreditProcentageLabel.setValue("Credits @ " + (PercentageOfCredits).toFixed(2) + "%");
-                                }
-                                if (PercentageOfResearchPoints >= 100) {
-                                    this.mcvResearchTimerLabel.setValue("Res.Points READY");
-                                }
-                                if (PercentageOfResearchPoints < 100) {
-                                    this.mcvResearchTimerLabel.setValue("Res.Points @ " + (PercentageOfResearchPoints).toFixed(2) + "%");
-                                }
+                                    var openProductionWindowButton = this.createDesktopButton(Lang.gt("Overall production"), "ProductionMenu", false, this.desktopPosition(desktopPositionModifier));
+                                    openProductionWindowButton.addListener("execute", function () {
+                                        MaelstromTools.Production.getInstance().openWindow("Production", Lang.gt("Overall production"));
+                                    }, this);
 
-                                if (!this.mcvPopup.isVisible()) {
-                                    this.mcvPopup.open();
+                                    var openResourceOverviewWindowButton = this.createDesktopButton(Lang.gt("Base resources"), "ResourceOverviewMenu", false, this.desktopPosition(desktopPositionModifier));
+                                    openResourceOverviewWindowButton.addListener("execute", function () {
+                                        MaelstromTools.ResourceOverview.getInstance().openWindow("ResourceOverview", Lang.gt("Base resources"));
+                                    }, this);
+
+                                    desktopPositionModifier++;
+                                    var openMainMenuButton = this.createDesktopButton(Lang.gt("Main menu"), "ProductionMenu", false, this.desktopPosition(desktopPositionModifier));
+                                    openMainMenuButton.addListener("click", function (e) {
+                                        this.mainMenuWindow.placeToMouse(e);
+                                        this.mainMenuWindow.show();
+                                    }, this);
+
+                                    this.buttonRepairAllUnits = this.createDesktopButton(Lang.gt("Repair all units"), "RepairAllUnits", true, this.desktopPosition(desktopPositionModifier));
+                                    this.buttonRepairAllUnits.addListener("execute", this.repairAllUnits, this);
+
+                                    this.buttonRepairAllBuildings = this.createDesktopButton(Lang.gt("Repair all buildings"), "RepairAllBuildings", true, this.desktopPosition(desktopPositionModifier));
+                                    this.buttonRepairAllBuildings.addListener("execute", this.repairAllBuildings, this);
+
+                                    var openRepairTimeWindowButton = this.createDesktopButton(Lang.gt("Army overview"), "RepairTimeMenu", false, this.desktopPosition(desktopPositionModifier));
+                                    openRepairTimeWindowButton.addListener("execute", function () {
+                                        MaelstromTools.RepairTime.getInstance().openWindow("RepairTime", Lang.gt("Army overview"));
+                                    }, this);
+
+                                    var openBaseStatusOverview = this.createDesktopButton(Lang.gt("Base status overview"), "Crosshair", false, this.desktopPosition(desktopPositionModifier));
+                                    openBaseStatusOverview.addListener("execute", function () {
+                                        MaelstromTools.BaseStatus.getInstance().openWindow("BaseStatusOverview", Lang.gt("Base status overview"));
+                                    }, this);
+
+                                    desktopPositionModifier++;
+                                    var openHuffyUpgradeOverview = this.createDesktopButton(Lang.gt("Upgrade priority overview"), "UpgradeBuilding", false, this.desktopPosition(desktopPositionModifier));
+                                    openHuffyUpgradeOverview.addListener("execute", function () {
+                                        HuffyTools.UpgradePriorityGUI.getInstance().openWindow("UpgradePriority", Lang.gt("Upgrade priority overview"));
+                                    }, this);
+
+                                    desktopPositionModifier++;
+                                    var preferencesButton = new qx.ui.form.Button(Lang.gt("Options")).set({
+                                        appearance: "button-text-small",
+                                        width: 100,
+                                        minWidth: 100,
+                                        maxWidth: 100
+                                    });
+                                    preferencesButton.setUserData("desktopPosition", this.desktopPosition(desktopPositionModifier));
+                                    preferencesButton.addListener("execute", function () {
+                                        MaelstromTools.Preferences.getInstance().openWindow("Preferences", Lang.gt("MaelstromTools Preferences"), true);
+                                    }, this);
+
+                                    if (MT_Preferences.Settings.useDedicatedMainMenu) {
+                                        this.addToDesktop("MainMenu", openMainMenuButton);
+                                    }
+                                    this.addToMainMenu("ResourceOverviewMenu", openResourceOverviewWindowButton);
+                                    this.addToMainMenu("ProductionMenu", openProductionWindowButton);
+                                    this.addToMainMenu("BaseStatusMenu", openBaseStatusOverview);
+                                    this.addToMainMenu("RepairTimeMenu", openRepairTimeWindowButton);
+                                    this.addToMainMenu("UpgradeBuilding", openHuffyUpgradeOverview);
+
+                                    this.addToMainMenu("PreferencesMenu", preferencesButton);
+
+                                    if (!MT_Preferences.Settings.useDedicatedMainMenu) {
+                                        this.mainMenuWindow.show();
+                                        var target = qx.core.Init.getApplication().getOptionsBar(); //getServerBar(); //qx.core.Init.getApplication().getUIItem(ClientLib.Data.Missions.PATH.BAR_APPOINTMENTS);
+                                        this.mainMenuWindow.placeToWidget(target, true);
+                                    }
+
+                                    phe.cnc.Util.attachNetEvent(ClientLib.Data.MainData.GetInstance().get_Cities(), "CurrentOwnChange", ClientLib.Data.CurrentOwnCityChange, this, function () {
+                                        MaelstromTools.Cache.getInstance().SelectedBaseForLoot = null;
+                                    });
+
+                                    webfrontend.gui.chat.ChatWidget.recvbufsize = MaelstromTools.LocalStorage.get(MaelstromTools.Preferences.CHATHISTORYLENGTH, 64);
+                                    this.runSecondlyTimer();
+                                    this.runMainTimer();
+                                    this.runAutoCollectTimer();
+                                } catch (e) {
+                                    console.log("MaelstromTools.initialize: ", e);
                                 }
-                            } catch (e) {
-                                console.log("calculateCostsForNextMCV", e);
+                            },
+
+                            desktopPosition: function (modifier) {
+                                if (!modifier) modifier = 0;
+                                return modifier;
+                            },
+
+                            createDesktopButton: function (title, imageName, isNotification, desktopPosition) {
+                                try {
+                                    if (!isNotification) {
+                                        isNotification = false;
+                                    }
+                                    if (!desktopPosition) {
+                                        desktopPosition = this.desktopPosition();
+                                    }
+                                    var desktopButton = new qx.ui.form.Button(null, this.images[imageName]).set({
+                                        toolTipText: title,
+                                        width: 50,
+                                        height: 40,
+                                        maxWidth: 50,
+                                        maxHeight: 40,
+                                        appearance: (isNotification ? "button-standard-nod" : "button-playarea-mode-frame"), //"button-standard-"+factionText), button-playarea-mode-red-frame
+                                        center: true
+                                    });
+
+                                    desktopButton.setUserData("isNotification", isNotification);
+                                    desktopButton.setUserData("desktopPosition", desktopPosition);
+                                    return desktopButton;
+                                } catch (e) {
+                                    console.log("MaelstromTools.createDesktopButton: ", e);
+                                }
+                            },
+
+                            createNewImage: function (name, path, fileManager) {
+                                try {
+                                    if (!this.images) {
+                                        this.images = {};
+                                    }
+                                    if (!fileManager) {
+                                        return;
+                                    }
+
+                                    this.images[name] = fileManager.GetPhysicalPath(path);
+                                } catch (e) {
+                                    console.log("MaelstromTools.createNewImage: ", e);
+                                }
+                            },
+
+                            createNewWindow: function (name, align, x, y, w, h, alignV) {
+                                try {
+                                    if (!this.mWindows) {
+                                        this.mWindows = {};
+                                    }
+                                    this.mWindows[name] = {};
+                                    this.mWindows[name]["Align"] = align;
+                                    this.mWindows[name]["AlignV"] = alignV;
+                                    this.mWindows[name]["x"] = x;
+                                    this.mWindows[name]["y"] = y;
+                                    this.mWindows[name]["w"] = w;
+                                    this.mWindows[name]["h"] = h;
+                                } catch (e) {
+                                    console.log("MaelstromTools.createNewWindow: ", e);
+                                }
+                            },
+
+                            addToMainMenu: function (name, button) {
+                                try {
+                                    /*if(!this.useDedicatedMainMenu) {
+                                      return;
+                                    }*/
+                                    if (this.itemsInMainMenu[name] != null) {
+                                        return;
+                                    }
+                                    var desktopPosition = button.getUserData("desktopPosition");
+                                    var isNotification = button.getUserData("isNotification");
+                                    if (!desktopPosition) {
+                                        desktopPosition = this.desktopPosition();
+                                    }
+                                    if (!isNotification) {
+                                        isNotification = false;
+                                    }
+
+                                    if (isNotification && MT_Preferences.Settings.useDedicatedMainMenu) {
+                                        this.addToDesktop(name, button);
+                                    } else {
+                                        if (!this.itemsInMainMenuCount[desktopPosition]) {
+                                            this.itemsInMainMenuCount[desktopPosition] = 0;
+                                        }
+                                        this.mainMenuWindow.add(button, {
+                                            right: 5 + (52 * this.itemsInMainMenuCount[desktopPosition]),
+                                            top: 0 + (42 * (desktopPosition)) //bottom: 0 - (42 * (desktopPosition - 1))
+                                        });
+
+                                        this.itemsInMainMenu[name] = button;
+                                        this.itemsInMainMenuCount[desktopPosition]++;
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.addToMainMenu: ", e);
+                                }
+                            },
+
+                            removeFromMainMenu: function (name, rearrange) {
+                                try {
+                                    if (rearrange == null) {
+                                        rearrange = true;
+                                    }
+                                    if (this.itemsOnDesktop[name] != null) {
+                                        var isNotification = this.itemsOnDesktop[name].getUserData("isNotification");
+                                        if (!isNotification) {
+                                            isNotification = false;
+                                        }
+                                        if (isNotification && MT_Preferences.Settings.useDedicatedMainMenu) {
+                                            this.removeFromDesktop(name, rearrange);
+                                        }
+                                    } else if (this.itemsInMainMenu[name] != null) {
+                                        var desktopPosition = this.itemsInMainMenu[name].getUserData("desktopPosition");
+                                        var isNotification = this.itemsInMainMenu[name].getUserData("isNotification");
+                                        if (!desktopPosition) {
+                                            desktopPosition = this.desktopPosition();
+                                        }
+                                        if (!isNotification) {
+                                            isNotification = false;
+                                        }
+
+                                        this.mainMenuWindow.remove(this.itemsInMainMenu[name]);
+                                        this.itemsInMainMenu[name] = null;
+                                        this.itemsInMainMenuCount[desktopPosition]--;
+
+                                        if (rearrange && this.itemsInMainMenu[desktopPosition] > 1) {
+                                            var tmpItems = {};
+                                            // remove notifications
+                                            for (var itemName in this.itemsOnDesktop) {
+                                                if (this.itemsInMainMenu[itemName] == null) {
+                                                    continue;
+                                                }
+                                                if (!isNotification) {
+                                                    continue;
+                                                }
+                                                tmpItems[itemName] = this.itemsInMainMenu[itemName];
+                                                this.removeFromMainMenu(itemName, false);
+                                            }
+                                            // rearrange notifications
+                                            for (var itemName2 in tmpItems) {
+                                                var tmp = tmpItems[itemName2];
+                                                if (tmp == null) {
+                                                    continue;
+                                                }
+                                                this.addToMainMenu(itemName2, tmp);
+                                            }
+                                        }
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.removeFromDesktop: ", e);
+                                }
+                            },
+
+                            addToDesktop: function (name, button) {
+                                try {
+                                    if (this.itemsOnDesktop[name] != null) {
+                                        return;
+                                    }
+                                    var desktopPosition = button.getUserData("desktopPosition");
+                                    if (!desktopPosition) {
+                                        desktopPosition = this.desktopPosition();
+                                    }
+
+                                    if (!this.itemsOnDesktopCount[desktopPosition]) {
+                                        this.itemsOnDesktopCount[desktopPosition] = 0;
+                                    }
+
+                                    var app = qx.core.Init.getApplication();
+                                    //var navBar = app.getNavigationBar();
+
+                                    // console.log("add to Desktop at pos: " + this.itemsOnDesktopCount);
+                                    app.getDesktop().add(button, {
+                                        //right: navBar.getBounds().width + (52 * this.itemsOnDesktopCount[desktopPosition]),
+                                        //top: 42 * (desktopPosition - 1)
+                                        right: 5 + (52 * this.itemsOnDesktopCount[desktopPosition]),
+                                        //top: this.initialAppointmentBarHeight + 125 + (42 * (desktopPosition - 1))
+                                        bottom: 140 - (42 * (desktopPosition - 1))
+                                    });
+
+                                    this.itemsOnDesktop[name] = button;
+                                    this.itemsOnDesktopCount[desktopPosition]++;
+                                } catch (e) {
+                                    console.log("MaelstromTools.addToDesktop: ", e);
+                                }
+                            },
+
+                            removeFromDesktop: function (name, rearrange) {
+                                try {
+                                    if (rearrange == null) {
+                                        rearrange = true;
+                                    }
+                                    var app = qx.core.Init.getApplication();
+
+                                    if (this.itemsOnDesktop[name] != null) {
+                                        var desktopPosition = this.itemsOnDesktop[name].getUserData("desktopPosition");
+                                        var isNotification = this.itemsOnDesktop[name].getUserData("isNotification");
+                                        if (!desktopPosition) {
+                                            desktopPosition = this.desktopPosition();
+                                        }
+                                        if (!isNotification) {
+                                            isNotification = false;
+                                        }
+
+                                        app.getDesktop().remove(this.itemsOnDesktop[name]);
+                                        this.itemsOnDesktop[name] = null;
+                                        this.itemsOnDesktopCount[desktopPosition]--;
+
+                                        if (rearrange && this.itemsOnDesktopCount[desktopPosition] > 1) {
+                                            var tmpItems = {};
+                                            // remove notifications
+                                            for (var itemName in this.itemsOnDesktop) {
+                                                if (this.itemsOnDesktop[itemName] == null) {
+                                                    continue;
+                                                }
+                                                if (!this.itemsOnDesktop[itemName].getUserData("isNotification")) {
+                                                    continue;
+                                                }
+                                                tmpItems[itemName] = this.itemsOnDesktop[itemName];
+                                                this.removeFromDesktop(itemName, false);
+                                            }
+                                            // rearrange notifications
+                                            for (var itemName2 in tmpItems) {
+                                                var tmp = tmpItems[itemName2];
+                                                if (tmp == null) {
+                                                    continue;
+                                                }
+                                                this.addToMainMenu(itemName2, tmp);
+                                            }
+                                        }
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.removeFromDesktop: ", e);
+                                }
+                            },
+
+                            runSecondlyTimer: function () {
+                                try {
+                                    this.calculateCostsForNextMCV();
+
+                                    var self = this;
+                                    setTimeout(function () {
+                                        self.runSecondlyTimer();
+                                    }, 1000);
+                                } catch (e) {
+                                    console.log("MaelstromTools.runSecondlyTimer: ", e);
+                                }
+                            },
+
+                            runMainTimer: function () {
+                                try {
+                                    this.checkForPackages();
+                                    this.checkRepairAllUnits();
+                                    this.checkRepairAllBuildings();
+
+                                    var missionTracker = typeof (qx.core.Init.getApplication().getMissionsBar) === 'function' ? qx.core.Init.getApplication().getMissionsBar() : qx.core.Init.getApplication().getMissionTracker(); //fix for PerforceChangelist>=376877
+                                    if (MT_Preferences.Settings.autoHideMissionTracker) {
+                                        if (missionTracker.isVisible()) {
+                                            missionTracker.hide();
+                                        }
+                                        if (typeof (qx.core.Init.getApplication().getMissionsBar) === 'function') {
+                                            if (qx.core.Init.getApplication().getMissionsBar().getSizeHint().height != 0) {
+                                                qx.core.Init.getApplication().getMissionsBar().getSizeHint().height = 0;
+                                                qx.core.Init.getApplication().triggerDesktopResize();
+                                            }
+                                        }
+                                    } else {
+                                        if (!missionTracker.isVisible()) {
+                                            missionTracker.show();
+                                            if (typeof (qx.core.Init.getApplication().getMissionsBar) === 'function') {
+                                                qx.core.Init.getApplication().getMissionsBar().initHeight();
+                                                qx.core.Init.getApplication().triggerDesktopResize();
+                                            }
+                                        }
+                                    }
+
+                                    var self = this;
+                                    setTimeout(function () {
+                                        self.runMainTimer();
+                                    }, this.mainTimerInterval);
+                                } catch (e) {
+                                    console.log("MaelstromTools.runMainTimer: ", e);
+                                }
+                            },
+
+                            runAutoCollectTimer: function () {
+                                try {
+                                    //console.log("runAutoCollectTimer ", MT_Preferences.Settings.AutoCollectTimer);
+                                    if (!CCTAWrapperIsInstalled()) return; // run timer only then wrapper is running
+                                    if (this.checkForPackages() && MT_Preferences.Settings.autoCollectPackages) {
+                                        this.collectAllPackages();
+                                    }
+                                    if (this.checkRepairAllUnits() && MT_Preferences.Settings.autoRepairUnits) {
+                                        this.repairAllUnits();
+                                    }
+                                    if (this.checkRepairAllBuildings() && MT_Preferences.Settings.autoRepairBuildings) {
+                                        this.repairAllBuildings();
+                                    }
+
+                                    var self = this;
+                                    setTimeout(function () {
+                                        self.runAutoCollectTimer();
+                                    }, MT_Preferences.Settings.AutoCollectTimer * 60000);
+                                } catch (e) {
+                                    console.log("MaelstromTools.runMainTimer: ", e);
+                                }
+                            },
+
+                            openWindow: function (windowObj, windowName, skipMoveWindow) {
+                                try {
+                                    if (!windowObj.isVisible()) {
+                                        if (windowName == "MainMenu") {
+                                            windowObj.show();
+                                        } else {
+                                            if (!skipMoveWindow) {
+                                                this.moveWindow(windowObj, windowName);
+                                            }
+                                            windowObj.open();
+                                        }
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.openWindow: ", e);
+                                }
+                            },
+
+                            moveWindow: function (windowObj, windowName) {
+                                try {
+                                    var x = this.mWindows[windowName]["x"];
+                                    var y = this.mWindows[windowName]["y"];
+                                    if (this.mWindows[windowName]["Align"] == "R") {
+                                        x = qx.bom.Viewport.getWidth(window) - this.mWindows[windowName]["x"];
+                                    }
+                                    if (this.mWindows[windowName]["AlignV"] == "B") {
+                                        y = qx.bom.Viewport.getHeight(window) - this.mWindows[windowName]["y"] - windowObj.height;
+                                    }
+                                    windowObj.moveTo(x, y);
+                                    if (windowName != "MainMenu") {
+                                        windowObj.setHeight(this.mWindows[windowName]["h"]);
+                                        windowObj.setWidth(this.mWindows[windowName]["w"]);
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.moveWindow: ", e);
+                                }
+                            },
+
+                            checkForPackages: function () {
+                                try {
+                                    MT_Cache.updateCityCache();
+
+                                    for (var cname in MT_Cache.Cities) {
+                                        var ncity = MT_Cache.Cities[cname].Object;
+                                        if (ncity.get_CityBuildingsData().get_HasCollectableBuildings() && !ncity.get_IsGhostMode()) {
+                                            this.addToMainMenu("CollectAllResources", this.buttonCollectAllResources);
+                                            return true;
+                                        }
+                                    }
+                                    this.removeFromMainMenu("CollectAllResources");
+                                    return false;
+                                } catch (e) {
+                                    console.log("MaelstromTools.checkForPackages: ", e);
+                                    return false;
+                                }
+                            },
+
+                            collectAllPackages: function () {
+                                try {
+                                    MT_Cache.updateCityCache();
+                                    for (var cname in MT_Cache.Cities) {
+                                        var ncity = MT_Cache.Cities[cname].Object;
+                                        if (ncity.get_CityBuildingsData().get_HasCollectableBuildings()) {
+                                            ncity.CollectAllResources();
+                                        }
+                                    }
+                                    this.removeFromMainMenu("CollectAllResources");
+                                } catch (e) {
+                                    console.log("MaelstromTools.collectAllPackages: ", e);
+                                }
+                            },
+
+                            checkRepairAll: function (visMode, buttonName, button) {
+                                try {
+                                    MT_Cache.updateCityCache();
+
+                                    for (var cname in MT_Cache.Cities) {
+                                        var ncity = MT_Cache.Cities[cname].Object;
+                                        if (!ncity.get_IsGhostMode() && ncity.get_CityRepairData().CanRepairAll(visMode)) {
+                                            this.addToMainMenu(buttonName, button);
+                                            return true;
+                                        }
+                                    }
+
+                                    this.removeFromMainMenu(buttonName);
+                                    return false;
+                                } catch (e) {
+                                    console.log("MaelstromTools.checkRepairAll: ", e);
+                                    return false;
+                                }
+                            },
+
+                            checkRepairAllUnits: function () {
+                                return this.checkRepairAll(ClientLib.Vis.Mode.ArmySetup, "RepairAllUnits", this.buttonRepairAllUnits);
+                            },
+
+                            checkRepairAllBuildings: function () {
+                                return this.checkRepairAll(ClientLib.Vis.Mode.City, "RepairAllBuildings", this.buttonRepairAllBuildings);
+                            },
+
+                            repairAll: function (visMode, buttonName) {
+                                try {
+                                    MT_Cache.updateCityCache();
+
+                                    for (var cname in MT_Cache.Cities) {
+                                        var ncity = MT_Cache.Cities[cname].Object;
+                                        if (!ncity.get_IsGhostMode() && ncity.get_CityRepairData().CanRepairAll(visMode)) {
+                                            ncity.get_CityRepairData().RepairAll(visMode);
+                                        }
+                                    }
+                                    this.removeFromMainMenu(buttonName);
+                                } catch (e) {
+                                    console.log("MaelstromTools.repairAll: ", e);
+                                }
+                            },
+
+                            //ClientLib.Data.City.prototype.get_CityRepairData
+                            //ClientLib.Data.CityRepair.prototype.CanRepairAll
+                            //ClientLib.Data.CityRepair.prototype.RepairAll
+                            repairAllUnits: function () {
+                                try {
+                                    this.repairAll(ClientLib.Vis.Mode.ArmySetup, "RepairAllUnits");
+                                } catch (e) {
+                                    console.log("MaelstromTools.repairAllUnits: ", e);
+                                }
+                            },
+
+                            repairAllBuildings: function () {
+                                try {
+                                    this.repairAll(ClientLib.Vis.Mode.City, "RepairAllBuildings");
+                                } catch (e) {
+                                    console.log("MaelstromTools.repairAllBuildings: ", e);
+                                }
+                            },
+
+                            updateLoot: function (ident, visCity, widget) {
+                                try {
+                                    clearInterval(this.lootStatusInfoInterval);
+                                    if (!MT_Preferences.Settings.showLoot) {
+                                        if (this.lootWidget[ident]) {
+                                            this.lootWidget[ident].removeAll();
+                                        }
+                                        return;
+                                    }
+
+                                    var baseLoadState = MT_Cache.updateLoot(visCity);
+                                    if (baseLoadState == -2) { // base already cached and base not changed
+                                        return;
+                                    }
+
+                                    if (!this.lootWidget) {
+                                        this.lootWidget = {};
+                                    }
+                                    if (!this.lootWidget[ident]) {
+                                        this.lootWidget[ident] = new qx.ui.container.Composite(new qx.ui.layout.Grid(5, 5));
+                                        this.lootWidget[ident].setTextColor("white");
+                                        widget.add(this.lootWidget[ident]);
+                                    }
+                                    var lootWidget = this.lootWidget[ident];
+
+                                    var rowIdx = 1;
+                                    var colIdx = 1;
+                                    lootWidget.removeAll();
+                                    switch (baseLoadState) {
+                                        case -1:
+                                            {
+                                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, "Target out of range, no resource calculation possible", null, null, 'bold', null);
+                                                break;
+                                            }
+                                        case 1:
+                                            {
+                                                var Resources = MT_Cache.SelectedBaseResources;
+                                                this.createResourceLabels(lootWidget, ++rowIdx, "Possible attacks from this base (available CP)", Resources, -1);
+                                                this.createResourceLabels(lootWidget, ++rowIdx, "Lootable resources", Resources, 1);
+                                                this.createResourceLabels(lootWidget, ++rowIdx, "per CP", Resources, 1 * Resources.CPNeeded);
+                                                this.createResourceLabels(lootWidget, ++rowIdx, "2nd run", Resources, 2 * Resources.CPNeeded);
+                                                this.createResourceLabels(lootWidget, ++rowIdx, "3rd run", Resources, 3 * Resources.CPNeeded);
+                                                break;
+                                            }
+                                        default:
+                                            {
+                                                MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, "Calculating resources...", null, null, 'bold', null);
+                                                this.lootStatusInfoInterval = setInterval(function () {
+                                                    MaelstromTools.Base.getInstance().updateLoot(ident, visCity, widget);
+                                                }, 100);
+                                                break;
+                                            }
+                                    }
+                                } catch (e) {
+                                    console.log("MaelstromTools.updateLoot: ", e);
+                                }
+                            },
+
+                            createResourceLabels: function (lootWidget, rowIdx, Label, Resources, Modifier) {
+                                var colIdx = 1;
+                                var font = (Modifier > 1 ? null : 'bold');
+
+                                if (Modifier == -1 && Resources.CPNeeded > 0) {
+                                    Label = Lang.gt(Label) + ": " + Math.floor(ClientLib.Data.MainData.GetInstance().get_Player().GetCommandPointCount() / Resources.CPNeeded);
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, Label, null, 'left', font, null, 9);
+                                    return;
+                                }
+                                colIdx = 1;
+                                if (Modifier > 0) {
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, Lang.gt(Label) + ":", null, null, font);
+                                    MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Research));
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Research] / Modifier), 50, 'right', font);
+                                    MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Tiberium));
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Tiberium] / Modifier), 50, 'right', font);
+                                    MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Crystal));
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Crystal] / Modifier), 50, 'right', font);
+                                    MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage(MaelstromTools.Statics.Dollar));
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources[MaelstromTools.Statics.Dollar] / Modifier), 50, 'right', font);
+                                    MaelstromTools.Util.addImage(lootWidget, rowIdx, colIdx++, MaelstromTools.Util.getImage("Sum"));
+                                    MaelstromTools.Util.addLabel(lootWidget, rowIdx, colIdx++, MaelstromTools.Wrapper.FormatNumbersCompact(Resources["Total"] / Modifier), 50, 'right', font);
+                                }
+                            },
+
+                            mcvPopup: null,
+                            mcvPopupX: 0,
+                            mcvPopupY: 0,
+                            mcvTimerLabel: null,
+                            mcvCreditProcentageLabel: null,
+                            mcvResearchTimerLabel: null,
+                            calculateCostsForNextMCV: function () {
+                                try {
+                                    if (!MT_Preferences.Settings.showCostsForNextMCV) {
+                                        if (this.mcvPopup) {
+                                            this.mcvPopup.close();
+                                        }
+                                        return;
+                                    }
+                                    var player = ClientLib.Data.MainData.GetInstance().get_Player();
+                                    var cw = player.get_Faction();
+                                    var cj = ClientLib.Base.Tech.GetTechIdFromTechNameAndFaction(ClientLib.Base.ETechName.Research_BaseFound, cw);
+                                    var cr = player.get_PlayerResearch();
+                                    var cd = cr.GetResearchItemFomMdbId(cj);
+                                    if (cd == null) {
+                                        if (this.mcvPopup) {
+                                            this.mcvPopup.close();
+                                        }
+                                        return;
+                                    }
+
+                                    if (!this.mcvPopup) {
+                                        this.mcvPopup = new qx.ui.window.Window("").set({
+                                            contentPadding: 0,
+                                            showMinimize: false,
+                                            showMaximize: false,
+                                            showClose: false,
+                                            resizable: false
+                                        });
+                                        this.mcvPopup.setLayout(new qx.ui.layout.VBox());
+                                        this.mcvPopup.addListener("move", function (e) {
+                                            var base = MaelstromTools.Base.getInstance();
+                                            var size = qx.core.Init.getApplication().getRoot().getBounds();
+                                            var value = size.width - e.getData().left;
+                                            base.mcvPopupX = value < 0 ? 150 : value;
+                                            value = size.height - e.getData().top;
+                                            base.mcvPopupY = value < 0 ? 70 : value;
+                                            MaelstromTools.LocalStorage.set("mcvPopup", {
+                                                x: base.mcvPopupX,
+                                                y: base.mcvPopupY
+                                            });
+                                        });
+                                        var font1 = qx.bom.Font.fromString('bold').set({
+                                            size: 15
+                                        });
+                                        var font2 = qx.bom.Font.fromString('bold').set({
+                                            size: 14
+                                        });
+                                        var font3 = qx.bom.Font.fromString('bold').set({
+                                            size: 14
+                                        });
+
+                                        this.mcvTimerLabel = new qx.ui.basic.Label().set({
+                                            font: font1,
+                                            textColor: 'cyan',
+                                            width: 155,
+                                            textAlign: 'center',
+                                            marginBottom: 5
+                                        });
+                                        this.mcvCreditProcentageLabel = new qx.ui.basic.Label().set({
+                                            font: font2,
+                                            textColor: 'yellow',
+                                            width: 155,
+                                            textAlign: 'center',
+                                            marginBottom: 5
+                                        });
+                                        this.mcvResearchTimerLabel = new qx.ui.basic.Label().set({
+                                            font: font3,
+                                            textColor: 'yellow',
+                                            width: 155,
+                                            textAlign: 'center',
+                                            marginBottom: 5
+                                        });
+                                        this.mcvPopup.add(this.mcvTimerLabel);
+                                        this.mcvPopup.add(this.mcvCreditProcentageLabel);
+                                        this.mcvPopup.add(this.mcvResearchTimerLabel);
+                                        var serverBar = qx.core.Init.getApplication().getServerBar().getBounds();
+                                        var pos = MaelstromTools.LocalStorage.get("mcvPopup", {
+                                            x: serverBar.width + 150,
+                                            y: 70
+                                        });
+                                        this.mcvPopupX = pos.x;
+                                        this.mcvPopupY = pos.y;
+                                        this.mcvPopup.open();
+                                    }
+                                    var size = qx.core.Init.getApplication().getRoot().getBounds();
+                                    this.mcvPopup.moveTo(size.width - this.mcvPopupX, size.height - this.mcvPopupY);
+
+                                    var nextLevelInfo = cd.get_NextLevelInfo_Obj();
+                                    var resourcesNeeded = [];
+                                    for (var i in nextLevelInfo.rr) {
+                                        if (nextLevelInfo.rr[i].t > 0) {
+                                            resourcesNeeded[nextLevelInfo.rr[i].t] = nextLevelInfo.rr[i].c;
+                                        }
+                                    }
+                                    var researchNeeded = resourcesNeeded[ClientLib.Base.EResourceType.ResearchPoints];
+                                    var currentResearchPoints = player.get_ResearchPoints();
+                                    XY = 100 / researchNeeded
+                                    XYX = currentResearchPoints
+                                    PercentageOfResearchPoints = XYX * XY
+                                    //PercentageOfResearchPoints = 150.23
+
+                                    var creditsNeeded = resourcesNeeded[ClientLib.Base.EResourceType.Gold];
+                                    var creditsResourceData = player.get_Credits();
+                                    var creditGrowthPerHour = (creditsResourceData.Delta + creditsResourceData.ExtraBonusDelta) * ClientLib.Data.MainData.GetInstance().get_Time().get_StepsPerHour();
+                                    var creditTimeLeftInHours = (creditsNeeded - player.GetCreditsCount()) / creditGrowthPerHour;
+                                    var ZX = 100 / creditsNeeded;
+                                    var ZXZ = player.GetCreditsCount();
+                                    var PercentageOfCredits = ZXZ * ZX
+                                    //PercentageOfCredits = ZXZ * 1% of ZX
+
+                                    //if (creditGrowthPerHour == 0 || creditTimeLeftInHours <= 0) {
+                                    //  if (this.mcvPopup) {
+                                    //    this.mcvPopup.close();
+                                    //  }
+                                    //  return;
+                                    //}
+
+                                    this.mcvPopup.setCaption(Lang.gt("Next MCV") + " ($ " + MaelstromTools.Wrapper.FormatNumbersCompact(creditsNeeded) + ")");
+                                    if (creditTimeLeftInHours > 0) {
+                                        this.mcvTimerLabel.setValue("$-timer : " + MaelstromTools.Wrapper.FormatTimespan(creditTimeLeftInHours * 60 * 60));
+                                    } else {
+                                        this.mcvTimerLabel.setValue("");
+                                    }
+                                    if (PercentageOfCredits >= 100) {
+                                        this.mcvCreditProcentageLabel.setValue("Credits READY");
+                                    }
+                                    if (PercentageOfCredits < 100) {
+                                        this.mcvCreditProcentageLabel.setValue("Credits @ " + (PercentageOfCredits).toFixed(2) + "%");
+                                    }
+                                    if (PercentageOfResearchPoints >= 100) {
+                                        this.mcvResearchTimerLabel.setValue("Res.Points READY");
+                                    }
+                                    if (PercentageOfResearchPoints < 100) {
+                                        this.mcvResearchTimerLabel.setValue("Res.Points @ " + (PercentageOfResearchPoints).toFixed(2) + "%");
+                                    }
+
+                                    if (!this.mcvPopup.isVisible()) {
+                                        this.mcvPopup.open();
+                                    }
+                                } catch (e) {
+                                    console.log("calculateCostsForNextMCV", e);
+                                }
                             }
                         }
-                    }
-                });
+                    });
 
                 // define Preferences
                 qx.Class.define("MaelstromTools.Preferences", {
@@ -3865,7 +3865,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             this.ZN.setColumnWidth(19, Addons.LocalStorage.getserver("Basescanner_ColWidth_19", 40));
                             var c = 0;
                             var tcm = this.ZN.getTableColumnModel();
-                            for (c = 0; c < this.ZL.getColumnCount() ; c++) {
+                            for (c = 0; c < this.ZL.getColumnCount(); c++) {
                                 if (c == 0 || c == 1 || c == 11 || c == 12) {
                                     tcm.setColumnVisible(c, Addons.LocalStorage.getserver("Basescanner_Column_" + c, false));
                                 } else {
@@ -4201,7 +4201,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             //this.tableSettings = new qx.ui.groupbox.GroupBox("Visable Columns");
                             //box.add(this.tableSettings, {flex:1});
                             var k = 2;
-                            for (k = 2; k < this.ZL.getColumnCount() ; k++) {
+                            for (k = 2; k < this.ZL.getColumnCount(); k++) {
                                 var index = k - 2;
 
                                 this.ZR[index] = new qx.ui.form.CheckBox(this.ZL.getColumnName(k));
@@ -4399,8 +4399,8 @@ var cd=cr.GetResearchItemFomMdbId(cj);
                             var t3 = true;
 
                             var maxAttackDistance = ClientLib.Data.MainData.GetInstance().get_Server().get_MaxAttackDistance();
-                            for (scanY = posY - Math.floor(maxAttackDistance + 1) ; scanY <= posY + Math.floor(maxAttackDistance + 1) ; scanY++) {
-                                for (scanX = posX - Math.floor(maxAttackDistance + 1) ; scanX <= posX + Math.floor(maxAttackDistance + 1) ; scanX++) {
+                            for (scanY = posY - Math.floor(maxAttackDistance + 1); scanY <= posY + Math.floor(maxAttackDistance + 1); scanY++) {
+                                for (scanX = posX - Math.floor(maxAttackDistance + 1); scanX <= posX + Math.floor(maxAttackDistance + 1); scanX++) {
                                     var distX = Math.abs(posX - scanX);
                                     var distY = Math.abs(posY - scanY);
                                     var distance = Math.sqrt((distX * distX) + (distY * distY));
@@ -5231,7 +5231,7 @@ var cd=cr.GetResearchItemFomMdbId(cj);
             var protostring = s.replace(/\s/gim, "");
             redexfounds = protostring.match(redex);
             var i;
-            for (i = 1; i < (n + 1) ; i++) {
+            for (i = 1; i < (n + 1); i++) {
                 if (redexfounds != null && redexfounds[i].length == 6) {
                     console.debug(objname, i, redexfounds[i]);
                 } else if (redexfounds != null && redexfounds[i].length > 0) {
@@ -5640,11 +5640,11 @@ try {
                                     link += "N|";
                                     break;
                                 case 3:
-                                    /* FOR faction - unseen, but in GAMEDATA */
+                                /* FOR faction - unseen, but in GAMEDATA */
                                 case 4:
-                                    /* Forgotten Bases */
+                                /* Forgotten Bases */
                                 case 5:
-                                    /* Forgotten Camps */
+                                /* Forgotten Camps */
                                 case 6:
                                     /* Forgotten Outposts */
                                     link += "F|";
@@ -5664,11 +5664,11 @@ try {
                                     link += "N|";
                                     break;
                                 case 3:
-                                    /* FOR faction - unseen, but in GAMEDATA */
+                                /* FOR faction - unseen, but in GAMEDATA */
                                 case 4:
-                                    /* Forgotten Bases */
+                                /* Forgotten Bases */
                                 case 5:
-                                    /* Forgotten Camps */
+                                /* Forgotten Camps */
                                 case 6:
                                     /* Forgotten Outposts */
                                     link += "F|";
@@ -7702,7 +7702,7 @@ function Ini() {
                             Sel.moveStart('character', -ctrl.value.length);
                             CaretPos = Sel.text.length;
                         }
-                            // Firefox support
+                        // Firefox support
                         else if (ctrl.selectionStart || ctrl.selectionStart == '0') CaretPos = ctrl.selectionStart;
                         return (CaretPos);
                     },
@@ -9201,8 +9201,8 @@ function Ini() {
                             this.requiredOffenseLevel = 0;
                             var region = this._VisMain.get_Region();
                             var scanDistance = 7;
-                            for (var x = startX - (scanDistance) ; x < (startX + scanDistance) ; x++) {
-                                for (var y = startY - scanDistance; y < (startY + scanDistance) ; y++) {
+                            for (var x = startX - (scanDistance); x < (startX + scanDistance); x++) {
+                                for (var y = startY - scanDistance; y < (startY + scanDistance); y++) {
                                     var visObject = region.GetObjectFromPosition(x * region.get_GridWidth(), y * region.get_GridHeight());
                                     if (visObject != null) {
                                         if (visObject.get_VisObjectType() == ClientLib.Vis.VisObject.EObjectType.RegionPointOfInterest) {
@@ -9522,819 +9522,819 @@ function Ini() {
                     }
                 }),
 
-                qx.Class.define("BaseInfo", {
-                    type: "singleton",
-                    extend: qx.core.Object,
-                    construct: function () {
-                        window.addEventListener("click", this.onClick, false);
-                        window.addEventListener("keyup", this.onKey, false);
-                        window.addEventListener("mouseover", this.onMouseOver, false);
-                        BIVERSION = '3.2.8';
-                        BIAUTHOR = 'Dirk Kántor (NurIcke)';
-                        BICLASS = 'BaseInfo';
-                        BIHOMEPAGE = 'http://baseinfo.scriptarea.net';
-                        BICONTACT = 'BaseInfo@scriptarea.net';
-                        BIUSERLANGUAGE = qx.locale.Manager.getInstance().getLocale().split("_")[0];
-                        BIIMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QEEEAcmURyr/AAACJBJREFUWMPVll2MXVUVx3/rnHPvPffOR2cKlCnt1OmUpnbaYqsIpUFbSSkVrFD6YIgmfsRoCEWRJzU8GGMioj4QNelDTZAEAyHS0BICrQrhwXZsC8UwkEhJh/nqfHS+7rnnnnPPOXsvH+4ZmH4g6ps3Wdn73rv3/v/2XmuvteH/8ZMkyRV/f/XVV//rtbz/ZNDAwAAbNmwAYGho6HNzc3Ofn5mZWee6bjsgxpgoy7LBOI5P7Nmz54UjR45kAEePHmXXrl3/+06Hh4cX2o6xsbHvTU9PZ0EQaBiGWq/Xbb1e19xsGIZaq9V0dnZWR0ZGDg4ODl63sM6JEyc+UkM+DmJ0dPS7lUrlUc/zOhzHQcRRcQpibQOhDliUEuK0gKqqzUTVkmVZEgTBc93d3ff9u/U/EuDAgQOyd+/eZ0ul0j7P8xC3iMbv4cQncfU8jtNAJJ+uBmsshg6suw7at4M6aq2RMAwHx8fHd2zevPn9jwVQVUSE559/XrZu3XrW9/1e13VBU3T0cSr2fZyu20G0aRfNBcGBcJBo5K/YdY8jxR6MMcRxzPj4+Nobbrjh7BtvvMGWLVuuDHDu3DlWr17N+Pj4c77v73XdgmoyIsVT36DYewfSvgLFNLUX9BXA5lCC4iBJgjn7DLVl+/DW7FeTRFKv1yeXL19+7ce6YHh4+IFyufzbYrGIbZzHO3YPLZv2oq1LESwYgQwwuWUJFDvAX4JmU+DGiOOBcbDHH2Pukw9R6NuPyTKq1erxY8eObdu4cSNbt269GGBwcBAR6SgWi4PlcnkJGJxnv0TbkgjW78kTABALNJp9TTNwO2DXDxDXw9bnkNOPIW0e6oBceJf01IsEX/kThaW3aBzX5cKFC5/p6+t7fUHXWej09PQAfLtQKCzBLVA/dYCWkTfRtjVQq8FMDSYDmKjCVBVmq8jMLCpXoY6LtRZ1fexYBONVZLYGxW4KFtzffZM0mRbP8yiXy88uPnHnIn+I/FJESOrnqfzhFzi4SFaE2QAuVGE6gGoAYQD1AE1CdOQtbK2KbcTUTr2CTE3AVK05fi5AtZUl8zXS48+AOFoqlXrPnDlzS39//4eZMI5jRkdHb2vec9Hk5MtyjXEgMTA7C56BKHeBAlZRkyJhHWdmCPvIfWhHhTY/wvErTeAIKBeQuQYkIC8/DTvuF9d1qVQq+zZv3nz8AwDf9zl79ux213WxOKKnX4EUiFwYG4L2nuZ3A6iFeoAsXY/e+XVYfzNSKGD+8BO8kdegoU3IBjDfgLkGRB7FgTdJGmOIdKrrulsuc4GIrAXUCriD7zTDs64wOdWMgShEGwHUJtFVtzBz+8NE167GOEKWJsS9N0I4A0kIcQi1EAbfbW4iUZZ4DnNv/Q0FEZGeywCstR2AGJvh1WfRIiACUQLn34MkRBqz2J6bmendRtuv7qZgYowxqCpm5B9QisGGYOswNw61KliBoiAVB8aHAUFV268E4FlrsdYgLkghd5DjQBZCOAJuwPzSa2g5dj/O2mVoVy+qioqLd/4otGZQCiGZgGgcHIECUFQoODiqqFqstc5l5dhaG6iqYh0xS9rQtI54Ao4FV6AQgRfR8f5vkKtC4jsfRUyGKoQTg7S7/WilA6k2moKtTjMQLc3k5VnMVVdjrWKtrV8GkGXZcJqmUnCLJCuuR4YmmvSeQEGhFWgHKjHGW0Z63U1I0gCnSPTafq5eEYMJm7CONHOcA6QKCdRdxV/7WYzJyLJs/DIXGGP+nqYpmFSTtTc307ynUFIoC1SAVkUqMenqexCbICKk4STXtP4FlnpoewPaFNpoti35XM8h7FmNW16FyTKyLHv7IgBVpaur64UoirDWiFn/BeKkGQuUBHyFEmixWQXT7q99kLzM7OuUyhmNdU8SJAZ8Cz5QBsqClpsVq37jHkiNxnFMkiQvXQQgInR1dVWttU+naUqxs5ehW++F1KCFZhTjgliDyVrJOm8iyzJUCuj5lzBrHmdq8DTtZQMqzStcVPCb3VAd0k/fizGpRFFk+vr6nrliKvY878dhGCZiUtVtDzPnL0cS/XBUaon9WzFpjIigpkFxy2MMDpzmuulfo0kFGg6ooo4DCia2DN/9I7zWbo3jGGPM/paWFntFgI0bN56r1+uHoyiSUrmdsTt+TjAvEIIaAeviT71GOPFPamHMdP/vsYc2sSZ6EidrRSKvWaozaYJPpwz1fpHimr2YtEEQBBccx3lCVT/yPSCA9vf3n+vs7Oxx3IJGoyfkE3/+IW3+LHQIFGJs1CDJwO8A/BIqJcQKGNBEkBCyaWVo1V1kt/0M16rOz89JEATbduzYcXyxoLtI2M1PxNu+fftLLS0tD5SKBSl1dDO9ZjfR8Nt0TI6BFqFQouD7gA+ZhzQEjUECQWahOlfi3G0/RTZ9CxfRIAhkamrqOzt37nwx15DFAE6eDzygBPiHDh0Kly1bdmTlypVfLhQKlVK5XeO1d8nE0k1EsaJT0ziTVdyqQeYzshlDVCsxU+nj/PVfZXb7I5Su3qzWGObn52VgYOChffv2/TFff/Gmm/G6SLyUX6AS4LuuWzp06NDBlStXbqhUKuI4rhqLpJqh6SR2bhRMhlQ6cNq6cZ1WPAcVVOI4Znp6ev6pp576/sGDB8/k9bFBMz8u9DNZJFjJrTW3FqAsIv7u3bvXPvjgg/uXL1++rFAo4HmeijiXvKgt1lrSNKVarWaHDx9+8sCBA68EQRAAMRACtdzquTUkFyrlbVtu7TlEJQcsAnbnzp3rd+3a9alVq1at6Ozs7PR93xcRSZIkCYKgOjY2NnHy5Ml3nnjiidP58yXLd1zPhatAkFu4AFDmw9y1APHBCeT/FWlWBjc3ueQGLX6kL7yX04VnbA6xcAIL4hEQe/ng5JIF4nxwKRdeLO4sApBF8xbMXgKR5v6OF8HEuab5F8JUZQbxrSgeAAAAAElFTkSuQmCC';
-                        BIIMAGESMALL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAB3RJTUUH3QMQDho5kHvXxwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAQ+SURBVHjarVRbTFxVFF33MQ9eAzNQWmmFgRKgUBIYWmkxov0g0Vh/bKImxvghavnQGLQxMSZNjTF8IIlJNTHaBORDPxoSP0icKjFUISRCYnF4KCIdBMprZu4M987jvo77jAPWqEk/nNx1z51z9l1n7b3XucD//BP+a2FkZMTn9XqfCwQCnaIo+XmsbVubc3NzN6empr7o7e29fc+7TExMPK7EE2OqqrFkMkVQCFFCkqlakinxvR+CwRvd96RwenrmSkNj01uCvitLmVlI0g5EIUMrDMwWYdkeWHILWH4VNtbWPrt27dOLfX19qX8lnJycfLMl0NZn74bgio9A9pUCkoe4GGCbFGERTNjKFjLSaeD+x7C4uPhJoLX1pX0Ocf9hbGzsgcaTzZfNzUU4Z69Alp2AQsp+3wKW1oGdYsB1DkwrI8X5cC9/DHNxFDW1tS9STZ/6B2Fdff1rtpHME75+Hw6LprfjwK+bhB0iXIUt+GF5G2EpPmA5DEGuhmv0dbDdMI5UHH27p6fHzXkkfgsGg5XlR+77UArPyp4v34BwrJ7UGUA0CahKFixqgW1uQAgFIe4lAF2HFPoeKUcDHM1nDpV5vd8NDQ39llXIGDvjLihwsdAtiCpNrISB3QgRrtJaEYzOS8AzvdQWA9LGOBChTZbJNSReXgiBmZqoKPEA55L5TdO0wzaYIKlJ3kzgDtWsxAArrUHSVwNZcoLluWE4ZDhsIlLzqCQb2ZbK69NQYxGIsqP0oIa2bcOyKCWR2PJ476kZ6QWyRwLO6DcQyw/D0E2IkZ+AYnKIuUoxtHk+DS4ZNrmATP9XU9Lp1B1LN5lRUkidpIlC2rrUA9kxDuHEw9DLqqCvhSCz94CjtFauAz4hG6tXnaL4EuiZdOSAsKWldSqp7Wl6dRNsXoQCmvaQWrKgUdkB2zLhVGeAmhdgeSgFajS8QjabVHUDZSeT69nMAWFzc/Oalti7blXUIXryIuURA5wWbFrLFLdkfZ1xeJBKUWdBqTq4OgWpQ01InTiLpJq4FYvFvv2bD5ltXVW1VCLR8Tz2HI+AoiCkqVwbPyO9NAHn8jiKtodJUhHVKA6DeLcfugzd7UVCUd4lH1p3Hz0+suHh4VfbOx78QIyvwzv5EXza5386ldeVN4tL1uiyT2On7RJMfztuL/1ytaur65V9YVIOTl65lZWVhRJPkV5xvPGsUdspJfLbYTCqq1UN3WyA6noUkWPPQjn1MtLFlfhxenp4YGDgnXA4zCRJEsnPTMjtXSAIQgn95+V2d3d3nzt//omn/cdr62WXQxTtNPcWmOyGSQdoiz4zN4JfXe/v7x+leIXeVehdhevnhIWckFBGKCdwg/JzWXDhwpN1gUCb3+srLRIFUUgklOT8/Pza4ODgPCfijiNECduE3X1Cd06lh5shN+bn5lmucsg9C3eBfySpNaCDjVhuTP0BKVPnFst9kFQAAAAASUVORK5CYII=';
-                        BIIMAGESMALL16 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3QQUCxMm9zjo1wAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAALmSURBVHjatVJbSBRRGP5mdlfX3fXutomLUSqa0kMJpiBGkhCEm/bS5TkMWkh76E2MnkJMKsgu+CZhkiViZRIIUhhRkJC6XnLXS4667uruOrOXmZ3Z05lVl3rqqYF/5sw5//d95//+H/gfz/uRkbMbbu+AEBSn+aA44/b43g0ODl38J7ClpVk//9PZKQiCL7zzi0T4eRqzJLyzRIKCX5h2zPXcbmvL/hPD7C+6uh6l1Nsa35pTmVpN4AO0hjAYNgbEZBASgxLWQzHWgmfMjmdPHp9ubW3d/Itgdm7+oTXbcCPJ0QndwXRANgAhGUgvBtKoqH8cytoMIgW3sCoah0qKCs+rOHZXvavEkmtpImM90G3PAss+YHIF+D6FmJQPWVsG4nBDE2ShfdMBS4bJ1vuiry5BUF1TUx/d5PTJo/eBjQjgXAU4F4ihCNjaAvOyHczCIrDog27sOcj6MkrKShsTBGFRKmWEEFjOA6iJniVEjYcgHq2DXHUGilYD+Fy0zlmw29QW1ySislyoYrXqS1FkTUylMtKQtmj9URBlChqTHqIQgF78RDM5IEpNTVMBUYqJI3YJNAzrknQsiJn+pItADget9QTCecVUbRSavM+ALplK60GiFG8tRlQSuUQJG2vcsGTKJHzpTUAvAbQBkvUyFFYHhnFDzLpAlSlxRgCRojqEMy2QRXE4QdDQ0PA1FIq89lddQji5AqA+KnwQEjcHrDuh9wwAYrwyeE81Q1A03zybmwPx2+/PQVDgvxw7WW0jBXVZVBQG5x2Y5p4iOTAOskONls/BXfkA/owjnsFX/Vfsdvvq/iAlIX5pGGw2W9nVpmt3Cw7nl6cIXiTx63HD5NRcRNIOYMXtW+jv623t7u7+qDaPRkglMNHIYBgmj5C4jVnX7faK8orK42ZzTg7dh8/nD/yYmJi819E+Ts/ddM9Lc1UT/SpBCo1UGio4B7uNYvY6xO5VSPsHWf1SME/BXrqmQwP+N0iuTDWLJDNBAAAAAElFTkSuQmCC';
-                    },
-                    members: {
-                        BaseinfoFenster: null,
-                        BaseinfoTab: null,
-                        BaseinfoGeneralPage: null,
-                        BaseinfoBasesPage: null,
-                        BaseinfoMemberPage: null,
-                        BaseinfoInfoPage: null,
-                        BaseinfoGeneralVBox: null,
-                        BaseinfoBasesVBox: null,
-                        BaseinfoMemberVBox: null,
-                        BaseinfoInfoVBox: null,
-                        BaseinfoVBox: null,
-                        BaseinfoButton: null,
-                        app: null,
-                        initialize: function () {
-                            try {
-                                console.log("BaseInfo: Initialized...");
-                                Lang.loadData(qx.locale.Manager.getInstance().getLocale().split("_")[0]);
-                                this.BaseinfoFenster = new qx.ui.window.Window(BICLASS + " " + BIVERSION + " (" + Lang.gt("Server Sprache") + ": " + BIUSERLANGUAGE + ")", BIIMAGE).set({
-                                    padding: 5,
-                                    paddingRight: 0,
-                                    width: 200,
-                                    showMaximize: false,
-                                    showMinimize: false,
-                                    showClose: true,
-                                    allowClose: true,
-                                    resizable: false
-                                });
-                                this.BaseinfoFenster.setTextColor('black');
-                                this.BaseinfoFenster.setLayout(new qx.ui.layout.HBox);
-                                this.BaseinfoFenster.moveTo(280, 10);
-
-                                // Tab Reihe
-                                this.BaseinfoTab = (new qx.ui.tabview.TabView).set({
-                                    contentPaddingTop: 3,
-                                    contentPaddingBottom: 6,
-                                    contentPaddingRight: 7,
-                                    contentPaddingLeft: 3
-                                });
-                                this.BaseinfoFenster.add(this.BaseinfoTab);
-
-                                // Tab 1
-                                this.BaseinfoGeneralPage = new qx.ui.tabview.Page(Lang.gt("Allgemein"));
-                                this.BaseinfoGeneralPage.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoTab.add(this.BaseinfoGeneralPage);
-                                this.BaseinfoGeneralVBox = new qx.ui.container.Composite();
-                                this.BaseinfoGeneralVBox.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoGeneralVBox.setThemedPadding(10);
-                                this.BaseinfoGeneralVBox.setThemedBackgroundColor("#eef");
-                                this.BaseinfoGeneralPage.add(this.BaseinfoGeneralVBox);
-
-                                // Tab 2
-                                this.BaseinfoBasesPage = new qx.ui.tabview.Page(Lang.gt("Basenwerte"));
-                                this.BaseinfoBasesPage.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoTab.add(this.BaseinfoBasesPage);
-                                this.BaseinfoBasesVBox = new qx.ui.container.Composite();
-                                this.BaseinfoBasesVBox.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoBasesVBox.setThemedPadding(10);
-                                this.BaseinfoBasesVBox.setThemedBackgroundColor("#eef");
-                                this.BaseinfoBasesPage.add(this.BaseinfoBasesVBox);
-
-                                // Tab 3
-                                this.BaseinfoAllBasesPage = new qx.ui.tabview.Page(Lang.gt("Alle Basen"));
-                                this.BaseinfoAllBasesPage.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoTab.add(this.BaseinfoAllBasesPage);
-                                this.BaseinfoAllBasesVBox = new qx.ui.container.Composite();
-                                this.BaseinfoAllBasesVBox.setLayout(new qx.ui.layout.VBox(5));
-                                this.BaseinfoAllBasesVBox.setThemedPadding(10);
-                                this.BaseinfoAllBasesVBox.setThemedBackgroundColor("#eef");
-                                this.BaseinfoAllBasesPage.add(this.BaseinfoAllBasesVBox);
-
-                                var BIBUTTONIMAGE = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 3) ? BIIMAGESMALL : '';
-                                var BIBUTTONNAME = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 2) ? '<b>' + BICLASS + '</b>' : '';
-                                this.BaseinfoButton = new qx.ui.form.Button(BIBUTTONNAME, BIBUTTONIMAGE).set({
-                                    toolTipText: "" + Lang.gt("Öffnen") + ": " + BICLASS + " " + BIVERSION + "",
-                                    width: BIBUTTONWIDTH,
-                                    height: BIBUTTONHEIGHT,
-                                    maxWidth: BIBUTTONWIDTH,
-                                    maxHeight: BIBUTTONHEIGHT,
-                                    center: true,
-                                    rich: true
-                                });
-                                this.BaseinfoButton.addListener("click", function (e) {
-                                    this.BaseinfoGeneralVBox.removeAll();
-                                    this.BaseinfoBasesVBox.removeAll();
-                                    this.BaseinfoAllBasesVBox.removeAll();
-                                    this.showBaseinfo();
-                                    this.BaseinfoFenster.show();
-                                }, this);
-                                this.app = qx.core.Init.getApplication();
-                                if (BIBUTTONPOSITION == 4) this.app.getDesktop().add(this.BaseinfoButton, { left: 125, bottom: 180 }); // Chat
-                                else if (BIBUTTONPOSITION == 3) this.app.getDesktop().add(this.BaseinfoButton, { right: 122, bottom: 0 }); // Serverinfo
-                                else if (BIBUTTONPOSITION == 2) this.app.getDesktop().add(this.BaseinfoButton, { left: 127, top: 0 }); // Playername
-                                else this.app.getDesktop().add(this.BaseinfoButton, { right: 125, top: 0 }); // Standard Worldname
-                            }
-                            catch (e) {
-                                console.log("BaseInfo: Initialize Error - ", e);
-                            }
+                    qx.Class.define("BaseInfo", {
+                        type: "singleton",
+                        extend: qx.core.Object,
+                        construct: function () {
+                            window.addEventListener("click", this.onClick, false);
+                            window.addEventListener("keyup", this.onKey, false);
+                            window.addEventListener("mouseover", this.onMouseOver, false);
+                            BIVERSION = '3.2.8';
+                            BIAUTHOR = 'Dirk Kántor (NurIcke)';
+                            BICLASS = 'BaseInfo';
+                            BIHOMEPAGE = 'http://baseinfo.scriptarea.net';
+                            BICONTACT = 'BaseInfo@scriptarea.net';
+                            BIUSERLANGUAGE = qx.locale.Manager.getInstance().getLocale().split("_")[0];
+                            BIIMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QEEEAcmURyr/AAACJBJREFUWMPVll2MXVUVx3/rnHPvPffOR2cKlCnt1OmUpnbaYqsIpUFbSSkVrFD6YIgmfsRoCEWRJzU8GGMioj4QNelDTZAEAyHS0BICrQrhwXZsC8UwkEhJh/nqfHS+7rnnnnPPOXsvH+4ZmH4g6ps3Wdn73rv3/v/2XmuvteH/8ZMkyRV/f/XVV//rtbz/ZNDAwAAbNmwAYGho6HNzc3Ofn5mZWee6bjsgxpgoy7LBOI5P7Nmz54UjR45kAEePHmXXrl3/+06Hh4cX2o6xsbHvTU9PZ0EQaBiGWq/Xbb1e19xsGIZaq9V0dnZWR0ZGDg4ODl63sM6JEyc+UkM+DmJ0dPS7lUrlUc/zOhzHQcRRcQpibQOhDliUEuK0gKqqzUTVkmVZEgTBc93d3ff9u/U/EuDAgQOyd+/eZ0ul0j7P8xC3iMbv4cQncfU8jtNAJJ+uBmsshg6suw7at4M6aq2RMAwHx8fHd2zevPn9jwVQVUSE559/XrZu3XrW9/1e13VBU3T0cSr2fZyu20G0aRfNBcGBcJBo5K/YdY8jxR6MMcRxzPj4+Nobbrjh7BtvvMGWLVuuDHDu3DlWr17N+Pj4c77v73XdgmoyIsVT36DYewfSvgLFNLUX9BXA5lCC4iBJgjn7DLVl+/DW7FeTRFKv1yeXL19+7ce6YHh4+IFyufzbYrGIbZzHO3YPLZv2oq1LESwYgQwwuWUJFDvAX4JmU+DGiOOBcbDHH2Pukw9R6NuPyTKq1erxY8eObdu4cSNbt269GGBwcBAR6SgWi4PlcnkJGJxnv0TbkgjW78kTABALNJp9TTNwO2DXDxDXw9bnkNOPIW0e6oBceJf01IsEX/kThaW3aBzX5cKFC5/p6+t7fUHXWej09PQAfLtQKCzBLVA/dYCWkTfRtjVQq8FMDSYDmKjCVBVmq8jMLCpXoY6LtRZ1fexYBONVZLYGxW4KFtzffZM0mRbP8yiXy88uPnHnIn+I/FJESOrnqfzhFzi4SFaE2QAuVGE6gGoAYQD1AE1CdOQtbK2KbcTUTr2CTE3AVK05fi5AtZUl8zXS48+AOFoqlXrPnDlzS39//4eZMI5jRkdHb2vec9Hk5MtyjXEgMTA7C56BKHeBAlZRkyJhHWdmCPvIfWhHhTY/wvErTeAIKBeQuQYkIC8/DTvuF9d1qVQq+zZv3nz8AwDf9zl79ux213WxOKKnX4EUiFwYG4L2nuZ3A6iFeoAsXY/e+XVYfzNSKGD+8BO8kdegoU3IBjDfgLkGRB7FgTdJGmOIdKrrulsuc4GIrAXUCriD7zTDs64wOdWMgShEGwHUJtFVtzBz+8NE167GOEKWJsS9N0I4A0kIcQi1EAbfbW4iUZZ4DnNv/Q0FEZGeywCstR2AGJvh1WfRIiACUQLn34MkRBqz2J6bmendRtuv7qZgYowxqCpm5B9QisGGYOswNw61KliBoiAVB8aHAUFV268E4FlrsdYgLkghd5DjQBZCOAJuwPzSa2g5dj/O2mVoVy+qioqLd/4otGZQCiGZgGgcHIECUFQoODiqqFqstc5l5dhaG6iqYh0xS9rQtI54Ao4FV6AQgRfR8f5vkKtC4jsfRUyGKoQTg7S7/WilA6k2moKtTjMQLc3k5VnMVVdjrWKtrV8GkGXZcJqmUnCLJCuuR4YmmvSeQEGhFWgHKjHGW0Z63U1I0gCnSPTafq5eEYMJm7CONHOcA6QKCdRdxV/7WYzJyLJs/DIXGGP+nqYpmFSTtTc307ynUFIoC1SAVkUqMenqexCbICKk4STXtP4FlnpoewPaFNpoti35XM8h7FmNW16FyTKyLHv7IgBVpaur64UoirDWiFn/BeKkGQuUBHyFEmixWQXT7q99kLzM7OuUyhmNdU8SJAZ8Cz5QBsqClpsVq37jHkiNxnFMkiQvXQQgInR1dVWttU+naUqxs5ehW++F1KCFZhTjgliDyVrJOm8iyzJUCuj5lzBrHmdq8DTtZQMqzStcVPCb3VAd0k/fizGpRFFk+vr6nrliKvY878dhGCZiUtVtDzPnL0cS/XBUaon9WzFpjIigpkFxy2MMDpzmuulfo0kFGg6ooo4DCia2DN/9I7zWbo3jGGPM/paWFntFgI0bN56r1+uHoyiSUrmdsTt+TjAvEIIaAeviT71GOPFPamHMdP/vsYc2sSZ6EidrRSKvWaozaYJPpwz1fpHimr2YtEEQBBccx3lCVT/yPSCA9vf3n+vs7Oxx3IJGoyfkE3/+IW3+LHQIFGJs1CDJwO8A/BIqJcQKGNBEkBCyaWVo1V1kt/0M16rOz89JEATbduzYcXyxoLtI2M1PxNu+fftLLS0tD5SKBSl1dDO9ZjfR8Nt0TI6BFqFQouD7gA+ZhzQEjUECQWahOlfi3G0/RTZ9CxfRIAhkamrqOzt37nwx15DFAE6eDzygBPiHDh0Kly1bdmTlypVfLhQKlVK5XeO1d8nE0k1EsaJT0ziTVdyqQeYzshlDVCsxU+nj/PVfZXb7I5Su3qzWGObn52VgYOChffv2/TFff/Gmm/G6SLyUX6AS4LuuWzp06NDBlStXbqhUKuI4rhqLpJqh6SR2bhRMhlQ6cNq6cZ1WPAcVVOI4Znp6ev6pp576/sGDB8/k9bFBMz8u9DNZJFjJrTW3FqAsIv7u3bvXPvjgg/uXL1++rFAo4HmeijiXvKgt1lrSNKVarWaHDx9+8sCBA68EQRAAMRACtdzquTUkFyrlbVtu7TlEJQcsAnbnzp3rd+3a9alVq1at6Ozs7PR93xcRSZIkCYKgOjY2NnHy5Ml3nnjiidP58yXLd1zPhatAkFu4AFDmw9y1APHBCeT/FWlWBjc3ueQGLX6kL7yX04VnbA6xcAIL4hEQe/ng5JIF4nxwKRdeLO4sApBF8xbMXgKR5v6OF8HEuab5F8JUZQbxrSgeAAAAAElFTkSuQmCC';
+                            BIIMAGESMALL = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAB3RJTUUH3QMQDho5kHvXxwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAAQ+SURBVHjarVRbTFxVFF33MQ9eAzNQWmmFgRKgUBIYWmkxov0g0Vh/bKImxvghavnQGLQxMSZNjTF8IIlJNTHaBORDPxoSP0icKjFUISRCYnF4KCIdBMprZu4M987jvo77jAPWqEk/nNx1z51z9l1n7b3XucD//BP+a2FkZMTn9XqfCwQCnaIo+XmsbVubc3NzN6empr7o7e29fc+7TExMPK7EE2OqqrFkMkVQCFFCkqlakinxvR+CwRvd96RwenrmSkNj01uCvitLmVlI0g5EIUMrDMwWYdkeWHILWH4VNtbWPrt27dOLfX19qX8lnJycfLMl0NZn74bgio9A9pUCkoe4GGCbFGERTNjKFjLSaeD+x7C4uPhJoLX1pX0Ocf9hbGzsgcaTzZfNzUU4Z69Alp2AQsp+3wKW1oGdYsB1DkwrI8X5cC9/DHNxFDW1tS9STZ/6B2Fdff1rtpHME75+Hw6LprfjwK+bhB0iXIUt+GF5G2EpPmA5DEGuhmv0dbDdMI5UHH27p6fHzXkkfgsGg5XlR+77UArPyp4v34BwrJ7UGUA0CahKFixqgW1uQAgFIe4lAF2HFPoeKUcDHM1nDpV5vd8NDQ39llXIGDvjLihwsdAtiCpNrISB3QgRrtJaEYzOS8AzvdQWA9LGOBChTZbJNSReXgiBmZqoKPEA55L5TdO0wzaYIKlJ3kzgDtWsxAArrUHSVwNZcoLluWE4ZDhsIlLzqCQb2ZbK69NQYxGIsqP0oIa2bcOyKCWR2PJ476kZ6QWyRwLO6DcQyw/D0E2IkZ+AYnKIuUoxtHk+DS4ZNrmATP9XU9Lp1B1LN5lRUkidpIlC2rrUA9kxDuHEw9DLqqCvhSCz94CjtFauAz4hG6tXnaL4EuiZdOSAsKWldSqp7Wl6dRNsXoQCmvaQWrKgUdkB2zLhVGeAmhdgeSgFajS8QjabVHUDZSeT69nMAWFzc/Oalti7blXUIXryIuURA5wWbFrLFLdkfZ1xeJBKUWdBqTq4OgWpQ01InTiLpJq4FYvFvv2bD5ltXVW1VCLR8Tz2HI+AoiCkqVwbPyO9NAHn8jiKtodJUhHVKA6DeLcfugzd7UVCUd4lH1p3Hz0+suHh4VfbOx78QIyvwzv5EXza5386ldeVN4tL1uiyT2On7RJMfztuL/1ytaur65V9YVIOTl65lZWVhRJPkV5xvPGsUdspJfLbYTCqq1UN3WyA6noUkWPPQjn1MtLFlfhxenp4YGDgnXA4zCRJEsnPTMjtXSAIQgn95+V2d3d3nzt//omn/cdr62WXQxTtNPcWmOyGSQdoiz4zN4JfXe/v7x+leIXeVehdhevnhIWckFBGKCdwg/JzWXDhwpN1gUCb3+srLRIFUUgklOT8/Pza4ODgPCfijiNECduE3X1Cd06lh5shN+bn5lmucsg9C3eBfySpNaCDjVhuTP0BKVPnFst9kFQAAAAASUVORK5CYII=';
+                            BIIMAGESMALL16 = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAB3RJTUUH3QQUCxMm9zjo1wAAAAlwSFlzAAALEwAACxMBAJqcGAAAAARnQU1BAACxjwv8YQUAAALmSURBVHjatVJbSBRRGP5mdlfX3fXutomLUSqa0kMJpiBGkhCEm/bS5TkMWkh76E2MnkJMKsgu+CZhkiViZRIIUhhRkJC6XnLXS4667uruOrOXmZ3Z05lVl3rqqYF/5sw5//d95//+H/gfz/uRkbMbbu+AEBSn+aA44/b43g0ODl38J7ClpVk//9PZKQiCL7zzi0T4eRqzJLyzRIKCX5h2zPXcbmvL/hPD7C+6uh6l1Nsa35pTmVpN4AO0hjAYNgbEZBASgxLWQzHWgmfMjmdPHp9ubW3d/Itgdm7+oTXbcCPJ0QndwXRANgAhGUgvBtKoqH8cytoMIgW3sCoah0qKCs+rOHZXvavEkmtpImM90G3PAss+YHIF+D6FmJQPWVsG4nBDE2ShfdMBS4bJ1vuiry5BUF1TUx/d5PTJo/eBjQjgXAU4F4ihCNjaAvOyHczCIrDog27sOcj6MkrKShsTBGFRKmWEEFjOA6iJniVEjYcgHq2DXHUGilYD+Fy0zlmw29QW1ySislyoYrXqS1FkTUylMtKQtmj9URBlChqTHqIQgF78RDM5IEpNTVMBUYqJI3YJNAzrknQsiJn+pItADget9QTCecVUbRSavM+ALplK60GiFG8tRlQSuUQJG2vcsGTKJHzpTUAvAbQBkvUyFFYHhnFDzLpAlSlxRgCRojqEMy2QRXE4QdDQ0PA1FIq89lddQji5AqA+KnwQEjcHrDuh9wwAYrwyeE81Q1A03zybmwPx2+/PQVDgvxw7WW0jBXVZVBQG5x2Y5p4iOTAOskONls/BXfkA/owjnsFX/Vfsdvvq/iAlIX5pGGw2W9nVpmt3Cw7nl6cIXiTx63HD5NRcRNIOYMXtW+jv623t7u7+qDaPRkglMNHIYBgmj5C4jVnX7faK8orK42ZzTg7dh8/nD/yYmJi819E+Ts/ddM9Lc1UT/SpBCo1UGio4B7uNYvY6xO5VSPsHWf1SME/BXrqmQwP+N0iuTDWLJDNBAAAAAElFTkSuQmCC';
                         },
-                        showBaseinfo: function (ev) {
-                            try {
-                                console.log("BaseInfo: Loading...");
-                                var instance = ClientLib.Data.MainData.GetInstance();
-                                var alliance = instance.get_Alliance();
-                                var allianceid = alliance.get_Id();
-                                var serverName = instance.get_Server().get_Name();
-                                var player = instance.get_Player();
-                                var faction1 = player.get_Faction();
-                                var playerRank = player.get_OverallRank();
-                                var playerSubstitution = player.get_IsSubstituted();
-                                var accountId = player.get_AccountId();
-                                var accountCreate = new Date(player.get_CreationDate());
-                                var Stunde1 = accountCreate.getHours();
-                                var Minute1 = accountCreate.getMinutes();
-                                var Monat1 = accountCreate.getMonth() + 1;
-                                var Tag1 = accountCreate.getDate();
-                                var Jahr1 = accountCreate.getFullYear();
-                                if (Stunde1 < 10) Stunde1 = "0" + Stunde1;
-                                if (Minute1 < 10) Minute1 = "0" + Minute1;
-                                if (Tag1 < 10) Tag1 = "0" + Tag1;
-                                if (Monat1 < 10) Monat1 = "0" + Monat1;
-                                accountCreate = Tag1 + "." + Monat1 + "." + Jahr1 + " - " + Stunde1 + ":" + Minute1;
-                                var aktuellesDatum = new Date();
-                                var Stunde = aktuellesDatum.getHours();
-                                var Minute = aktuellesDatum.getMinutes();
-                                var Monat = aktuellesDatum.getMonth() + 1;
-                                var Tag = aktuellesDatum.getDate();
-                                var Jahr = aktuellesDatum.getFullYear();
-                                if (Stunde < 10) Stunde = "0" + Stunde;
-                                if (Minute < 10) Minute = "0" + Minute;
-                                if (Tag < 10) Tag = "0" + Tag;
-                                if (Monat < 10) Monat = "0" + Monat;
-                                var Datum = Tag + "." + Monat + "." + Jahr;
-                                var Uhrzeit = Stunde + ":" + Minute;
-                                var player_basen = 0;
-                                var support_gebaeude = 0;
-                                var v = 0;
-                                var offbasen = 0;
-                                var base1 = '';
-                                var base2 = '';
-                                var VE_durchschnitt = null;
-                                var VE_lvl = null;
-                                var support = 0;
-                                var supportlvl = null;
-                                var supportname = '';
-                                var def_durchschnitt = null;
-                                var credit_durchschnitt = null;
-                                var repairMaxTime = null;
-                                var creditPerHour = 0;
-                                var creditsPerHour = 0;
-                                var PowerPerHour = 0;
-                                var PowersPerHour = 0;
-                                var PowerProduction = 0;
-                                var PowersProduction = 0;
-                                var TiberiumPerHour = 0;
-                                var TiberiumsPerHour = 0;
-                                var TiberiumProduction = 0;
-                                var TiberiumsProduction = 0;
-                                var CrystalPerHour = 0;
-                                var CrystalsPerHour = 0;
-                                var CrystalProduction = 0;
-                                var CrystalsProduction = 0;
-                                var credit_basen = '';
-                                var first_rep_flug = 0;
-                                var first_rep_fahr = 0;
-                                var first_rep_fuss = 0;
-                                var second_rep_flug = 0;
-                                var second_rep_fahr = 0;
-                                var second_rep_fuss = 0;
-                                var firstBaseName = '';
-                                var firstBaselvl = 0;
-                                var firstOfflvl = 0;
-                                var firstDeflvl = 0;
-                                var firstPowerProduction = 0;
-                                var firstRepairAir = null;
-                                var firstRepairVehicle = null;
-                                var firstRepairInfantry = null;
-                                var secondBaseName = '';
-                                var secondBaselvl = 0;
-                                var secondOfflvl = 0;
-                                var secondDeflvl = 0;
-                                var secondPowerProduction = 0;
-                                var secondRepairAir = null;
-                                var secondRepairVehicle = null;
-                                var secondRepairInfantry = null;
-                                var factionArt = new Array();
-                                factionArt[0] = "";
-                                factionArt[1] = "GDI";
-                                factionArt[2] = "NOD";
-                                var newAusgabe = new Array();
-                                var apc = instance.get_Cities();
-                                var PlayerName = apc.get_CurrentOwnCity().get_PlayerName();
-                                var PlayerID = apc.get_CurrentOwnCity().get_PlayerId();
-                                var AllianzName = apc.get_CurrentOwnCity().get_AllianceName();
-                                var AllianzID = apc.get_CurrentOwnCity().get_AllianceId();
-                                var apcl = apc.get_AllCities().d;
-                                var members = alliance.get_MemberData().d, member;
-                                var leaders = alliance.get_FirstLeaders();
-                                keys = Object.keys(members);
-                                len = keys.length;
-                                var AllianzRolle = new Array();
-                                var AllianzSpieler = new Array();
-                                var sd;
-                                var baseidforWorldmap = null;
-                                var coordsforWorldmap = '';
-                                var worldidforWorldmap = document.URL.split("/");
-                                var AllianzMemberList = '';
-                                if (AllianzID > 0) {
-                                    while (len--) {
-                                        member = members[keys[len]];
-                                        AllianzRolle[member.Id] = member.RoleName;
-                                        AllianzSpieler[member.Id] = member.Name;
-                                        AllianzMemberList += (AllianzMemberList != '') ? '|||' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '' : '' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '';
-                                    }
+                        members: {
+                            BaseinfoFenster: null,
+                            BaseinfoTab: null,
+                            BaseinfoGeneralPage: null,
+                            BaseinfoBasesPage: null,
+                            BaseinfoMemberPage: null,
+                            BaseinfoInfoPage: null,
+                            BaseinfoGeneralVBox: null,
+                            BaseinfoBasesVBox: null,
+                            BaseinfoMemberVBox: null,
+                            BaseinfoInfoVBox: null,
+                            BaseinfoVBox: null,
+                            BaseinfoButton: null,
+                            app: null,
+                            initialize: function () {
+                                try {
+                                    console.log("BaseInfo: Initialized...");
+                                    Lang.loadData(qx.locale.Manager.getInstance().getLocale().split("_")[0]);
+                                    this.BaseinfoFenster = new qx.ui.window.Window(BICLASS + " " + BIVERSION + " (" + Lang.gt("Server Sprache") + ": " + BIUSERLANGUAGE + ")", BIIMAGE).set({
+                                        padding: 5,
+                                        paddingRight: 0,
+                                        width: 200,
+                                        showMaximize: false,
+                                        showMinimize: false,
+                                        showClose: true,
+                                        allowClose: true,
+                                        resizable: false
+                                    });
+                                    this.BaseinfoFenster.setTextColor('black');
+                                    this.BaseinfoFenster.setLayout(new qx.ui.layout.HBox);
+                                    this.BaseinfoFenster.moveTo(280, 10);
+
+                                    // Tab Reihe
+                                    this.BaseinfoTab = (new qx.ui.tabview.TabView).set({
+                                        contentPaddingTop: 3,
+                                        contentPaddingBottom: 6,
+                                        contentPaddingRight: 7,
+                                        contentPaddingLeft: 3
+                                    });
+                                    this.BaseinfoFenster.add(this.BaseinfoTab);
+
+                                    // Tab 1
+                                    this.BaseinfoGeneralPage = new qx.ui.tabview.Page(Lang.gt("Allgemein"));
+                                    this.BaseinfoGeneralPage.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoTab.add(this.BaseinfoGeneralPage);
+                                    this.BaseinfoGeneralVBox = new qx.ui.container.Composite();
+                                    this.BaseinfoGeneralVBox.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoGeneralVBox.setThemedPadding(10);
+                                    this.BaseinfoGeneralVBox.setThemedBackgroundColor("#eef");
+                                    this.BaseinfoGeneralPage.add(this.BaseinfoGeneralVBox);
+
+                                    // Tab 2
+                                    this.BaseinfoBasesPage = new qx.ui.tabview.Page(Lang.gt("Basenwerte"));
+                                    this.BaseinfoBasesPage.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoTab.add(this.BaseinfoBasesPage);
+                                    this.BaseinfoBasesVBox = new qx.ui.container.Composite();
+                                    this.BaseinfoBasesVBox.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoBasesVBox.setThemedPadding(10);
+                                    this.BaseinfoBasesVBox.setThemedBackgroundColor("#eef");
+                                    this.BaseinfoBasesPage.add(this.BaseinfoBasesVBox);
+
+                                    // Tab 3
+                                    this.BaseinfoAllBasesPage = new qx.ui.tabview.Page(Lang.gt("Alle Basen"));
+                                    this.BaseinfoAllBasesPage.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoTab.add(this.BaseinfoAllBasesPage);
+                                    this.BaseinfoAllBasesVBox = new qx.ui.container.Composite();
+                                    this.BaseinfoAllBasesVBox.setLayout(new qx.ui.layout.VBox(5));
+                                    this.BaseinfoAllBasesVBox.setThemedPadding(10);
+                                    this.BaseinfoAllBasesVBox.setThemedBackgroundColor("#eef");
+                                    this.BaseinfoAllBasesPage.add(this.BaseinfoAllBasesVBox);
+
+                                    var BIBUTTONIMAGE = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 3) ? BIIMAGESMALL : '';
+                                    var BIBUTTONNAME = (BIBUTTONDESIGN == 1 || BIBUTTONDESIGN == 2) ? '<b>' + BICLASS + '</b>' : '';
+                                    this.BaseinfoButton = new qx.ui.form.Button(BIBUTTONNAME, BIBUTTONIMAGE).set({
+                                        toolTipText: "" + Lang.gt("Öffnen") + ": " + BICLASS + " " + BIVERSION + "",
+                                        width: BIBUTTONWIDTH,
+                                        height: BIBUTTONHEIGHT,
+                                        maxWidth: BIBUTTONWIDTH,
+                                        maxHeight: BIBUTTONHEIGHT,
+                                        center: true,
+                                        rich: true
+                                    });
+                                    this.BaseinfoButton.addListener("click", function (e) {
+                                        this.BaseinfoGeneralVBox.removeAll();
+                                        this.BaseinfoBasesVBox.removeAll();
+                                        this.BaseinfoAllBasesVBox.removeAll();
+                                        this.showBaseinfo();
+                                        this.BaseinfoFenster.show();
+                                    }, this);
+                                    this.app = qx.core.Init.getApplication();
+                                    if (BIBUTTONPOSITION == 4) this.app.getDesktop().add(this.BaseinfoButton, { left: 125, bottom: 180 }); // Chat
+                                    else if (BIBUTTONPOSITION == 3) this.app.getDesktop().add(this.BaseinfoButton, { right: 122, bottom: 0 }); // Serverinfo
+                                    else if (BIBUTTONPOSITION == 2) this.app.getDesktop().add(this.BaseinfoButton, { left: 127, top: 0 }); // Playername
+                                    else this.app.getDesktop().add(this.BaseinfoButton, { right: 125, top: 0 }); // Standard Worldname
                                 }
-                                var allBases = '';
-                                var aB_basename, aB_baselvl, aB_offlvl, aB_deflvl, aB_bhlvl, aB_velvl, aB_vzlvl, aB_cclvl, aB_supportweapon, aB_supportlvl, aB_credits, aB_strom, aB_tiberium, aB_crystal;
-                                var aB__basename, aB__baselvl, aB__offlvl, aB__deflvl, aB__bhlvl, aB__velvl, aB__vzlvl, aB__cclvl, aB__supportweapon, aB__supportlvl, aB__credits, aB__strom, aB__tiberium, aB__crystal = new Array();
-                                var GeneralField5 = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "center" }));
-                                GeneralField5.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Überblick über die Basen") + "</b></u></big>").set({ rich: true }));
-                                GeneralField5.add(new qx.ui.basic.Label("").set({ rich: true }));
-                                var Basen = new qx.ui.container.Composite(new qx.ui.layout.HBox(10).set({ alignX: "center" }));
-                                var BasenName = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenBase = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenOffensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenDefensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenBH = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenCC = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenVE = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenVZ = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenSupport = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenTiberium = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenCrystal = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenPower = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                var BasenCredits = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
-                                BasenName.add(new qx.ui.basic.Label("<b>" + Lang.gt("Basis Name") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenBase.add(new qx.ui.basic.Label("<b>Lvl</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenOffensive.add(new qx.ui.basic.Label("<b>Off</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenDefensive.add(new qx.ui.basic.Label("<b>Def</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenBH.add(new qx.ui.basic.Label("<b>" + Lang.gt("BH") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenCC.add(new qx.ui.basic.Label("<b>" + Lang.gt("KZ") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenVE.add(new qx.ui.basic.Label("<b>" + Lang.gt("VE") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenVZ.add(new qx.ui.basic.Label("<b>" + Lang.gt("VZ") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenSupport.add(new qx.ui.basic.Label("<b>Support</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenTiberium.add(new qx.ui.basic.Label("<b>" + Lang.gt("Tiberium") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenCrystal.add(new qx.ui.basic.Label("<b>" + Lang.gt("Kristall") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenPower.add(new qx.ui.basic.Label("<b>" + Lang.gt("Strom") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-                                BasenCredits.add(new qx.ui.basic.Label("<b>" + Lang.gt("Credit") + "</b>").set({
-                                    rich: true, alignX: "center"
-                                }));
-
-                                for (var key in apcl) {
-                                    player_basen++;
-                                    var c = apcl[key];
-                                    try {
-                                        sd = c.get_SupportData();
-                                        if (sd !== null) {
-                                            support_gebaeude++;
-                                            support = sd.get_Level();
-                                            supportlvl = supportlvl + support;
-                                            supportname = c.get_SupportWeapon().n.replace(/NOD_SUPPORT_/gi, "").replace(/GDI_SUPPORT_/gi, "").replace(/FOR_SUPPORT_/gi, "");
+                                catch (e) {
+                                    console.log("BaseInfo: Initialize Error - ", e);
+                                }
+                            },
+                            showBaseinfo: function (ev) {
+                                try {
+                                    console.log("BaseInfo: Loading...");
+                                    var instance = ClientLib.Data.MainData.GetInstance();
+                                    var alliance = instance.get_Alliance();
+                                    var allianceid = alliance.get_Id();
+                                    var serverName = instance.get_Server().get_Name();
+                                    var player = instance.get_Player();
+                                    var faction1 = player.get_Faction();
+                                    var playerRank = player.get_OverallRank();
+                                    var playerSubstitution = player.get_IsSubstituted();
+                                    var accountId = player.get_AccountId();
+                                    var accountCreate = new Date(player.get_CreationDate());
+                                    var Stunde1 = accountCreate.getHours();
+                                    var Minute1 = accountCreate.getMinutes();
+                                    var Monat1 = accountCreate.getMonth() + 1;
+                                    var Tag1 = accountCreate.getDate();
+                                    var Jahr1 = accountCreate.getFullYear();
+                                    if (Stunde1 < 10) Stunde1 = "0" + Stunde1;
+                                    if (Minute1 < 10) Minute1 = "0" + Minute1;
+                                    if (Tag1 < 10) Tag1 = "0" + Tag1;
+                                    if (Monat1 < 10) Monat1 = "0" + Monat1;
+                                    accountCreate = Tag1 + "." + Monat1 + "." + Jahr1 + " - " + Stunde1 + ":" + Minute1;
+                                    var aktuellesDatum = new Date();
+                                    var Stunde = aktuellesDatum.getHours();
+                                    var Minute = aktuellesDatum.getMinutes();
+                                    var Monat = aktuellesDatum.getMonth() + 1;
+                                    var Tag = aktuellesDatum.getDate();
+                                    var Jahr = aktuellesDatum.getFullYear();
+                                    if (Stunde < 10) Stunde = "0" + Stunde;
+                                    if (Minute < 10) Minute = "0" + Minute;
+                                    if (Tag < 10) Tag = "0" + Tag;
+                                    if (Monat < 10) Monat = "0" + Monat;
+                                    var Datum = Tag + "." + Monat + "." + Jahr;
+                                    var Uhrzeit = Stunde + ":" + Minute;
+                                    var player_basen = 0;
+                                    var support_gebaeude = 0;
+                                    var v = 0;
+                                    var offbasen = 0;
+                                    var base1 = '';
+                                    var base2 = '';
+                                    var VE_durchschnitt = null;
+                                    var VE_lvl = null;
+                                    var support = 0;
+                                    var supportlvl = null;
+                                    var supportname = '';
+                                    var def_durchschnitt = null;
+                                    var credit_durchschnitt = null;
+                                    var repairMaxTime = null;
+                                    var creditPerHour = 0;
+                                    var creditsPerHour = 0;
+                                    var PowerPerHour = 0;
+                                    var PowersPerHour = 0;
+                                    var PowerProduction = 0;
+                                    var PowersProduction = 0;
+                                    var TiberiumPerHour = 0;
+                                    var TiberiumsPerHour = 0;
+                                    var TiberiumProduction = 0;
+                                    var TiberiumsProduction = 0;
+                                    var CrystalPerHour = 0;
+                                    var CrystalsPerHour = 0;
+                                    var CrystalProduction = 0;
+                                    var CrystalsProduction = 0;
+                                    var credit_basen = '';
+                                    var first_rep_flug = 0;
+                                    var first_rep_fahr = 0;
+                                    var first_rep_fuss = 0;
+                                    var second_rep_flug = 0;
+                                    var second_rep_fahr = 0;
+                                    var second_rep_fuss = 0;
+                                    var firstBaseName = '';
+                                    var firstBaselvl = 0;
+                                    var firstOfflvl = 0;
+                                    var firstDeflvl = 0;
+                                    var firstPowerProduction = 0;
+                                    var firstRepairAir = null;
+                                    var firstRepairVehicle = null;
+                                    var firstRepairInfantry = null;
+                                    var secondBaseName = '';
+                                    var secondBaselvl = 0;
+                                    var secondOfflvl = 0;
+                                    var secondDeflvl = 0;
+                                    var secondPowerProduction = 0;
+                                    var secondRepairAir = null;
+                                    var secondRepairVehicle = null;
+                                    var secondRepairInfantry = null;
+                                    var factionArt = new Array();
+                                    factionArt[0] = "";
+                                    factionArt[1] = "GDI";
+                                    factionArt[2] = "NOD";
+                                    var newAusgabe = new Array();
+                                    var apc = instance.get_Cities();
+                                    var PlayerName = apc.get_CurrentOwnCity().get_PlayerName();
+                                    var PlayerID = apc.get_CurrentOwnCity().get_PlayerId();
+                                    var AllianzName = apc.get_CurrentOwnCity().get_AllianceName();
+                                    var AllianzID = apc.get_CurrentOwnCity().get_AllianceId();
+                                    var apcl = apc.get_AllCities().d;
+                                    var members = alliance.get_MemberData().d, member;
+                                    var leaders = alliance.get_FirstLeaders();
+                                    keys = Object.keys(members);
+                                    len = keys.length;
+                                    var AllianzRolle = new Array();
+                                    var AllianzSpieler = new Array();
+                                    var sd;
+                                    var baseidforWorldmap = null;
+                                    var coordsforWorldmap = '';
+                                    var worldidforWorldmap = document.URL.split("/");
+                                    var AllianzMemberList = '';
+                                    if (AllianzID > 0) {
+                                        while (len--) {
+                                            member = members[keys[len]];
+                                            AllianzRolle[member.Id] = member.RoleName;
+                                            AllianzSpieler[member.Id] = member.Name;
+                                            AllianzMemberList += (AllianzMemberList != '') ? '|||' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '' : '' + AllianzID + ',' + AllianzName + ',' + worldidforWorldmap[3] + ',' + member.Id + ',' + member.Name + ',' + member.Bases + ',' + factionArt[member.Faction] + ',' + member.Rank + ',' + member.RoleName + ',' + member.HasControlHubCode + ',' + member.Level + '';
                                         }
-                                        else {
-                                            support = 0;
-                                            supportname = '-';
-                                        }
-                                        unitData = c.get_CityBuildingsData();
-                                        ve = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Defense_Facility);
-                                        vz = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Defense_HQ);
-                                        bh = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Construction_Yard);
-                                        cc = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Command_Center);
-                                        commandpointsMaxStorage = c.GetResourceMaxStorage(ClientLib.Base.EResourceType.CommandPoints);
+                                    }
+                                    var allBases = '';
+                                    var aB_basename, aB_baselvl, aB_offlvl, aB_deflvl, aB_bhlvl, aB_velvl, aB_vzlvl, aB_cclvl, aB_supportweapon, aB_supportlvl, aB_credits, aB_strom, aB_tiberium, aB_crystal;
+                                    var aB__basename, aB__baselvl, aB__offlvl, aB__deflvl, aB__bhlvl, aB__velvl, aB__vzlvl, aB__cclvl, aB__supportweapon, aB__supportlvl, aB__credits, aB__strom, aB__tiberium, aB__crystal = new Array();
+                                    var GeneralField5 = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "center" }));
+                                    GeneralField5.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Überblick über die Basen") + "</b></u></big>").set({ rich: true }));
+                                    GeneralField5.add(new qx.ui.basic.Label("").set({ rich: true }));
+                                    var Basen = new qx.ui.container.Composite(new qx.ui.layout.HBox(10).set({ alignX: "center" }));
+                                    var BasenName = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenBase = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenOffensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenDefensive = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenBH = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenCC = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenVE = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenVZ = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenSupport = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenTiberium = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenCrystal = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenPower = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    var BasenCredits = new qx.ui.container.Composite(new qx.ui.layout.VBox(1).set({ alignX: "right" }));
+                                    BasenName.add(new qx.ui.basic.Label("<b>" + Lang.gt("Basis Name") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenBase.add(new qx.ui.basic.Label("<b>Lvl</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenOffensive.add(new qx.ui.basic.Label("<b>Off</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenDefensive.add(new qx.ui.basic.Label("<b>Def</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenBH.add(new qx.ui.basic.Label("<b>" + Lang.gt("BH") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenCC.add(new qx.ui.basic.Label("<b>" + Lang.gt("KZ") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenVE.add(new qx.ui.basic.Label("<b>" + Lang.gt("VE") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenVZ.add(new qx.ui.basic.Label("<b>" + Lang.gt("VZ") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenSupport.add(new qx.ui.basic.Label("<b>Support</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenTiberium.add(new qx.ui.basic.Label("<b>" + Lang.gt("Tiberium") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenCrystal.add(new qx.ui.basic.Label("<b>" + Lang.gt("Kristall") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenPower.add(new qx.ui.basic.Label("<b>" + Lang.gt("Strom") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
+                                    BasenCredits.add(new qx.ui.basic.Label("<b>" + Lang.gt("Credit") + "</b>").set({
+                                        rich: true, alignX: "center"
+                                    }));
 
-                                        creditPerHour = ClientLib.Base.Resource.GetResourceGrowPerHour(c.get_CityCreditsProduction(), false) + ClientLib.Base.Resource.GetResourceBonusGrowPerHour(c.get_CityCreditsProduction(), false);
-
-                                        PowerPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
-                                        PowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power);
-                                        TiberiumPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Tiberium);
-                                        TiberiumProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium);
-                                        CrystalPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Crystal);
-                                        CrystalProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal);
-
-                                        creditsPerHour = creditsPerHour + creditPerHour;
-
-                                        PowersPerHour = PowersPerHour + PowerPerHour;
-                                        PowersProduction = PowersProduction + PowerProduction;
-                                        TiberiumsPerHour = TiberiumsPerHour + TiberiumPerHour;
-                                        TiberiumsProduction = TiberiumsProduction + TiberiumProduction;
-                                        CrystalsPerHour = CrystalsPerHour + CrystalPerHour;
-                                        CrystalsProduction = CrystalsProduction + CrystalProduction;
-
-                                        if (c.get_CommandCenterLevel() > 0) {
-                                            repairMaxTime = c.GetResourceMaxStorage(ClientLib.Base.EResourceType.RepairChargeInf);
-                                            if (firstOfflvl < c.get_LvlOffense()) {
-                                                secondBaseName = firstBaseName;
-                                                secondBaselvl = firstBaselvl;
-                                                secondOfflvl = firstOfflvl;
-                                                secondDeflvl = firstDeflvl;
-                                                secondPowerProduction = firstPowerProduction;
-                                                secondRepairInfantry = firstRepairInfantry;
-                                                secondRepairVehicle = firstRepairVehicle;
-                                                secondRepairAir = firstRepairAir;
-
-                                                firstBaseName = c.get_Name();
-                                                firstBaselvl = c.get_LvlBase();
-                                                firstOfflvl = c.get_LvlOffense();
-                                                firstDeflvl = c.get_LvlDefense();
-                                                firstPowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
-                                                firstRepairInfantry = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false);
-                                                firstRepairVehicle = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false);
-                                                firstRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
+                                    for (var key in apcl) {
+                                        player_basen++;
+                                        var c = apcl[key];
+                                        try {
+                                            sd = c.get_SupportData();
+                                            if (sd !== null) {
+                                                support_gebaeude++;
+                                                support = sd.get_Level();
+                                                supportlvl = supportlvl + support;
+                                                supportname = c.get_SupportWeapon().n.replace(/NOD_SUPPORT_/gi, "").replace(/GDI_SUPPORT_/gi, "").replace(/FOR_SUPPORT_/gi, "");
                                             }
-                                            else if (c.get_LvlOffense() > secondOfflvl) {
-                                                secondBaseName = c.get_Name();
-                                                secondBaselvl = c.get_LvlBase();
-                                                secondOfflvl = c.get_LvlOffense();
-                                                secondDeflvl = c.get_LvlDefense();
-                                                secondPowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
-                                                secondRepairInfantry = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false);
-                                                secondRepairVehicle = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false);
-                                                secondRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
+                                            else {
+                                                support = 0;
+                                                supportname = '-';
                                             }
-                                        }
-                                        if (c.get_CommandCenterLevel() > 0 && c.get_LvlOffense() > 0) {
-                                            offbasen++;
-                                        }
-                                        if (ve !== null) {
-                                            v++;
-                                            VE_lvl = VE_lvl + ve.get_CurrentLevel();
-                                        }
-                                        if (c.get_LvlDefense()) {
-                                            def_durchschnitt = def_durchschnitt + c.get_LvlDefense();
-                                        }
-                                        if (allBases != "") {
-                                            allBases += ' |||| ';
-                                        }
-                                        if (ve !== null) { aB_velvl = ve.get_CurrentLevel().toString(); } else { aB_velvl = '-'; }
-                                        if (vz !== null) { aB_vzlvl = vz.get_CurrentLevel().toString(); } else { aB_vzlvl = '-'; }
-                                        if (bh !== null) { aB_bhlvl = bh.get_CurrentLevel().toString(); } else { aB_bhlvl = '-'; }
-                                        if (cc !== null) { aB_cclvl = cc.get_CurrentLevel().toString(); } else { aB_cclvl = '-'; }
-                                        allBases += '' + c.get_Name().toString() + ' | ' + c.get_LvlBase().toFixed(2).toString() + ' | ' + c.get_LvlOffense().toFixed(2).toString() + ' | ' + c.get_LvlDefense().toFixed(2).toString() + ' | ' + aB_bhlvl + ' | ' + aB_velvl + ' | ' + aB_vzlvl + ' | ' + aB_cclvl + ' | ' + support.toFixed(2).toString() + ' | ' + supportname.toString() + ' | ' + parseInt(creditPerHour) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Tiberium)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Crystal)) + ' | ' + key + '';
-                                        if (baseidforWorldmap == null) {
-                                            baseidforWorldmap = key;
-                                            coordsforWorldmap = c.get_PosX() + ':' + c.get_PosY();
-                                        }
+                                            unitData = c.get_CityBuildingsData();
+                                            ve = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Defense_Facility);
+                                            vz = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Defense_HQ);
+                                            bh = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Construction_Yard);
+                                            cc = unitData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Command_Center);
+                                            commandpointsMaxStorage = c.GetResourceMaxStorage(ClientLib.Base.EResourceType.CommandPoints);
 
-                                        // all Bases Tab
-                                        BasenName.add(new qx.ui.basic.Label(c.get_Name().toString()).set({
-                                            rich: true, alignX: "left"
-                                        }));
-                                        BasenBase.add(new qx.ui.basic.Label(c.get_LvlBase().toFixed(2).toString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenOffensive.add(new qx.ui.basic.Label(c.get_LvlOffense().toFixed(2).toString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenDefensive.add(new qx.ui.basic.Label(c.get_LvlDefense().toFixed(2).toString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenBH.add(new qx.ui.basic.Label(aB_bhlvl).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenCC.add(new qx.ui.basic.Label(aB_cclvl).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenVE.add(new qx.ui.basic.Label(aB_velvl).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenVZ.add(new qx.ui.basic.Label(aB_vzlvl).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenSupport.add(new qx.ui.basic.Label(support.toFixed(0).toString() + " " + supportname.toString()).set({
-                                            rich: true, alignX: "left"
-                                        }));
-                                        BasenTiberium.add(new qx.ui.basic.Label(parseInt(TiberiumProduction).toLocaleString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenCrystal.add(new qx.ui.basic.Label(parseInt(CrystalProduction).toLocaleString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenPower.add(new qx.ui.basic.Label(parseInt(PowerProduction).toLocaleString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
-                                        BasenCredits.add(new qx.ui.basic.Label(parseInt(creditPerHour).toLocaleString()).set({
-                                            rich: true, alignX: "right"
-                                        }));
+                                            creditPerHour = ClientLib.Base.Resource.GetResourceGrowPerHour(c.get_CityCreditsProduction(), false) + ClientLib.Base.Resource.GetResourceBonusGrowPerHour(c.get_CityCreditsProduction(), false);
+
+                                            PowerPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
+                                            PowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power);
+                                            TiberiumPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Tiberium);
+                                            TiberiumProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium);
+                                            CrystalPerHour = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Crystal);
+                                            CrystalProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal);
+
+                                            creditsPerHour = creditsPerHour + creditPerHour;
+
+                                            PowersPerHour = PowersPerHour + PowerPerHour;
+                                            PowersProduction = PowersProduction + PowerProduction;
+                                            TiberiumsPerHour = TiberiumsPerHour + TiberiumPerHour;
+                                            TiberiumsProduction = TiberiumsProduction + TiberiumProduction;
+                                            CrystalsPerHour = CrystalsPerHour + CrystalPerHour;
+                                            CrystalsProduction = CrystalsProduction + CrystalProduction;
+
+                                            if (c.get_CommandCenterLevel() > 0) {
+                                                repairMaxTime = c.GetResourceMaxStorage(ClientLib.Base.EResourceType.RepairChargeInf);
+                                                if (firstOfflvl < c.get_LvlOffense()) {
+                                                    secondBaseName = firstBaseName;
+                                                    secondBaselvl = firstBaselvl;
+                                                    secondOfflvl = firstOfflvl;
+                                                    secondDeflvl = firstDeflvl;
+                                                    secondPowerProduction = firstPowerProduction;
+                                                    secondRepairInfantry = firstRepairInfantry;
+                                                    secondRepairVehicle = firstRepairVehicle;
+                                                    secondRepairAir = firstRepairAir;
+
+                                                    firstBaseName = c.get_Name();
+                                                    firstBaselvl = c.get_LvlBase();
+                                                    firstOfflvl = c.get_LvlOffense();
+                                                    firstDeflvl = c.get_LvlDefense();
+                                                    firstPowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
+                                                    firstRepairInfantry = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false);
+                                                    firstRepairVehicle = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false);
+                                                    firstRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
+                                                }
+                                                else if (c.get_LvlOffense() > secondOfflvl) {
+                                                    secondBaseName = c.get_Name();
+                                                    secondBaselvl = c.get_LvlBase();
+                                                    secondOfflvl = c.get_LvlOffense();
+                                                    secondDeflvl = c.get_LvlDefense();
+                                                    secondPowerProduction = c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power);
+                                                    secondRepairInfantry = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Infantry, false);
+                                                    secondRepairVehicle = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Vehicle, false);
+                                                    secondRepairAir = c.get_CityUnitsData().GetRepairTimeFromEUnitGroup(ClientLib.Data.EUnitGroup.Aircraft, false);
+                                                }
+                                            }
+                                            if (c.get_CommandCenterLevel() > 0 && c.get_LvlOffense() > 0) {
+                                                offbasen++;
+                                            }
+                                            if (ve !== null) {
+                                                v++;
+                                                VE_lvl = VE_lvl + ve.get_CurrentLevel();
+                                            }
+                                            if (c.get_LvlDefense()) {
+                                                def_durchschnitt = def_durchschnitt + c.get_LvlDefense();
+                                            }
+                                            if (allBases != "") {
+                                                allBases += ' |||| ';
+                                            }
+                                            if (ve !== null) { aB_velvl = ve.get_CurrentLevel().toString(); } else { aB_velvl = '-'; }
+                                            if (vz !== null) { aB_vzlvl = vz.get_CurrentLevel().toString(); } else { aB_vzlvl = '-'; }
+                                            if (bh !== null) { aB_bhlvl = bh.get_CurrentLevel().toString(); } else { aB_bhlvl = '-'; }
+                                            if (cc !== null) { aB_cclvl = cc.get_CurrentLevel().toString(); } else { aB_cclvl = '-'; }
+                                            allBases += '' + c.get_Name().toString() + ' | ' + c.get_LvlBase().toFixed(2).toString() + ' | ' + c.get_LvlOffense().toFixed(2).toString() + ' | ' + c.get_LvlDefense().toFixed(2).toString() + ' | ' + aB_bhlvl + ' | ' + aB_velvl + ' | ' + aB_vzlvl + ' | ' + aB_cclvl + ' | ' + support.toFixed(2).toString() + ' | ' + supportname.toString() + ' | ' + parseInt(creditPerHour) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Power, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Power) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Power)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Tiberium, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Tiberium) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Tiberium)) + ' | ' + parseInt(c.GetResourceGrowPerHour(ClientLib.Base.EResourceType.Crystal, false, false) + c.GetResourceBonusGrowPerHour(ClientLib.Base.EResourceType.Crystal) + alliance.GetPOIBonusFromResourceType(ClientLib.Base.EResourceType.Crystal)) + ' | ' + key + '';
+                                            if (baseidforWorldmap == null) {
+                                                baseidforWorldmap = key;
+                                                coordsforWorldmap = c.get_PosX() + ':' + c.get_PosY();
+                                            }
+
+                                            // all Bases Tab
+                                            BasenName.add(new qx.ui.basic.Label(c.get_Name().toString()).set({
+                                                rich: true, alignX: "left"
+                                            }));
+                                            BasenBase.add(new qx.ui.basic.Label(c.get_LvlBase().toFixed(2).toString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenOffensive.add(new qx.ui.basic.Label(c.get_LvlOffense().toFixed(2).toString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenDefensive.add(new qx.ui.basic.Label(c.get_LvlDefense().toFixed(2).toString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenBH.add(new qx.ui.basic.Label(aB_bhlvl).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenCC.add(new qx.ui.basic.Label(aB_cclvl).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenVE.add(new qx.ui.basic.Label(aB_velvl).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenVZ.add(new qx.ui.basic.Label(aB_vzlvl).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenSupport.add(new qx.ui.basic.Label(support.toFixed(0).toString() + " " + supportname.toString()).set({
+                                                rich: true, alignX: "left"
+                                            }));
+                                            BasenTiberium.add(new qx.ui.basic.Label(parseInt(TiberiumProduction).toLocaleString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenCrystal.add(new qx.ui.basic.Label(parseInt(CrystalProduction).toLocaleString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenPower.add(new qx.ui.basic.Label(parseInt(PowerProduction).toLocaleString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                            BasenCredits.add(new qx.ui.basic.Label(parseInt(creditPerHour).toLocaleString()).set({
+                                                rich: true, alignX: "right"
+                                            }));
+                                        }
+                                        catch (e) {
+                                            console.warn("BaseInfo: AllBases - ", e);
+                                        }
                                     }
-                                    catch (e) {
-                                        console.warn("BaseInfo: AllBases - ", e);
+
+                                    def_durchschnitt = def_durchschnitt / player_basen;
+                                    newAusgabe["off_basen"] = offbasen;
+                                    if (player_basen > 0) {
+                                        newAusgabe["def_durchschnitt"] = "" + def_durchschnitt.toFixed(2).toString() + "";
                                     }
-                                }
+                                    else {
+                                        newAusgabe["def_durchschnitt"] = 0;
+                                    }
+                                    newAusgabe["support_basen"] = support_gebaeude;
+                                    if (support_gebaeude > 0) {
+                                        supportlvl = supportlvl / support_gebaeude;
+                                        newAusgabe["support_lvl"] = "" + supportlvl.toFixed(2).toString() + "";
+                                    }
+                                    else {
+                                        newAusgabe["support_lvl"] = 0;
+                                    }
+                                    VE_durchschnitt = VE_lvl / v;
+                                    if (v > 0) {
+                                        newAusgabe["ve"] = "" + VE_durchschnitt.toFixed(2).toString() + "";
+                                    }
+                                    else {
+                                        newAusgabe["ve"] = 0;
+                                    }
+                                    first_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(firstRepairAir);
+                                    first_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(firstRepairVehicle);
+                                    first_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(firstRepairInfantry);
+                                    if (first_rep_flug.split(":").length < 3) {
+                                        first_rep_flug = "0:" + first_rep_flug;
+                                    }
+                                    if (first_rep_flug.split(":").length < 4) {
+                                        first_rep_flug = "0:" + first_rep_flug;
+                                    }
+                                    if (first_rep_fahr.split(":").length < 3) {
+                                        first_rep_fahr = "0:" + first_rep_fahr;
+                                    }
+                                    if (first_rep_fahr.split(":").length < 4) {
+                                        first_rep_fahr = "0:" + first_rep_fahr;
+                                    }
+                                    if (first_rep_fuss.split(":").length < 3) {
+                                        first_rep_fuss = "0:" + first_rep_fuss;
+                                    }
+                                    if (first_rep_fuss.split(":").length < 4) {
+                                        first_rep_fuss = "0:" + first_rep_fuss;
+                                    }
+                                    second_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(secondRepairAir);
+                                    second_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(secondRepairVehicle);
+                                    second_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(secondRepairInfantry);
+                                    if (second_rep_flug.split(":").length < 3) {
+                                        second_rep_flug = "0:" + second_rep_flug;
+                                    }
+                                    if (second_rep_flug.split(":").length < 4) {
+                                        second_rep_flug = "0:" + second_rep_flug;
+                                    }
+                                    if (second_rep_fahr.split(":").length < 3) {
+                                        second_rep_fahr = "0:" + second_rep_fahr;
+                                    }
+                                    if (second_rep_fahr.split(":").length < 4) {
+                                        second_rep_fahr = "0:" + second_rep_fahr;
+                                    }
+                                    if (second_rep_fuss.split(":").length < 3) {
+                                        second_rep_fuss = "0:" + second_rep_fuss;
+                                    }
+                                    if (second_rep_fuss.split(":").length < 4) {
+                                        second_rep_fuss = "0:" + second_rep_fuss;
+                                    }
 
-                                def_durchschnitt = def_durchschnitt / player_basen;
-                                newAusgabe["off_basen"] = offbasen;
-                                if (player_basen > 0) {
-                                    newAusgabe["def_durchschnitt"] = "" + def_durchschnitt.toFixed(2).toString() + "";
-                                }
-                                else {
-                                    newAusgabe["def_durchschnitt"] = 0;
-                                }
-                                newAusgabe["support_basen"] = support_gebaeude;
-                                if (support_gebaeude > 0) {
-                                    supportlvl = supportlvl / support_gebaeude;
-                                    newAusgabe["support_lvl"] = "" + supportlvl.toFixed(2).toString() + "";
-                                }
-                                else {
-                                    newAusgabe["support_lvl"] = 0;
-                                }
-                                VE_durchschnitt = VE_lvl / v;
-                                if (v > 0) {
-                                    newAusgabe["ve"] = "" + VE_durchschnitt.toFixed(2).toString() + "";
-                                }
-                                else {
-                                    newAusgabe["ve"] = 0;
-                                }
-                                first_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(firstRepairAir);
-                                first_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(firstRepairVehicle);
-                                first_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(firstRepairInfantry);
-                                if (first_rep_flug.split(":").length < 3) {
-                                    first_rep_flug = "0:" + first_rep_flug;
-                                }
-                                if (first_rep_flug.split(":").length < 4) {
-                                    first_rep_flug = "0:" + first_rep_flug;
-                                }
-                                if (first_rep_fahr.split(":").length < 3) {
-                                    first_rep_fahr = "0:" + first_rep_fahr;
-                                }
-                                if (first_rep_fahr.split(":").length < 4) {
-                                    first_rep_fahr = "0:" + first_rep_fahr;
-                                }
-                                if (first_rep_fuss.split(":").length < 3) {
-                                    first_rep_fuss = "0:" + first_rep_fuss;
-                                }
-                                if (first_rep_fuss.split(":").length < 4) {
-                                    first_rep_fuss = "0:" + first_rep_fuss;
-                                }
-                                second_rep_flug = ClientLib.Vis.VisMain.FormatTimespan(secondRepairAir);
-                                second_rep_fahr = ClientLib.Vis.VisMain.FormatTimespan(secondRepairVehicle);
-                                second_rep_fuss = ClientLib.Vis.VisMain.FormatTimespan(secondRepairInfantry);
-                                if (second_rep_flug.split(":").length < 3) {
-                                    second_rep_flug = "0:" + second_rep_flug;
-                                }
-                                if (second_rep_flug.split(":").length < 4) {
-                                    second_rep_flug = "0:" + second_rep_flug;
-                                }
-                                if (second_rep_fahr.split(":").length < 3) {
-                                    second_rep_fahr = "0:" + second_rep_fahr;
-                                }
-                                if (second_rep_fahr.split(":").length < 4) {
-                                    second_rep_fahr = "0:" + second_rep_fahr;
-                                }
-                                if (second_rep_fuss.split(":").length < 3) {
-                                    second_rep_fuss = "0:" + second_rep_fuss;
-                                }
-                                if (second_rep_fuss.split(":").length < 4) {
-                                    second_rep_fuss = "0:" + second_rep_fuss;
-                                }
+                                    newAusgabe["AccountID"] = accountId;
+                                    newAusgabe["AllianzID"] = AllianzID;
+                                    if (AllianzID > 0) newAusgabe["AllianzName"] = AllianzName.toString();
+                                    else newAusgabe["AllianzName"] = " ";
+                                    if (AllianzID > 0) newAusgabe["AllianzRolle"] = AllianzRolle[PlayerID].toString();
+                                    else newAusgabe["AllianzRolle"] = " ";
+                                    newAusgabe["ServerName"] = serverName.toString();
+                                    newAusgabe["SpielerID"] = PlayerID;
+                                    newAusgabe["Spieler"] = PlayerName;
+                                    newAusgabe["Klasse"] = factionArt[faction1];
+                                    newAusgabe["Datum"] = Datum;
+                                    newAusgabe["Uhrzeit"] = Uhrzeit;
+                                    newAusgabe["Rang"] = playerRank;
+                                    newAusgabe["Substitution"] = playerSubstitution;
+                                    newAusgabe["maxKP"] = commandpointsMaxStorage;
+                                    newAusgabe["repZeit"] = repairMaxTime / 60 / 60;
+                                    newAusgabe["Basen"] = player_basen;
+                                    newAusgabe["Creditproduktion"] = parseInt(creditsPerHour);
+                                    newAusgabe["Tiberiumproduktion"] = parseInt(TiberiumsPerHour);
+                                    newAusgabe["Kristallproduktion"] = parseInt(CrystalsPerHour);
+                                    newAusgabe["Stromproduktion"] = parseInt(PowersPerHour);
+                                    newAusgabe["1st_Base"] = firstBaselvl.toFixed(2).toString();
+                                    newAusgabe["1st_Def"] = firstDeflvl.toFixed(2).toString();
+                                    newAusgabe["1st_Off"] = firstOfflvl.toFixed(2).toString();
+                                    newAusgabe["1st_Stromproduktion"] = parseInt(firstPowerProduction);
+                                    newAusgabe["1st_Flugzeuge"] = first_rep_flug;
+                                    newAusgabe["1st_Fahrzeuge"] = first_rep_fahr;
+                                    newAusgabe["1st_Fusstruppen"] = first_rep_fuss;
+                                    newAusgabe["2nd_Base"] = secondBaselvl.toFixed(2).toString();
+                                    newAusgabe["2nd_Def"] = secondDeflvl.toFixed(2).toString();
+                                    newAusgabe["2nd_Off"] = secondOfflvl.toFixed(2).toString();
+                                    newAusgabe["2nd_Stromproduktion"] = parseInt(secondPowerProduction);
+                                    newAusgabe["2nd_Flugzeuge"] = second_rep_flug;
+                                    newAusgabe["2nd_Fahrzeuge"] = second_rep_fahr;
+                                    newAusgabe["2nd_Fusstruppen"] = second_rep_fuss;
+                                    newAusgabe["Leaders"] = leaders.l[leaders.l.indexOf(PlayerID)];
+                                    newAusgabe["WorldID"] = worldidforWorldmap[3];
+                                    newAusgabe["CoordsforWorldmap"] = coordsforWorldmap;
+                                    newAusgabe["ShowonWorldmap"] = baseidforWorldmap;
+                                    newAusgabe["Version"] = BIVERSION;
 
-                                newAusgabe["AccountID"] = accountId;
-                                newAusgabe["AllianzID"] = AllianzID;
-                                if (AllianzID > 0) newAusgabe["AllianzName"] = AllianzName.toString();
-                                else newAusgabe["AllianzName"] = " ";
-                                if (AllianzID > 0) newAusgabe["AllianzRolle"] = AllianzRolle[PlayerID].toString();
-                                else newAusgabe["AllianzRolle"] = " ";
-                                newAusgabe["ServerName"] = serverName.toString();
-                                newAusgabe["SpielerID"] = PlayerID;
-                                newAusgabe["Spieler"] = PlayerName;
-                                newAusgabe["Klasse"] = factionArt[faction1];
-                                newAusgabe["Datum"] = Datum;
-                                newAusgabe["Uhrzeit"] = Uhrzeit;
-                                newAusgabe["Rang"] = playerRank;
-                                newAusgabe["Substitution"] = playerSubstitution;
-                                newAusgabe["maxKP"] = commandpointsMaxStorage;
-                                newAusgabe["repZeit"] = repairMaxTime / 60 / 60;
-                                newAusgabe["Basen"] = player_basen;
-                                newAusgabe["Creditproduktion"] = parseInt(creditsPerHour);
-                                newAusgabe["Tiberiumproduktion"] = parseInt(TiberiumsPerHour);
-                                newAusgabe["Kristallproduktion"] = parseInt(CrystalsPerHour);
-                                newAusgabe["Stromproduktion"] = parseInt(PowersPerHour);
-                                newAusgabe["1st_Base"] = firstBaselvl.toFixed(2).toString();
-                                newAusgabe["1st_Def"] = firstDeflvl.toFixed(2).toString();
-                                newAusgabe["1st_Off"] = firstOfflvl.toFixed(2).toString();
-                                newAusgabe["1st_Stromproduktion"] = parseInt(firstPowerProduction);
-                                newAusgabe["1st_Flugzeuge"] = first_rep_flug;
-                                newAusgabe["1st_Fahrzeuge"] = first_rep_fahr;
-                                newAusgabe["1st_Fusstruppen"] = first_rep_fuss;
-                                newAusgabe["2nd_Base"] = secondBaselvl.toFixed(2).toString();
-                                newAusgabe["2nd_Def"] = secondDeflvl.toFixed(2).toString();
-                                newAusgabe["2nd_Off"] = secondOfflvl.toFixed(2).toString();
-                                newAusgabe["2nd_Stromproduktion"] = parseInt(secondPowerProduction);
-                                newAusgabe["2nd_Flugzeuge"] = second_rep_flug;
-                                newAusgabe["2nd_Fahrzeuge"] = second_rep_fahr;
-                                newAusgabe["2nd_Fusstruppen"] = second_rep_fuss;
-                                newAusgabe["Leaders"] = leaders.l[leaders.l.indexOf(PlayerID)];
-                                newAusgabe["WorldID"] = worldidforWorldmap[3];
-                                newAusgabe["CoordsforWorldmap"] = coordsforWorldmap;
-                                newAusgabe["ShowonWorldmap"] = baseidforWorldmap;
-                                newAusgabe["Version"] = BIVERSION;
+                                    var usersubmit = '';
+                                    for (var werte in newAusgabe) {
+                                        usersubmit += "[" + werte + "] == " + newAusgabe[werte] + "\n";
+                                    }
 
-                                var usersubmit = '';
-                                for (var werte in newAusgabe) {
-                                    usersubmit += "[" + werte + "] == " + newAusgabe[werte] + "\n";
+                                    // Field 1
+                                    var GeneralField1 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    GeneralField1.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Allgemeine Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
+                                    GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+
+                                    var GeneralField2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    GeneralField2.add(new qx.ui.basic.Label("<br><big><u><b>" + Lang.gt("Script Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
+                                    GeneralField2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+
+                                    // Field 2
+                                    var field2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    field2.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Gesamte Produktion") + "</b></u></big>").set({ rich: true, selectable: true }));
+                                    field2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+
+                                    var production = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
+                                    // 2.1
+                                    var playerproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    playerproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Spieler Produktion") + "</b><br><i>(" + Lang.gt("aller Basen") + ")</i>").set({ rich: true, selectable: true }));
+                                    // 2.2
+                                    var overallproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    overallproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Gesamte Produktion") + "</b><br><i>(" + Lang.gt("inklusive POI Bonus") + ")</i>").set({ rich: true, selectable: true }));
+
+                                    // Field 3
+                                    var field3 = new qx.ui.container.Composite(new qx.ui.layout.VBox(5).set({ alignX: "center" }));
+                                    field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+
+                                    var offensive = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
+                                    // 3.1
+                                    var firstoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    firstoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Erste Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
+                                    firstoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                    // 3.2
+                                    var secondoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
+                                    secondoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Zweite Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
+                                    secondoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+
+                                    var chrystal, tiberium, power, dollar, squad, vehicle, plane, firstoff, secondoff, name, level, off, def, strom;
+
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Account Erstellung") + ":</b> " + accountCreate.toString()).set({ rich: true }));
+                                    if (AllianzID > 0) GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> " + AllianzRolle[PlayerID].toString()).set({ rich: true }));
+                                    else GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> ---").set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielername") + ":</b> " + PlayerName).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielerklasse") + ":</b> " + factionArt[faction1]).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Aktuelle Uhrzeit") + ":</b> " + Datum + " " + Uhrzeit).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Rang") + ":</b> " + playerRank).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale KP") + ":</b> " + commandpointsMaxStorage).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale Repzeit") + ":</b> " + repairMaxTime / 60 / 60 + " " + Lang.gt("Stunden")).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Basenanzahl") + ":</b> " + player_basen).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Anzahl Offensiv Basen") + ":</b> " + offbasen).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Support Gebäude Level Ø") + ":</b> " + newAusgabe["support_lvl"]).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("VE Ø aller Basen") + ":</b> " + newAusgabe["ve"]).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Def Ø aller Basen") + ":</b> " + newAusgabe["def_durchschnitt"]).set({ rich: true }));
+                                    GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                    var worldmap = '&nbsp;&nbsp;&nbsp;<a href="http://map.tiberium-alliances.com/map/' + worldidforWorldmap[3] + '#' + coordsforWorldmap + '|3|' + baseidforWorldmap + '|~" target="_blank"><button style="font-weight: bold; font-size: 18px;"><b>&nbsp;' + Lang.gt("Weltkarte") + '&nbsp;</b></button></a>';
+                                    if (AllianzID > 0) {
+                                        GeneralField1.add(new qx.ui.basic.Label('<form action="http://baseinfo.scriptarea.net/index.php" method="post" target="_blank" style="display:inline;"><input type="hidden" name="usersubmit" value="' + usersubmit + '" /><input type="hidden" name="allBases" value="' + allBases + '" /><input type="hidden" name="allMembers" value="' + AllianzMemberList + '" /><input type="submit" name="" value="&nbsp;' + Lang.gt("Werte übertragen") + '&nbsp;" style="font-weight: bold; font-size: 18px;" /></form> ' + worldmap + '').set({ rich: true, selectable: true }));
+                                    }
+                                    else {
+                                        GeneralField1.add(new qx.ui.basic.Label("<button disabled='disabled'><s>&nbsp;" + Lang.gt('Werte übertragen') + "&nbsp;</s></button>").set({ rich: true, selectable: true, toolTipText: "Deactivated" }));
+                                    }
+
+                                    GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Name") + ":</b> " + BICLASS).set({ rich: true }));
+                                    GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Version") + ":</b> " + BIVERSION).set({ rich: true }));
+                                    GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Ersteller") + ":</b> " + BIAUTHOR).set({ rich: true }));
+                                    GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Webseite") + ":</b> <a href='" + BIHOMEPAGE + "' target='_blank'>" + BIHOMEPAGE + "</a>").set({ rich: true }));
+                                    if (AllianzID > 0) GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im in the alliance " + AllianzName.toString() + " and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
+                                    else GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im not in a alliance and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
+
+                                    playerproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
+                                    chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
+                                    chrystal.setToolTipText(Lang.gt("Kristall Produktion"));
+                                    chrystal.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(playerproduction);
+                                    playerproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
+                                    tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
+                                    tiberium.setToolTipText(Lang.gt("Tiberium Produktion"));
+                                    tiberium.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(playerproduction);
+                                    playerproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                    power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                                    power.setToolTipText(Lang.gt("Strom Produktion"));
+                                    power.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(playerproduction);
+                                    playerproduction.add(dollar = new qx.ui.basic.Atom("" + parseInt(creditsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_dollar.png").set({ rich: true }));
+                                    dollar.setToolTipIcon("webfrontend/ui/common/icn_res_dollar.png");
+                                    dollar.setToolTipText(Lang.gt("Credit Produktion"));
+                                    dollar.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(playerproduction);
+
+                                    overallproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
+                                    chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
+                                    chrystal.setToolTipText(Lang.gt("Gesamte Kristall Produktion"));
+                                    chrystal.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(overallproduction);
+                                    overallproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
+                                    tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
+                                    tiberium.setToolTipText(Lang.gt("Gesamte Tiberium Produktion"));
+                                    tiberium.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(overallproduction);
+                                    overallproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                    power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                                    power.setToolTipText(Lang.gt("Gesamte Strom Produktion"));
+                                    power.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    production.add(overallproduction);
+
+                                    firstoff.add(name = new qx.ui.basic.Atom(firstBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                    name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
+                                    name.setToolTipText("1st-OFF: " + Lang.gt("Basis Name"));
+                                    name.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(level = new qx.ui.basic.Atom(firstBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                    level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
+                                    level.setToolTipText("1st-OFF: " + Lang.gt("Basis Level"));
+                                    level.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(off = new qx.ui.basic.Atom(firstOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
+                                    off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
+                                    off.setToolTipText("1st-OFF: " + Lang.gt("Offensiv Level"));
+                                    off.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(def = new qx.ui.basic.Atom(firstDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
+                                    def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
+                                    def.setToolTipText("1st-OFF: " + Lang.gt("Defensiv Level"));
+                                    def.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(strom = new qx.ui.basic.Atom(parseInt(firstPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                    strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                                    strom.setToolTipText("1st-OFF: " + Lang.gt("Strom Produktion"));
+                                    strom.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(squad = new qx.ui.basic.Atom(first_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
+                                    squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
+                                    squad.setToolTipText("1st-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
+                                    squad.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(vehicle = new qx.ui.basic.Atom(first_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
+                                    vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
+                                    vehicle.setToolTipText("1st-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
+                                    vehicle.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+                                    firstoff.add(plane = new qx.ui.basic.Atom(first_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
+                                    plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
+                                    plane.setToolTipText("1st-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
+                                    plane.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(firstoff);
+
+                                    secondoff.add(name = new qx.ui.basic.Atom(secondBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                    name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
+                                    name.setToolTipText("2nd-OFF: " + Lang.gt("Basis Name"));
+                                    name.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(level = new qx.ui.basic.Atom(secondBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
+                                    level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
+                                    level.setToolTipText("2nd-OFF: " + Lang.gt("Basis Level"));
+                                    level.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(off = new qx.ui.basic.Atom(secondOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
+                                    off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
+                                    off.setToolTipText("2nd-OFF: " + Lang.gt("Offensiv Level"));
+                                    off.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(def = new qx.ui.basic.Atom(secondDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
+                                    def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
+                                    def.setToolTipText("2nd-OFF: " + Lang.gt("Defensive Level"));
+                                    def.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(strom = new qx.ui.basic.Atom(parseInt(secondPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
+                                    strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
+                                    strom.setToolTipText("2nd-OFF: " + Lang.gt("Strom Produktion"));
+                                    strom.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(squad = new qx.ui.basic.Atom(second_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
+                                    squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
+                                    squad.setToolTipText("2nd-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
+                                    squad.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(vehicle = new qx.ui.basic.Atom(second_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
+                                    vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
+                                    vehicle.setToolTipText("2nd-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
+                                    vehicle.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+                                    secondoff.add(plane = new qx.ui.basic.Atom(second_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
+                                    plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
+                                    plane.setToolTipText("2nd-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
+                                    plane.getChildControl("icon").set({
+                                        width: 18, height: 18, scale: true, alignY: "middle"
+                                    });
+                                    offensive.add(secondoff);
+
+                                    // Tab 1 General Informations
+                                    this.BaseinfoGeneralVBox.add(GeneralField1);
+                                    this.BaseinfoGeneralVBox.add(GeneralField2);
+
+                                    // Tab 2 Base values
+                                    field2.add(production);
+                                    field3.add(offensive);
+                                    this.BaseinfoBasesVBox.add(field2);
+                                    field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                    field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
+                                    this.BaseinfoBasesVBox.add(field3);
+
+                                    // Tab 3 Basen
+                                    Basen.add(BasenName);
+                                    Basen.add(BasenBase);
+                                    Basen.add(BasenOffensive);
+                                    Basen.add(BasenDefensive);
+                                    Basen.add(BasenBH);
+                                    Basen.add(BasenCC);
+                                    Basen.add(BasenVE);
+                                    Basen.add(BasenVZ);
+                                    Basen.add(BasenSupport);
+                                    Basen.add(BasenTiberium);
+                                    Basen.add(BasenCrystal);
+                                    Basen.add(BasenPower);
+                                    Basen.add(BasenCredits);
+                                    GeneralField5.add(Basen);
+                                    this.BaseinfoAllBasesVBox.add(GeneralField5);
                                 }
-
-                                // Field 1
-                                var GeneralField1 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                GeneralField1.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Allgemeine Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-
-                                var GeneralField2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                GeneralField2.add(new qx.ui.basic.Label("<br><big><u><b>" + Lang.gt("Script Informationen") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                GeneralField2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-
-                                // Field 2
-                                var field2 = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                field2.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Gesamte Produktion") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                field2.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-
-                                var production = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
-                                // 2.1
-                                var playerproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                playerproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Spieler Produktion") + "</b><br><i>(" + Lang.gt("aller Basen") + ")</i>").set({ rich: true, selectable: true }));
-                                // 2.2
-                                var overallproduction = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                overallproduction.add(new qx.ui.basic.Label("<b>" + Lang.gt("Gesamte Produktion") + "</b><br><i>(" + Lang.gt("inklusive POI Bonus") + ")</i>").set({ rich: true, selectable: true }));
-
-                                // Field 3
-                                var field3 = new qx.ui.container.Composite(new qx.ui.layout.VBox(5).set({ alignX: "center" }));
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-
-                                var offensive = new qx.ui.container.Composite(new qx.ui.layout.HBox(50).set({ alignX: "center" }));
-                                // 3.1
-                                var firstoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                firstoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Erste Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                firstoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                // 3.2
-                                var secondoff = new qx.ui.container.Composite(new qx.ui.layout.VBox(2).set({ alignX: "center" }));
-                                secondoff.add(new qx.ui.basic.Label("<big><u><b>" + Lang.gt("Zweite Offensive") + "</b></u></big>").set({ rich: true, selectable: true }));
-                                secondoff.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-
-                                var chrystal, tiberium, power, dollar, squad, vehicle, plane, firstoff, secondoff, name, level, off, def, strom;
-
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Account Erstellung") + ":</b> " + accountCreate.toString()).set({ rich: true }));
-                                if (AllianzID > 0) GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> " + AllianzRolle[PlayerID].toString()).set({ rich: true }));
-                                else GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Allianz Rolle") + ":</b> ---").set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielername") + ":</b> " + PlayerName).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Spielerklasse") + ":</b> " + factionArt[faction1]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Aktuelle Uhrzeit") + ":</b> " + Datum + " " + Uhrzeit).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Rang") + ":</b> " + playerRank).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale KP") + ":</b> " + commandpointsMaxStorage).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Maximale Repzeit") + ":</b> " + repairMaxTime / 60 / 60 + " " + Lang.gt("Stunden")).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Basenanzahl") + ":</b> " + player_basen).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Anzahl Offensiv Basen") + ":</b> " + offbasen).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Support Gebäude Level Ø") + ":</b> " + newAusgabe["support_lvl"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("VE Ø aller Basen") + ":</b> " + newAusgabe["ve"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Def Ø aller Basen") + ":</b> " + newAusgabe["def_durchschnitt"]).set({ rich: true }));
-                                GeneralField1.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                var worldmap = '&nbsp;&nbsp;&nbsp;<a href="http://map.tiberium-alliances.com/map/' + worldidforWorldmap[3] + '#' + coordsforWorldmap + '|3|' + baseidforWorldmap + '|~" target="_blank"><button style="font-weight: bold; font-size: 18px;"><b>&nbsp;' + Lang.gt("Weltkarte") + '&nbsp;</b></button></a>';
-                                if (AllianzID > 0) {
-                                    GeneralField1.add(new qx.ui.basic.Label('<form action="http://baseinfo.scriptarea.net/index.php" method="post" target="_blank" style="display:inline;"><input type="hidden" name="usersubmit" value="' + usersubmit + '" /><input type="hidden" name="allBases" value="' + allBases + '" /><input type="hidden" name="allMembers" value="' + AllianzMemberList + '" /><input type="submit" name="" value="&nbsp;' + Lang.gt("Werte übertragen") + '&nbsp;" style="font-weight: bold; font-size: 18px;" /></form> ' + worldmap + '').set({ rich: true, selectable: true }));
+                                catch (e) {
+                                    console.log("BaseInfo: Loading Error - ", e);
                                 }
-                                else {
-                                    GeneralField1.add(new qx.ui.basic.Label("<button disabled='disabled'><s>&nbsp;" + Lang.gt('Werte übertragen') + "&nbsp;</s></button>").set({ rich: true, selectable: true, toolTipText: "Deactivated" }));
-                                }
-
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Name") + ":</b> " + BICLASS).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Version") + ":</b> " + BIVERSION).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Ersteller") + ":</b> " + BIAUTHOR).set({ rich: true }));
-                                GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("Webseite") + ":</b> <a href='" + BIHOMEPAGE + "' target='_blank'>" + BIHOMEPAGE + "</a>").set({ rich: true }));
-                                if (AllianzID > 0) GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im in the alliance " + AllianzName.toString() + " and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
-                                else GeneralField2.add(new qx.ui.basic.Atom("<b>" + Lang.gt("E-Mail") + ":</b> <a href='mailto:" + BICONTACT + "?subject=BaseInfo%20InGame%20Contact&amp;body=Hi, my InGame Name is " + PlayerName.toString() + " and im not in a alliance and im playing at the world " + serverName.toString() + " (" + worldidforWorldmap[3] + "),' target='_blank'>" + BICONTACT + "</a>").set({ rich: true }));
-
-                                playerproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
-                                chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
-                                chrystal.setToolTipText(Lang.gt("Kristall Produktion"));
-                                chrystal.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(playerproduction);
-                                playerproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
-                                tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
-                                tiberium.setToolTipText(Lang.gt("Tiberium Produktion"));
-                                tiberium.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(playerproduction);
-                                playerproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersProduction).toLocaleString() + "", "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
-                                power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                                power.setToolTipText(Lang.gt("Strom Produktion"));
-                                power.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(playerproduction);
-                                playerproduction.add(dollar = new qx.ui.basic.Atom("" + parseInt(creditsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_dollar.png").set({ rich: true }));
-                                dollar.setToolTipIcon("webfrontend/ui/common/icn_res_dollar.png");
-                                dollar.setToolTipText(Lang.gt("Credit Produktion"));
-                                dollar.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(playerproduction);
-
-                                overallproduction.add(chrystal = new qx.ui.basic.Atom("" + parseInt(CrystalsPerHour).toLocaleString() + "", "webfrontend/ui/common/icn_res_chrystal.png").set({ rich: true }));
-                                chrystal.setToolTipIcon("webfrontend/ui/common/icn_res_chrystal.png");
-                                chrystal.setToolTipText(Lang.gt("Gesamte Kristall Produktion"));
-                                chrystal.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(overallproduction);
-                                overallproduction.add(tiberium = new qx.ui.basic.Atom("" + parseInt(TiberiumsPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_tiberium.png").set({ rich: true }));
-                                tiberium.setToolTipIcon("webfrontend/ui/common/icn_res_tiberium.png");
-                                tiberium.setToolTipText(Lang.gt("Gesamte Tiberium Produktion"));
-                                tiberium.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(overallproduction);
-                                overallproduction.add(power = new qx.ui.basic.Atom("" + parseInt(PowersPerHour).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
-                                power.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                                power.setToolTipText(Lang.gt("Gesamte Strom Produktion"));
-                                power.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                production.add(overallproduction);
-
-                                firstoff.add(name = new qx.ui.basic.Atom(firstBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
-                                name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
-                                name.setToolTipText("1st-OFF: " + Lang.gt("Basis Name"));
-                                name.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(level = new qx.ui.basic.Atom(firstBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
-                                level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
-                                level.setToolTipText("1st-OFF: " + Lang.gt("Basis Level"));
-                                level.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(off = new qx.ui.basic.Atom(firstOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
-                                off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
-                                off.setToolTipText("1st-OFF: " + Lang.gt("Offensiv Level"));
-                                off.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(def = new qx.ui.basic.Atom(firstDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
-                                def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
-                                def.setToolTipText("1st-OFF: " + Lang.gt("Defensiv Level"));
-                                def.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(strom = new qx.ui.basic.Atom(parseInt(firstPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
-                                strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                                strom.setToolTipText("1st-OFF: " + Lang.gt("Strom Produktion"));
-                                strom.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(squad = new qx.ui.basic.Atom(first_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
-                                squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
-                                squad.setToolTipText("1st-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
-                                squad.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(vehicle = new qx.ui.basic.Atom(first_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
-                                vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
-                                vehicle.setToolTipText("1st-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
-                                vehicle.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-                                firstoff.add(plane = new qx.ui.basic.Atom(first_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
-                                plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
-                                plane.setToolTipText("1st-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
-                                plane.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(firstoff);
-
-                                secondoff.add(name = new qx.ui.basic.Atom(secondBaseName, "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
-                                name.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
-                                name.setToolTipText("2nd-OFF: " + Lang.gt("Basis Name"));
-                                name.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(level = new qx.ui.basic.Atom(secondBaselvl.toFixed(2).toString(), "FactionUI/icons/icon_arsnl_base_buildings.png").set({ rich: true }));
-                                level.setToolTipIcon("FactionUI/icons/icon_arsnl_base_buildings.png");
-                                level.setToolTipText("2nd-OFF: " + Lang.gt("Basis Level"));
-                                level.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(off = new qx.ui.basic.Atom(secondOfflvl.toFixed(2).toString(), "FactionUI/icons/icon_army_points.png").set({ rich: true }));
-                                off.setToolTipIcon("FactionUI/icons/icon_army_points.png");
-                                off.setToolTipText("2nd-OFF: " + Lang.gt("Offensiv Level"));
-                                off.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(def = new qx.ui.basic.Atom(secondDeflvl.toFixed(2).toString(), "FactionUI/icons/icon_def_army_points.png").set({ rich: true }));
-                                def.setToolTipIcon("FactionUI/icons/icon_def_army_points.png");
-                                def.setToolTipText("2nd-OFF: " + Lang.gt("Defensive Level"));
-                                def.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(strom = new qx.ui.basic.Atom(parseInt(secondPowerProduction).toLocaleString(), "webfrontend/ui/common/icn_res_power.png").set({ rich: true }));
-                                strom.setToolTipIcon("webfrontend/ui/common/icn_res_power.png");
-                                strom.setToolTipText("2nd-OFF: " + Lang.gt("Strom Produktion"));
-                                strom.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(squad = new qx.ui.basic.Atom(second_rep_fuss, "FactionUI/icons/icon_arsnl_off_squad.png").set({ rich: true }));
-                                squad.setToolTipIcon("FactionUI/icons/icon_arsnl_off_squad.png");
-                                squad.setToolTipText("2nd-OFF: " + Lang.gt("Fußtruppen Reparaturzeit"));
-                                squad.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(vehicle = new qx.ui.basic.Atom(second_rep_fahr, "FactionUI/icons/icon_arsnl_off_vehicle.png").set({ rich: true }));
-                                vehicle.setToolTipIcon("FactionUI/icons/icon_arsnl_off_vehicle.png");
-                                vehicle.setToolTipText("2nd-OFF: " + Lang.gt("Fahrzeug Reparaturzeit"));
-                                vehicle.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-                                secondoff.add(plane = new qx.ui.basic.Atom(second_rep_flug, "FactionUI/icons/icon_arsnl_off_plane.png").set({ rich: true }));
-                                plane.setToolTipIcon("FactionUI/icons/icon_arsnl_off_plane.png");
-                                plane.setToolTipText("2nd-OFF: " + Lang.gt("Flugzeug Reparaturzeit"));
-                                plane.getChildControl("icon").set({
-                                    width: 18, height: 18, scale: true, alignY: "middle"
-                                });
-                                offensive.add(secondoff);
-
-                                // Tab 1 General Informations
-                                this.BaseinfoGeneralVBox.add(GeneralField1);
-                                this.BaseinfoGeneralVBox.add(GeneralField2);
-
-                                // Tab 2 Base values
-                                field2.add(production);
-                                field3.add(offensive);
-                                this.BaseinfoBasesVBox.add(field2);
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                field3.add(new qx.ui.basic.Label("").set({ rich: true, selectable: true }));
-                                this.BaseinfoBasesVBox.add(field3);
-
-                                // Tab 3 Basen
-                                Basen.add(BasenName);
-                                Basen.add(BasenBase);
-                                Basen.add(BasenOffensive);
-                                Basen.add(BasenDefensive);
-                                Basen.add(BasenBH);
-                                Basen.add(BasenCC);
-                                Basen.add(BasenVE);
-                                Basen.add(BasenVZ);
-                                Basen.add(BasenSupport);
-                                Basen.add(BasenTiberium);
-                                Basen.add(BasenCrystal);
-                                Basen.add(BasenPower);
-                                Basen.add(BasenCredits);
-                                GeneralField5.add(Basen);
-                                this.BaseinfoAllBasesVBox.add(GeneralField5);
-                            }
-                            catch (e) {
-                                console.log("BaseInfo: Loading Error - ", e);
                             }
                         }
-                    }
-                });
+                    });
             }
             catch (e) {
                 console.warn("qx.Class.define(BaseInfo: ", e);
@@ -10501,8 +10501,8 @@ function Ini() {
                     __reader: null,
                     _Init: function () {
                         var localStorage = ClientLib.Base.LocalStorage,
-							player = ClientLib.Data.MainData.GetInstance().get_Player(),
-							server = ClientLib.Data.MainData.GetInstance().get_Server();
+                            player = ClientLib.Data.MainData.GetInstance().get_Player(),
+                            server = ClientLib.Data.MainData.GetInstance().get_Server();
                         this.__name = "TABS.SETTINGS." + player.get_Id() + "." + server.get_WorldId();
                         if (this.__store === null) {
                             if (localStorage.get_IsSupported() && localStorage.GetItem(this.__name) !== null)
@@ -10538,7 +10538,7 @@ function Ini() {
                     },
                     reset: function () {
                         var player = ClientLib.Data.MainData.GetInstance().get_Player(),
-							server = ClientLib.Data.MainData.GetInstance().get_Server();
+                            server = ClientLib.Data.MainData.GetInstance().get_Server();
                         this.__name = "TABS.SETTINGS." + player.get_Id() + "." + server.get_WorldId();
                         window.localStorage.removeItem(this.__name);
                         this.__store = null;
@@ -10549,7 +10549,7 @@ function Ini() {
                         var textFileAsBlob = new Blob([JSON.stringify(this.__store)], {
                             type: 'text/plain'
                         }),
-							downloadLink = document.createElement("a");
+                            downloadLink = document.createElement("a");
                         downloadLink.download = "TABS_Backup.json";
                         if (window.webkitURL !== undefined)
                             downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
@@ -10600,7 +10600,7 @@ function Ini() {
                 statics: {
                     GetFormation: function (cityid, ownid) {
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							OwnCity = ((ownid !== undefined && ownid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity());
+                            OwnCity = ((ownid !== undefined && ownid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity());
                         if (OwnCity !== null)
                             return OwnCity.get_CityArmyFormationsManager().GetFormationByTargetBaseId(CityId);
                         else
@@ -10639,7 +10639,7 @@ function Ini() {
 						 *	},{...}]
 						 */
                         var units = this.GetUnits(cityid, ownid),
-							formation = [];
+                            formation = [];
                         if (units !== null) {
                             for (var i = 0; i < units.length; i++) {
                                 formation.push({
@@ -10670,31 +10670,31 @@ function Ini() {
 						 *	},{...}]
 						 */
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							OwnId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-							unit,
-							target,
-							freePos,
-							transported = [],
-							i,
-							targetFormation = this.GetFormation(CityId, OwnId),
-							getFreePos = function (formation) {
-							    for (var x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; x++) {
-							        for (var y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; y++) {
-							            if (formation.GetUnitByCoord(x, y) === null)
-							                return {
-							                    x: x,
-							                    y: y
-							                };
-							        }
-							    }
-							    return null;
-							},
-							freeTransported = function (unit, freePos) {
-							    if (unit.get_TransportedCityEntity() !== null)
-							        unit = unit.get_TransportedCityEntity();
-							    if (unit.get_IsTransportedCityEntity() && freePos !== null)
-							        unit.MoveBattleUnit(freePos.x, freePos.y);
-							};
+                            OwnId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+                            unit,
+                            target,
+                            freePos,
+                            transported = [],
+                            i,
+                            targetFormation = this.GetFormation(CityId, OwnId),
+                            getFreePos = function (formation) {
+                                for (var x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX(); x++) {
+                                    for (var y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY(); y++) {
+                                        if (formation.GetUnitByCoord(x, y) === null)
+                                            return {
+                                                x: x,
+                                                y: y
+                                            };
+                                    }
+                                }
+                                return null;
+                            },
+                            freeTransported = function (unit, freePos) {
+                                if (unit.get_TransportedCityEntity() !== null)
+                                    unit = unit.get_TransportedCityEntity();
+                                if (unit.get_IsTransportedCityEntity() && freePos !== null)
+                                    unit.MoveBattleUnit(freePos.x, freePos.y);
+                            };
                         if (targetFormation !== null) {
                             for (i = 0; i < formation.length; i++) {
                                 unit = this.GetUnitById(formation[i].id, CityId, OwnId);
@@ -10751,10 +10751,10 @@ function Ini() {
                         for (var i in formation) {
                             for (var j in attacker) {
                                 if (formation[i].gs == attacker[j].gs &&
-									formation[i].i == attacker[j].i &&
-									formation[i].l == attacker[j].l &&
-									formation[i].x == attacker[j].x &&
-									formation[i].y == attacker[j].y) {
+                                    formation[i].i == attacker[j].i &&
+                                    formation[i].l == attacker[j].l &&
+                                    formation[i].x == attacker[j].x &&
+                                    formation[i].y == attacker[j].y) {
                                     for (var k in attacker[j])
                                         formation[i][k] = attacker[j][k];
                                 }
@@ -10801,7 +10801,7 @@ function Ini() {
                     },
                     Shift: function (formation, pos, sel) {
                         var v_shift = 0,
-							h_shift = 0;
+                            h_shift = 0;
 
                         switch (pos) {
                             case "u":
@@ -10898,8 +10898,8 @@ function Ini() {
                 statics: {
                     get_LootFromCurrentCity: function () {
                         var LootFromCurrentCity = ClientLib.API.Battleground.GetInstance().GetLootFromCurrentCity(),
-							LootClass = new TABS.STATS.Entity.Resource(),
-							Loot = LootClass.getAny();
+                            LootClass = new TABS.STATS.Entity.Resource(),
+                            Loot = LootClass.getAny();
                         if (LootFromCurrentCity !== null) {
                             for (var i = 0; i < LootFromCurrentCity.length; i++)
                                 Loot[LootFromCurrentCity[i].Type] = LootFromCurrentCity[i].Count;
@@ -10910,11 +10910,11 @@ function Ini() {
                     },
                     get_RepairCosts: function (mdbId, level, HealthPoints, AttackCounter) {
                         var ResourcesClass = new TABS.STATS.Entity.Resource(),
-							Resources = ResourcesClass.getAny(),
-							unit = ClientLib.Res.ResMain.GetInstance().GetUnit_Obj(mdbId),
-							Health,
-							dmgRatio,
-							costs;
+                            Resources = ResourcesClass.getAny(),
+                            unit = ClientLib.Res.ResMain.GetInstance().GetUnit_Obj(mdbId),
+                            Health,
+                            dmgRatio,
+                            costs;
                         AttackCounter = (AttackCounter !== undefined && AttackCounter !== null ? AttackCounter : 0);
 
                         if (HealthPoints instanceof TABS.STATS.Entity.HealthPoints)
@@ -10951,19 +10951,19 @@ function Ini() {
                     },
                     get_BuildingInfo: function (cityid) {
                         var BuildingInfo = {},
-							City = ((cityid !== undefined && cityid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity());
+                            City = ((cityid !== undefined && cityid !== null) ? ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid) : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity());
                         if (City !== null) {
                             var CityBuildingsData = City.get_CityBuildingsData(),
-								get_BuildingInfo = function (Building) {
-								    if (Building !== null)
-								        return {
-								            MdbId: Building.get_TechGameData_Obj().c,
-								            x: Building.get_CoordX(),
-								            y: Building.get_CoordY()
-								        };
-								    else
-								        return null;
-								};
+                                get_BuildingInfo = function (Building) {
+                                    if (Building !== null)
+                                        return {
+                                            MdbId: Building.get_TechGameData_Obj().c,
+                                            x: Building.get_CoordX(),
+                                            y: Building.get_CoordY()
+                                        };
+                                    else
+                                        return null;
+                                };
 
                             BuildingInfo.Construction_Yard = get_BuildingInfo(CityBuildingsData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Construction_Yard) || CityBuildingsData.GetBuildingByMDBId(ClientLib.Base.ETech.FOR_Fortress_ConstructionYard));
                             BuildingInfo.Command_Center = get_BuildingInfo(CityBuildingsData.GetUniqueBuildingByTechName(ClientLib.Base.ETechName.Command_Center));
@@ -10985,7 +10985,7 @@ function Ini() {
                     },
                     _patchUnitLifePoints: function (unit, activeModules) {
                         var newUnit = qx.lang.Object.clone(unit, true),
-							module = this._GetModuleByType(newUnit.m, ClientLib.Base.EUnitModuleType.HitpointOverride);
+                            module = this._GetModuleByType(newUnit.m, ClientLib.Base.EUnitModuleType.HitpointOverride);
 
                         if (module !== null && activeModules.indexOf(module.i) != -1)
                             newUnit.lp = module.h;
@@ -10998,19 +10998,19 @@ function Ini() {
                     get_Stats: function (data) {
                         try {
                             var StatsClass = new TABS.STATS(),
-								Stats = StatsClass.getAny(),
-								sim = {},
-								buildings = data.d.s,
-								buildingInfo = this.get_BuildingInfo(data.d.di),
-								efficiency = 0,
-								ve_level = 1,
-								defender = data.d.d,
-								attacker = data.d.a,
-								unit,
-								unitHealthPoints = new TABS.STATS.Entity.HealthPoints(),
-								unitRepairCosts,
-								unitMaxHealthPoints,
-								i;
+                                Stats = StatsClass.getAny(),
+                                sim = {},
+                                buildings = data.d.s,
+                                buildingInfo = this.get_BuildingInfo(data.d.di),
+                                efficiency = 0,
+                                ve_level = 1,
+                                defender = data.d.d,
+                                attacker = data.d.a,
+                                unit,
+                                unitHealthPoints = new TABS.STATS.Entity.HealthPoints(),
+                                unitRepairCosts,
+                                unitMaxHealthPoints,
+                                i;
 
                             function addObject(a, b) {
                                 for (var i in a)
@@ -11262,13 +11262,13 @@ function Ini() {
                         try {
                             for (var i in ClientLib.Data.Cities.prototype) {
                                 if (typeof ClientLib.Data.Cities.prototype[i] === "function" &&
-									ClientLib.Data.Cities.prototype[i] == ClientLib.Data.Cities.prototype.get_CurrentCity &&
-									i !== "get_CurrentCity")
+                                    ClientLib.Data.Cities.prototype[i] == ClientLib.Data.Cities.prototype.get_CurrentCity &&
+                                    i !== "get_CurrentCity")
                                     break;
                             }
                             var GetOwnUnitRepairCosts = ClientLib.API.Util.GetUnitRepairCosts.toString().replace(i, "get_CurrentOwnCity"),
-								args = GetOwnUnitRepairCosts.substring(GetOwnUnitRepairCosts.indexOf("(") + 1, GetOwnUnitRepairCosts.indexOf(")")),
-								body = GetOwnUnitRepairCosts.substring(GetOwnUnitRepairCosts.indexOf("{") + 1, GetOwnUnitRepairCosts.lastIndexOf("}"));
+                                args = GetOwnUnitRepairCosts.substring(GetOwnUnitRepairCosts.indexOf("(") + 1, GetOwnUnitRepairCosts.indexOf(")")),
+                                body = GetOwnUnitRepairCosts.substring(GetOwnUnitRepairCosts.indexOf("{") + 1, GetOwnUnitRepairCosts.lastIndexOf("}"));
                             /*jslint evil: true */
                             ClientLib.API.Util.GetOwnUnitRepairCosts = Function(args, body);
                             /*jslint evil: false */
@@ -11495,21 +11495,21 @@ function Ini() {
                         }
 
                         var link = "http://cncopt.com/?map=",
-							defense_units = [],
-							offense_units = [],
-							defense_unit_list = getDefenseUnits(city),
-							army = own_city.get_CityArmyFormationsManager().GetFormationByTargetBaseId(city.get_Id()),
-							offense_unit_list,
-							techLayout = findTechLayout(city),
-							buildings = findBuildings(city),
-							row,
-							spot,
-							level,
-							building,
-							defense_unit,
-							offense_unit,
-							alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
-							i;
+                            defense_units = [],
+                            offense_units = [],
+                            defense_unit_list = getDefenseUnits(city),
+                            army = own_city.get_CityArmyFormationsManager().GetFormationByTargetBaseId(city.get_Id()),
+                            offense_unit_list,
+                            techLayout = findTechLayout(city),
+                            buildings = findBuildings(city),
+                            row,
+                            spot,
+                            level,
+                            building,
+                            defense_unit,
+                            offense_unit,
+                            alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
+                            i;
 
                         link += "3|"; // link version
                         link += getFactionKey(city.get_CityFaction()) + "|";
@@ -11625,26 +11625,26 @@ function Ini() {
                         }
                         function initMapRev() {
                             var units = GAMEDATA.units,
-								keys = Object.keys(GAMEDATA.units),
-								len = keys.length,
-								unit,
-								data = {
-								    1: {
-								        0: {},
-								        1: {},
-								        2: {}
-								    },
-								    2: {
-								        0: {},
-								        1: {},
-								        2: {}
-								    },
-								    3: {
-								        0: {},
-								        1: {},
-								        2: {}
-								    }
-								};
+                                keys = Object.keys(GAMEDATA.units),
+                                len = keys.length,
+                                unit,
+                                data = {
+                                    1: {
+                                        0: {},
+                                        1: {},
+                                        2: {}
+                                    },
+                                    2: {
+                                        0: {},
+                                        1: {},
+                                        2: {}
+                                    },
+                                    3: {
+                                        0: {},
+                                        1: {},
+                                        2: {}
+                                    }
+                                };
                             while (len--) {
                                 unit = units[keys[len]];
                                 if (typeof TABS.UTIL.CNCOpt.keymap[unit.n] !== "undefined") {
@@ -11668,9 +11668,9 @@ function Ini() {
                         }
                         function findFreePos(formation) {
                             var x, y, i, map = [];
-                            for (x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; x++) {
+                            for (x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX(); x++) {
                                 map[x] = [];
-                                for (y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; y++) {
+                                for (y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY(); y++) {
                                     map[x][y] = false;
                                     for (i = 0; i < formation.length; i++) {
                                         if (formation[i].x === x && formation[i].y === y)
@@ -11678,8 +11678,8 @@ function Ini() {
                                     }
                                 }
                             }
-                            for (x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; x++) {
-                                for (y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; y++) {
+                            for (x = 0; x < ClientLib.Base.Util.get_ArmyMaxSlotCountX(); x++) {
+                                for (y = 0; y < ClientLib.Base.Util.get_ArmyMaxSlotCountY(); y++) {
                                     if (map[x][y] === false) {
                                         return {
                                             'x': x,
@@ -11697,22 +11697,22 @@ function Ini() {
                                 return formation;
                             }
                             var keymapRev = initMapRev(),
-								faction1 = getFaction(parts[1]),
-								faction2 = getFaction(parts[2]),
-								re = /[chjklnt.]|[\d]+[^.]/g,
-								count = -1,
-								step,
-								type,
-								id,
-								level,
-								section,
-								i,
-								j,
-								x,
-								y,
-								result,
-								units = [],
-								freePos;
+                                faction1 = getFaction(parts[1]),
+                                faction2 = getFaction(parts[2]),
+                                re = /[chjklnt.]|[\d]+[^.]/g,
+                                count = -1,
+                                step,
+                                type,
+                                id,
+                                level,
+                                section,
+                                i,
+                                j,
+                                x,
+                                y,
+                                result,
+                                units = [],
+                                freePos;
                             while ((result = re.exec(parts[4]))) {
                                 result = result ? result[0] : null;
                                 step = ++count % 72;
@@ -11785,9 +11785,9 @@ function Ini() {
 
                     //SETTINGS
                     var settingsMenu = new qx.ui.menu.Menu(),
-						settingsLoad = new qx.ui.menu.Button(this.tr("load"), null, null),
-						settingsSave = new qx.ui.menu.Button(this.tr("save"), null, null),
-						settingsReset = new qx.ui.menu.Button(this.tr("reset"), null, null);
+                        settingsLoad = new qx.ui.menu.Button(this.tr("load"), null, null),
+                        settingsSave = new qx.ui.menu.Button(this.tr("save"), null, null),
+                        settingsReset = new qx.ui.menu.Button(this.tr("reset"), null, null);
                     settingsLoad.addListener("execute", function () {
                         TABS.SETTINGS.load();
                     }, this);
@@ -11807,8 +11807,8 @@ function Ini() {
                     //Info
                     this.Menu.add(new qx.ui.menu.Separator());
                     var infoMenu = new qx.ui.menu.Menu(),
-						infoHomepage = new qx.ui.menu.Button(this.tr("Homepage"), "https://github.global.ssl.fastly.net/favicon.ico", null),
-						infoFacebook = new qx.ui.menu.Button(this.tr("Facebook"), "https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico", null);
+                        infoHomepage = new qx.ui.menu.Button(this.tr("Homepage"), "https://github.global.ssl.fastly.net/favicon.ico", null),
+                        infoFacebook = new qx.ui.menu.Button(this.tr("Facebook"), "https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico", null);
                     infoHomepage.addListener("execute", function () {
                         qx.core.Init.getApplication().showExternal("http://eistee82.github.io/ta_simv2");
                     }, this);
@@ -11997,9 +11997,9 @@ function Ini() {
                     },
                     _calcCosts: function (Resource /*{ ClientLib.Base.EResourceType.Tiberium: 0, ClientLib.Base.EResourceType.Crystal: 0, ClientLib.Base.EResourceType.Credits: 0, ClientLib.Base.EResourceType.ResearchPoints: 0 }*/, prio) {
                         var costs = Resource[ClientLib.Base.EResourceType.Tiberium] +
-							Resource[ClientLib.Base.EResourceType.Crystal] +
-							Resource[ClientLib.Base.EResourceType.Credits] +
-							Resource[ClientLib.Base.EResourceType.ResearchPoints];
+                            Resource[ClientLib.Base.EResourceType.Crystal] +
+                            Resource[ClientLib.Base.EResourceType.Credits] +
+                            Resource[ClientLib.Base.EResourceType.ResearchPoints];
                         return costs * (prio[2] ? -1 : 1); // Negate
                     },
                     _calcHealthPoints: function (HealthPoints /*{ max: 0, end: 0 }*/, prio) { //Todo: better front value selection
@@ -12044,7 +12044,7 @@ function Ini() {
                     },
                     _calcBattleDuration: function (BattleDuration /*int*/, prio) {
                         var result = BattleDuration,
-							max = 120000;
+                            max = 120000;
                         if (result < (prio[3] * max)) // Limit
                             result = (prio[3] * max);
                         if (result > max) // max 1
@@ -12542,8 +12542,8 @@ function Ini() {
                         if (units !== null) {
                             units.sort(this.sortByPosition);
                             var OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-								i,
-								data = [];
+                                i,
+                                data = [];
                             for (i = 0; i < units.length; i++)
                                 if (units[i].enabled && units[i].h > 0)
                                     data.push(units[i].x, units[i].y, units[i].i, units[i].l);
@@ -12553,8 +12553,8 @@ function Ini() {
                     },
                     check: function (units, cityid, ownid) { // returns { key : "", result : { ownid : 0, cityid: 0, stats : {}, formation : [], combat : {}, valid: true } }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-							Hash = this.calcUnitsHash(units, OwnCityId);
+                            OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+                            Hash = this.calcUnitsHash(units, OwnCityId);
                         if (CityId !== null && OwnCityId !== null && Hash !== null) {
                             this.__validate(CityId, OwnCityId, Hash);
                             return {
@@ -12578,15 +12578,15 @@ function Ini() {
                     },
                     get: function (key, cityid) { // returns { ownid : 0, cityid: 0, stats : {}, formation : [], combat : {}, valid: true }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							caches = this.getAll(CityId).caches;
+                            caches = this.getAll(CityId).caches;
                         if (typeof caches[key] !== "undefined" && caches[key].valid)
                             return caches[key];
                         return null;
                     },
                     getPrio: function (prios, cityid, ownid) {
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							caches = this.getAll(CityId).caches,
-							results = [];
+                            caches = this.getAll(CityId).caches,
+                            results = [];
                         for (var key in caches) {
                             if (ownid === null || ownid === undefined || (ownid !== null && ownid !== undefined && caches[key].ownid == ownid))
                                 results.push({
@@ -12629,9 +12629,9 @@ function Ini() {
                     },
                     add: function (data, cityid, ownid) { // { key : "", result : { stats : {}, formation : [], combat : {} } }
                         var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-							OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-							OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(OwnCityId),
-							caches = this.getAll(CityId).caches;
+                            OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+                            OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(OwnCityId),
+                            caches = this.getAll(CityId).caches;
                         caches[data.key] = data.result;
                         caches[data.key].cityid = CityId;
                         caches[data.key].ownid = OwnCityId;
@@ -12651,12 +12651,12 @@ function Ini() {
                     merge: function (cityid, ownid, data, caches) {
                         try {
                             var CityId = ((cityid !== undefined && cityid !== null) ? cityid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId()),
-								OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
-								key,
-								sim = {
-								    data: data,
-								    caches: caches
-								};
+                                OwnCityId = ((ownid !== undefined && ownid !== null) ? ownid : ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCityId()),
+                                key,
+                                sim = {
+                                    data: data,
+                                    caches: caches
+                                };
                             for (key in sim.caches) {
                                 sim.caches[key].cityid = CityId;
                                 sim.caches[key].ownid = OwnCityId;
@@ -12680,9 +12680,9 @@ function Ini() {
                     },
                     __validate: function (cityid, ownid, hash) {
                         var targetCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(cityid),
-							ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid),
-							city = (typeof hash != "object" ? this.getAll(cityid) : hash),
-							key;
+                            ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(ownid),
+                            city = (typeof hash != "object" ? this.getAll(cityid) : hash),
+                            key;
 
                         if (targetCity !== null && targetCity.get_Version() !== -1) {
                             var version = targetCity.get_Version();
@@ -12696,7 +12696,7 @@ function Ini() {
 
                         if (ownCity !== null && ownCity.get_Version() !== -1) {
                             var alliance = ClientLib.Data.MainData.GetInstance().get_Alliance(),
-								recovery = ownCity.get_hasRecovery();
+                                recovery = ownCity.get_hasRecovery();
 
                             if (typeof hash != "object" && typeof city.caches[hash] !== "undefined" && city.caches[hash].recovery != recovery)
                                 city.caches[hash].valid = false;
@@ -12707,9 +12707,9 @@ function Ini() {
 
                             if (alliance !== null) {
                                 if ((city.data.air != alliance.get_POIAirBonus() ||
-										city.data.inf != alliance.get_POIInfantryBonus() ||
-										city.data.veh != alliance.get_POIVehicleBonus()) &&
-									recovery === false) {
+                                    city.data.inf != alliance.get_POIInfantryBonus() ||
+                                    city.data.veh != alliance.get_POIVehicleBonus()) &&
+                                    recovery === false) {
                                     city.data.air = alliance.get_POIAirBonus();
                                     city.data.inf = alliance.get_POIInfantryBonus();
                                     city.data.veh = alliance.get_POIVehicleBonus();
@@ -12783,7 +12783,7 @@ function Ini() {
                     SimulateBattle: function () {
                         if (!this.getLock()) {
                             var CurrentOwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentOwnCity(),
-								CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                                CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
                             if (CurrentOwnCity !== null && CurrentCity !== null && CurrentCity.CheckInvokeBattle(CurrentOwnCity, true) == ClientLib.Data.EAttackBaseResult.OK) {
                                 clearTimeout(this.__Timeout);
                                 if (PerforceChangelist >= 448942) { // patch 16.2
@@ -12795,7 +12795,7 @@ function Ini() {
                                 this.resetData();
                                 this.setLock(true);
                                 var formation = TABS.UTIL.Formation.Get(),
-									armyUnits = [];
+                                    armyUnits = [];
                                 for (var i in formation)
                                     if (formation[i].enabled && formation[i].h > 0)
                                         armyUnits.push({
@@ -12828,7 +12828,7 @@ function Ini() {
                         var data = e.getData();
                         if (data === null) return;
                         var mergedformation = TABS.UTIL.Formation.Merge(this.getFormation(), data.d.a),
-							cache = TABS.CACHE.getInstance().check(mergedformation, data.d.di, data.d.ai);
+                            cache = TABS.CACHE.getInstance().check(mergedformation, data.d.di, data.d.ai);
                         this.setData(data.e);
                         cache.result = {
                             stats: TABS.UTIL.Stats.get_Stats(data).getAny(),
@@ -12953,8 +12953,8 @@ function Ini() {
                     patchSetEnabled: function () {
                         try {
                             var set_Enabled = ClientLib.Data.CityPreArmyUnit.prototype.set_Enabled.toString(),
-								args = set_Enabled.substring(set_Enabled.indexOf("(") + 1, set_Enabled.indexOf(")")),
-								body = set_Enabled.substring(set_Enabled.indexOf("{") + 1, set_Enabled.lastIndexOf("}"));
+                                args = set_Enabled.substring(set_Enabled.indexOf("(") + 1, set_Enabled.indexOf(")")),
+                                body = set_Enabled.substring(set_Enabled.indexOf("{") + 1, set_Enabled.lastIndexOf("}"));
                             body = body + "TABS.PreArmyUnits.getInstance().__CityPreArmyUnitsChanged();";
                             /*jslint evil: true */
                             ClientLib.Data.CityPreArmyUnit.prototype.set_Enabled = Function(args, body);
@@ -13027,8 +13027,8 @@ function Ini() {
 
                         // Mirror and Shift Buttons left Side (Rows/Wave)
                         var i,
-							cntWave;
-                        for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountY() ; i++) {
+                            cntWave;
+                        for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountY(); i++) {
                             if (PerforceChangelist >= 441469) { // 15.4 patch
                                 cntWave = this.ArmySetupAttackBar.getMainContainer().getChildren()[(i + 3)];
                             } else { //old
@@ -13046,8 +13046,8 @@ function Ini() {
 
                         // Mirror and Shift Buttons top
                         var formation = this.ArmySetupAttackBar.getMainContainer().getChildren()[1].getChildren()[0],
-							btnHBox = new qx.ui.container.Composite(new qx.ui.layout.HBox()),
-							btnHBoxouter = new qx.ui.container.Composite(new qx.ui.layout.HBox());
+                            btnHBox = new qx.ui.container.Composite(new qx.ui.layout.HBox()),
+                            btnHBoxouter = new qx.ui.container.Composite(new qx.ui.layout.HBox());
                         btnHBoxouter.add(new qx.ui.core.Spacer(), {
                             flex: 1
                         });
@@ -13065,7 +13065,7 @@ function Ini() {
 
                         formation.bind("changeWidth", btnHBox, "width");
 
-                        for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountX() ; i++) {
+                        for (i = 0; i < ClientLib.Base.Util.get_ArmyMaxSlotCountX(); i++) {
                             btnHBox.add(new qx.ui.core.Spacer(), {
                                 flex: 1
                             });
@@ -13454,17 +13454,17 @@ function Ini() {
                     },
                     onClick_btnSwap_1_2: function (e) {
                         var formation = TABS.UTIL.Formation.Get(),
-						formation = TABS.UTIL.Formation.SwapLines(formation, 1, 2);
+                            formation = TABS.UTIL.Formation.SwapLines(formation, 1, 2);
                         TABS.UTIL.Formation.Set(formation);
                     },
                     onClick_btnSwap_2_3: function (e) {
                         var formation = TABS.UTIL.Formation.Get(),
-						formation = TABS.UTIL.Formation.SwapLines(formation, 2, 3);
+                            formation = TABS.UTIL.Formation.SwapLines(formation, 2, 3);
                         TABS.UTIL.Formation.Set(formation);
                     },
                     onClick_btnSwap_3_4: function (e) {
                         var formation = TABS.UTIL.Formation.Get(),
-						formation = TABS.UTIL.Formation.SwapLines(formation, 3, 4);
+                            formation = TABS.UTIL.Formation.SwapLines(formation, 3, 4);
                         TABS.UTIL.Formation.Set(formation);
                     },
                     onClick_btnDisable: function (e) {
@@ -13547,7 +13547,7 @@ function Ini() {
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
                         } else {
                             var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-								LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                                LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
                             if (LastBattleTime >= BattleDuration)
                                 ClientLib.Vis.VisMain.GetInstance().get_Battleground().RestartReplay();
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(10000);
@@ -13556,7 +13556,7 @@ function Ini() {
                     },
                     onTick_btnSkip: function () {
                         var BattleDuration = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_BattleDuration(),
-							LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
+                            LastBattleTime = ClientLib.Vis.VisMain.GetInstance().get_Battleground().get_LastBattleTime();
                         if (LastBattleTime >= BattleDuration) {
                             phe.cnc.base.Timer.getInstance().removeListener("uiTick", this.onTick_btnSkip, this);
                             ClientLib.Vis.VisMain.GetInstance().get_Battleground().set_ReplaySpeed(1);
@@ -13591,8 +13591,8 @@ function Ini() {
                             useResizeFrame: false
                         });
                         this.moveTo(
-							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
-							TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
+                            TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[0],
+                            TABS.SETTINGS.get("GUI.Window.Stats.position", [124, 31])[1]);
                         this.addListener("move", function () {
                             TABS.SETTINGS.set("GUI.Window.Stats.position", [this.getBounds().left, this.getBounds().top]);
                         }, this);
@@ -13794,13 +13794,13 @@ function Ini() {
                             flex: 1
                         });
                         var fontsize = qx.theme.manager.Font.getInstance().resolve(this.getChildControl("statusbar-text").getFont()).getSize(),
-							lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
-							    textColor: "#115274",
-							    font: new qx.bom.Font("statusbar-text").set({
-							        size: fontsize,
-							        decoration: "underline"
-							    })
-							});
+                            lblReset = new qx.ui.basic.Label(this.tr("Reset")).set({
+                                textColor: "#115274",
+                                font: new qx.bom.Font("statusbar-text").set({
+                                    size: fontsize,
+                                    decoration: "underline"
+                                })
+                            });
                         lblReset.addListener("click", function () {
                             var CurrentCityId = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCityId();
                             if (CurrentCityId)
@@ -13905,7 +13905,7 @@ function Ini() {
                     },
                     makeSimView: function () {
                         var i,
-							num = Math.round((this.getWidth() - 30) / 75);
+                            num = Math.round((this.getWidth() - 30) / 75);
                         if (this.simViews.length != num) {
                             for (i = 0; i < num; i++) {
                                 if (this.simViews[i] === undefined) {
@@ -13950,7 +13950,7 @@ function Ini() {
                     __updateLabels: function () {
                         if (this.simViews.length > 0) {
                             var i,
-								visibility;
+                                visibility;
 
                             //Label.Battle.Morale
                             visibility = "excluded";
@@ -14038,8 +14038,8 @@ function Ini() {
                         if (toolTipIcon === undefined)
                             toolTipIcon = null;
                         var _toolTipText = (toolTipText !== null ? toolTipText : (label !== null ? label : "")),
-							_toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
-							_show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
+                            _toolTipIcon = (toolTipIcon !== null ? toolTipIcon : (icon !== null ? icon : "")),
+                            _show = (toolTipIcon !== null || icon !== null ? "icon" : (toolTipText !== null || label !== null ? "label" : "both"));
                         this.initAlignX("center");
                         this.initAlignY("middle");
                         this.initGap(0);
@@ -14076,8 +14076,8 @@ function Ini() {
                     try {
                         this.base(arguments);
                         var i,
-							j,
-							defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
+                            j,
+                            defaultPreset = TABS.SETTINGS.get("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num));
                         if (defaultPreset.Name === undefined)
                             defaultPreset = TABS.SETTINGS.set("GUI.Window.Stats.SimView." + num, TABS.STATS.getPreset(num)); // Reset Settings (if no Name)
                         if (defaultPreset.Description === undefined)
@@ -14400,8 +14400,8 @@ function Ini() {
                     Description: null,
                     updateStats: function () {
                         var i,
-							cache = null,
-							CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
+                            cache = null,
+                            CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().get_CurrentCity();
                         if (CurrentCity !== null && CurrentCity.get_Version() !== -1 && ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete()) {
                             if (this.Prio.length === 0)
                                 cache = TABS.CACHE.getInstance().check(TABS.UTIL.Formation.Get());
@@ -14421,9 +14421,9 @@ function Ini() {
 
                         if (typeof this.Cache["key"] !== "undefined" && typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
                             if (CurrentCity !== null &&
-								CurrentCity.get_Version() !== -1 &&
-								ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
-								this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
+                                CurrentCity.get_Version() !== -1 &&
+                                ClientLib.Vis.VisMain.GetInstance().GetActiveView().get_VisAreaComplete() &&
+                                this.Cache.key === TABS.CACHE.getInstance().calcUnitsHash(TABS.UTIL.Formation.Get(), this.Cache.result.ownid)) {
                                 for (i in this.GUI) {
                                     this.GUI[i].setDecorator("pane-light-opaque");
                                     this.GUI[i].setOpacity(1);
@@ -14497,10 +14497,10 @@ function Ini() {
                     __updateBattleMoral: function () {
                         if (typeof this.Cache["result"] !== "undefined" && typeof this.Cache.result["cityid"] !== "undefined" && typeof this.Cache.result["ownid"] !== "undefined") {
                             var CurrentCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.cityid),
-								OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
+                                OwnCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
                             if (CurrentCity !== null && OwnCity !== null) {
                                 var MoralSignType = ClientLib.Base.Util.GetMoralSignType(OwnCity.get_LvlOffense(), CurrentCity.get_LvlBase()),
-									moral = 100;
+                                    moral = 100;
                                 if (ClientLib.Data.MainData.GetInstance().get_Server().get_CombatUseMoral() && CurrentCity.IsNPC() && CurrentCity.get_Id() != ClientLib.Data.MainData.GetInstance().get_EndGame().GetCenter().get_CombatId() && (MoralSignType.k == 1 || MoralSignType.k == 2)) {
                                     moral = "~" + (moral - MoralSignType.v) + "%";
                                     if (MoralSignType.k == 1) {
@@ -14532,9 +14532,9 @@ function Ini() {
                             var ownCity = ClientLib.Data.MainData.GetInstance().get_Cities().GetCity(this.Cache.result.ownid);
                             if (ownCity !== null) {
                                 var RepairCharge = Math.min(
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
-                                        ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
+                                    ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeInf),
+                                    ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeVeh),
+                                    ownCity.GetResourceCount(ClientLib.Base.EResourceType.RepairChargeAir));
                                 this.Label.Repair.Storage.setValue(phe.cnc.Util.getTimespanString(ClientLib.Data.MainData.GetInstance().get_Time().GetTimeSpan(RepairCharge)));
                             } else
                                 this.Label.Repair.Storage.resetValue();
@@ -14659,7 +14659,7 @@ function Ini() {
                     HealthPointsAbs: function () {
                         if (this.HealthPoints.getMax() > 0) {
                             var percent = (this.HealthPoints.getEnd() / this.HealthPoints.getMax()) * 100,
-								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                                digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
                             percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
                             return {
                                 text: percent.toFixed(digits) + " %",
@@ -14671,7 +14671,7 @@ function Ini() {
                     HealthPointsRel: function () {
                         if (this.HealthPoints.getMax() > 0) {
                             var percent = ((this.HealthPoints.getStart() - this.HealthPoints.getEnd()) / this.HealthPoints.getMax()) * 100,
-								digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
+                                digits = (percent <= 0 || percent >= 100 ? 0 : (percent >= 10 ? 1 : 2));
                             percent = Math.round(percent * Math.pow(10, digits)) / Math.pow(10, digits);
                             return {
                                 text: percent.toFixed(digits) + " %",
@@ -14717,8 +14717,8 @@ function Ini() {
                     },
                     Loot: function () {
                         var res = 0,
-							lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
-							loot;
+                            lootFromCurrentCity = TABS.UTIL.Stats.get_LootFromCurrentCity(),
+                            loot;
                         if (this.HealthPoints.getMax() > 0 && lootFromCurrentCity !== null) {
                             switch (this.getSubType()) {
                                 case "Resource":
@@ -14814,12 +14814,12 @@ function Ini() {
         function waitForGame() {
             try {
                 if (typeof qx != 'undefined' &&
-					typeof qx.core != 'undfined' &&
-					typeof qx.core.Init != 'undefined') {
+                    typeof qx.core != 'undfined' &&
+                    typeof qx.core.Init != 'undefined') {
                     var app = qx.core.Init.getApplication();
                     if (app !== null && app.initDone === true &&
-						ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
-						ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
+                        ClientLib.Data.MainData.GetInstance().get_Player().get_Id() !== 0 &&
+                        ClientLib.Data.MainData.GetInstance().get_Server().get_WorldId() !== 0) {
                         try {
                             console.time("loaded in");
 
@@ -14857,7 +14857,7 @@ function Ini() {
         }
         window.setTimeout(waitForGame, 1000);
     }
-	.toString() + ")();";
+        .toString() + ")();";
     script.type = "text/javascript";
     document.getElementsByTagName("head")[0].appendChild(script);
 })();
